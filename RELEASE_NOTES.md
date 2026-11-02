@@ -9,13 +9,13 @@ Baseline: **Package-20a + optional Camera15 + optional Gallery14**, dated 2026-1
 - Camera capture/newest-media handoff, Photos Markup/Save copy and the dimming-interruption correction after the OTA.
 - Camera15/Gallery14's earlier mode and editor checks listed in the README. The full mode matrix was not repeated after every OTA.
 
-Daily-use acceptance used the owner's diagnostic boot with rooted ADB. The OTA/support archive contains the standard boot. Its separate live acceptance remains open. This is an engineering beta with one primary test device.
+The standard boot in the OTA/support archive passed startup, encrypted-data access, PIN/fingerprint, normal ADB authorization and brief Camera/Photos/Play Store checks on 2026-11-02. Longer daily-use checks used the owner's diagnostic boot. This beta has one primary test device.
 
 ## GNSS
 
 Rapper_skull's Realme L5 research identifies the stock GNSS configuration. This project adds exact-layout validation, whole-image preservation, durable backup/readback and an inactive-slot installer migration. No personal NV image is distributed.
 
-The development phone's two slots were enabled through separately checked field trials. GPS L5/Galileo E5a and fixes were observed on the earlier A trial. The latest 20a/B sample was **indoors**: GPS L5 reception was observed, with no fresh fix in that short window. Outdoor positioning on 20a/B remains untested.
+The development phone's two slots were enabled through separately checked field trials. Outdoor testing on 20a/B now confirms fresh positioning and GPS L5/Galileo E5a reception, with up to four secondary signals used in fixes. The bounded test recorded 110 fresh location updates. Navigation accuracy and power use still need broader testing.
 
 The packaged migration is compiled into normal/recovery update engines and has host checks. Its first live installer execution, failure handling and inverse return remain unvalidated. Other reviewed-layout mismatches stop installation. Keep both NV backups and report the exact error if this happens; leave firmware unchanged.
 
