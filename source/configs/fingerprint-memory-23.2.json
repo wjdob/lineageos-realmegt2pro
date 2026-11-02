@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "source": "kernel/oneplus/sm8450-devicetrees/oplus/ferrari-21631-waipio-overlay.dts",
+  "source_sha256": "df85fd6c6e46e55853d69382382f1dc4e9b55e4fa3f590f1d704a896f49bd942",
+  "stock_vendor_boot_sha256": "f5523b8cf06182e53c06e9f59bf74723f2a24932366922a4453d7fefcbd9e0ca",
+  "stock_dtbo_sha256": "f0b9ed99d93eb81e5dff4a18bb03bd142be9dabeddf983d5ef472ef02712e40a",
+  "soc_ids": [457, 482],
+  "expected_base_trees": 4,
+  "board_id": [65544, 0],
+  "ta_bytes": 33554432,
+  "alignment_bytes": 4194304,
+  "qseecom_bytes": 20971520,
+  "alloc_ranges": [0, 0, 0, 4294967295],
+  "limit": "Stock-matched OS device-tree reservation, not fingerprint enrollment/authentication or firmware compatibility proof."
+}

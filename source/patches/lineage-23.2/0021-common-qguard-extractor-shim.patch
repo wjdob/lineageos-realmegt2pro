@@ -1,0 +1,6 @@
+diff --git a/extract-files.py b/extract-files.py
+--- a/extract-files.py
++++ b/extract-files.py
+@@ -69,0 +70,2 @@
++    'vendor/bin/qguard': blob_fixup()
++        .add_needed('libbase_shim.so'),

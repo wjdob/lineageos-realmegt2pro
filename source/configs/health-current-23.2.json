@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "project": "21631",
+  "raw_current_unit": "mA",
+  "raw_positive_direction": "discharge",
+  "hal_multiplier": -1000,
+  "modules": {
+    "VENDOR_BOOT/RAMDISK/lib/modules/oplus_chg.ko": "4cf5fe762339c6924caa46bf7a89ed8f5ea02147c7c30caffc51cae27f3af050",
+    "VENDOR_DLKM/lib/modules/oplus_chg.ko": "4cf5fe762339c6924caa46bf7a89ed8f5ea02147c7c30caffc51cae27f3af050"
+  },
+  "limits": "Binds conversion to the reviewed actual gauge implementation; a changed module requires renewed unit/polarity review. Capacity, voltage, energy and charging controls are outside this contract. Not a corrected HAL binary or runtime pass."
+}

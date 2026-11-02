@@ -1,0 +1,7 @@
+diff --git a/Android.bp b/Android.bp
+--- a/Android.bp
++++ b/Android.bp
+@@ -18649,2 +18649,3 @@
+                 "libandroid_runtime",
++                "libinput_shim",
+                 "libui",

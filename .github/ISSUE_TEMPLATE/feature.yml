@@ -1,0 +1,12 @@
+name: Feature request
+description: Suggest a device fix or optional improvement
+title: "[Request] "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Use case and desired result
+      description: Explain who benefits and mention related issues or an existing workaround.
+    validations:
+      required: true

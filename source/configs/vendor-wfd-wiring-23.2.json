@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "board_platform": "taro",
+  "init_member": "SYSTEM_EXT/etc/init/wfdservice.rc",
+  "init_sha256": "cf1019ae924cb3fef81bdc76888cc55b72307143e8fd7d377a7dc519c8d03081",
+  "recipe_source": "vendor/oneplus/sm8450-common/proprietary/system_ext/etc/init/wfdservice.rc",
+  "executable_member": "SYSTEM_EXT/bin/wfdservice",
+  "executable_sha256": "0cc3afa7c464528a8dd6a67eaa9ea6df45f6159ed4f1ccaf4423481da27e62de",
+  "APK_member": "SYSTEM_EXT/priv-app/WfdService/WfdService.apk",
+  "DEX_member": "classes.dex",
+  "DEX_sha256": "e4b9790e72a20ccffdc7ae2a6233c19db6f8bc5c53dd1b31c904c2502d19eb80",
+  "seccomp_member": "SYSTEM_EXT/etc/seccomp_policy/wfdservice64.policy",
+  "review": "Actual packaged SessionManagerService selects vendor.wfdservice64 on taro. The source proprietary list renames its ARM64 executable to wfdservice. Retain both service names and property actions; use the existing ARM64 executable for both. DEX is bound separately from APK signing metadata."
+}

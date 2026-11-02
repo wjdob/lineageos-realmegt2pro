@@ -1,0 +1,166 @@
+{
+  "schema": 1,
+  "loading_context": {
+    "projects": [
+      {
+        "path": "hardware/qcom-caf/sm8450/display",
+        "revision": "0fee94e438b07631b3081c31fd9b3c9a484eefc3",
+        "source_sha256": {
+          "sdm/libs/core/color_manager.h": "6c53dba677943f19f678845964bf2ba3e12f99421b2700ca255a97ec0dfef070",
+          "sdm/libs/core/color_manager.cpp": "a973812f3e08b0df4384a06278e5fe66fd279eee93c191113d2195d10855275b",
+          "sdm/libs/utils/sys.cpp": "b90829726c9e7564822c567d6ef29ebc2d66fa02c05107a10eb497e91e60ddcc"
+        }
+      },
+      {
+        "path": "bionic",
+        "revision": "ff9fe01e7e1e81febaf32b15fa561aec480a112c",
+        "source_sha256": {
+          "linker/linker.cpp": "6281c8bd8bd8c3904c910740a5e31f8357aeb63b4194898a47c221670881c89b",
+          "linker/linker_namespaces.cpp": "04927391682fa5cb6b6bd0efdf110b80c2e98fb67a29a8607e5a46e90e5080d1"
+        }
+      }
+    ],
+    "review": "ColorManagerProxy opens libsdm-color before Stc using RTLD_NOW with default local scope. Bionic global lookup uses DF_1_GLOBAL; the reviewed XML providers lack that flag. Already linked libsdm-color relocations retain their earlier libtinyxml2_1 binding. In the later Stc breadth-first dependency group, direct v34 precedes transitive _1. libdigital-dimming has no XML imports. Source and ELF identities support this ordering; actual process binding still requires a corrected boot."
+  },
+  "provider": {
+    "member": "VENDOR/lib64/libtinyxml2-v34.so",
+    "soname": "libtinyxml2-v34.so",
+    "sha256": "6c2e1dfa2e938139eafd4338ff7bce13d53cd8bee50a04c24afa4e19c5137ef6",
+    "source": "hardware/lineage/compat/vndk/v34/arm64/libtinyxml2-v34.so"
+  },
+  "reviewed_layout": {
+    "legacy_display_XMLDocument_bytes": 776,
+    "versioned_provider_constructor_end_offset": 776,
+    "incompatible_platform_TinyXML2_11_document_bytes": 880,
+    "witness": "Package-06 StcOrderParserImpl::ParseFile reserves 0x308 bytes. Platform AArch64 constructor zeroes object offsets 0x360..0x36f, including the caller saved x20 at relative offset 0x368. Versioned v34 constructor stays within 0x308 bytes.",
+    "scope": "Legacy proprietary unversioned XML consumers from the pinned common vendor input; existing libtinyxml2_1 consumers and platform-built modules retain their dependencies."
+  },
+  "consumers": [
+    {
+      "member": "VENDOR/lib64/libapengine.so",
+      "module": "libapengine",
+      "sha256": "14c227e1371e80b91458ab22055c05a4c674404ac52c77bc1c44cc9011122d2e",
+      "source_sha256": "90a1f45024ae8d66b41adc7f6454474f0fa79885173c381c1bc716531ecb2e23",
+      "xml_imports": [
+        "_ZN8tinyxml211XMLDocument8LoadFileEPKc",
+        "_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE",
+        "_ZN8tinyxml211XMLDocumentD1Ev",
+        "_ZNK8tinyxml210XMLElement9AttributeEPKcS2_",
+        "_ZNK8tinyxml27XMLNode17FirstChildElementEPKc",
+        "_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc"
+      ]
+    },
+    {
+      "member": "VENDOR/lib64/libdpps.so",
+      "module": "libdpps",
+      "sha256": "6b80061eab50ffd3473082d97efc4ed5b403189aa292ad24924b699f9c3573e3",
+      "source_sha256": "c56036c37d8517b242f4dea2a9a4c6ae99ba9449d9c93f7375e66ea9fcce5c51",
+      "xml_imports": [
+        "_ZN8tinyxml211XMLDocument8LoadFileEPKc",
+        "_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE",
+        "_ZN8tinyxml211XMLDocumentD1Ev",
+        "_ZNK8tinyxml210XMLElement12IntAttributeEPKci",
+        "_ZNK8tinyxml210XMLElement14QueryFloatTextEPf",
+        "_ZNK8tinyxml210XMLElement14QueryInt64TextEPl",
+        "_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj",
+        "_ZNK8tinyxml210XMLElement7GetTextEv",
+        "_ZNK8tinyxml210XMLElement9AttributeEPKcS2_",
+        "_ZNK8tinyxml27XMLNode17FirstChildElementEPKc",
+        "_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc",
+        "_ZNK8tinyxml27XMLNode5ValueEv"
+      ]
+    },
+    {
+      "member": "VENDOR/lib64/liblearningmodule.so",
+      "module": "liblearningmodule",
+      "sha256": "c506a620e8752565db29d977916479949fb911e37cfa743c005e424710aaebea",
+      "source_sha256": "f7a3c19192f300cf34995f6b582e0757eedc9d28e884d75b066b84c34400e6c5",
+      "xml_imports": [
+        "_ZN8tinyxml211XMLDocument5ParseEPKcm",
+        "_ZN8tinyxml211XMLDocument8LoadFileEPKc",
+        "_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE",
+        "_ZN8tinyxml211XMLDocumentD1Ev",
+        "_ZNK8tinyxml210XMLElement9AttributeEPKcS2_",
+        "_ZNK8tinyxml27XMLNode17FirstChildElementEPKc",
+        "_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc",
+        "_ZNK8tinyxml27XMLNode5ValueEv"
+      ]
+    },
+    {
+      "member": "VENDOR/lib64/libpowercallback.so",
+      "module": "libpowercallback",
+      "sha256": "1ce8026da47bb97aee444c7e814eca4f5f74bbffcfb26a6ae648c33a5f510f2d",
+      "source_sha256": "d0da46e7d864bc8cea798d8f301f5b8473e24884090d7233569dd8b3aaecb8e0",
+      "xml_imports": []
+    },
+    {
+      "member": "VENDOR/lib64/libpowercore.so",
+      "module": "libpowercore",
+      "sha256": "0a63e1669f78c86ffcce4b055757d274b0c058c70363f7ca9fc99a8990862e29",
+      "source_sha256": "e62004040fdb190249e964ff7c7f9dfaa5bc31131a183d9e90fd6c6be33b3fad",
+      "xml_imports": [
+        "_ZN8tinyxml211XMLDocument5ParseEPKcm",
+        "_ZN8tinyxml211XMLDocument8LoadFileEPKc",
+        "_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE",
+        "_ZN8tinyxml211XMLDocumentD1Ev",
+        "_ZNK8tinyxml210XMLElement9AttributeEPKcS2_",
+        "_ZNK8tinyxml27XMLNode17FirstChildElementEPKc",
+        "_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc",
+        "_ZNK8tinyxml27XMLNode5ValueEv"
+      ]
+    },
+    {
+      "member": "VENDOR/lib64/libpsmoptfeature.so",
+      "module": "libpsmoptfeature",
+      "sha256": "4204c7459ccf1f2ebd30d51593db7cd8baf71988b8bb4d704d8b017542d89c32",
+      "source_sha256": "cd788bfa90b571adc6cb08fecc76d35ac25c8d558e8223e033c2b959b62615cf",
+      "xml_imports": []
+    },
+    {
+      "member": "VENDOR/lib64/libsnapdragoncolor-manager.so",
+      "module": "libsnapdragoncolor-manager",
+      "sha256": "47cac1ce0718c1d3193f8bd11a4be8571bec22ce94c737690b40e53ef7a88afd",
+      "source_sha256": "633f397cc6250ccb9563045dc5ffcd58d1438327b2f1d8658b6f11969d896d77",
+      "xml_imports": [
+        "_ZN8tinyxml211XMLDocument8LoadFileEPKc",
+        "_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE",
+        "_ZN8tinyxml211XMLDocumentD1Ev",
+        "_ZNK8tinyxml210XMLElement13QueryBoolTextEPb",
+        "_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj",
+        "_ZNK8tinyxml210XMLElement7GetTextEv",
+        "_ZNK8tinyxml211XMLDocument9ErrorNameEv",
+        "_ZNK8tinyxml27XMLNode17FirstChildElementEPKc",
+        "_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc",
+        "_ZNK8tinyxml27XMLNode5ValueEv"
+      ]
+    },
+    {
+      "member": "VENDOR/lib64/libstandbyfeature.so",
+      "module": "libstandbyfeature",
+      "sha256": "2951bf49050734f7eb30313ab9860e67c265615aae2456cd2c64138b216c1bac",
+      "source_sha256": "7ebaed79b774d990bf59969decb88d08784936f256d06da16dc442585661a3c8",
+      "xml_imports": []
+    },
+    {
+      "member": "VENDOR/lib64/libvendorscenariopoweroptfeature.so",
+      "module": "libvendorscenariopoweroptfeature",
+      "sha256": "3a8a3bfef4bef6a5b3ddd7b0747f2792fa076d8ac81955968d3d4ca7134efcc8",
+      "source_sha256": "72e7d76e3119a59dc4f8bcc00af1512c34c68e524c7c4b5a31688874ec6d586e",
+      "xml_imports": []
+    },
+    {
+      "member": "VENDOR/lib64/libvideooptfeature.so",
+      "module": "libvideooptfeature",
+      "sha256": "e8db72d18f6145a3e44d6db3db7c1329dc56dca5348e8525af39bcdfaf15def4",
+      "source_sha256": "8e06db6db40ae90b2f0ca775dcf53c3e70e080f209dd6c027afe32063a454210",
+      "xml_imports": []
+    },
+    {
+      "member": "VENDOR/bin/poweropt-service",
+      "module": "poweropt-service",
+      "sha256": "fa389826a9ea2ea986fb62cc82975d8548e82eb69a99b20f3a1fe380c3238588",
+      "source_sha256": "4dcf45389f07a56f577d96a23e3b6681d717ea8cc9e49ab7c04e64defdf7896c",
+      "xml_imports": []
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+--- a/payload_consumer/postinstall_runner_action.cc
++++ b/payload_consumer/postinstall_runner_action.cc
+@@ -183,6 +183,7 @@
+   EnsureUnmounted();
+ 
+ #ifdef __ANDROID__
++  bool backuptool_failed = false;
+ #if !defined(__ANDROID_RECOVERY__) && defined(RUN_BACKUPTOOL)
+   // Check the currently installed /system partition to see if it's ever
+   // been mounted R/W. If it has, we'll run backuptool scripts for it
+@@ -225,31 +226,39 @@
+     }
+     // Mount the target partition R/W
+     LOG(INFO) << "Running backuptool scripts";
+-    utils::MountFilesystem(mountable_device, fs_mount_dir_, MS_NOATIME | MS_NODEV | MS_NODIRATIME,
+-                           partition.filesystem_type, "seclabel");
+-
+-    // Switch to a permissive domain
++    if (!utils::MountFilesystem(mountable_device, fs_mount_dir_,
++                                MS_NOATIME | MS_NODEV | MS_NODIRATIME,
++                                partition.filesystem_type, "seclabel")) {
++      LOG(ERROR) << "Failed to mount target for backuptool";
++      utils::SetBlockDeviceReadOnly(mountable_device, true);
++      return false;
++    }
++
++    // The execution context applies to the child, not this process.
+     if (setexeccon("u:r:backuptool:s0")) {
+       LOG(ERROR) << "Failed to set backuptool context";
+-      return false;
+-    }
+-
+-    // Run backuptool script
+-    int ret = system("/postinstall/system/bin/backuptool_postinstall.sh");
+-    if (ret == -1 || WEXITSTATUS(ret) != 0) {
+-      LOG(ERROR) << "Backuptool postinstall step failed. ret=" << ret;
+-    }
+-
+-    // Switch back to update_engine domain
++      backuptool_failed = true;
++    } else {
++      int ret = system("/postinstall/system/bin/backuptool_postinstall.sh");
++      backuptool_failed = ret == -1 || !WIFEXITED(ret) || WEXITSTATUS(ret) != 0;
++      if (backuptool_failed) {
++        LOG(ERROR) << "Backuptool postinstall step failed. ret=" << ret;
++      }
++    }
++
++    // Clear the child context and restore the target even on a helper error.
+     if (setexeccon(nullptr)) {
+-      LOG(ERROR) << "Failed to set update_engine context";
+-      return false;
++      LOG(ERROR) << "Failed to clear backuptool context";
++      backuptool_failed = true;
++    }
++    if (!utils::UnmountFilesystem(fs_mount_dir_)) {
++      LOG(ERROR) << "Failed to unmount backuptool target";
++      backuptool_failed = true;
+     }
+   } else {
+     LOG(INFO) << "Skipping backuptool scripts";
+   }
+ 
+-  utils::UnmountFilesystem(fs_mount_dir_);
+ #endif  // !__ANDROID_RECOVERY__ && RUN_BACKUPTOOL
+ 
+   // In Chromium OS, the postinstall step is allowed to write to the block
+@@ -258,6 +267,10 @@
+ 
+   // Mark the block device as read-only before mounting for post-install.
+   if (!utils::SetBlockDeviceReadOnly(mountable_device, true)) {
++    return false;
++  }
++  if (backuptool_failed) {
++    LOG(ERROR) << "Backuptool failure stops OTA activation";
+     return false;
+   }
+ #endif  // __ANDROID__

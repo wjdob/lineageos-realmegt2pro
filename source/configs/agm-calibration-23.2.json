@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "namespace": "qti_agm",
+  "variable": "acdb_path",
+  "path": "/odm/etc/acdbdata",
+  "legacy_root": "/vendor/etc/acdbdata/",
+  "module": "libagm",
+  "module_source": "hardware/qcom-caf/sm8450/audio/agm/service",
+  "library_member": "VENDOR/lib64/libagm.so",
+  "graph_source": "hardware/qcom-caf/sm8450/audio/agm/service/src/graph.c",
+  "source_sha256": {
+    "hardware/qcom-caf/sm8450/audio/agm/service/Android.bp": "5db1be75e23261752df2cc809ab1a10f37af02e36099fcd6c29600f95d77b11e",
+    "hardware/qcom-caf/sm8450/audio/agm/service/src/graph.c": "309109754ff3e349ef43ecb6625e640045b0e07fad31d400b508e76fe4449169",
+    "device/realme/ferrari/device.mk": "59aa5153d91ece2fd9b7d38415f201e38af8ed48f8a9262536aa884a7d93c0cc"
+  },
+  "calibration_member": "ODM/etc/acdbdata/acdb_cal.acdb",
+  "calibration_sha256": "6d9a1a1f3d3a5e11d32b316638f4dfaf32d6ddd40d0e33f5022cc0685a31bb97",
+  "review": "Stock .1410 AGM has this flat ODM calibration file open. The same hash is already packaged from the pinned RMX3301 vendor input. Package-06 instead selected absent /vendor/etc/acdbdata/waipio_mtp and AGM exited repeatedly. Keep generic per-card/ARRAX behavior for products without this explicit override."
+}

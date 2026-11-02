@@ -1,0 +1,20 @@
+--- a/init/init_oplus.cpp
++++ b/init/init_oplus.cpp
+@@ -37,6 +37,17 @@ void vendor_load_properties() {
+     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
+     auto rf_version = std::stoi(GetProperty("ro.boot.rf_version", "0"));
+ 
++    // Ferrari's custom-image boot can omit vbmeta.device_state. Goodix then
++    // defaults to "locked" and cannot load this unlocked device's calibration.
++    // ORANGE is the bootloader's explicit UNLOCKED report; expose the same
++    // state before HAL startup. Preserve any supplied state and never infer
++    // unlocking from missing data.
++    if (prjname == 21631 &&
++        GetProperty("ro.boot.vbmeta.device_state", "").empty() &&
++        GetProperty("ro.boot.verifiedbootstate", "") == "orange") {
++        OverrideProperty("ro.boot.vbmeta.device_state", "unlocked");
++    }
++
+     switch (prjname) {
+         // lunaa
+         case 21603: // CN

@@ -1,0 +1,25 @@
+--- a/Android.bp
++++ b/Android.bp
+@@ -21995,22 +21995,6 @@
+ }
+ 
+ sh_binary {
+-    name: "init.kernel.post_boot-cape",
+-    owner: "oneplus",
+-    src: "proprietary/vendor/bin/init.kernel.post_boot-cape.sh",
+-    filename: "init.kernel.post_boot-cape.sh",
+-    soc_specific: true,
+-}
+-
+-sh_binary {
+-    name: "init.kernel.post_boot-taro",
+-    owner: "oneplus",
+-    src: "proprietary/vendor/bin/init.kernel.post_boot-taro.sh",
+-    filename: "init.kernel.post_boot-taro.sh",
+-    soc_specific: true,
+-}
+-
+-sh_binary {
+     name: "init.kernel.post_boot",
+     owner: "oneplus",
+     src: "proprietary/vendor/bin/init.kernel.post_boot.sh",

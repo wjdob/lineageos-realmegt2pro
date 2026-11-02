@@ -1,0 +1,51 @@
+--- a/Android.bp
++++ b/Android.bp
+@@ -287,6 +287,10 @@
+         "payload_consumer/block_extent_writer.cc",
+         "payload_consumer/snapshot_extent_writer.cc",
+         "payload_consumer/postinstall_runner_action.cc",
++        "common/realme_gnss/GnssNvbkPatch.cpp",
++        "common/realme_gnss/GnssNvbkMigration.cpp",
++        "common/realme_gnss/GnssNvbkPosix.cpp",
++        "common/realme_gnss/GnssNvbkUpdateEngine.cpp",
+         "payload_consumer/verified_source_fd.cc",
+         "payload_consumer/verity_writer_android.cc",
+         "payload_consumer/xz_extent_writer.cc",
+@@ -1329,6 +1333,10 @@
+     srcs: [
+         "payload_consumer/postinstall_runner_action_recovery_unittest.cc",
+         "payload_consumer/postinstall_runner_action.cc",
++        "common/realme_gnss/GnssNvbkPatch.cpp",
++        "common/realme_gnss/GnssNvbkMigration.cpp",
++        "common/realme_gnss/GnssNvbkPosix.cpp",
++        "common/realme_gnss/GnssNvbkUpdateEngine.cpp",
+         "common/subprocess.cc",
+         "common/test_utils.cc",
+         "common/utils.cc",
+--- a/payload_consumer/postinstall_runner_action.cc
++++ b/payload_consumer/postinstall_runner_action.cc
+@@ -15,6 +15,7 @@
+ //
+ 
+ #include "update_engine/payload_consumer/postinstall_runner_action.h"
++#include "update_engine/common/realme_gnss/GnssNvbkUpdateEngine.h"
+ 
+ #include <fcntl.h>
+ #include <signal.h>
+@@ -564,6 +565,16 @@
+     processor_->ActionComplete(this, error_code);
+   };
+   if (error_code == ErrorCode::kSuccess) {
++#ifdef __ANDROID__
++    // Device-specific, idempotent inactive NV migration. Run in the installer
++    // before activation, not in a postinstall child or a per-boot root script.
++    std::string gnss_error;
++    if (!MigrateRealmeGnssNvbk(boot_control_, install_plan_, &gnss_error)) {
++      LOG(ERROR) << "Realme GNSS NVBK migration failed: " << gnss_error;
++      error_code = ErrorCode::kPostinstallRunnerError;
++      return;
++    }
++#endif
+     if (install_plan_.switch_slot_on_reboot) {
+       if (!boot_control_->GetDynamicPartitionControl()->FinishUpdate(
+               install_plan_.powerwash_required) ||

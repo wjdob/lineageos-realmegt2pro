@@ -1,0 +1,286 @@
+--- a/Android.bp
++++ b/Android.bp
+@@ -53,8 +53,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -196,8 +196,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -661,8 +661,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -721,8 +721,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -844,8 +844,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -937,8 +937,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -997,8 +997,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -1058,8 +1058,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libchilog",
+                 "libcom.qti.chinodeutils",
+@@ -1148,8 +1148,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libcamxswispiqmodule",
+@@ -1209,8 +1209,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -1466,8 +1466,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamximageformatutils",
+                 "libchilog",
+@@ -1774,8 +1774,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libchilog",
+                 "libcom.qti.chinodeutils",
+@@ -5115,8 +5115,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libprotobuf-cpp-full-3.9.1-vendorcompat",
+                 "libqmi_common_so",
+@@ -5518,8 +5518,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libcamxfdengine",
+                 "libcamxhwnodecontext",
+@@ -6153,8 +6153,8 @@
+                 "libxml2",
+                 "android.frameworks.sensorservice@1.0",
+                 "libsensorndkbridge",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "libdisplayconfig.qti",
+                 "vendor.qti.hardware.display.config-V5-ndk",
+@@ -6769,7 +6769,7 @@
+                 "proprietary/vendor/lib64/libmidasserviceintf_aidl.so",
+             ],
+             shared_libs: [
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "android.frameworks.stats-V1-ndk",
+                 "libbinder_ndk",
+                 "libutils",
+@@ -7462,7 +7462,8 @@
+ }
+ 
+ cc_prebuilt_library_shared {
+-    name: "vendor.oplus.hardware.cameraextension-V1-ndk_platform",
++    name: "vendor.oplus.hardware.cameraextension-V1-ndk_platform_vendor",
++    stem: "vendor.oplus.hardware.cameraextension-V1-ndk_platform",
+     owner: "realme",
+     strip: {
+         none: true,
+@@ -11829,7 +11830,7 @@
+                 "vendor.qti.hardware.vpp@1.2",
+                 "libthirdcapability",
+                 "libcom.qti.chinodeutils",
+-                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
+                 "libmidasserviceintf_aidl",
+                 "vendor.oplus.hardware.cameraextension-V1-service-impl",
+                 "vendor.oplus.hardware.sendextcamcmd-V1-service-impl",
+@@ -12333,7 +12334,7 @@
+                 "proprietary/odm/lib64/libsecurity_event_dcs.so",
+             ],
+             shared_libs: [
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
++                "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
+                 "libbinder",
+                 "liblog",
+                 "libbase",
+@@ -12775,20 +12776,21 @@
+                 "libbinder_ndk",
+                 "libhwconfigurationutil",
+                 "libchilog",
+-                "vendor.oplus.hardware.cameraextension-V1-ndk_platform",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    prefer: true,
+-    device_specific: true,
+-}
+-
+-cc_prebuilt_library_shared {
+-    name: "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
++                "vendor.oplus.hardware.cameraextension-V1-ndk_platform_vendor",
++                "libc",
++                "libm",
++                "libdl",
++            ],
++        },
++    },
++    compile_multilib: "64",
++    prefer: true,
++    device_specific: true,
++}
++
++cc_prebuilt_library_shared {
++    name: "vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor",
++    stem: "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
+     owner: "realme",
+     strip: {
+         none: true,
+@@ -12813,7 +12815,8 @@
+ }
+ 
+ cc_prebuilt_library_shared {
+-    name: "vendor.oplus.hardware.commondcs-V1-ndk_platform",
++    name: "vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor",
++    stem: "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+     owner: "realme",
+     strip: {
+         none: true,
+@@ -12918,7 +12921,8 @@
+ }
+ 
+ cc_prebuilt_library_shared {
+-    name: "vendor.oplus.hardware.sendextcamcmd-V2-ndk",
++    name: "vendor.oplus.hardware.sendextcamcmd-V2-ndk_vendor",
++    stem: "vendor.oplus.hardware.sendextcamcmd-V2-ndk",
+     owner: "realme",
+     strip: {
+         none: true,
+--- a/ferrari-vendor.mk
++++ b/ferrari-vendor.mk
+@@ -1049,7 +1049,7 @@
+     libtfestriping \
+     libthreadutils \
+     libubifocus \
+-    vendor.oplus.hardware.cameraextension-V1-ndk_platform \
++    vendor.oplus.hardware.cameraextension-V1-ndk_platform_vendor \
+     vendor.oplus.hardware.cammidasservice@1.0 \
+     vendor.oplus.hardware.sendextcamcmd-V2-ndk_platform \
+     vendor.qti.hardware.camera.aon@1.0-service-impl \
+@@ -1241,11 +1241,11 @@
+     libtriplecam_video_optical_zoom \
+     libwatermark_photo \
+     vendor.oplus.hardware.cameraextension-V1-service-impl \
+-    vendor.oplus.hardware.cammidasservice-V1-ndk_platform \
+-    vendor.oplus.hardware.commondcs-V1-ndk_platform \
++    vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor \
++    vendor.oplus.hardware.commondcs-V1-ndk_platform_vendor \
+     vendor.oplus.hardware.orms@1.0 \
+     vendor.oplus.hardware.sendextcamcmd-V1-service-impl \
+-    vendor.oplus.hardware.sendextcamcmd-V2-ndk \
++    vendor.oplus.hardware.sendextcamcmd-V2-ndk_vendor \
+     vendor.qti.esepowermanager@1.0 \
+     vendor.qti.esepowermanager@1.1 \
+     libQnnHtpV69Skel \

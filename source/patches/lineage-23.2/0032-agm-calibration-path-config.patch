@@ -1,0 +1,32 @@
+diff --git a/service/Android.bp b/service/Android.bp
+--- a/service/Android.bp
++++ b/service/Android.bp
+@@ -1,3 +1,20 @@
++soong_config_module_type {
++    name: "agm_acdb_cc_defaults",
++    module_type: "cc_defaults",
++    config_namespace: "qti_agm",
++    value_variables: ["acdb_path"],
++    properties: ["cflags"],
++}
++
++agm_acdb_cc_defaults {
++    name: "agm_acdb_path_defaults",
++    soong_config_variables: {
++        acdb_path: {
++            cflags: ["-DAGM_ACDB_PATH=\"%s\""],
++        },
++    },
++}
++
+ cc_library_headers {
+     name: "libagm_headers",
+     vendor: true,
+@@ -7,6 +24,7 @@
+ cc_library_shared {
+     name: "libagm",
+     defaults: [
++        "agm_acdb_path_defaults",
+         "android_hardware_qtiaudio_config_defaults",
+         "qtiaudio_dynamic_log_defaults",
+     ],

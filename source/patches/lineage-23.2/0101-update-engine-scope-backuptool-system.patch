@@ -1,0 +1,43 @@
+--- a/payload_consumer/postinstall_runner_action.cc
++++ b/payload_consumer/postinstall_runner_action.cc
+@@ -204,8 +204,16 @@
+ 
+   string source_path;
+ 
+-  if (install_plan_.source_slot != BootControlInterface::kInvalidSlot) {
+-    boot_control_->GetPartitionDevice(partition.name, install_plan_.source_slot, &source_path);
++  // Only the system ext4 source can own these add-on hooks. Other partitions
++  // (notably EROFS vendor) do not have an ext4 mount counter at this offset.
++  if (partition.name == "system" && partition.filesystem_type == "ext4" &&
++      install_plan_.source_slot != BootControlInterface::kInvalidSlot) {
++    if (!boot_control_->GetPartitionDevice(
++            partition.name, install_plan_.source_slot, &source_path) ||
++        source_path.empty()) {
++      LOG(ERROR) << "Failed to resolve source system for backuptool";
++      return false;
++    }
+   }
+ 
+   uint16_t mount_count = 0;
+@@ -213,8 +221,19 @@
+   if (!source_path.empty()) {
+     brillo::Blob chunk;
+ 
+-    utils::ReadFileChunk(source_path, 0x400 + 0x34, sizeof(uint16_t), &chunk);
+-    mount_count = *reinterpret_cast<uint16_t*>(chunk.data());
++    // Read mount count, maximum mount count and the ext4 magic together.
++    // Fail on unreadable/truncated state rather than losing selected add-ons.
++    if (!utils::ReadFileChunk(source_path, 0x400 + 0x34, 6, &chunk) ||
++        chunk.size() != 6) {
++      LOG(ERROR) << "Failed to read source superblock for backuptool";
++      return false;
++    }
++    if (chunk[4] == 0x53 && chunk[5] == 0xef) {
++      mount_count = static_cast<uint16_t>(
++          chunk[0] | (static_cast<uint16_t>(chunk[1]) << 8));
++    } else {
++      LOG(INFO) << "Non-ext4 source has no ext4 backuptool mount counter";
++    }
+   }
+ 
+   LOG(INFO) << source_path << " has been mounted R/W " << mount_count << " times.";

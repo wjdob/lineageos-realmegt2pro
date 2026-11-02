@@ -1,0 +1,143 @@
+{
+  "schema": 1,
+  "tag": "lineage-23.2-rmx3301-20a-20261102",
+  "channel": "beta",
+  "published_date": "2026-11-02",
+  "device": "RMX3301",
+  "project": "21631",
+  "rom": "Package-20a",
+  "lineageos": "23.2",
+  "android": "16",
+  "api": 36,
+  "target_release": "bp4a",
+  "kernel": "5.10.246-gki-g914935583f0c",
+  "kernel_config_sha256": "e72ce945996b9ca426974f11bde2fa4ca13477b659ad4649f4640ec629a5e2dc",
+  "platform_security_patch": "2026-10-01",
+  "vendor_security_patch": "2025-05-01",
+  "tested_stock": "TW RMX3301_15.0.0.1410(EX01)",
+  "camera": "15",
+  "gallery": "14",
+  "rom_source_commit": "60ac15ad78a2abbbadb0cf1715079efc184732de",
+  "source_manifest_sha256": "cd151cc92bb023019ab272ca6774bba0302903626e95729de346ec461c972cbd",
+  "recipe_sha256": "8e17f21409ab74d544a1907c374aa3be7023720d8925b18310b2fc00a67bc6ae",
+  "rom_incremental": "RMX3301.1793582271.de7e0ffca5c0",
+  "os_payload_partitions": [
+    "boot",
+    "dtbo",
+    "odm",
+    "product",
+    "recovery",
+    "system",
+    "system_ext",
+    "vbmeta",
+    "vbmeta_system",
+    "vbmeta_vendor",
+    "vendor",
+    "vendor_boot",
+    "vendor_dlkm"
+  ],
+  "additional_install_effects": "Guarded inactive-slot oplusstanvbk GNSS migration; live packaged migration/return execution remains unvalidated.",
+  "support_images": {
+    "boot.img": {
+      "bytes": 201326592,
+      "sha256": "d3d671cb37f1b20c4dd17e776e71c253cc89a48ef73cfa768e16e373d50c53fc"
+    },
+    "dtbo.img": {
+      "bytes": 25165824,
+      "sha256": "e399a38756bcad5a1dcfbf5e553b15283cce2f08ea12600d9ceb0a2e0b2d5a36"
+    },
+    "vendor_boot.img": {
+      "bytes": 201326592,
+      "sha256": "4627f96ee8a09ae74cbc1fabe25d45a7628f9f092f73957cf59183f1c32794f5"
+    },
+    "recovery.img": {
+      "bytes": 104857600,
+      "sha256": "4558c7d0bd16fc01f00bba472ba87639e94310916fca97547ce365f242de864e"
+    },
+    "vbmeta.img": {
+      "bytes": 12288,
+      "sha256": "2cee1998bb42cd0302cb5ff489758634b4466d8eeb76076e275c0653ae14d3de"
+    },
+    "vbmeta_system.img": {
+      "bytes": 4096,
+      "sha256": "fd8c1c10a1c6cc0b7c3c0d42011e352c25cdc55b0a5ebd77251c86d81fd3d06c"
+    },
+    "vbmeta_vendor.img": {
+      "bytes": 4096,
+      "sha256": "6f5790130b4b2a30d7bc28a2d3d687eccd644eab776c210999cfa5190f90f3c1"
+    }
+  },
+  "validation": "Development-phone combined-profile same-key update and selected daily-use checks; diagnostic boot used for live acceptance. Standard downloaded boot has separate live acceptance pending.",
+  "assets": [
+    {
+      "name": "lineage-23.2-RMX3301-package20a.zip",
+      "type": "rom",
+      "bytes": 2121982543,
+      "sha256": "37cb9379fdf750a7623794d6e1ef12190d4e42e0b5ba91e46985067b959ca446",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/lineage-23.2-RMX3301-package20a.zip"
+    },
+    {
+      "name": "realme-camera-23.2-beta15-check.zip",
+      "type": "camera",
+      "bytes": 121464,
+      "sha256": "1b5280cd2b44216be45a55e8abdeeb2ff88a606b4370a71902cc6644d06440d0",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-camera-23.2-beta15-check.zip"
+    },
+    {
+      "name": "realme-camera-23.2-beta15-install.zip",
+      "type": "camera",
+      "bytes": 186188591,
+      "sha256": "c229c18aebe5ea105cb698222e8f4cb67dfad67bc10781ea96e1444e79a522f7",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-camera-23.2-beta15-install.zip"
+    },
+    {
+      "name": "realme-camera-23.2-beta15-remove.zip",
+      "type": "camera",
+      "bytes": 104618,
+      "sha256": "791daebf6ce9329fa4a29c6a9738303e6fa3062867b905779d1df6d20de90f06",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-camera-23.2-beta15-remove.zip"
+    },
+    {
+      "name": "realme-photos-23.2-alpha14-check.zip",
+      "type": "gallery",
+      "bytes": 101339,
+      "sha256": "316749d192d4fbfe4d9083c4c808925554e9eefe6f5342500bf98e8783340648",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-photos-23.2-alpha14-check.zip"
+    },
+    {
+      "name": "realme-photos-23.2-alpha14-install.zip",
+      "type": "gallery",
+      "bytes": 222745709,
+      "sha256": "c142d78bd304e80b96d70850b1f92a75e553c1c7c00ed818f3b85255198a1c82",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-photos-23.2-alpha14-install.zip"
+    },
+    {
+      "name": "realme-photos-23.2-alpha14-remove.zip",
+      "type": "gallery",
+      "bytes": 75320,
+      "sha256": "03b79b8ae3186d6d13229a71b127108e120aacf04a7f30044d58e2480c46aff2",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-photos-23.2-alpha14-remove.zip"
+    },
+    {
+      "name": "recovery-support-RMX3301-package20a.zip",
+      "type": "recovery-support",
+      "bytes": 56874187,
+      "sha256": "1bd52e20925802ee1d9a7cf05ac3362dd65f204ee59256b6c3e292f6d898bcd7",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/recovery-support-RMX3301-package20a.zip"
+    },
+    {
+      "name": "recovery-RMX3301-package20a.img",
+      "type": "recovery",
+      "bytes": 104857600,
+      "sha256": "4558c7d0bd16fc01f00bba472ba87639e94310916fca97547ce365f242de864e",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/recovery-RMX3301-package20a.img"
+    },
+    {
+      "name": "kernel-source-RMX3301-package20a.tar.gz",
+      "type": "kernel-source",
+      "bytes": 254390060,
+      "sha256": "2f3246ec653bd19e5edb918aa09f7b55afc936f0a7c31c3208c7dccedb0abcdd",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/kernel-source-RMX3301-package20a.tar.gz"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+--- a/prebuilt/common/bin/backuptool_ab.sh
++++ b/prebuilt/common/bin/backuptool_ab.sh
+@@ -27,7 +27,7 @@
+ preserve_addon_d() {
+   if [ -d /system/addon.d/ ]; then
+     mkdir -p /postinstall/tmp/addon.d/
+-    cp -a /system/addon.d/* /postinstall/tmp/addon.d/
++    cp -a /system/addon.d/* /postinstall/tmp/addon.d/ || return $?
+ 
+     # Discard any version 1 script, as it is not compatible with a/b
+     for f in /postinstall/tmp/addon.d/*sh; do
+@@ -44,7 +44,7 @@
+ restore_addon_d() {
+   if [ -d /postinstall/tmp/addon.d/ ]; then
+     mkdir -p /postinstall/system/addon.d/
+-    cp -a /postinstall/tmp/addon.d/* /postinstall/system/addon.d/
++    cp -a /postinstall/tmp/addon.d/* /postinstall/system/addon.d/ || return $?
+     rm -rf /postinstall/tmp/addon.d/
+   fi
+ }
+@@ -82,9 +82,9 @@
+ 
+     for stage in $@; do
+       if [ $v -ge 3 ]; then
+-        $script $stage
++        "$script" "$stage" || return $?
+       else
+-        ADDOND_VERSION=2 $script $stage
++        ADDOND_VERSION=2 "$script" "$stage" || return $?
+       fi
+     done
+   done
+@@ -175,8 +175,16 @@
+   backup)
+     if check_prereq; then
+       mkdir -p $C
+-      preserve_addon_d
+-      run_stages pre-backup backup post-backup
++      preserve_addon_d || {
++        stage_result=$?
++        cleanup
++        exit "$stage_result"
++      }
++      run_stages pre-backup backup post-backup || {
++        stage_result=$?
++        cleanup
++        exit "$stage_result"
++      }
+       umount_extra $all_V3_partitions
+     else
+       cleanup
+@@ -184,8 +192,16 @@
+   ;;
+   restore)
+     if check_prereq; then
+-      run_stages pre-restore restore post-restore
+-      restore_addon_d
++      run_stages pre-restore restore post-restore || {
++        stage_result=$?
++        cleanup
++        exit "$stage_result"
++      }
++      restore_addon_d || {
++        stage_result=$?
++        cleanup
++        exit "$stage_result"
++      }
+       cleanup
+       sync
+     else
+--- a/prebuilt/common/bin/backuptool_postinstall.sh
++++ b/prebuilt/common/bin/backuptool_postinstall.sh
+@@ -2,6 +2,8 @@
+ #
+ # LineageOS A/B OTA Postinstall Script
+ #
++
++set -e
+ 
+ /postinstall/system/bin/backuptool_ab.sh backup
+ /postinstall/system/bin/backuptool_ab.sh restore

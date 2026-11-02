@@ -1,0 +1,7 @@
+*.img
+*.zip
+*.apk
+*.pk8
+*.tar.gz
+__pycache__/
+backups/

@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "source_files": {
+    "system/update_engine/payload_consumer/postinstall_runner_action.cc": "2efa9b511ce5c7070289f70bfbc07b6031171beb54085b1a8b07bf0d73ce6f51",
+    "system/update_engine/Android.bp": "84af0ec8784a2f5b35951c6b0861fa8a7fbf9f2f8a20fee4569206bb31ddd459",
+    "system/update_engine/common/realme_gnss/GnssNvbkMigration.cpp": "87ad78ec99b4925d59d9835c658e969f7714b3a5837db8f257dea1840aebaf29",
+    "system/update_engine/common/realme_gnss/GnssNvbkMigration.h": "53340ec2de265166aa816d5b4a57fccffcf13a8c38592cf43b57fc4245b3276a",
+    "system/update_engine/common/realme_gnss/GnssNvbkPatch.cpp": "9f5d7c1ebc5a1924ced8e51df00571b2986bfd71bba8800aca8c9c3d8cc8b978",
+    "system/update_engine/common/realme_gnss/GnssNvbkPatch.h": "e19c3f221f3b67d6f1762f81ae023a18798b5d624e5b44136d887558c4a7e231",
+    "system/update_engine/common/realme_gnss/GnssNvbkPosix.cpp": "074a84bacd5613d457b27bb4dd56aba9f7d6d4dd8b0ecd57503a0532c6973e75",
+    "system/update_engine/common/realme_gnss/GnssNvbkPosix.h": "cc8dddadf4b50c017a1ad8bf08c41f2faff127f0895a81a607ece397eb3d31d9",
+    "system/update_engine/common/realme_gnss/GnssNvbkUpdateEngine.cpp": "5f62947a28f12849eaa488d41974118e2bfd90b1f2cdbf612391585c56a6c8f3",
+    "system/update_engine/common/realme_gnss/GnssNvbkUpdateEngine.h": "3cb12f47d9c6eb9c92d7672b3d5fd0ce91d11be788b66211009365f2a5705c72",
+    "device/realme/ferrari/BoardConfig.mk": "b84aa78c1a4873de86783adac2c666be872431efca697fe7ed2b88bfc2335b72"
+  },
+  "engine_members": [
+    "SYSTEM/bin/update_engine",
+    "RECOVERY/RAMDISK/system/bin/update_engine_sideload"
+  ],
+  "engine_markers": [
+    "Realme GNSS NVBK migration applied to inactive slot",
+    "Realme GNSS NVBK migration already enabled in inactive slot",
+    "Realme GNSS NVBK migration failed:"
+  ],
+  "unchanged_policy_members": {
+    "ODM/etc/selinux/odm_sepolicy.cil": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ODM/etc/selinux/precompiled_sepolicy": "06fa69762ccb66d7003462b6e14b9406ef29d403dfd948ee88fb0530bc5213a7",
+    "PRODUCT/etc/selinux/mapping/202504.cil": "934bb77bba43f8dfe26c7eabb1498adb5a5656992d1c35fba815b62128a0b263",
+    "PRODUCT/etc/selinux/product_mac_permissions.xml": "9fc6e3bc49b67055ec3e2059f5fce7c7e5b72069697d82f963aec4dd2d61fcf0",
+    "PRODUCT/etc/selinux/product_seapp_contexts": "2fd04f9d730e073a00621765150741958e02e9ba6a4aa4079d3ac68908aadbf0",
+    "PRODUCT/etc/selinux/product_sepolicy.cil": "15b7c5d8ec647cd0215288ec5babc41a6877a99db30d96cd8ea154861bc90ecd",
+    "PRODUCT/etc/selinux/product_sepolicy_and_mapping.sha256": "009d10a4c32db36eb7d5f77ea6e6b1b10878ab1c4f2c3fe75cd754c7691112e1",
+    "RECOVERY/RAMDISK/sepolicy": "d625470225872413bfa3aba67b63ced12efc5a8dffe814996854d13f62402d5e",
+    "SYSTEM/etc/selinux/mapping/202504.cil": "a98f4b8479aa64e7d2b5a4146e6edc89fc50d62c80d37200258ff719dfced03b",
+    "SYSTEM/etc/selinux/plat_sepolicy.cil": "abdb865ef33ed6ec924c6ceef87a31be0d905c79326679924cfb2678a1b0e589",
+    "SYSTEM/etc/selinux/plat_sepolicy_genfs_202504.cil": "480d503e7730236b659230d16b3946b628394d529dabfef67c679281fd98357b",
+    "SYSTEM_EXT/etc/selinux/mapping/202504.cil": "1be72cd527d5ddb85faa9fa5fe0845509cbaf60f5bd60f411f3a90aed3fa312c",
+    "SYSTEM_EXT/etc/selinux/system_ext_sepolicy.cil": "4297a905654e4ac8bb69044b9d7a02107406cbdef5ca62d26a213de3876a99e4",
+    "VENDOR/etc/selinux/plat_pub_versioned.cil": "92e0b6546adac2d8a9d51a1f21a6ae180e36b9fc71aaca6e1d957655d40d2e88",
+    "VENDOR/etc/selinux/vendor_sepolicy.cil": "33ee7a3f8e522240209ed23ca8269db17c22ee1bb394e7042bf958a8ee83ce84"
+  },
+  "baseline_target_files_sha256": "e166e6b1cd6ab528250e6e4c048739b746bd8a3da557b71d20f8938b4216937a",
+  "limits": "Staged device-specific installer migration, outside the unchanged13-partition OS payload. No unit NV image is shipped. Exact source, compiled markers and unchanged optional-profile policy inputs are prerequisites, not recovery/install/update/restore acceptance."
+}
