@@ -32,7 +32,7 @@ Same-key updates retained encrypted data and the selected Google/Camera/Photos a
 ## Quick start
 
 1. Read [Install](INSTALL.md), including backups, FRP and the data wipe.
-2. Download the full OTA and matching recovery-support ZIP from [Releases](https://github.com/wjdob/lineageos-realmegt2pro/releases/latest). Verify `SHA256SUMS`.
+2. Download the full OTA and matching recovery-support ZIP from [the beta release](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-23.2-rmx3301-20a-20261102). Verify `SHA256SUMS`.
 3. With an **already unlocked bootloader**, install the matching recovery/support images, then sideload the ROM. A first installation from stock requires **Format data**.
 4. If wanted, install Android 16 ARM64 MindTheGapps in the new recovery **before the first Android boot**.
 5. Finish Android setup and let the OTA merge complete. Camera15 and Gallery14 can then be installed separately through recovery's **Apply update → Apply from ADB**. Their installers handle checks and updates. An app-only installation needs no data wipe.
