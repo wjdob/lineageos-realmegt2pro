@@ -11,7 +11,7 @@ This beta targets RMX3301 / project 21631 with compatible Android 15 firmware. R
 - Keep your own calibration, EFS and protected-state backups private. Treat them as recovery references. Restoring old FRP/EFS data during an ordinary ROM install can damage pairing or radio state.
 - Download this release's full OTA, recovery-support ZIP and any selected add-ons. Check the published hashes. A first stock-to-Lineage installation **erases internal storage**.
 
-The OS payload contains 13 OS partitions. Package-20a also contains a separately guarded inactive-slot GNSS NV migration; its live installer execution remains unvalidated. Details are in [release notes](RELEASE_NOTES.md#gnss).
+The OS payload contains 13 OS partitions. Package-23b also contains a separately guarded inactive-slot GNSS NV migration; the already-enabled normal-OTA path is validated; changed-target/inverse/refusal paths need further testing. Details are in [release notes](RELEASE_NOTES.md#gnss).
 
 ## FRP and screen locks
 
@@ -21,7 +21,7 @@ Factory Reset Protection can request the previous credential or Google account a
 
 ## First installation
 
-1. Extract `recovery-support-RMX3301-package20a.zip`. Verify the extracted images against its own `SHA256SUMS`.
+1. Extract `recovery-support-RMX3301-package23b.zip`. Verify the extracted images against its own `SHA256SUMS`.
 2. With USB debugging authorized in Android, check:
 
    ```sh
@@ -52,7 +52,7 @@ Factory Reset Protection can request the previous credential or Google account a
 5. Choose **Apply update → Apply from ADB**, then send the full ROM:
 
    ```sh
-   adb sideload lineage-23.2-RMX3301-package20a.zip
+   adb sideload lineage-23.2-RMX3301-package23b.zip
    ```
 
    Wait for recovery to report successful installation. The PC stopping near 47% can be normal; use recovery's result.
@@ -61,13 +61,13 @@ Factory Reset Protection can request the previous credential or Google account a
 
 ## Optional Camera and Gallery
 
-Each package works as a separate choice on the declared compatible baseline. Use the Camera15/Gallery14 pair listed in this release. Existing supported versions use the same install ZIP for an update.
+Each package works as a separate choice on the declared compatible baseline. Use the Camera15/Gallery15 pair listed in this release. Existing supported versions use the same install ZIP for an update.
 
 After the ROM's first boot and completed merge, enter recovery with `adb reboot recovery`. Leave system unmounted. Choose **Apply update → Apply from ADB** for each selected package:
 
 ```sh
 adb sideload realme-camera-23.2-beta15-install.zip
-adb sideload realme-photos-23.2-alpha14-install.zip
+adb sideload realme-photos-23.2-alpha15-install.zip
 ```
 
 Select **Apply from ADB again between commands**. After the first package, choose **No** if asked to reboot recovery for more packages; both app packages can use one session. Reboot Android after successful results. Each installer checks the device/runtime, recognized old files, available space and shared ownership before applying its files.
@@ -78,10 +78,14 @@ The matching `check.zip` performs a package check. The matching `remove.zip` rem
 
 Use the same signing lineage and follow the next release's compatibility notes. Install a local full OTA through **Settings → System → Updater → Local update**, then reboot when installation finishes. Routine same-profile updates preserve data and use add-on retention hooks for installed Google/Camera/Gallery packages.
 
-Keep the selected apps installed during a routine OTA. The tested combined profile retained their identities, settings and Google session through 19d and 20a. Adding Google apps to an already-used Google-free installation requires a fresh setup. Removing an add-on is a separate, deliberate operation.
+For routine updates, keep one verified known-good backup set and refresh a rotating set when changed state requires it. A new full backup is useful for major migrations or insufficient restore coverage.
+
+20a's Camera15/Gallery14 pair passes offline compatibility checks against 23b; the current pair also passes checks against 20a. The direct 20a-to-23b jump has not had a separate live test. Keep the existing pair installed for the OTA, wait for a completed merge, then use the current Camera15/Gallery15 installers for app updates. If a preflight refuses, preserve the error and existing installation for review.
+
+Keep the selected apps installed during a routine OTA. The tested combined profile retained their identities, settings and Google session through the tested 22 to 23b update. Adding Google apps to an already-used Google-free installation requires a fresh setup. Removing an add-on is a separate, deliberate operation.
 
 ## Returning to stock
 
 Use a complete stock OS set for your exact phone and partition layout, or your own verified pre-install images. Restore matching `super` and the slot's seven OS support images using their correct normal-fastboot/fastbootd routes. A stock recovery data format may be needed before stock Android can boot.
 
-Keep the bootloader unlocked. Preserve bootloader/TEE firmware, calibration, EFS, FRP and unlock state. A saved protected-state image is not a routine restore target. Slot switching after a completed OTA is not a complete stock return. Stop if the package changes firmware, rolls back incompatible security state or asks to relock. Historical .1410 returns passed on the development phone; the Package-20a inverse path remains untested.
+Keep the bootloader unlocked. Preserve bootloader/TEE firmware, calibration, EFS, FRP and unlock state. A saved protected-state image is not a routine restore target. Slot switching after a completed OTA is not a complete stock return. Stop if the package changes firmware, rolls back incompatible security state or asks to relock. Historical .1410 returns passed on the development phone; the Package-23b inverse path remains untested.

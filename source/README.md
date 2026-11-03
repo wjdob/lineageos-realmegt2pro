@@ -1,7 +1,7 @@
 # Source kit
 
-The manifest, recipe and patches describe Package-20a. The compatibility tools/configs describe the accepted Camera15/Gallery14 ports. PROVENANCE.json records their input hashes and original checkpoints.
+The manifest, recipe, patches and templates describe Package-23b. Compatibility sources/configs describe Camera15/Gallery15. PROVENANCE.json records the original snapshot and file hashes. Historical status strings in frozen source contracts describe their build-time state; current acceptance is in the release notes.
 
-Proprietary input bytes and private keys stay outside this source kit. The recipe's omitted `.local/build-inputs/ferrari-filter/libmsnativefilter.so` is extracted from the owner's matching stock set and checked against its recorded hash. This source reference is part of the ROM input contract.
+Proprietary inputs and private keys are supplied separately. The recipe's omitted `.local/build-inputs/ferrari-filter/libmsnativefilter.so` comes from matching stock firmware and is checked against the recorded hash.
 
-Use the top-level SOURCES.md for kernel source, toolchain pins and attribution, and INSTALL.md for installation. This source kit is a reviewable release snapshot; adapting its build helpers to a new build host requires the corresponding Android checkout and proprietary inputs.
+See [Sources](../SOURCES.md) for kernel/toolchain pins and attribution, and [Install](../INSTALL.md) for installation. Rebuilding requires the Android checkout, proprietary inputs and host configuration.

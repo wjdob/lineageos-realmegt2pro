@@ -1,0 +1,12 @@
+--- a/device.mk
++++ b/device.mk
+@@ -45,7 +45,8 @@
+     android.hardware.biometrics.fingerprint@2.3-service.oplus
+ 
+ PRODUCT_COPY_FILES += \
+-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
++    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
++    $(LOCAL_PATH)/init/init.ferrari.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ferrari.fingerprint.rc
+ 
+ $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
+ 

@@ -1,31 +1,31 @@
-# Package-20a beta
+# Package-23b beta
 
-Baseline: **Package-20a + optional Camera15 + optional Gallery14**, dated 2026-11-02. The full OTA contains the earlier battery, fingerprint, display, camera-platform and update fixes. Install the full OTA directly.
+**Package-23b + optional Camera15 + optional Gallery15**, release date 2026-11-03. This full OTA includes the earlier battery, calibration, display, GNSS and camera-platform fixes.
 
-## Confirmed on the development phone
+## Changes since 20a
 
-- Same-key 19d → 20a update, completed merge, encrypted data, existing PIN and fingerprint.
-- Retained Google session, app download/update/open, Camera/Photos identities and all 38 captured preferences.
-- Camera capture/newest-media handoff, Photos Markup/Save copy and the dimming-interruption correction after the OTA.
-- Camera15/Gallery14's earlier mode and editor checks listed in the README. The full mode matrix was not repeated after every OTA.
+- Match both Qualcomm Codec2 launchers to the provider's 288-byte allocation ABI; retain the narrow audio crash-report syscall fix.
+- Restore fingerprint framework state after HAL death and restart its OEM companion through a device-specific init dependency.
+- Reload the notification-header guideline correctly when switching resolution and align lock-screen carrier font padding.
+- Gallery15 supplies Share labels and image-specific MIME handling, including privacy/format conversion.
 
-The standard boot in the OTA/support archive passed startup, encrypted-data access, PIN/fingerprint, normal ADB authorization and brief Camera/Photos/Play Store checks on 2026-11-02. Longer daily-use checks used the owner's diagnostic boot. This beta has one primary test device.
+## Tested
+
+The development phone completed a same-key, no-wipe 22/A to 23b/B update using the standard shipped boot. Recovery/firmware checks, encrypted data, PIN/fingerprint, Google session/app installation, video/audio, Camera JPEG/HEIC10-bit OFF/ON/video/thumbnail, Photos Markup/Remover and High/Max alignment passed. All 38 captured app preferences were retained. Captured codec startup/crash checks and dimming-interruption checks passed.
+
+Idle fingerprint-service recovery passed in 6.3 seconds. During active recovery, the original empty-queue test timed out while cleanup waited behind fresh authentication. Cleanup then completed and PIN/fingerprint worked without repair. A brief reconnect retry burst remains tracked.
 
 ## GNSS
 
-Rapper_skull's Realme L5 research identifies the stock GNSS configuration. This project adds exact-layout validation, whole-image preservation, durable backup/readback and an inactive-slot installer migration. No personal NV image is distributed.
+Earlier 20a/B outdoor testing received fresh fixes and GPS L5/Galileo E5a signals. The packaged migration's already-enabled path now runs successfully through normal OTA updates, preserving both NV images. A changed-target write, inverse return and live refusal/failure paths still need validation. The installer can refuse other layouts. Preserve your own NV backups and report an error before changing firmware.
 
-The development phone's two slots were enabled through separately checked field trials. Outdoor testing on 20a/B now confirms fresh positioning and GPS L5/Galileo E5a reception, with up to four secondary signals used in fixes. The bounded test recorded 110 fresh location updates. Navigation accuracy and power use still need broader testing.
+## Remaining limits
 
-The packaged migration is compiled into normal/recovery update engines and has host checks. Its first live installer execution, failure handling and inverse return remain unvalidated. Other reviewed-layout mismatches stop installation. Keep both NV backups and report the exact error if this happens; leave firmware unchanged.
+- A brief HIDL user-start retry burst during deliberate fingerprint HAL recovery; enrollment hints need broader observation.
+- Gallery private-photo locking requires its missing OEM privacy backend.
+- Independent plain/Google-only/Camera-only/Gallery-only update profiles need live coverage. Their package prerequisites pass offline checks.
+- The older bundled Wellbeing version's direct-boot behavior remains separate from the working Play-updated app.
+- NFC tags, every camera mode, navigation accuracy and full power behavior need broader testing.
+- Remover downloads models from OEM services; filtering can block `fourier-videoclip-sg.allawnos.com` or `videoclipfsg.coloros.com`.
 
-## Known limits
-
-- Occasional Codec2 startup abort with service recovery; ordinary video/sound playback passed.
-- Gallery private-photo locking is unavailable because its OEM authentication/storage backend is absent.
-- Some Share targets have missing names or duplicate Google Wallet entries.
-- A small lock-screen status-row offset and fingerprint enrollment hints remain under observation.
-- NFC tags, every camera mode, independent add-on OTA profiles and full battery/power behavior need broader testing.
-- Remover depends on the OEM model service. Network filtering can block `fourier-videoclip-sg.allawnos.com` and `videoclipfsg.coloros.com`.
-
-The release preserves Android's permission controls and SELinux Enforcing. Magisk/KernelSU remain user-managed and have no acceptance claim in this baseline. Report problems through the matching issue form.
+Magisk and KernelSU remain user-managed, with separate compatibility work required. See [open issues](https://github.com/wjdob/lineageos-realmegt2pro/issues) before reporting a problem.

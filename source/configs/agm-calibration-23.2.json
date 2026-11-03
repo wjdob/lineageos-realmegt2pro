@@ -11,7 +11,7 @@
   "source_sha256": {
     "hardware/qcom-caf/sm8450/audio/agm/service/Android.bp": "5db1be75e23261752df2cc809ab1a10f37af02e36099fcd6c29600f95d77b11e",
     "hardware/qcom-caf/sm8450/audio/agm/service/src/graph.c": "309109754ff3e349ef43ecb6625e640045b0e07fad31d400b508e76fe4449169",
-    "device/realme/ferrari/device.mk": "59aa5153d91ece2fd9b7d38415f201e38af8ed48f8a9262536aa884a7d93c0cc"
+    "device/realme/ferrari/device.mk": "62e8856771b5aedadd4bd1a14f02846843ce35940c12358e636e7d00ccc65df3"
   },
   "calibration_member": "ODM/etc/acdbdata/acdb_cal.acdb",
   "calibration_sha256": "6d9a1a1f3d3a5e11d32b316638f4dfaf32d6ddd40d0e33f5022cc0685a31bb97",

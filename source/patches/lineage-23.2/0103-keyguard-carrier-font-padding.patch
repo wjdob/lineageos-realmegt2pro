@@ -1,0 +1,10 @@
+--- a/packages/SystemUI/res/layout/keyguard_status_bar.xml
++++ b/packages/SystemUI/res/layout/keyguard_status_bar.xml
+@@ -84,6 +84,7 @@
+         android:ellipsize="marquee"
+         android:textDirection="locale"
+         android:textAppearance="@style/TextAppearance.StatusBar.Default"
++        android:includeFontPadding="false"
+         android:textColor="?attr/wallpaperTextColorSecondary"
+         android:singleLine="true"
+         systemui:showMissingSim="true"

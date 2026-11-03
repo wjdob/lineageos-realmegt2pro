@@ -1,20 +1,20 @@
 # Sources
 
-Package-20a uses the pinned [23.2 manifest](source/manifests/lineage-23.2-candidate.xml), [source recipe](source/tools/build/recipe-23.2.json) and published patches. The original ROM source checkpoint is `60ac15ad78a2abbbadb0cf1715079efc184732de`. The public source kit has its own clean history; [provenance](source/PROVENANCE.json) records each exported file.
+Package-23b uses the pinned [manifest](source/manifests/lineage-23.2-candidate.xml), [recipe](source/tools/build/recipe-23.2.json) and published patches. Its engineering source checkpoint is `6dbf8f1e4c7ffb3b60acfdb218008242d9bce458`. The public source kit has its own history; [provenance](source/PROVENANCE.json) binds exported files to that snapshot.
 
 ## Kernel
 
 Linux **5.10.246-gki-g914935583f0c** comes from pjgowtham's SM8450 work:
 
-| Source | Exact revision |
+| Tree | Exact revision |
 | --- | --- |
 | [Kernel](https://github.com/pjgowtham/android_kernel_oneplus_sm8450/tree/914935583f0ce199114a4a1f31178ab25a3a052d) | `914935583f0ce199114a4a1f31178ab25a3a052d` |
 | [Device trees](https://github.com/pjgowtham/android_kernel_oneplus_sm8450-devicetrees/tree/d8f3eb3fe8f98facd9669aa97d1247f6580e1e58) | `d8f3eb3fe8f98facd9669aa97d1247f6580e1e58` |
 | [Modules](https://github.com/pjgowtham/android_kernel_oneplus_sm8450-modules/tree/ca1104519fcb7e769129e75458a9da4833bcc751) | `ca1104519fcb7e769129e75458a9da4833bcc751` |
 
-Download `kernel-source-RMX3301-package20a.tar.gz` from this release. It contains those three source trees, their licenses, the applied ferrari trusted-application memory overlay, and `release/kernel_configs.txt` / `kernel_version.txt` taken from the built target-files archive. Compare the overlay with patch 0035 and its hashes in the recipe. The kernel and module trees have no project modifications in this build.
+Download [kernel-source-RMX3301-package23b.tar.gz](https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/kernel-source-RMX3301-package23b.tar.gz). It contains all three source trees, upstream licenses, the applied ferrari trusted-app memory overlay and the built `release/kernel_configs.txt` / `kernel_version.txt`. The kernel and module trees have no local modifications; the device-tree change is patch 0035 in the recipe. Kernel pins/configuration match 20a.
 
-To inspect the original kernel history:
+To inspect kernel history:
 
 ```sh
 git clone https://github.com/pjgowtham/android_kernel_oneplus_sm8450.git
@@ -23,12 +23,10 @@ git checkout --detach 914935583f0ce199114a4a1f31178ab25a3a052d
 git show --stat HEAD
 ```
 
-For a rebuild, use the manifest's pinned kernel build tools/Clang projects and the device tree's `BoardConfigCommon.mk`/kernel configuration together with the recipe. Preserve the shipped compiler/configuration when comparing results. No kernel binary or private signing key is needed to inspect the source.
+Use the manifest's pinned build tools/Clang and device kernel configuration when reproducing it.
 
-## ROM and optional-app changes
+## ROM and app ports
 
-`source/` contains the selected manifests, source patches, templates and compatibility/package tools. Recipe hashes bind the ROM modifications to the build snapshot. App-port files come from the accepted Camera15/Gallery14 source line. Proprietary APKs, libraries, model files and signing keys are separate inputs; their expected hashes are recorded in the configs.
+`source/` contains the release's patches, templates, contracts and compatibility tools for Camera15/Gallery15. Proprietary APKs, libraries and models are separate inputs with expected hashes in the configs. Extract them from your own matching stock set; rebuilding signed packages also requires Android build dependencies and your signing identity.
 
-The stock input reference is the development phone's .1410 firmware. Extract proprietary files from your own matching stock set. The source kit records the fixes; rebuilding signed releases also requires the corresponding proprietary inputs, Android build dependencies and your own signing identity.
-
-Upstream sources retain their licenses. The kernel uses GPL-2.0; the archive includes its full license texts. OEM apps/libraries remain proprietary, with their original owners' rights and notices. Publishing this port does not grant a new license to those OEM assets. [Changes and credits](CHANGES.md) identifies upstream work and local additions.
+Upstream licenses remain in place. The kernel archive includes GPL-2.0 license texts. OEM apps/libraries retain their owners' rights and notices. [Changes and credits](CHANGES.md) separates foundations from local additions.

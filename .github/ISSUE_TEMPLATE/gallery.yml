@@ -10,7 +10,7 @@ body:
     id: versions
     attributes:
       label: ROM and bundle versions
-      placeholder: Package-20a, Camera15, Gallery14
+      placeholder: Package-23b, Camera15, Gallery15
     validations:
       required: true
   - type: textarea
