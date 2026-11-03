@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "tag": "lineage-23.2-rmx3301-20a-20261102",
+  "tag": "lineage-23.2-rmx3301-23b-20261103",
   "channel": "beta",
-  "published_date": "2026-11-02",
+  "release_date": "2026-11-03",
   "device": "RMX3301",
   "project": "21631",
-  "rom": "Package-20a",
+  "rom": "Package-23b",
   "lineageos": "23.2",
   "android": "16",
   "api": 36,
@@ -16,11 +16,11 @@
   "vendor_security_patch": "2025-05-01",
   "tested_stock": "TW RMX3301_15.0.0.1410(EX01)",
   "camera": "15",
-  "gallery": "14",
-  "rom_source_commit": "60ac15ad78a2abbbadb0cf1715079efc184732de",
+  "gallery": "15",
+  "rom_source_commit": "6dbf8f1e4c7ffb3b60acfdb218008242d9bce458",
   "source_manifest_sha256": "cd151cc92bb023019ab272ca6774bba0302903626e95729de346ec461c972cbd",
-  "recipe_sha256": "8e17f21409ab74d544a1907c374aa3be7023720d8925b18310b2fc00a67bc6ae",
-  "rom_incremental": "RMX3301.1793582271.de7e0ffca5c0",
+  "recipe_sha256": "030ad752dfbfd67bed4744bddd3921cb8e70884b67a7dc15f64a93d582baed45",
+  "rom_incremental": "RMX3301.1793741073.e07edcf28438",
   "os_payload_partitions": [
     "boot",
     "dtbo",
@@ -36,11 +36,11 @@
     "vendor_boot",
     "vendor_dlkm"
   ],
-  "additional_install_effects": "Guarded inactive-slot oplusstanvbk GNSS migration; live packaged migration/return execution remains unvalidated.",
+  "additional_install_effects": "Guarded inactive-slot GNSS NV migration; live already-enabled OTA path validated, changed-target/inverse/refusal paths remain open.",
   "support_images": {
     "boot.img": {
       "bytes": 201326592,
-      "sha256": "d3d671cb37f1b20c4dd17e776e71c253cc89a48ef73cfa768e16e373d50c53fc"
+      "sha256": "0f0c22de0a28df95adf0b1ee1c77a9e321054dad27bc41afa1d40df185da151d"
     },
     "dtbo.img": {
       "bytes": 25165824,
@@ -52,7 +52,7 @@
     },
     "recovery.img": {
       "bytes": 104857600,
-      "sha256": "4558c7d0bd16fc01f00bba472ba87639e94310916fca97547ce365f242de864e"
+      "sha256": "06ad5a26583feafb1e56886f724a39d7fc4b2db781ec588f20b209492f73f9ad"
     },
     "vbmeta.img": {
       "bytes": 12288,
@@ -60,84 +60,84 @@
     },
     "vbmeta_system.img": {
       "bytes": 4096,
-      "sha256": "fd8c1c10a1c6cc0b7c3c0d42011e352c25cdc55b0a5ebd77251c86d81fd3d06c"
+      "sha256": "44d72da24cca433a3bff678afd1bb8679e838aaa10e28fb561d056c930cbc14c"
     },
     "vbmeta_vendor.img": {
       "bytes": 4096,
-      "sha256": "6f5790130b4b2a30d7bc28a2d3d687eccd644eab776c210999cfa5190f90f3c1"
+      "sha256": "1b2dade3d575d84f1cace5c63987f9b6157eca94c524dd94c9ed76378b3b16a9"
     }
   },
-  "validation": "Development-phone combined-profile same-key update and selected daily-use checks; diagnostic boot used for live acceptance. Standard downloaded boot has separate live acceptance pending.",
+  "validation": "Standard shipped boot, same-key22-to23b combined-profile OTA and scoped owner UAT. Remaining fingerprint retry burst and other limits are documented in RELEASE_NOTES.md.",
   "assets": [
     {
-      "name": "lineage-23.2-RMX3301-package20a.zip",
+      "name": "lineage-23.2-RMX3301-package23b.zip",
       "type": "rom",
-      "bytes": 2121982543,
-      "sha256": "37cb9379fdf750a7623794d6e1ef12190d4e42e0b5ba91e46985067b959ca446",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/lineage-23.2-RMX3301-package20a.zip"
-    },
-    {
-      "name": "realme-camera-23.2-beta15-check.zip",
-      "type": "camera",
-      "bytes": 121464,
-      "sha256": "1b5280cd2b44216be45a55e8abdeeb2ff88a606b4370a71902cc6644d06440d0",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-camera-23.2-beta15-check.zip"
+      "bytes": 2121988635,
+      "sha256": "5e8284a023c81f5ce2bb14b2a2dd3bd2404cb32bd6cfc94e6155d54de631311f",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/lineage-23.2-RMX3301-package23b.zip"
     },
     {
       "name": "realme-camera-23.2-beta15-install.zip",
       "type": "camera",
-      "bytes": 186188591,
-      "sha256": "c229c18aebe5ea105cb698222e8f4cb67dfad67bc10781ea96e1444e79a522f7",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-camera-23.2-beta15-install.zip"
+      "bytes": 186197963,
+      "sha256": "a88fe35f2fb2431c41885bde941363bbd52e7ea3e7025f505fe5e2e5825949df",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-install.zip"
     },
     {
       "name": "realme-camera-23.2-beta15-remove.zip",
       "type": "camera",
-      "bytes": 104618,
-      "sha256": "791daebf6ce9329fa4a29c6a9738303e6fa3062867b905779d1df6d20de90f06",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-camera-23.2-beta15-remove.zip"
+      "bytes": 113990,
+      "sha256": "9a4eff5a5b8f120bd448bd79712ca723a9a9eddc1dd3434465a0d3c63fcda511",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-remove.zip"
     },
     {
-      "name": "realme-photos-23.2-alpha14-check.zip",
+      "name": "realme-camera-23.2-beta15-check.zip",
+      "type": "camera",
+      "bytes": 130836,
+      "sha256": "f80009968b697b0614b0c3ab938cb68ce343778f51d8b739742f14b4e1bd0fe6",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-check.zip"
+    },
+    {
+      "name": "realme-photos-23.2-alpha15-install.zip",
       "type": "gallery",
-      "bytes": 101339,
-      "sha256": "316749d192d4fbfe4d9083c4c808925554e9eefe6f5342500bf98e8783340648",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-photos-23.2-alpha14-check.zip"
+      "bytes": 222751747,
+      "sha256": "1283780af6fd5d183a861a6ef5846094da60793e8a8bc7ce65b7c73aa9427a9b",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-install.zip"
     },
     {
-      "name": "realme-photos-23.2-alpha14-install.zip",
+      "name": "realme-photos-23.2-alpha15-remove.zip",
       "type": "gallery",
-      "bytes": 222745709,
-      "sha256": "c142d78bd304e80b96d70850b1f92a75e553c1c7c00ed818f3b85255198a1c82",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-photos-23.2-alpha14-install.zip"
+      "bytes": 75375,
+      "sha256": "71c501fcd561c24e103eecb3e33b0851e39fc69308cd6a18c8ca7c5e6bd0abd8",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-remove.zip"
     },
     {
-      "name": "realme-photos-23.2-alpha14-remove.zip",
+      "name": "realme-photos-23.2-alpha15-check.zip",
       "type": "gallery",
-      "bytes": 75320,
-      "sha256": "03b79b8ae3186d6d13229a71b127108e120aacf04a7f30044d58e2480c46aff2",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/realme-photos-23.2-alpha14-remove.zip"
+      "bytes": 110008,
+      "sha256": "c356eaf992c2dbb80e36889ee3a1477db22a06a2678c4b86cdf5601da8f5f9fd",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-check.zip"
     },
     {
-      "name": "recovery-support-RMX3301-package20a.zip",
+      "name": "recovery-support-RMX3301-package23b.zip",
       "type": "recovery-support",
-      "bytes": 56874187,
-      "sha256": "1bd52e20925802ee1d9a7cf05ac3362dd65f204ee59256b6c3e292f6d898bcd7",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/recovery-support-RMX3301-package20a.zip"
+      "bytes": 56874176,
+      "sha256": "0612534fe37c86e5207341c0d8585aab904c3774bbe49343b0956883e5cda0af",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/recovery-support-RMX3301-package23b.zip"
     },
     {
-      "name": "recovery-RMX3301-package20a.img",
+      "name": "recovery-RMX3301-package23b.img",
       "type": "recovery",
       "bytes": 104857600,
-      "sha256": "4558c7d0bd16fc01f00bba472ba87639e94310916fca97547ce365f242de864e",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/recovery-RMX3301-package20a.img"
+      "sha256": "06ad5a26583feafb1e56886f724a39d7fc4b2db781ec588f20b209492f73f9ad",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/recovery-RMX3301-package23b.img"
     },
     {
-      "name": "kernel-source-RMX3301-package20a.tar.gz",
+      "name": "kernel-source-RMX3301-package23b.tar.gz",
       "type": "kernel-source",
-      "bytes": 254390060,
-      "sha256": "2f3246ec653bd19e5edb918aa09f7b55afc936f0a7c31c3208c7dccedb0abcdd",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-20a-20261102/kernel-source-RMX3301-package20a.tar.gz"
+      "bytes": 254390054,
+      "sha256": "5cd5a2d59367729a5c1c9dad99a8615df96551659f8938ee9ee2926d25aae41e",
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/kernel-source-RMX3301-package23b.tar.gz"
     }
   ]
 }

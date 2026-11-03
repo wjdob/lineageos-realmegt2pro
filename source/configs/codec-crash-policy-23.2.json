@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "project": "hardware/qcom-caf/sm8450/audio/primary-hal",
+  "revision": "9f4dec53710a32af11cfffd89256daf7de2a9dee",
+  "relative": "configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy",
+  "target_member": "VENDOR/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy",
+  "base_sha256": "a1559800186ab02db9b24962285231e1d501af77157199ebb351be9b6bc4538f",
+  "candidate_sha256": "22849bb6123b674570e89e261f162432fce6df94672f46f393d3145cb5458230",
+  "append": "# Android 16 debuggerd fallback records the kernel release in crash reports.\n# This preserves the original fault report; it does not repair the codec fault.\nuname: 1\n",
+  "scope": "Allow only uname in the existing audio extension for Android16 fallback crash reporting. Original codec SIGSEGV is unresolved. Existing base policy, W^X restrictions, video policy and SELinux remain unchanged.",
+  "attribution": "Inherited Qualcomm/The Linux Foundation policy from pinned Lineage primary-hal; local extension follows the pinned AOSP/Lineage debuggerd fallback requirement."
+}

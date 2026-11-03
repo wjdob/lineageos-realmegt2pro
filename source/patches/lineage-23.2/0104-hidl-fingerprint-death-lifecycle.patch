@@ -1,0 +1,47 @@
+--- a/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapter.java
++++ b/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapter.java
+@@ -125,8 +125,14 @@
+     @Override
+     public void serviceDied(long cookie) {
+         Slog.d(TAG, "Fingerprint HAL died.");
+-        mSession = null;
+-        mDaemon = null;
++        // Match the sensor's death lifecycle on its owning handler. The new
++        // daemon must select its user again before any subsequent operation.
++        getHandler().post(() -> {
++            mSession = null;
++            mDaemon = null;
++            mCurrentUserId = UserHandle.USER_NULL;
++            super.onBinderDied();
++        });
+     }
+ 
+     @Override
+--- a/services/tests/servicestests/src/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapterTest.java
++++ b/services/tests/servicestests/src/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapterTest.java
+@@ -144,6 +144,25 @@
+     }
+ 
+     @Test
++    public void serviceDeathInvalidatesUserOnHandler() {
++        final var session = mHidlToAidlSensorAdapter.getLazySession().get();
++        assertThat(session.getUserId()).isEqualTo(USER_ID);
++
++        mHidlToAidlSensorAdapter.serviceDied(0);
++        assertThat(mHidlToAidlSensorAdapter.getSessionForUser(USER_ID))
++                .isSameInstanceAs(session);
++
++        mLooper.dispatchAll();
++        assertThat(mHidlToAidlSensorAdapter.getSessionForUser(USER_ID)).isNull();
++        assertThat(mHidlToAidlSensorAdapter.getScheduler().getCurrentClient()).isNull();
++
++        // Use the existing fake HAL; never reconnect to physical hardware.
++        when(mFingerprintProvider.getTestHalEnabled()).thenReturn(true);
++        assertThat(mHidlToAidlSensorAdapter.getLazySession().get().getUserId())
++                .isEqualTo(android.os.UserHandle.USER_NULL);
++    }
++
++    @Test
+     public void lockoutTimedResetViaClient() {
+         setLockoutTimed();
+ 

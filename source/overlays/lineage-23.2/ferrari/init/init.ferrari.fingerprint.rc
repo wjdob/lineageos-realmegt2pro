@@ -1,0 +1,8 @@
+# Ferrari's OEM provider becomes unavailable when its wrapper disconnects.
+# Keep the upstream service options; recover its provider before wrapper restart.
+service vendor.fps_hal_oplus /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.oplus
+    override
+    class late_start
+    user system
+    group system
+    onrestart restart fps_hal

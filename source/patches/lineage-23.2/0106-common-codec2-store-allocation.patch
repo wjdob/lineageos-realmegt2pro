@@ -1,0 +1,14 @@
+--- a/extract-files.py
++++ b/extract-files.py
+@@ -52,6 +52,11 @@
+ }
+ 
+ blob_fixups: blob_fixups_user_type = {
++    # ComponentStore is 288 bytes in the linked Android 16 HIDL library.
++    'vendor/bin/hw/vendor.qti.media.c2audio@1.0-service': blob_fixup()
++        .binary_regex_replace(b'\x00\x21\x80\x52\xc5\x04\x00\x94', b'\x00\x24\x80\x52\xc5\x04\x00\x94'),
++    'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
++        .binary_regex_replace(b'\x00\x21\x80\x52\xff\x0b\x00\xf9\x71\x03\x00\x94', b'\x00\x24\x80\x52\xff\x0b\x00\xf9\x71\x03\x00\x94'),
+     # Android 14/15 proprietary XMLDocument ABI; platform TinyXML2 11 is larger.
+     (
+         'vendor/lib64/libapengine.so',

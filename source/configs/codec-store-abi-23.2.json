@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "required_size": 288,
+  "legacy_size": 264,
+  "attribution": "Qualcomm proprietary launchers inherited through the pinned Lineage sm8450 vendor tree; Android ComponentStore implementation from the pinned AOSP/Lineage framework. Local allocation correction and delivery checks.",
+  "extraction": {
+    "path": "device/oneplus/sm8450-common/extract-files.py",
+    "sha256": "00bbf486dba494178a3bf640d04402fd59e3ecba9b1d9296a729df7e3fead848"
+  },
+  "provider": {
+    "target_member": "VENDOR/lib64/libcodec2_hidl@1.0.so",
+    "sha256": "aba9ffd19613c02b9e14a0c4dc39285fa675ecd39685330a448218261a8f9dd2",
+    "constructor_symbol": "_ZN7android8hardware5media2c24V1_05utils14ComponentStoreC1ERKNSt3__110shared_ptrI16C2ComponentStoreEE",
+    "constructor_virtual_base_va": 145064,
+    "constructor_virtual_base_hex": "00400491",
+    "virtual_base_offset": 272,
+    "deleting_destructor_symbol": "_ZN7android8hardware5media2c24V1_05utils14ComponentStoreD0Ev",
+    "deleting_size_va": 150132,
+    "deleting_size_hex": "01248052",
+    "sized_delete_branch_va": 150148,
+    "sized_delete_branch_hex": "65540014"
+  },
+  "launchers": [
+    {
+      "name": "vendor.qti.media.c2audio@1.0-service",
+      "relative": "proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service",
+      "base_sha256": "0cc7c1f382adda0decacd3ee926247cbf95f793251ac07b2a57cb605a42df0c6",
+      "candidate_sha256": "857c8e099c301fa15b0bb4f1c51dd7d1ba0853252eb6425f30f72ff0e31e016b",
+      "allocation_va": 15888,
+      "allocation_file_offset": 15888,
+      "old_hex": "00218052c5040094",
+      "new_hex": "00248052c5040094",
+      "package21_exact_base": true,
+      "changed_bytes": 1,
+      "source_path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service",
+      "target_member": "VENDOR/bin/hw/vendor.qti.media.c2audio@1.0-service"
+    },
+    {
+      "name": "vendor.qti.media.c2@1.0-service",
+      "relative": "proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
+      "base_sha256": "5c720a1ccc042873f54312bb90fdfa5bbed25486e78108fa71e9cbeb5b8cd45a",
+      "candidate_sha256": "fccb4656522818367241da56e79305ab16df557b4b16f8b036daa8dbcf2b39a6",
+      "allocation_va": 8980,
+      "allocation_file_offset": 8980,
+      "old_hex": "00218052ff0b00f971030094",
+      "new_hex": "00248052ff0b00f971030094",
+      "package21_exact_base": true,
+      "changed_bytes": 1,
+      "source_path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
+      "target_member": "VENDOR/bin/hw/vendor.qti.media.c2@1.0-service"
+    }
+  ],
+  "limits": "Exact ARM64 binary/layout correction only. Provider library changes require renewed ABI review. No claim of runtime fault elimination or physical codec acceptance."
+}

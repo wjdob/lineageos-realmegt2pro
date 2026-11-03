@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "status": "Engineering Package20a GNSS migration over accepted19d. Revised normal/recovery updater compiles,70 focused host tests plus6 source/package gate tests pass. No SELinux changes;15 base policy files must remain exact. Matching recovery, first integrated install, subsequent normal-source OTA and inverse restore remain unproven.",
+  "status": "Unreleased bundled follow-up to installed Package22: reload the existing QQS row guideline and add a Ferrari-only fingerprint wrapper/provider restart dependency. Preserve upstream common service options and all prior corrections. Source/package checks, native build and physical idle/active recovery acceptance are separate; neither follow-up is installed.",
   "manifest": "manifests/lineage-23.2-candidate.xml",
   "manifest_sha256": "cd151cc92bb023019ab272ca6774bba0302903626e95729de346ec461c972cbd",
   "files": [
@@ -92,13 +92,14 @@
       "relative": "extract-files.py",
       "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
       "base_sha256": "9b978c38f98505dc8f36e942c64652d54e54ded73e57e2e2cfd945fe8887a890",
-      "canonical_sha256": "22bd0eacee4c0025cf968a4d602eda881af14348aca0f7e6489aa7ebe482b545",
+      "canonical_sha256": "00bbf486dba494178a3bf640d04402fd59e3ecba9b1d9296a729df7e3fead848",
       "previous_sha256": [
         "3045390a898ffb0bbf07cebf0dd9f9cf7e04ff57c4ac7b2582ac6266f62dc1a9",
         "00a0cbef7eb41baab3e0a1c9c929180f0f50c043e7bd01d353edf9bec5703dac",
         "01dc534960a7188b09f08e10e7a4807de616cd7d22691c0f565ed1bbad868ffa",
         "44fa01f13c6d1f16bd6160c5862c562889cbac355e1f776f25759c44049e6565",
-        "cf345f947f751ff99da32bac12c24fffd68e00df5160d2cb4e8a6655be0f460b"
+        "cf345f947f751ff99da32bac12c24fffd68e00df5160d2cb4e8a6655be0f460b",
+        "22bd0eacee4c0025cf968a4d602eda881af14348aca0f7e6489aa7ebe482b545"
       ]
     },
     {
@@ -199,11 +200,12 @@
       "relative": "device.mk",
       "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
       "base_sha256": "5cd814c0a0ed0cd0c5dd47c5791e2cd8448e210cbd3121c81ef795f8028a4213",
-      "canonical_sha256": "59aa5153d91ece2fd9b7d38415f201e38af8ed48f8a9262536aa884a7d93c0cc",
+      "canonical_sha256": "62e8856771b5aedadd4bd1a14f02846843ce35940c12358e636e7d00ccc65df3",
       "previous_sha256": [
         "5cd814c0a0ed0cd0c5dd47c5791e2cd8448e210cbd3121c81ef795f8028a4213",
         "2f35e439742ec4228f0fe5c228caa3719707c2a14ac8267929e8f03017d38c94",
-        "a5533183e286f599aa3e366831ff8d23b3f6fb2a3daaf473d2f2d4172dc20f08"
+        "a5533183e286f599aa3e366831ff8d23b3f6fb2a3daaf473d2f2d4172dc20f08",
+        "59aa5153d91ece2fd9b7d38415f201e38af8ed48f8a9262536aa884a7d93c0cc"
       ]
     },
     {
@@ -351,6 +353,62 @@
       "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
       "base_sha256": "12152eb17e52f5e2a0e8ac60f7924e855e4f729f8aa189d2fa5cd321b3c53988",
       "canonical_sha256": "b84aa78c1a4873de86783adac2c666be872431efca697fe7ed2b88bfc2335b72"
+    },
+    {
+      "path": "frameworks/base/packages/SystemUI/res/layout/keyguard_status_bar.xml",
+      "project": "frameworks/base",
+      "relative": "packages/SystemUI/res/layout/keyguard_status_bar.xml",
+      "revision": "958afcc3d647d57571650cee4172afe0da619171",
+      "base_sha256": "d14e4ba1e1f5d4a7a875c902f4d3fd7994f144f33e153448e937a9c4e93a25bc",
+      "canonical_sha256": "98953742d79b79094e33c30d8dd0142e4680d74ce252f35e8d17cf6fa7421794"
+    },
+    {
+      "path": "frameworks/base/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapter.java",
+      "project": "frameworks/base",
+      "relative": "services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapter.java",
+      "revision": "958afcc3d647d57571650cee4172afe0da619171",
+      "base_sha256": "1fa42bd97dc8fe9832392f5b6b7ac278b6fc3a1810abafc0258132e467fed390",
+      "canonical_sha256": "66dc49026c3c797513510e3d4e98dacd87e9c76750a3a3908375d70ae61d0a35"
+    },
+    {
+      "path": "frameworks/base/services/tests/servicestests/src/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapterTest.java",
+      "project": "frameworks/base",
+      "relative": "services/tests/servicestests/src/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapterTest.java",
+      "revision": "958afcc3d647d57571650cee4172afe0da619171",
+      "base_sha256": "124bf8ae791ad8edd410967fcdd94754f43f67827c67d27b7e33f8e166953df0",
+      "canonical_sha256": "7cb9ab9771b80565fd2b22f15ec0a059393bc0db1fa98a3ad11d37456ede0e73"
+    },
+    {
+      "path": "hardware/qcom-caf/sm8450/audio/primary-hal/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy",
+      "project": "hardware/qcom-caf/sm8450/audio/primary-hal",
+      "relative": "configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy",
+      "revision": "9f4dec53710a32af11cfffd89256daf7de2a9dee",
+      "base_sha256": "a1559800186ab02db9b24962285231e1d501af77157199ebb351be9b6bc4538f",
+      "canonical_sha256": "22849bb6123b674570e89e261f162432fce6df94672f46f393d3145cb5458230"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service",
+      "project": "vendor/oneplus/sm8450-common",
+      "relative": "proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service",
+      "revision": "15ddc806fa2816908b0d61e9ff9c161e6ef1eba5",
+      "base_sha256": "0cc7c1f382adda0decacd3ee926247cbf95f793251ac07b2a57cb605a42df0c6",
+      "canonical_sha256": "857c8e099c301fa15b0bb4f1c51dd7d1ba0853252eb6425f30f72ff0e31e016b"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
+      "project": "vendor/oneplus/sm8450-common",
+      "relative": "proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
+      "revision": "15ddc806fa2816908b0d61e9ff9c161e6ef1eba5",
+      "base_sha256": "5c720a1ccc042873f54312bb90fdfa5bbed25486e78108fa71e9cbeb5b8cd45a",
+      "canonical_sha256": "fccb4656522818367241da56e79305ab16df557b4b16f8b036daa8dbcf2b39a6"
+    },
+    {
+      "path": "frameworks/base/packages/SystemUI/res/xml/qqs_header.xml",
+      "project": "frameworks/base",
+      "relative": "packages/SystemUI/res/xml/qqs_header.xml",
+      "revision": "958afcc3d647d57571650cee4172afe0da619171",
+      "base_sha256": "6e66593c00a421d60e943c8e100c0e6f2c3adca3d4221fd455f8dcc817742d38",
+      "canonical_sha256": "3f7d1217883967607738f4461dfee25fb65545ad6b8714c6b6d570d7fbdf9880"
     }
   ],
   "actions": [
@@ -673,6 +731,56 @@
       "project": "system/update_engine",
       "file": "patches/lineage-23.2/0102-update-engine-realme-gnss-nvbk.patch",
       "sha256": "5123e79cf4ef0e8e7c74847be991e4c142ead33aec65d4dfee248f1c1c854ffb"
+    },
+    {
+      "type": "patch",
+      "project": "frameworks/base",
+      "file": "patches/lineage-23.2/0103-keyguard-carrier-font-padding.patch",
+      "sha256": "f4c01c283a4f7ea81891ede1c2e6e9e250ba88e412a0f1664794e8863b9f4de9"
+    },
+    {
+      "type": "patch",
+      "project": "frameworks/base",
+      "file": "patches/lineage-23.2/0104-hidl-fingerprint-death-lifecycle.patch",
+      "sha256": "1a9cc65094dcde80133e40353547d1c285f87a9dc17c5c2998db800ab26da4eb"
+    },
+    {
+      "type": "patch",
+      "project": "hardware/qcom-caf/sm8450/audio/primary-hal",
+      "file": "patches/lineage-23.2/0105-c2audio-crash-report-uname.patch",
+      "sha256": "83485963da20fceee8571a08cc348b123db18e970ab3a224aba470f1642c4cf2"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0106-common-codec2-store-allocation.patch",
+      "sha256": "f1f8c21889e7cfab7b6f55c117271cf3cba1f7ff387c73e79b8d83e9ab4bc377"
+    },
+    {
+      "type": "replace_bytes",
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service",
+      "old_hex": "00218052c5040094",
+      "new_hex": "00248052c5040094",
+      "expected_count": 1
+    },
+    {
+      "type": "replace_bytes",
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
+      "old_hex": "00218052ff0b00f971030094",
+      "new_hex": "00248052ff0b00f971030094",
+      "expected_count": 1
+    },
+    {
+      "type": "patch",
+      "project": "frameworks/base",
+      "file": "patches/lineage-23.2/0107-qqs-reload-header-guideline.patch",
+      "sha256": "23be571882355a1b06ecf3b4b8dea6d19f6420859197d191de4a0f5d7d8f9b6b"
+    },
+    {
+      "type": "patch",
+      "project": "device/realme/ferrari",
+      "file": "patches/lineage-23.2/0108-ferrari-fingerprint-provider-restart.patch",
+      "sha256": "62fa69c35af45a8d8c9258c08ef580ced5b2f050692a61f41de9e20984351a81"
     }
   ],
   "binary_fixups": [
@@ -990,6 +1098,14 @@
       "revision": "fc83053aa2a71885ba8615da9946033adf3462ce",
       "source": "tools/device/GnssNvbkUpdateEngine.h",
       "canonical_sha256": "3cb12f47d9c6eb9c92d7672b3d5fd0ce91d11be788b66211009365f2a5705c72"
+    },
+    {
+      "path": "device/realme/ferrari/init/init.ferrari.fingerprint.rc",
+      "project": "device/realme/ferrari",
+      "relative": "init/init.ferrari.fingerprint.rc",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "source": "overlays/lineage-23.2/ferrari/init/init.ferrari.fingerprint.rc",
+      "canonical_sha256": "197717af2a96755d40634d65e66b7b2be57fa2e21df65935572908b15754a823"
     }
   ]
 }

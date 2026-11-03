@@ -87,6 +87,19 @@ def check_package(target_files, contract=None):
     return dict(pass_all=True, scope='Packaged vendor provider/APS bytes only; no live image acceptance', provider_sha256=contract['provider']['sha256'], aps_sha256=contract['aps']['sha256'])
 
 
+def new_report(path, root=ROOT):
+    """Allow declared output roots, including shared controller run records.
+
+    A detached source export can link .local/goals/runs to its controller.
+    Resolve that narrow root too; unrelated nested links must not expand access.
+    """
+    report = path.resolve()
+    roots = [(root/p).resolve() for p in ('tmp', '.local', '.local/goals/runs')]
+    if report.exists() or not any(report.is_relative_to(p) for p in roots):
+        raise ValueError('use a new report under tmp or .local')
+    return report
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -95,13 +108,15 @@ def main():
     mode.add_argument('--target-files', type=Path)
     parser.add_argument('--report', type=Path, required=True)
     args = parser.parse_args()
-    report = args.report.resolve()
-    if not any(report.is_relative_to(ROOT/p) for p in ('tmp', '.local')) or report.exists():
-        parser.error('use a new report under tmp or .local')
+    try:
+        report = new_report(args.report)
+    except ValueError as error:
+        parser.error(str(error))
     result = (prepare(args.prepare_provider) if args.prepare_provider else
               check_source(args.source_tree) if args.source_tree else check_package(args.target_files))
     report.parent.mkdir(parents=True, exist_ok=True)
-    report.write_text(json.dumps(result, indent=2)+'\n')
+    with report.open('x') as stream:
+        stream.write(json.dumps(result, indent=2)+'\n')
     print(json.dumps(result))
 
 

@@ -1,0 +1,9 @@
+--- a/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy
++++ b/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy
+@@ -35,3 +35,6 @@
+ getcwd: 1
+ getdents64: 1
+ setsockopt: 1
++# Android 16 debuggerd fallback records the kernel release in crash reports.
++# This preserves the original fault report; it does not repair the codec fault.
++uname: 1
