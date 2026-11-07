@@ -27,8 +27,7 @@ def main():
             local = manifest.parent/Path(*path.parts)
             assert local.is_file() and hashlib.sha256(local.read_bytes()).hexdigest() == row['sha256'], row['path']
             exported += 1
-    documents = [p for p in ROOT.rglob('*.md') if '.git' not in p.parts and 'source' not in p.relative_to(ROOT).parts]
-    documents += [ROOT/'source/lineage-24.0/README.md'] if (ROOT/'source/lineage-24.0').is_dir() else []
+    documents = [p for p in ROOT.rglob('*.md') if '.git' not in p.parts]
     for document in documents:
         text = document.read_text(encoding='utf-8')
         for link in re.findall(r'\[[^\]]*\]\(([^)]+)\)', text):

@@ -1,36 +1,44 @@
-# Native25 release notes
+# Native25 beta
 
-Native25 is the first public Android 17 beta from this workstream. The full OTA
-contains the base fixes together. Camera/Photos API37 and Clock alpha5 are separate
-optional downloads. Google uses the separate MindTheGapps project.
+LineageOS 24.0 / Android 17 for RMX3301. Camera and Photos are separate
+downloads. Clock alpha5 is also available as a normal APK.
 
-## Recorded checks
+## Tested features
 
-- Two standard-image boots, retained encrypted data/media, PIN/fingerprint and Google sign-in.
-- Play installs/updates, screen-off notifications, ordinary video/audio.
-- Calls/mobile data, Wi-Fi/hotspot, Bluetooth headset and owner-reported ordinary GPS.
-- High/Max top-row alignment, dimming interruption, rapid wake, touch/adaptive brightness.
-- Camera preview/photos/video/audio, HEIC with 10-bit OFF/ON, filters, front/rear Portrait, flash and newest-item handoff.
-- Photos JPEG/HEIC/video, Markup/Remover, Undo, Save copy, Replace original, album moves, sharing and wallpaper picker.
-- Clock sound, notification Snooze/Dismiss, timer, stopwatch and World Clock. Full-screen alarm wake/dismissal passed after owner-granted overlay access; bottom labels are clear.
+Photos and videos, existing apps, PIN/fingerprint and Google sign-in were preserved
+in the tested Native24-to-Native25 update. Camera/Photos settings and the features
+listed below worked after the update.
 
-## Limits
+- Calls/mobile data, Wi-Fi/hotspot, Bluetooth audio and ordinary video playback.
+- PIN/fingerprint unlock, Play Store installs/updates and screen-off notifications.
+- High/Max display alignment, dimming, wake, touch and adaptive brightness.
+- Camera photos/video with sound, HEIC with 10-bit OFF/ON, filters, Portrait, flash and latest-media viewing.
+- Photos JPEG/HEIC/video, Markup, Remover, Undo, Save copy, Replace original, album moves, Share and wallpaper selection.
+- Clock alarm sound, notification Snooze/Dismiss, timer, stopwatch and World Clock. Full-screen alarms worked after enabling Display over other apps.
 
-NFC/card transactions, measured outdoor L5, all six refresh modes independently,
-fresh clean installation, a generic direct Android 16-to-Native25 jump and the
-next API37 add-on-retaining OTA remain untested. Independent base/single-app OTA
-profiles remain open. Earlier major-version/data-retention results used a controlled
-intermediate-candidate route; they do not qualify every public upgrade path.
+## Known issues and untested cases
 
-Photos private-photo locking needs its OEM backend and remains unavailable.
-Some OEM share targets can have duplicate or incomplete labels. Clock's Android 16
-runtime, Doze, reboot/timezone rescheduling and powered-off alarms remain unqualified.
-Retain a trusted alarm while extended reliability is assessed.
+- Private-photo locking is unavailable because the OEM privacy service is missing.
+- Some share targets have duplicate or missing names.
+- NFC, measured outdoor L5 reception and a separate test of all six display modes remain untested. Ordinary GPS worked in the reported use.
+- A fresh clean installation and a direct Package-23b-to-Native25 upgrade have not been tested. The major-version trial used intermediate development builds.
+- Camera/Photos removal, same-version package upgrades and retention through a later Android 17 OTA need live testing.
+- Separate base-only, Google-only, Camera-only and Photos-only update combinations need live testing.
+- Clock has not been tested on Android 16, during Doze, after reboot/timezone changes or with the phone powered off. Keep a trusted alarm app until those checks are complete.
+- Remover downloads models from OEM servers. VPN or DNS filtering can block `fourier-videoclip-sg.allawnos.com` or `videoclipfsg.coloros.com`.
 
-The build is userdebug. Global SELinux is Enforcing, with nine inherited permissive
-vendor domains. Public recovery is standard; the owner-keyed engineering image is
-excluded. Android patch level is 2026-10-01; vendor patch level remains 2025-05-01.
-Play Integrity, banking, DRM and every third-party app are not certified by these tests.
+## GNSS
 
-Android 16 Package-23b remains available in its own release channel. Keep its
-matching app bundles and guide together.
+Native25 includes no GNSS NV migration writer. Outdoor dual-band reception needs further testing on this release.
+
+## Security
+
+Public downloads use the standard boot and recovery images. The custom auto-ADB
+engineering recovery is excluded. The ROM is a **userdebug beta**.
+SELinux is enforcing globally, with **nine permissive vendor domains**.
+Keep the bootloader unlocked.
+
+Android security patch: **2026-10-01**. Vendor security patch: **2025-05-01**.
+Play Integrity, banking-app compatibility and DRM support have not been certified.
+
+See [open issues](https://github.com/wjdob/lineageos-realmegt2pro/issues) for current reports and workarounds.

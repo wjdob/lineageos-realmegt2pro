@@ -1,44 +1,36 @@
 # Install and update Native25
 
-This guide covers the RMX3301 / project 21631 Android 17 beta. Its tested device
-used TW .1410 Android 15 firmware. Clean installation on a fresh phone and a direct
-Package-23b-to-Native25 upgrade remain untested. The live major-version trial used
-intermediate candidates; the later Native24-to-Native25 update preserved data.
-Use a clean setup for a first public trial. Read [release limits](RELEASE_NOTES.md).
+For RMX3301 / project 21631 with compatible Android 15 firmware. Testing uses TW
+.1410 firmware. Read the [release limits](RELEASE_NOTES.md).
+A fresh clean installation and a direct Android 16 upgrade have not yet been tested. The successful major upgrade used intermediate development builds.
 
 ## Backups and bootloader
 
 - Use current [Android platform-tools](https://developer.android.com/tools/releases/platform-tools).
-  The bootloader must already be unlocked. **Keep it unlocked throughout this ROM
-  and any return to stock. Relocking custom or mismatched images can brick the phone.**
-- Export personal files, contacts, app data and authenticator recovery codes.
-- Before changing partitions, keep off-device images of `super` and both slots'
-  `boot`, `vendor_boot`, `dtbo`, `recovery`, `vbmeta`, `vbmeta_system`, `vbmeta_vendor`.
-- Also preserve `persist`, `modemst1`, `modemst2`, `fsg`, `fsc`, both `oplusstanvbk`
-  partitions, `frp` and `devinfo`. Record names/sizes and verify SHA-256. A trusted
-  recovery or rooted Android can read them. Complete and verify backups before flashing.
-- Keep these backups private. Calibration, EFS and protected-state images are
-  recovery references; restoring old FRP/EFS during an ordinary install can damage state.
+- The bootloader must already be unlocked. **Keep it unlocked while using this ROM and when returning to stock. Relocking custom or mismatched images can brick the phone.**
+- Export personal files, contacts, app data and authenticator recovery codes. The first installation erases apps and internal storage.
+- Save off-device images of `super` and both slots' `boot`, `vendor_boot`, `dtbo`, `recovery`, `vbmeta`, `vbmeta_system` and `vbmeta_vendor`.
+- Also back up `persist`, `modemst1`, `modemst2`, `fsg`, `fsc`, both `oplusstanvbk` partitions, `frp` and `devinfo`. Record partition names/sizes and verify each file's SHA-256. Read them through trusted recovery or rooted Android before flashing.
+- Keep backups private. Restoring old FRP/EFS images during a routine installation can damage account pairing or radio state.
 
-Native25 carries 13 OS partitions. It includes no bootloader/radio firmware or
-GNSS-NV migration writer. The first stock-to-Lineage installation **erases internal storage**.
+Complete these backups before proceeding. Partition backups and personal-data
+exports protect different parts of the installation; keep both.
 
 ## FRP and accounts
 
-Confirm that you know the existing screen lock and can sign into the Google account.
-Save working two-factor recovery codes. Before a planned clean setup, remove the
-Google account and screen lock through the working Android Settings.
+Confirm that you know the current screen lock and can sign into the Google account.
+Save working two-factor recovery codes. Before a clean installation, remove Google
+accounts and the screen lock through Android Settings.
 
-A recovery wipe can trigger Factory Reset Protection and request previous
-credentials. Resolve account ownership before wiping. This recovery has no FRP
-bypass or OEM private-vault unlock.
+A recovery wipe can trigger Factory Reset Protection and request the previous
+credentials. Resolve account access before wiping. Recovery provides no FRP bypass.
 
 ## First installation
 
 1. Download `lineage-24.0-RMX3301-native25.zip` and
-   `recovery-support-RMX3301-native25.zip` from [the Native25 release](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-24.0-rmx3301-native25-20261107).
-   Check `SHA256SUMS`, extract the support ZIP and verify its image checksums.
-2. Confirm the intended phone and current slot:
+   `recovery-support-RMX3301-native25.zip` from [Native25](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-24.0-rmx3301-native25-20261107).
+   Verify `SHA256SUMS`, extract the support ZIP and verify its image checksums.
+2. Authorize USB debugging in Android, then check the phone and slot:
 
    ```sh
    adb shell getprop ro.product.model
@@ -50,8 +42,9 @@ bypass or OEM private-vault unlock.
    ```
 
    Expect RMX3301 / 21631. Use normal bootloader fastboot with `is-userspace: no`.
-3. Flash the seven support images to the **current slot**. This example uses A.
-   If the current slot is B, replace **every `_a` with `_b`**:
+   Connect only the intended phone.
+3. Flash all seven matching support images to the **current slot**. This example
+   uses A. If the current slot is B, replace **every `_a` with `_b`**:
 
    ```sh
    fastboot flash boot_a boot.img
@@ -64,71 +57,89 @@ bypass or OEM private-vault unlock.
    fastboot reboot recovery
    ```
 
-   Keep the matching seven-image set together. Investigate any failed write.
-4. In Lineage Recovery choose **Factory reset > Format data** once. This erases
+   Stop if a write fails. Keep the images from one release together.
+4. In Lineage Recovery, choose **Factory reset > Format data** once. This erases
    apps and internal storage. Then choose **Apply update > Apply from ADB**:
 
    ```sh
    adb sideload lineage-24.0-RMX3301-native25.zip
    ```
 
-   Do not mount system before a ROM sideload. If recovery says logical partitions
-   are mapped, reboot recovery and retry without mounting. Use recovery's final
-   result; a PC progress stop near 47% can be normal.
-5. If adding Google, reboot recovery when prompted for additional packages. Install
-   the reviewed [MindTheGapps Android 17 ARM64 package](https://github.com/MindTheGapps/17.0.0-arm64/releases/tag/MindTheGapps-17.0.0-arm64-20261022_132445)
-   before the first Android boot. Verify its publisher's checksum. Accept its
-   different-signature prompt only after that verification. See the
-   [LineageOS Google-apps guide](https://wiki.lineageos.org/gapps/).
-6. Boot Android, finish setup and let the OTA merge complete before returning to
-   recovery for OEM apps. Leave pending snapshots intact until normal merge finishes.
+   Leave system unmounted before a ROM sideload. If recovery reports mapped logical
+   partitions, reboot recovery and retry without mounting. Wait for recovery's
+   success message; the PC progress stopping near 47% can be normal.
+5. If adding Google apps, choose **Yes** when asked to reboot recovery for additional
+   packages. In the new recovery, sideload the matching
+   [MindTheGapps Android 17 ARM64 package](https://github.com/MindTheGapps/17.0.0-arm64/releases/tag/MindTheGapps-17.0.0-arm64-20261022_132445)
+   before the first Android boot. Verify its publisher's checksum before accepting
+   the different-signature prompt. See the [LineageOS Google-apps guide](https://wiki.lineageos.org/gapps/).
+6. Boot Android and finish setup. Wait for the background OTA merge to complete
+   before returning to recovery for Camera/Photos. Do not cancel or clear snapshots.
+   If an app installer reports a pending merge, return to Android, let it finish,
+   then retry the app installation.
 
-## Optional Camera, Photos and Clock
+The ROM installs 13 OS partitions and includes no bootloader or radio firmware.
+It includes no GNSS NV migration writer.
 
-For either recovery add-on, run `adb reboot recovery`, leave system unmounted and
-choose **Apply update > Apply from ADB**:
+## Optional Camera and Photos
+
+Use the packages matching this release. After Android setup and the completed
+OTA merge, run `adb reboot recovery`. Leave system unmounted and choose
+**Apply update > Apply from ADB** for each selected package:
 
 ```sh
 adb sideload realme-camera-24.0-alpha1-api37-install.zip
 adb sideload realme-photos-24.0-alpha1-api37-install.zip
 ```
 
-Choose Apply from ADB again between packages. Choose No if asked to reboot for
-more app packages. Each installer handles mapping, recognition, preflight,
-replacement and rollback staging. Check success before booting Android.
-The corresponding `check.zip` checks a package; `remove.zip` removes the matching
-bundle with shared-file ownership checks. API37 removal has host checks but no
-separate live removal test yet. Export app settings/media before removal.
+Choose Apply from ADB again between packages. Choose **No** if asked to reboot
+recovery for more app packages. Reboot Android after successful installation.
+The installers check compatibility, existing files and free space automatically.
 
-Clock installs through the normal Android package installer, or:
+The matching `check.zip` checks compatibility and installed files. The matching
+`remove.zip` removes one bundle while preserving shared files needed by the other.
+Back up app settings and media before removal. Android 17 removal has not yet had a separate live test.
+
+## Optional Clock
+
+Install the APK through Android's package installer, or:
 
 ```sh
 adb install --user 0 realme-clock-15.10.13-alpha5-api36-api37.apk
 ```
 
-Allow notifications. Clock's existing full-screen alarm path uses Android's
-**Display over other apps** access; notification controls work separately. Choose
-that access in Settings if wanted. Same-signer updates use `adb install -r --user 0`.
-An existing differently signed OEM Clock needs a separate data-migration decision;
-export its alarms/settings before replacing it. This APK was tested on Android 17.
+Allow notifications. Enable **Display over other apps** in Android Settings if you
+want full-screen alarm controls to wake the display. Notification controls work
+separately. This APK has been tested on Android 17; Android 16 remains untested.
+
+For an update signed with the same key, use `adb install -r --user 0` followed by
+the new APK filename. If an existing Clock uses a different signing key, export
+its settings before deciding whether to replace it.
 
 ## Updates and app data
 
-For same-major releases, use **Settings > System > Updater > Local update** with
-the complete matching OTA. Keep the same signing lineage. Google and installed
-Camera/Photos use retention hooks; the ordinary Clock APK lives in user data.
-The next OTA retaining the installed API37 Camera/Photos packages is still an
-open live test. Keep a verified return set and review each release's update notes.
+Use **Settings > System > Updater > Local update** to install a matching full OTA.
+Reboot when installation finishes. Follow the new release's compatibility notes.
+Keep the same signing identity and leave selected Google/Camera/Photos packages
+installed so their update hooks can preserve them. The Clock APK stays in user data.
 
-Adding Google to an already-used Google-free installation needs a fresh setup.
-An Android major upgrade or downgrade can require a wipe. An OS-only rollback
-does not restore data migrated by Android 17. Preserve a matching OS/data return set.
+Retention of the Android 17 Camera/Photos bundles through a later OTA still needs live testing.
+After an OTA, let the merge complete before updating optional app packages.
+If an installer refuses an update, save the error and report it through the issue form.
+
+Keep a verified working backup. Adding Google apps after using a Google-free
+installation requires a fresh setup. Major Android upgrades or downgrades may
+require a wipe. Restoring older OS images does not reverse Android data migrations;
+keep a matching OS/data backup for a return to an earlier version.
 
 ## Returning to stock
 
-Use a complete matching stock set or your own verified pre-install OS images.
-Restore matching `super` and the seven slot support images through their correct
-normal-fastboot/fastbootd routes. A stock recovery data format may be required.
-Keep the bootloader unlocked and preserve bootloader/TEE firmware, calibration,
-EFS, FRP and unlock state. A slot switch after a completed OTA is not a stock return.
-Native25-to-stock restoration remains untested.
+Use complete stock firmware matching the phone and region, or your own verified
+stock backup. Restore matching `super` and the seven slot support images using
+the appropriate bootloader-fastboot/fastbootd instructions for that backup format.
+A data wipe through stock recovery may be required.
+
+Keep the bootloader unlocked. Preserve bootloader/TEE firmware, calibration, EFS,
+FRP and unlock state. Avoid restoring protected-state images during a routine
+return. Switching slots after a completed OTA does not restore stock firmware.
+A Native25-to-stock return has not been tested.

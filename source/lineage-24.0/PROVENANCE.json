@@ -804,8 +804,13 @@
     },
     {
       "path": "patches/README.md",
-      "sha256": "0d8bc5857ae8e053166a214806353be1f5a6b5d002906f0e30b8cf1d8ad36bc1",
-      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+      "sha256": "8a731bd79acc03b3c4cc8778322e4868b6d462407393a30f03caafb83e2a190d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c",
+      "documentation_update": {
+        "date": "2026-11-07",
+        "original_sha256": "0d8bc5857ae8e053166a214806353be1f5a6b5d002906f0e30b8cf1d8ad36bc1",
+        "reason": "Replace historical engineering notes with current public patch guidance. Code and build inputs are unchanged."
+      }
     },
     {
       "path": "patches/lineage-23.2/0001-remove-stale-vintf-conflict.patch",
@@ -3107,5 +3112,6 @@
       "sha256": "899e0af1b0a40401ee0d3e2be04ee2f0ca64bc2c015f4515759dbc98decaa918",
       "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
     }
-  ]
+  ],
+  "documentation_note": "Documentation edits are annotated per file; original code/configuration hashes are retained."
 }

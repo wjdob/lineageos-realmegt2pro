@@ -8,8 +8,8 @@ body:
     attributes:
       label: LineageOS version
       options:
-        - "24.0 / Android17"
-        - "23.2 / Android16"
+        - "24.0 / Android 17"
+        - "23.2 / Android 16"
         - "Other (give the exact version below)"
     validations:
       required: true
