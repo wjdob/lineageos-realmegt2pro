@@ -1,7 +1,8 @@
 # Install and update Native25
 
-For RMX3301 / project 21631 with compatible Android 15 firmware. Testing uses TW
-.1410 firmware. Read the [release limits](RELEASE_NOTES.md).
+Tested on an RMX3300 Chinese-market handset converted to RMX3301 TW .1410
+firmware, project 21631. The RMX3301 checks below refer to the installed firmware
+identity. Use matching firmware and partition layouts when selecting packages. Read the [release limits](RELEASE_NOTES.md).
 A fresh clean installation and a direct Android 16 upgrade have not yet been tested. The successful major upgrade used intermediate development builds.
 
 ## Backups and bootloader
