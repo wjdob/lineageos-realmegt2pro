@@ -1,0 +1,15 @@
+{
+  "status": "draft; not connected to the 23.0 recipe; not build-validated",
+  "review_date": "2026-10-24",
+  "project": "device/oneplus/sm8450-common",
+  "repository": "https://github.com/pjgowtham/android_device_oneplus_sm8450-common",
+  "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
+  "patch": "0001-remove-stale-vintf-conflict.patch",
+  "patch_sha256": "70f1e31e05566491d18037cd465c3033bbedd220772b5b0ed504b1c49ff7c6ab",
+  "file": "BoardConfigCommon.mk",
+  "preimage_sha256": "89f7fba4adb764c40cff3b8fab63a47698a942c8a141f6e565387b1cdea7721a",
+  "postimage_sha256": "6dfa322e01eb3dc01a78b2fef596780431303993e17ad4afb10565002de0af12",
+  "reason": "Remove committed conflict markers and stale VINTF block; common.mk already declares the VINTF inputs using vintf/ manifest paths.",
+  "verification": "git apply --check passed on fresh pinned common checkout; no original source modified",
+  "remaining": "Evaluate product/BoardConfig variable ordering, VINTF inputs, full build graph and packaged manifests before accepting the repair."
+}

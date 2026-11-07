@@ -1,0 +1,62 @@
+name: Clock problem
+description: Report a repeatable Clock issue
+title: "[Clock] "
+labels: [bug, needs-triage, "area:clock"]
+body:
+  - type: markdown
+    attributes:
+      value: Search existing issues first. Report one problem and remove private information from attachments.
+  - type: dropdown
+    id: lineage_version
+    attributes:
+      label: LineageOS version
+      options:
+        - "24.0 / Android17"
+        - "23.2 / Android16"
+        - "Other (give the exact version below)"
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: ROM and bundle versions
+      placeholder: Native25, Clock 15.10.13 alpha5
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Device and setup
+      description: Model, previous stock firmware/region, chosen add-ons, root or system changes. Keep identifiers private.
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Feature fails
+        - Boot or setup is blocked
+        - Possible data loss
+        - Minor visual problem
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Number the steps. Include how often it happens and any earlier working version.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+      description: Include the exact error and whether restarting changes it.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional evidence
+      description: Short redacted logs or screenshots. Exclude accounts, credentials, IMEIs, partition backups and private media.

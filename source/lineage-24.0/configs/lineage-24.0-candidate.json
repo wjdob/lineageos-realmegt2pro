@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "status": "Native24 boots with retained data, but secure-element cohort registration fails. Restore accepted23b SIM1/SIM2/eSE1 declarations; successor build/runtime remain unverified.",
+  "observed_utc": "2026-11-06T08:24:30.318595+00:00",
+  "platform_manifest_commit": "b51a0c449a3279ca55fb6d4d91d2143e42e2fff5",
+  "platform_manifest_path": "manifests/lineage-24.0-candidate.xml",
+  "platform_lock_sha256": "20c32bebf983a174d29166f6918d599097c0a5890d35adde2e85ecfbde7e851f",
+  "platform_projects": 1251,
+  "projects": [
+    {
+      "path": "device/realme/ferrari",
+      "url": "https://github.com/pjgowtham/android_device_realme_ferrari",
+      "revision": "5e0afb4cae08de6094d293bcc53cb9890a94326a"
+    },
+    {
+      "path": "device/oneplus/sm8450-common",
+      "url": "https://github.com/pjgowtham/android_device_oneplus_sm8450-common",
+      "revision": "f19d74ba3859298e56c2a139f415003b379a6320"
+    },
+    {
+      "path": "hardware/oplus",
+      "url": "https://github.com/pjgowtham/android_hardware_oplus",
+      "revision": "28ba653377380fe725a87a4fd21fa0ca5bb228c0"
+    },
+    {
+      "path": "kernel/oneplus/sm8450",
+      "url": "https://github.com/pjgowtham/android_kernel_oneplus_sm8450",
+      "revision": "914935583f0ce199114a4a1f31178ab25a3a052d"
+    },
+    {
+      "path": "kernel/oneplus/sm8450-devicetrees",
+      "url": "https://github.com/pjgowtham/android_kernel_oneplus_sm8450-devicetrees",
+      "revision": "d8f3eb3fe8f98facd9669aa97d1247f6580e1e58"
+    },
+    {
+      "path": "kernel/oneplus/sm8450-modules",
+      "url": "https://github.com/pjgowtham/android_kernel_oneplus_sm8450-modules",
+      "revision": "ca1104519fcb7e769129e75458a9da4833bcc751"
+    },
+    {
+      "path": "hardware/qcom-caf/sm8450/display",
+      "url": "https://github.com/pjgowtham/android_hardware_qcom_display",
+      "revision": "97a51d8eb6a856fc84a158261c21f1c11b9a00a3"
+    },
+    {
+      "path": "hardware/pixelworks/interfaces",
+      "url": "https://github.com/LineageOS/android_hardware_pixelworks_interfaces",
+      "revision": "462ccb7db689de0a92cafdde5efb3c81fa617448"
+    },
+    {
+      "path": "hardware/qcom-caf/sm8450/audio/agm",
+      "url": "https://github.com/LineageOS/android_vendor_qcom_opensource_agm",
+      "revision": "35c3491ff5566de4f60a64ad47e74fb39cd192e0"
+    },
+    {
+      "path": "vendor/qcom/opensource/healthd-ext",
+      "url": "https://github.com/LineageOS/android_vendor_qcom_opensource_healthd-ext",
+      "revision": "9bdd090e6b5797d339e96b060c03412f36993554"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common",
+      "url": "https://github.com/Arman-ATI/proprietary_vendor_oneplus_sm8450-common",
+      "revision": "52957f02429e1b4ec9e2cb8b7c6181c0959dd954"
+    },
+    {
+      "path": "vendor/realme/ferrari",
+      "url": "https://gitlab.com/pjgowtham/proprietary_vendor_realme_ferrari",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "note": "Public b87a690 is the preserved lower input; the separately hash-bound private .1410 reconstruction supplies the final Ferrari vendor files."
+    }
+  ],
+  "candidate_recipe": {
+    "path": "tools/build/recipe-24.0.json",
+    "sha256": "0535a86ff7972007680b67d57d10a62d89309b0371a043c7313c193f2a576cea",
+    "modified_files": 36,
+    "text_patches": 44,
+    "byte_replacements": 9,
+    "reconstruction": "Verified base recipe; final vendor files come from the separately bound private supplement.",
+    "limits": "File hashes only; no checkout HEAD verification, Soong graph evaluation, native build, package check or runtime claim.",
+    "new_files": 12
+  },
+  "build_plan": {
+    "source_tree": "/mnt/lineage24-store/tree (SSD-backed WSL ext4; overlay at /build/lineage-24.0; separate from archived 23.2)",
+    "store": "/mnt/lineage24-store",
+    "mount_script": "tools/build/mount_24.sh",
+    "sync_script": "tools/build/sync_24.sh",
+    "clone_policy": "clone-depth=1 for all1251 pinned projects;1248 selected on Linux",
+    "graph_note": "Native21 completed the native/package graph and selected independent package gates. This next compatibility source batch is unbuilt; it needs a fresh same-run graph, signed-image review and standard/repeat boot acceptance.",
+    "product": "lineage_ferrari",
+    "device": "ferrari",
+    "target_release": "cp2a",
+    "targets": [
+      "codec2-provider",
+      "check-elf-files",
+      "otapackage"
+    ],
+    "launcher": "tools/build/start_candidate_24.ps1",
+    "runner": "tools/build/run_candidate_24.py",
+    "agm_config": {
+      "path": "configs/agm-calibration-24.0.json",
+      "sha256": "9c80826d65ef827417b8e551695a5edcb54f39edbecb9887bb9cc7caef9f7532"
+    },
+    "signing_certificate": "certs/rmx3301-releasekey.x509.pem",
+    "preconditions": [
+      "Bind the verified SSD WSL-root store; keep source, provider, overlay, outputs and build scratch in that store.",
+      "Verify all1248 selected project HEADs, working files and materialized LFS payloads.",
+      "Reconstruct27 modified and10 added source files, then verify the private .1410 vendor source/output contracts.",
+      "Use a new run ID, preserve the signing identity, keep the 12-hour build timeout; observe every5minutes for the first hour, then every30minutes.",
+      "Do not infer flash, recovery, migration or hardware acceptance from host preparation."
+    ],
+    "store_backing": "/build/lineage24-store",
+    "previous_store_image": "E:\\lineage-24.0\\rootfs.img (400 GiB sparse ext4)"
+  },
+  "unresolved": [
+    "The next optional-compatibility source batch is unbuilt. Native21 selected package checks pass; standard/repeat boot and consolidated hardware UAT remain pending.",
+    "The .1410 vendor provider is reproducibly extracted and byte-verified. Public redistribution scope and runtime hardware qualification remain separate.",
+    "Google17 session, Play and media work on diagnostic native18. New standard-image retention and API37 OEM app installers still require qualification.",
+    "The OS-only payload preserves GNSS NV; it does not supply portable L5 migration.",
+    "Current offline source work does not authorize a device write, wipe, slot switch or recovery deployment."
+  ],
+  "limits": "Pins and file-level reconstruction only. This is not a build, package, installation or hardware acceptance result.",
+  "vendor_supplement": {
+    "inputs": "configs/lineage-24.0-vendor-inputs.json",
+    "inputs_sha256": "f762be5844f0cd03b220d122399bf09120aa0594833ad71e19cc5eee51e7cacc",
+    "outputs": "configs/lineage-24.0-vendor-output.json",
+    "distribution_scope": "Private local engineering only; no proprietary bytes committed or approved for redistribution.",
+    "outputs_sha256": "57e83ece9fc0b8c69935b6b187f4d1c9668086b1d723fc7c69ad9652525e0c5a"
+  },
+  "storage_migration_utc": "2026-11-04T07:54:17.704121+00:00",
+  "codec2_abi": {
+    "contract": "configs/codec-store-abi-24.0.json",
+    "contract_sha256": "33b0d588bf0b7d1a1081d1533933d19e9b046cb650f1c8afa4d4d7eedc96782f",
+    "required_size": 288,
+    "legacy_size": 264,
+    "compiled_probe_run": "candidate-24-native-10",
+    "limits": "Actual provider machine code and DWARF agree; source and package gates required. No runtime acceptance."
+  },
+  "legacy_xml_abi": {
+    "contract": "configs/vendor-xml-abi-24.0.json",
+    "sha256": "4f2a9596cee2aeaeb5aab6f43b82e3b8146202baa2901461e08a6187d78c3a7d",
+    "consumers": 12
+  },
+  "device_core": {
+    "contract": "configs/device-core-24.0.json",
+    "sha256": "783899bb51d56b4dd14838d04c177766743d292e9a1978f63642a54b40e162f0",
+    "source_files": 6,
+    "limits": "Qualified display-resource and recording-profile source/package checks; live Android17 acceptance remains required."
+  },
+  "common_runtime": {
+    "contract": "configs/common-runtime-24.0.json",
+    "sha256": "98ea5182b005d37601744dc4f4ea9a33158f06f229eb0476eb522395831362e6",
+    "private_files": 70,
+    "compiled_vendor_interfaces": 7,
+    "limits": "Exact private input/source delivery and required generated vendor variants only. No native build, full ABI, startup or hardware acceptance."
+  }
+}

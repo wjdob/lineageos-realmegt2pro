@@ -1,0 +1,17 @@
+{
+  "status": "draft binary fix paired with module-definition patch; not applied to original vendor tree",
+  "project": "vendor/realme/ferrari",
+  "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+  "binary": "proprietary/odm/lib64/libAlgoProcess.so",
+  "preimage_sha256": "9127d2e8ba4ffb842e10f1b01df9df4c01f5c152e9ccc299c7ca8761b585b6b2",
+  "postimage_sha256": "726183ac2d9073ca66497cfae074e421887d81298c0fb01532b7201d01647d30",
+  "old_needed": "android.hardware.graphics.common-V6-ndk.so",
+  "new_needed": "android.hardware.graphics.common-V7-ndk.so",
+  "changed_bytes": 1,
+  "definition_patch": "patches\\lineage-23.2\\0006-ferrari-graphics-common-v7.patch",
+  "definition_patch_sha256": "8f7decdf21ef67628e4cffd09be034a2c0a02e815d1899a3eb933611b8e2d8f0",
+  "definition_preimage_sha256": "c0876db748e3367d17b7bcb28dbb8bb3e62b6d8352bffc0fb8466062af771c16",
+  "definition_postimage_sha256": "f5f918708c4398a1778a7226d4564a7eb0b98bc9ed0237ca9e2fc398fe19b44e",
+  "api_revision": "13d687a84c834af855bfb314b853b8372a7aa6d9",
+  "limits": "Confirm DT_NEEDED and other ELF bytes; require actual graph/linker namespace and camera runtime validation. V7 is the unfrozen current interface at this platform pin."
+}

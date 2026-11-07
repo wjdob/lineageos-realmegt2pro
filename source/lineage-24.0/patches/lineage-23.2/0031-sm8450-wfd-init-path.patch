@@ -1,0 +1,12 @@
+diff --git a/proprietary/system_ext/etc/init/wfdservice.rc b/proprietary/system_ext/etc/init/wfdservice.rc
+--- a/proprietary/system_ext/etc/init/wfdservice.rc
++++ b/proprietary/system_ext/etc/init/wfdservice.rc
+@@ -9,7 +9,7 @@
+     disabled
+     oneshot
+ 
+-service wfdservice64 /system_ext/bin/wfdservice64
++service wfdservice64 /system_ext/bin/wfdservice
+     class main
+     user system
+     disabled

@@ -1,0 +1,71 @@
+--- a/aidl/main.cpp
++++ b/aidl/main.cpp
+@@ -6,6 +6,8 @@
+ #define LOG_TAG "android.hardware.health-service.qti"
+ 
+ #include <android-base/logging.h>
++#include <android-base/properties.h>
++#include <limits>
+ #include <android/binder_interface_utils.h>
+ #include <health/utils.h>
+ #include <health-impl/ChargerUtils.h>
+@@ -26,6 +28,50 @@
+ };
+ } //namespace aidl::android::hardware::health
+ #endif
++
++// RMX3301 exports Oplus gauge current in mA, positive on discharge.
++// Keep the kernel/OEM interface unchanged; normalize both public HAL paths.
++class Rmx3301Health : public Health {
++  public:
++    using Health::Health;
++
++    ndk::ScopedAStatus getCurrentNowMicroamps(int32_t* out) override {
++        auto status = Health::getCurrentNowMicroamps(out);
++        if (!status.isOk() || !normalize_current_) return status;
++        if (!NormalizeCurrent(out)) return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
++        return status;
++    }
++
++    ndk::ScopedAStatus getCurrentAverageMicroamps(int32_t* out) override {
++        auto status = Health::getCurrentAverageMicroamps(out);
++        if (!status.isOk() || !normalize_current_) return status;
++        if (!NormalizeCurrent(out)) return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
++        return status;
++    }
++
++  protected:
++    void UpdateHealthInfo(aidl::android::hardware::health::HealthInfo* info) override {
++        Health::UpdateHealthInfo(info);
++        if (!normalize_current_) return;
++        // HealthInfo has no per-field error channel; zero means unavailable here.
++        if (!NormalizeCurrent(&info->batteryCurrentMicroamps)) info->batteryCurrentMicroamps = 0;
++        if (!NormalizeCurrent(&info->batteryCurrentAverageMicroamps)) info->batteryCurrentAverageMicroamps = 0;
++    }
++
++  private:
++    const bool normalize_current_ = android::base::GetProperty("ro.boot.prjname", "") == "21631";
++
++    static bool NormalizeCurrent(int32_t* value) {
++        const int64_t microamps = -1000LL * *value;
++        if (microamps < std::numeric_limits<int32_t>::min() ||
++            microamps > std::numeric_limits<int32_t>::max()) {
++            LOG(ERROR) << "RMX3301 gauge current outside convertible range";
++            return false;
++        }
++        *value = static_cast<int32_t>(microamps);
++        return true;
++    }
++};
+ 
+ static constexpr const char* gInstanceName = "default";
+ static constexpr std::string_view gChargerArg{"--charger"};
+@@ -84,7 +130,7 @@
+     auto config = std::make_unique<healthd_config>();
+     ::android::hardware::health::InitHealthdConfig(config.get());
+     qti_healthd_board_init(config.get());
+-    auto binder = ndk::SharedRefBase::make<Health>(gInstanceName, std::move(config));
++    auto binder = ndk::SharedRefBase::make<Rmx3301Health>(gInstanceName, std::move(config));
+ 
+     if (argc >= 2 && argv[1] == gChargerArg) {
+ #if !CHARGER_FORCE_NO_UI

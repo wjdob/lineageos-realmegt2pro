@@ -1,0 +1,10 @@
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -21,3 +21,7 @@
+ 
+ # Include the proprietary files BoardConfig.
+ include vendor/realme/ferrari/BoardConfigVendor.mk
++
++# Keep optional system-app add-ons separate from the base ROM.
++# Dynamic-partition OTAs carry the resulting filesystem/partition size.
++BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 536870912

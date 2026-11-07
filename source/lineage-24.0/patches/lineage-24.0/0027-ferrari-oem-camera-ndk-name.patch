@@ -1,0 +1,11 @@
+--- a/proprietary-files.txt
++++ b/proprietary-files.txt
+@@ -1288,7 +1288,7 @@
+ odm/etc/vintf/manifest/manifest_oplus_face.xml
+ odm/lib64/libstfaceunlockocl.so
+ odm/init.oplus.face.rc
+-vendor/lib64/libcamera2ndk_vendor.so
++vendor/lib64/libcamera2ndk_vendor.so:vendor/lib64/libcamera2ndk_realme.so;FIX_SONAME
+ odm/vendor/firmware/facereg.b00
+ odm/vendor/firmware/facereg.b01
+ odm/vendor/firmware/facereg.b02

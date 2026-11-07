@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Native 152 px cutout inset scaled by 1080/1440. -->
+    <dimen name="status_bar_height_portrait">114px</dimen>
+</resources>

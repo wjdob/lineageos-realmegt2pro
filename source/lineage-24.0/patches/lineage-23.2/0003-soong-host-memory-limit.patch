@@ -1,0 +1,16 @@
+--- a/ui/build/soong.go
++++ b/ui/build/soong.go
+@@ -226,6 +226,13 @@
+ 
+ 	commonArgs = append(commonArgs, "-l", filepath.Join(pb.config.FileListDir(), "Android.bp.list"))
+ 	invocationEnv := make(map[string]string)
++	// The primary builder runs under env -i; explicitly pass this host memory policy.
++	if limit := os.Getenv("SOONG_GOMEMLIMIT"); limit != "" {
++		if value, err := strconv.ParseUint(limit, 10, 64); err != nil || value == 0 {
++			panic("SOONG_GOMEMLIMIT must be a positive byte count")
++		}
++		invocationEnv["GOMEMLIMIT"] = limit
++	}
+ 	if pb.debugPort != "" {
+ 		//debug mode
+ 		commonArgs = append(commonArgs, "--delve_listen", pb.debugPort,

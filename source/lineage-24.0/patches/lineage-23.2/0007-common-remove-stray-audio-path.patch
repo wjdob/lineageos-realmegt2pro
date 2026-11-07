@@ -1,0 +1,7 @@
+--- a/common.mk
++++ b/common.mk
+@@ -390,4 +390,3 @@
+ 
+ # Inherit from the proprietary files makefile.
+ $(call inherit-product, vendor/oneplus/sm8450-common/sm8450-common-vendor.mk)
+-    $(AUDIO_HAL_DIR)/configs/

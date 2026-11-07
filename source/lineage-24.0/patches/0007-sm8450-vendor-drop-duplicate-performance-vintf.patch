@@ -1,0 +1,32 @@
+From: RMX3301 recovery project
+Subject: [PATCH] sm8450-common vendor: do not install the duplicate performance VINTF manifest
+
+checkvintf (exit 70, during otapackage) reported:
+
+  HAL "vendor.oplus.hardware.performance" has a conflict:
+  IPerformance/default (@1) from /vendor/etc/vintf/manifest/vendor.oplus.hardware.performance-service.xml
+  vs. IPerformance/default (@1) from /odm/etc/vintf/manifest/manifest_performance_aidl.xml
+
+hardware/oplus already declares the HAL for /vendor, so the blob tree's /odm copy is removed from
+PRODUCT_PACKAGES. The LINE IS DELETED, not commented out. The fix applied by hand in the WSL tree on
+2026-10-12 replaced it with "# manifest_performance_aidl.xml ... \". Kati, like GNU make, joins
+backslash-continued lines BEFORE removing comments (kati src/strutil.cc FindEndOfLine), so that
+comment swallowed the remaining 105 entries of the statement: the post-fix vendor image has 1 of the
+93 vendor-partition modules listed after it (composer-service, installed by another route), against
+667 of 667 before it. Deleting the whole line keeps the continuation intact.
+
+Generated with git diff against Arman-ATI/proprietary_vendor_oneplus_sm8450-common
+2e695fe2ad3d99fd6bfd386b1ab0764c7b115d2a. Apply with: patch -p1 -d vendor/oneplus/sm8450-common
+
+diff --git a/sm8450-common-vendor.mk b/sm8450-common-vendor.mk
+index 5916521..b9e4c5f 100644
+--- a/sm8450-common-vendor.mk
++++ b/sm8450-common-vendor.mk
+@@ -1183,7 +1183,6 @@ PRODUCT_PACKAGES += \
+     device_manifest_communication_center_aidl.xml \
+     manifest_android.hardware.drm@1.4-service.widevine.xml \
+     manifest_oplus_cwb.xml \
+-    manifest_performance_aidl.xml \
+     vendor.pixelworks.hardware.display.iris-service.xml \
+     vendor.pixelworks.hardware.feature.irisfeature-service.xml \
+     adpl \

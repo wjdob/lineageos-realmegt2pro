@@ -1,0 +1,8 @@
+--- a/android.hardware.thermal-service.qti.rc
++++ b/android.hardware.thermal-service.qti.rc
+@@ -40,4 +40,4 @@
+ 
+ on boot
+     wait /sys/kernel/boot_adsp/boot
+-    restart android.thermal-hal
++    restart vendor.thermal-hal

@@ -1,0 +1,73 @@
+--- a/Android.mk
++++ b/Android.mk
+@@ -1,34 +1,2 @@
+-#
+-# Automatically generated file. DO NOT MODIFY
+-#
+-
+-LOCAL_PATH := $(call my-dir)
+-
+-ifeq ($(TARGET_DEVICE),ferrari)
+-
+-$(call add-radio-file-sha1-checked,radio/abl.img,f54cf60edd6b9cdb19ba1785ba384b8126b2bfb7)
+-$(call add-radio-file-sha1-checked,radio/aop.img,bec4d7747f1bb7d219d0e39e2849de7f46522fa0)
+-$(call add-radio-file-sha1-checked,radio/aop_config.img,1d0388de1411c2cf6213ff3d1bb72de213a2b310)
+-$(call add-radio-file-sha1-checked,radio/bluetooth.img,4f455981a8b3e814e502f6b886e9a3fff11c5b22)
+-$(call add-radio-file-sha1-checked,radio/cpucp.img,ab858f2764bca777f00c6eeb624c3507c937eb13)
+-$(call add-radio-file-sha1-checked,radio/devcfg.img,10c59f3dd1e38476237dcfc2844c9db4a633f840)
+-$(call add-radio-file-sha1-checked,radio/dsp.img,e9f84bc1929d77e5bcf2c8b184bfaed6c7942afb)
+-$(call add-radio-file-sha1-checked,radio/engineering_cdt.img,13f5f33df779408b04cdfb3d78dd1ebbd3afb7b4)
+-$(call add-radio-file-sha1-checked,radio/featenabler.img,c48aae71df958ed3e37b7cb0c47b7fa36cfe8f38)
+-$(call add-radio-file-sha1-checked,radio/hyp.img,88348ae7f23f0e6b7fbac9aa1737e417752d7deb)
+-$(call add-radio-file-sha1-checked,radio/imagefv.img,9ff924052332625e84f13035b94b44a04446c92d)
+-$(call add-radio-file-sha1-checked,radio/keymaster.img,427d6f1be34eb9787564fedf3af1b782b7e4aa80)
+-$(call add-radio-file-sha1-checked,radio/modem.img,f9074b1e0f43303910652525f43a47975569c560)
+-$(call add-radio-file-sha1-checked,radio/oplus_sec.img,903e1685b64a523d629ac41fce6191b472b8a6e0)
+-$(call add-radio-file-sha1-checked,radio/oplusstanvbk.img,6b98bca6a1b6e008771473a1277ea54f7c568f58)
+-$(call add-radio-file-sha1-checked,radio/qupfw.img,00cd5aece6da9b92e2012d96f89da1f4fd0916a6)
+-$(call add-radio-file-sha1-checked,radio/shrm.img,f018625d4fa9675d6361c7929775bad852689b89)
+-$(call add-radio-file-sha1-checked,radio/splash.img,88b02f550aa70d1d51f8197ee83eb026c49f28e2)
+-$(call add-radio-file-sha1-checked,radio/tz.img,e5018e5f6b8399b341da81aee6e30e0e85a00dbc)
+-$(call add-radio-file-sha1-checked,radio/uefi.img,908628844a9fa860dab419500c25a954694279f5)
+-$(call add-radio-file-sha1-checked,radio/uefisecapp.img,3e2064fe82816b08d562f63bdec2760a981541e0)
+-$(call add-radio-file-sha1-checked,radio/xbl.img,8b81b0cc80f2abafed34c796dc5293adce3eb4e0)
+-$(call add-radio-file-sha1-checked,radio/xbl_config.img,cade6ac2b57a34c7a8edf78041b9a8aaec3a041d)
+-$(call add-radio-file-sha1-checked,radio/xbl_ramdump.img,7a79fb17162e8b8d156bef9e41d2c0d102eb809f)
+-
+-endif
++# External firmware policy: retain the validated stock firmware.
++# Low-level firmware is neither registered nor updated by this ROM.
+--- a/BoardConfigVendor.mk
++++ b/BoardConfigVendor.mk
+@@ -1,29 +1,2 @@
+-#
+-# Automatically generated file. DO NOT MODIFY
+-#
+-
+-AB_OTA_PARTITIONS += \
+-    abl \
+-    aop \
+-    aop_config \
+-    bluetooth \
+-    cpucp \
+-    devcfg \
+-    dsp \
+-    engineering_cdt \
+-    featenabler \
+-    hyp \
+-    imagefv \
+-    keymaster \
+-    modem \
+-    oplus_sec \
+-    oplusstanvbk \
+-    qupfw \
+-    shrm \
+-    splash \
+-    tz \
+-    uefi \
+-    uefisecapp \
+-    xbl \
+-    xbl_config \
+-    xbl_ramdump
++# External firmware policy: retain the validated stock firmware.
++# Low-level firmware is neither registered nor updated by this ROM.

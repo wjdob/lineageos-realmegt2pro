@@ -1,0 +1,11 @@
+--- a/proprietary-files.txt
++++ b/proprietary-files.txt
+@@ -212,7 +212,7 @@
+ vendor/lib64/libcneoplookup.so
+ vendor/lib64/libcneqmiutils.so
+ vendor/lib64/libjnihelper.so
+-vendor/lib64/libmasc.so;DISABLE_CHECKELF
++vendor/lib64/libmasc.so
+ vendor/lib64/libshsc.so
+ vendor/lib64/libwms.so
+ vendor/lib64/libwqe.so

@@ -1,0 +1,510 @@
+{
+  "schema": 1,
+  "provider": "inputs/common-runtime-23b-01",
+  "source": {
+    "kind": "accepted23b target-files",
+    "sha256": "6375b9f7304b5bd6314ec22d5c270360b8a73d6ef96e880027f4b30a5d3673b8",
+    "vendor_project": "pjgowtham/proprietary_vendor_oneplus_sm8450-common",
+    "vendor_revision": "15ddc806fa2816908b0d61e9ff9c161e6ef1eba5"
+  },
+  "attribution": "Qualcomm/Oplus runtime inherited through the accepted pjgowtham23b vendor source; local restoration of missing24 metadata and preserved v34 extraction fixups. Seven HIDL vendor variants are generated from pinned Android17 source.",
+  "distribution_scope": "Private local engineering. No proprietary bytes committed or approved for redistribution.",
+  "files": [
+    {
+      "path": "proprietary/vendor/bin/hw/vendor.qti.hardware.iop@2.0-service",
+      "member": "VENDOR/bin/hw/vendor.qti.hardware.iop@2.0-service",
+      "bytes": 20312,
+      "sha256": "8f38d36db37b8050961fedd160dcd62d747039670d69b4442ce4d13b0a893241"
+    },
+    {
+      "path": "proprietary/vendor/bin/hw/vendor.qti.hardware.perf-hal-service",
+      "member": "VENDOR/bin/hw/vendor.qti.hardware.perf-hal-service",
+      "bytes": 42904,
+      "sha256": "41581c54097b5f3e56659fb6ec7d3ef88deb51008d12da72f9757b8d34a7eb10"
+    },
+    {
+      "path": "proprietary/vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service",
+      "member": "VENDOR/bin/hw/vendor.qti.hardware.servicetracker@1.2-service",
+      "bytes": 15504,
+      "sha256": "5ad03c28834bee1b22e508f7641eb5196f26a6c5fd3957ca5080f89de945cb07"
+    },
+    {
+      "path": "proprietary/vendor/bin/poweropt-service",
+      "member": "VENDOR/bin/poweropt-service",
+      "bytes": 70489,
+      "sha256": "fa389826a9ea2ea986fb62cc82975d8548e82eb69a99b20f3a1fe380c3238588"
+    },
+    {
+      "path": "proprietary/vendor/etc/init/poweropt-service.rc",
+      "member": "VENDOR/etc/init/poweropt-service.rc",
+      "bytes": 513,
+      "sha256": "419ef999e1ec33d30aa7226f869016edda18aba300f8ab59b632fb7d0e8da17b"
+    },
+    {
+      "path": "proprietary/vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc",
+      "member": "VENDOR/etc/init/vendor.qti.hardware.iop@2.0-service.rc",
+      "bytes": 536,
+      "sha256": "c6be5b6f1c7983d9b2e4fac585e346c854b1810e2531ee14740b6750c47d3423"
+    },
+    {
+      "path": "proprietary/vendor/etc/init/vendor.qti.hardware.perf-hal-service.rc",
+      "member": "VENDOR/etc/init/vendor.qti.hardware.perf-hal-service.rc",
+      "bytes": 1470,
+      "sha256": "fb4ab6fde80453cbf97bdc76ed369646b85d7f7e0bdc3dba35bc755ca1da144b"
+    },
+    {
+      "path": "proprietary/vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc",
+      "member": "VENDOR/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc",
+      "bytes": 143,
+      "sha256": "c0815e0ff3f81f1c4ad925fd006fd73d97d30df4e0c56208cc39c3262dc3010d"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/AdaptLaunchFeature.xml",
+      "member": "VENDOR/etc/lm/AdaptLaunchFeature.xml",
+      "bytes": 3423,
+      "sha256": "1b4675dc4351f52f7042b2f960c902288abd2211a4cf906e490ce2fa38a23966"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/AppClassifierFeature.xml",
+      "member": "VENDOR/etc/lm/AppClassifierFeature.xml",
+      "bytes": 1201,
+      "sha256": "b2c98d970b4277c0e230bf50d1df38b2924844f77c5b6fcbbd4be56d0cea6e07"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/LightningLaunchesFeature.xml",
+      "member": "VENDOR/etc/lm/LightningLaunchesFeature.xml",
+      "bytes": 3482,
+      "sha256": "6c2cb9cbc68047aa078306ba7b756bbb27e380d6df947746bf88efefd365901d"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/PreKillFeature.xml",
+      "member": "VENDOR/etc/lm/PreKillFeature.xml",
+      "bytes": 2765,
+      "sha256": "fdcf2504e71192447a650fad89fa82922110a92204831689b62e2a64f24582f7"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/ProCompFeature.xml",
+      "member": "VENDOR/etc/lm/ProCompFeature.xml",
+      "bytes": 1987,
+      "sha256": "f5a6e1f309528c10eea4e0983acb567cb727f8997d63cc8ce998aeb0fe63f706"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/QAPE.xml",
+      "member": "VENDOR/etc/lm/QAPE.xml",
+      "bytes": 3604,
+      "sha256": "d6eb2af23ab7690872fa043aa82a261d71671b9d7993ce8d1f4ff4d4ba8eed48"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/QGPE.xml",
+      "member": "VENDOR/etc/lm/QGPE.xml",
+      "bytes": 19638,
+      "sha256": "442ee42fd0256536387aba37b415a3323301cdeb77cc4d74d05d429c45a22456"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/QGPEActionMap.xml",
+      "member": "VENDOR/etc/lm/QGPEActionMap.xml",
+      "bytes": 4638,
+      "sha256": "f06e4ba3c4fd8c53e69cbb08b5a1675d4962bc2382f681769ceb54812fb5e736"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/SilkyScrollsFeature.xml",
+      "member": "VENDOR/etc/lm/SilkyScrollsFeature.xml",
+      "bytes": 2202,
+      "sha256": "47d50f67a939d22ee25a8421391025310fb27922eabfbee68a612d7f73c60e61"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/prekill/prekill_2GB.data",
+      "member": "VENDOR/etc/lm/prekill/prekill_2GB.data",
+      "bytes": 1434,
+      "sha256": "b89b0d7b8d4b3576cf70313f74c9ff6683d3c5162edd2fa3db9bfd107f036c58"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/prekill/prekill_4GB.data",
+      "member": "VENDOR/etc/lm/prekill/prekill_4GB.data",
+      "bytes": 1414,
+      "sha256": "4640013f6237a69de52eda80df379e565724985a1e08d0b3f82658fe06c25ba9"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/prekill/prekill_6GB.data",
+      "member": "VENDOR/etc/lm/prekill/prekill_6GB.data",
+      "bytes": 1544,
+      "sha256": "0f079263d050933f364f4c74f7c4745c3709ba4d352a3354ed5a76ebe78f58e8"
+    },
+    {
+      "path": "proprietary/vendor/etc/lm/sPLHFeature.xml",
+      "member": "VENDOR/etc/lm/sPLHFeature.xml",
+      "bytes": 2932,
+      "sha256": "2e1d8f520f12b3d0e6928f9474797668dd23230ac054341808730f5a4b609021"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/avcsysnodesconfigs.xml",
+      "member": "VENDOR/etc/perf/avcsysnodesconfigs.xml",
+      "bytes": 1871,
+      "sha256": "7fded53a23bd067374075f8c85b5c60dc03f6de1aba511200e5af39e3f8637ae"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/commonresourceconfigs.xml",
+      "member": "VENDOR/etc/perf/commonresourceconfigs.xml",
+      "bytes": 25720,
+      "sha256": "340039efb46bf4dc16dae335a1adc9b7b61daa61173454ce08ad496be96497a9"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/commonsysnodesconfigs.xml",
+      "member": "VENDOR/etc/perf/commonsysnodesconfigs.xml",
+      "bytes": 2744,
+      "sha256": "5d19c74aa1448d72f3511c7636243c3db61a4c4963cd9b4a2bcbc28d58d32651"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/perfboostsconfig.xml",
+      "member": "VENDOR/etc/perf/perfboostsconfig.xml",
+      "bytes": 57823,
+      "sha256": "088768c2e5ac61570d1bfb543b0929d7b2848068acfb4b53ae84ecf0cf9b0d82"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/perfconfigstore.xml",
+      "member": "VENDOR/etc/perf/perfconfigstore.xml",
+      "bytes": 10755,
+      "sha256": "f43d3ccf3cff9a5a567a35f41117f396ccd8bbc1446a74d9070ec6ef835ddc43"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/targetconfig.xml",
+      "member": "VENDOR/etc/perf/targetconfig.xml",
+      "bytes": 3893,
+      "sha256": "cab72a08987e2a91044c7205f944826f40834dde37ad041588e7b3e0504209c8"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/targetresourceconfigs.xml",
+      "member": "VENDOR/etc/perf/targetresourceconfigs.xml",
+      "bytes": 14298,
+      "sha256": "6167bfd77c8825d60223202e3daff992ab1f3de445f428a797637697edbb9435"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/targetsysnodesconfigs.xml",
+      "member": "VENDOR/etc/perf/targetsysnodesconfigs.xml",
+      "bytes": 780,
+      "sha256": "c0cc5d275a1e33d5a4fde61a77656cd5092b70b6fb919a17d67c5729126f7a62"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/testcommonresourceconfigs.xml",
+      "member": "VENDOR/etc/perf/testcommonresourceconfigs.xml",
+      "bytes": 19992,
+      "sha256": "2ac4f3b0725928516ec63edf246025e7f5b51979981267b400855e0a7b0e6c99"
+    },
+    {
+      "path": "proprietary/vendor/etc/perf/testtargetresourceconfigs.xml",
+      "member": "VENDOR/etc/perf/testtargetresourceconfigs.xml",
+      "bytes": 10880,
+      "sha256": "852550048c06aac51f94611893c38d5b87f6d12e565889774d2eba5ee335e123"
+    },
+    {
+      "path": "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml",
+      "member": "VENDOR/etc/vintf/manifest/vendor.qti.hardware.perf.xml",
+      "bytes": 1870,
+      "sha256": "334f35898177c8c9d59d057593f76cb2b4cc89abaace73786ccc27b70bd22559"
+    },
+    {
+      "path": "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml",
+      "member": "VENDOR/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml",
+      "bytes": 517,
+      "sha256": "ca5f06b599daaa1de32a786b5576ac3b68c49023e96fe3e86995b6320a3e8050"
+    },
+    {
+      "path": "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml",
+      "member": "VENDOR/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml",
+      "bytes": 472,
+      "sha256": "f57b12f5747dc5ba00186e1254dabebd071561c72ce3ae866cf8f9ce0ef901e0"
+    },
+    {
+      "path": "proprietary/vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so",
+      "member": "VENDOR/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so",
+      "bytes": 72208,
+      "sha256": "b661a45e82900a47893edb47ea5923e67ab55fb1d5408e28a71f1d87f9841218"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libadaptlaunch.so",
+      "member": "VENDOR/lib64/libadaptlaunch.so",
+      "bytes": 137664,
+      "sha256": "dca9ed7059d23fec838e10874f34ad4f70acc96790de6524453c8eaaefc601ee"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libapengine.so",
+      "member": "VENDOR/lib64/libapengine.so",
+      "bytes": 382193,
+      "sha256": "14c227e1371e80b91458ab22055c05a4c674404ac52c77bc1c44cc9011122d2e"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libappclassifier.so",
+      "member": "VENDOR/lib64/libappclassifier.so",
+      "bytes": 86920,
+      "sha256": "cb9998f4348940900befb664a64a220dfe05a64411ca2db20d4e7e26257c3479"
+    },
+    {
+      "path": "proprietary/vendor/lib64/liblearningmodule.so",
+      "member": "VENDOR/lib64/liblearningmodule.so",
+      "bytes": 302425,
+      "sha256": "c506a620e8752565db29d977916479949fb911e37cfa743c005e424710aaebea"
+    },
+    {
+      "path": "proprietary/vendor/lib64/liblightninglaunches.so",
+      "member": "VENDOR/lib64/liblightninglaunches.so",
+      "bytes": 163288,
+      "sha256": "dd9eb86f76cadeb6827c220e7af79161edfb3980f4c6ab8037cc270ac613acae"
+    },
+    {
+      "path": "proprietary/vendor/lib64/liblmutils-ns.so",
+      "member": "VENDOR/lib64/liblmutils-ns.so",
+      "bytes": 165280,
+      "sha256": "b1bf539d26ff69b77e2d1087aea7667fc451860d017e2e6240189cd53ad40a50"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libmemperfd.so",
+      "member": "VENDOR/lib64/libmemperfd.so",
+      "bytes": 57712,
+      "sha256": "775bcad30146ea191afaecb8c42cb5aadea5315ef3097c0e0a1872f3065d8eb7"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libmeters-ns.so",
+      "member": "VENDOR/lib64/libmeters-ns.so",
+      "bytes": 196648,
+      "sha256": "9a9046a0fb098fa9dd849efb717fb3d0bc84f227430536aa43106c9b5514f6da"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libmeters.so",
+      "member": "VENDOR/lib64/libmeters.so",
+      "bytes": 32416,
+      "sha256": "84952f93d2e6d23c0df639aca0a4b781f6e5c8111ee81984cad73a4e27464076"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libpasrutils.so",
+      "member": "VENDOR/lib64/libpasrutils.so",
+      "bytes": 15120,
+      "sha256": "626a31fd6df89fdc687becd057b569acc5474cd72a65e6a99aca02d51a781b3c"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libperfconfig.so",
+      "member": "VENDOR/lib64/libperfconfig.so",
+      "bytes": 36488,
+      "sha256": "3d0a634d361b950027f785f40d7b735e1a7ff2a32a4af892a67be3e70cce6015"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libperfgluelayer.so",
+      "member": "VENDOR/lib64/libperfgluelayer.so",
+      "bytes": 28464,
+      "sha256": "479f6b8ad20061de68de069454a2d45bcc49ac8aef94129d880e8a482036bdde"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libperfioctl.so",
+      "member": "VENDOR/lib64/libperfioctl.so",
+      "bytes": 15200,
+      "sha256": "c19c88d276a90756c3c02660f924215979cfddb15c4bf0c5c44eefa988eb40e0"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libpowercallback.so",
+      "member": "VENDOR/lib64/libpowercallback.so",
+      "bytes": 74305,
+      "sha256": "1ce8026da47bb97aee444c7e814eca4f5f74bbffcfb26a6ae648c33a5f510f2d"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libpowercore.so",
+      "member": "VENDOR/lib64/libpowercore.so",
+      "bytes": 144897,
+      "sha256": "0a63e1669f78c86ffcce4b055757d274b0c058c70363f7ca9fc99a8990862e29"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libprekill.so",
+      "member": "VENDOR/lib64/libprekill.so",
+      "bytes": 361552,
+      "sha256": "4ef3e131c71f4199d7c61e51a233df458348fd071f82096ce273e4866f6d8ddc"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libprocomp.so",
+      "member": "VENDOR/lib64/libprocomp.so",
+      "bytes": 124648,
+      "sha256": "c9515699576b5a64b4fea2be50902a31e2ef0050f6014741c9b6421395c9eea1"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libpsmoptfeature.so",
+      "member": "VENDOR/lib64/libpsmoptfeature.so",
+      "bytes": 156081,
+      "sha256": "4204c7459ccf1f2ebd30d51593db7cd8baf71988b8bb4d704d8b017542d89c32"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libqapesdk.so",
+      "member": "VENDOR/lib64/libqapesdk.so",
+      "bytes": 115888,
+      "sha256": "dd5b51bdddbc686d2ae2f4aee54ba81dce3ed1178b4922d46fb5568db2d47670"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libqti-iopd-client.so",
+      "member": "VENDOR/lib64/libqti-iopd-client.so",
+      "bytes": 24448,
+      "sha256": "887fde4184f9a77057d2e01081c42976cdb52f4a429343ace45138d80c562370"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libqti-iopd.so",
+      "member": "VENDOR/lib64/libqti-iopd.so",
+      "bytes": 156096,
+      "sha256": "302121c8054c83437aee19cacc509b9b844baa93ca4f4fcfd61714308f668290"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libqti-perfd-client.so",
+      "member": "VENDOR/lib64/libqti-perfd-client.so",
+      "bytes": 71984,
+      "sha256": "b7bcf0764650fa02c3ddc1d6ee171859da72ae9961291cf7e8554b1f0081a279"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libqti-perfd.so",
+      "member": "VENDOR/lib64/libqti-perfd.so",
+      "bytes": 317264,
+      "sha256": "bcd24d6059460e4a8115b89c269849a944fe62c73346ba6ef1c57198c8164caa"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libqti-util.so",
+      "member": "VENDOR/lib64/libqti-util.so",
+      "bytes": 28168,
+      "sha256": "410761c4f822298a4ea59c2d53052ea9342f3838ff69efdbd253656877500729"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libqti-utils.so",
+      "member": "VENDOR/lib64/libqti-utils.so",
+      "bytes": 14680,
+      "sha256": "e6535149c5c453ba1abd7037c7b804caf17e938dfd605968bd455e382900c482"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libsilkyscrolls.so",
+      "member": "VENDOR/lib64/libsilkyscrolls.so",
+      "bytes": 125336,
+      "sha256": "6b2a1e471676f3788ebc18aa13a233ca149af3f5ec758a4321e9abdac1bb1210"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libskewknob.so",
+      "member": "VENDOR/lib64/libskewknob.so",
+      "bytes": 32472,
+      "sha256": "1c48c841fb6eba4749f314a47f26e2e09ca32695ea1791c7237e9c5ff24a25a3"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libsplh.so",
+      "member": "VENDOR/lib64/libsplh.so",
+      "bytes": 104600,
+      "sha256": "2b8e86411e7b17fc27eb5a6c4122228b317fd5b1c730049aa75edb67f8befc16"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libstandbyfeature.so",
+      "member": "VENDOR/lib64/libstandbyfeature.so",
+      "bytes": 74601,
+      "sha256": "2951bf49050734f7eb30313ab9860e67c265615aae2456cd2c64138b216c1bac"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libvendorscenariopoweroptfeature.so",
+      "member": "VENDOR/lib64/libvendorscenariopoweroptfeature.so",
+      "bytes": 79297,
+      "sha256": "3a8a3bfef4bef6a5b3ddd7b0747f2792fa076d8ac81955968d3d4ca7134efcc8"
+    },
+    {
+      "path": "proprietary/vendor/lib64/libvideooptfeature.so",
+      "member": "VENDOR/lib64/libvideooptfeature.so",
+      "bytes": 153057,
+      "sha256": "e8db72d18f6145a3e44d6db3db7c1329dc56dca5348e8525af39bcdfaf15def4"
+    },
+    {
+      "path": "proprietary/vendor/lib64/vendor.qti.hardware.iop@1.0.so",
+      "member": "VENDOR/lib64/vendor.qti.hardware.iop@1.0.so",
+      "bytes": 84000,
+      "sha256": "ed053c21cf926ad55ac9f4599ea9363c2e9fe83d7d1262b1810700ab62a3632d"
+    },
+    {
+      "path": "proprietary/vendor/lib64/vendor.qti.hardware.iop@2.0.so",
+      "member": "VENDOR/lib64/vendor.qti.hardware.iop@2.0.so",
+      "bytes": 101112,
+      "sha256": "3dbe00415dfcc9306ba200a3446aa27ab934c2687f221bd15094adf8d594cea4"
+    },
+    {
+      "path": "proprietary/vendor/lib64/vendor.qti.hardware.power.powermodule@1.0.so",
+      "member": "VENDOR/lib64/vendor.qti.hardware.power.powermodule@1.0.so",
+      "bytes": 92400,
+      "sha256": "5165478e9cca07c3d3ad65bdcd167a38a7fa817e20e6ef3962e1e3b4280c1f75"
+    },
+    {
+      "path": "proprietary/vendor/lib64/vendor.qti.power.pasrmanager@1.0.so",
+      "member": "VENDOR/lib64/vendor.qti.power.pasrmanager@1.0.so",
+      "bytes": 83968,
+      "sha256": "07cf1cb1233e64b77cf7e0ff46a2719d2070f2440d270b4868eb002256bf3007"
+    }
+  ],
+  "metadata": [
+    {
+      "path": "vendor/oneplus/sm8450-common/Android.bp",
+      "sha256": "bae9e5e7cb84b079bc70854bf25b3daa2c4ede0770cfd462801a4fdc154a47fa"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/sm8450-common-vendor.mk",
+      "sha256": "7bfc09d765fbf564418f5eb3ccff3fd3287490f24c0287714121ed56db227504"
+    }
+  ],
+  "interface_sources": [
+    {
+      "path": "vendor/qcom/opensource/interfaces/perf/1.0/IPerf.hal",
+      "sha256": "3b62e5f205de632f6c1d6b46d01a2945b5a855ec4a98247515ce8d14b51a4fa3"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/perf/2.0/IPerf.hal",
+      "sha256": "517008020b188864935535fa5c9ab30c686d01a4e7559659658d61b78fcd7cd1"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/perf/2.1/IPerf.hal",
+      "sha256": "429bbf6c78faecc882e6d39ea05329be9519b3ae547448ec3cc5c2393b918740"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/perf/2.1/IPerfCallback.hal",
+      "sha256": "d5308ed1c730c17c0ae57de676255eb68f48846b5e976fccc1b046755e015a2e"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/perf/2.2/IPerf.hal",
+      "sha256": "dd76694de5ef346703b450dc96e6c96e274caacb52fba60ad52cb69352467040"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/perf/2.3/IPerf.hal",
+      "sha256": "ca3830177c6813da7219ffa8fd4bf2ffc161f9d10bcbb08b334a93838974f852"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/servicetracker/1.0/IServicetracker.hal",
+      "sha256": "bba735f959d5c7a36196de6548a5f74090512bc4e9d92ac29279b2dd786ebb8a"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/servicetracker/1.0/types.hal",
+      "sha256": "f054d56cfb47d897f64f71ef4fcacb5ddb1d9c2841e1a83e93efbf92ca1d1297"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/servicetracker/1.1/IServicetracker.hal",
+      "sha256": "e1112e99ed844f2e3d9d653acc818391dc0470b810704f59928b021a11eca675"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/servicetracker/1.2/IActivityEventInfoCallback.hal",
+      "sha256": "75c7c3e72c2efa195b743d1395dd3ea6ef96761a8503392f945d2f691ea0d2d0"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/servicetracker/1.2/IServicetracker.hal",
+      "sha256": "dc8389391ce48795d11717f6973f8e92a1f660fd6d5bc60e5de8ae19c1d16103"
+    },
+    {
+      "path": "vendor/qcom/opensource/interfaces/servicetracker/1.2/types.hal",
+      "sha256": "b21a4655232991b5121fc0c86522bdb76f8d519540deac62c85de5b7315a3e55"
+    }
+  ],
+  "compiled_interfaces": [
+    "VENDOR/lib64/vendor.qti.hardware.perf@2.0.so",
+    "VENDOR/lib64/vendor.qti.hardware.perf@2.1.so",
+    "VENDOR/lib64/vendor.qti.hardware.perf@2.2.so",
+    "VENDOR/lib64/vendor.qti.hardware.perf@2.3.so",
+    "VENDOR/lib64/vendor.qti.hardware.servicetracker@1.0.so",
+    "VENDOR/lib64/vendor.qti.hardware.servicetracker@1.1.so",
+    "VENDOR/lib64/vendor.qti.hardware.servicetracker@1.2.so"
+  ],
+  "excluded_templates": [
+    {
+      "member": "VENDOR/etc/init/qapeservice.rc",
+      "reason": "Standalone perf_qesdk_client is absent in the accepted23b baseline and the selected source list. The QAPE feature plugin and configuration are retained; an unregistered client launcher is not added."
+    }
+  ],
+  "limits": "Exact private input/source delivery and required generated vendor variants only. No native build, full ABI, startup or hardware acceptance."
+}

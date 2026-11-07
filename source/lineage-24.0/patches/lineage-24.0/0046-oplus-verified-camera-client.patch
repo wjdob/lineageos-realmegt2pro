@@ -1,0 +1,69 @@
+--- a/services/camera/libcameraservice/common/CameraDeviceBase.h
++++ b/services/camera/libcameraservice/common/CameraDeviceBase.h
+@@ -606,7 +606,13 @@
+      */
+     void setPrivilegedClient(bool privilegedClient) { mPrivilegedClient = privilegedClient; }
+ 
++    // Set only from the checked camera-service client, after camera-opening permission checks.
++    void setVerifiedClientPackageName(const std::string& packageName) {
++        mVerifiedClientPackageName = packageName;
++    }
++
+ protected:
++    std::string mVerifiedClientPackageName;
+     bool mImageDumpMask = 0;
+     bool mPrivilegedClient = false;
+     std::vector<int64_t> mStreamUseCaseOverrides;
+--- a/services/camera/libcameraservice/common/Camera2ClientBase.cpp
++++ b/services/camera/libcameraservice/common/Camera2ClientBase.cpp
+@@ -155,6 +155,11 @@
+         return res;
+     }
+ 
++    // Oplus HIDL HALs use the real caller in private session metadata. AIDL shared
++    // devices keep their existing client handling; request-supplied identities are ignored.
++    if (providerTransport == IPCTransport::HIDL) {
++        mDevice->setVerifiedClientPackageName(TClientBase::getPackageName());
++    }
+     res = mDevice->initialize(providerPtr, monitorTags);
+     if (res != OK) {
+         ALOGE("%s: Camera %s: unable to initialize device: %s (%d)",
+--- a/services/camera/libcameraservice/device3/Camera3Device.cpp
++++ b/services/camera/libcameraservice/device3/Camera3Device.cpp
+@@ -66,6 +66,7 @@
+ #include "aidl/android/hardware/graphics/common/Dataspace.h"
+ #include "aidl/AidlUtils.h"
+ #include "device3/Camera3Device.h"
++#include "device3/OplusCameraClientMetadata.h"
+ #include "device3/Camera3FakeStream.h"
+ #include "device3/Camera3InputStream.h"
+ #include "device3/Camera3OutputStream.h"
+@@ -2531,6 +2532,16 @@
+         return OK;
+     }
+ 
++    // Run at the common HAL boundary, including request-thread reconfiguration.
++    // The filtered/app request cannot supply or override the checked client identity.
++    CameraMetadata verifiedSessionParams(sessionParams);
++    status_t callerStatus = updateOplusClientMetadata(
++            mVendorTagId, mVerifiedClientPackageName, verifiedSessionParams);
++    if (callerStatus != OK) {
++        CLOGE("Could not set verified camera client metadata: %d", callerStatus);
++        return callerStatus;
++    }
++
+     // Workaround for device HALv3.2 or older spec bug - zero streams requires
+     // adding a fake stream instead.
+     // TODO(b/17321404): Fix the HAL spec and remove this workaround.
+@@ -2638,9 +2649,9 @@
+     // is not enabled but the HAL supports session specific hal buffer manager).
+ 
+     int64_t logId = mCameraServiceProxyWrapper->getCurrentLogIdForCamera(mId);
+-    const camera_metadata_t *sessionBuffer = sessionParams.getAndLock();
++    const camera_metadata_t *sessionBuffer = verifiedSessionParams.getAndLock();
+     res = mInterface->configureStreams(sessionBuffer, &config, bufferSizes, logId);
+-    sessionParams.unlock(sessionBuffer);
++    verifiedSessionParams.unlock(sessionBuffer);
+ 
+     if (res == BAD_VALUE) {
+         // HAL rejected this set of streams as unsupported, clean up config

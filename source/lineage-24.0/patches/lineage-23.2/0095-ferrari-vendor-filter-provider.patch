@@ -1,0 +1,32 @@
+--- a/Android.bp
++++ b/Android.bp
+@@ -13518,3 +13518,19 @@
+     filename: "init.oplus.fingerprints.sh",
+     device_specific: true,
+ }
++
++cc_prebuilt_library_shared {
++    name: "libmsnativefilter",
++    owner: "realme",
++    strip: { none: true },
++    target: {
++        android_arm64: {
++            srcs: ["proprietary/odm/lib64/libmsnativefilter.so"],
++            shared_libs: ["libz", "liblog", "libEGL", "libGLESv2", "libm", "libdl", "libc"],
++        },
++    },
++    compile_multilib: "64",
++    prefer: true,
++    device_specific: true,
++}
++
+--- a/ferrari-vendor.mk
++++ b/ferrari-vendor.mk
+@@ -1077,6 +1077,7 @@
+     lib2DSlender \
+     lib3d_photo \
+     libAlgoInterface \
++    libmsnativefilter \
+     libAlgoProcess \
+     libAncFilter \
+     libAncHumBokeh \

@@ -1,0 +1,5 @@
+# AOSP already ramps brightness through the display HAL. The OEM deferred path
+# waits for compositor kickoffs, which can stop on a static or bubble surface.
+# Select the driver's direct update path without changing curves or refresh policy.
+on property:ro.boot.prjname=21631 && property:sys.boot_completed=1
+    write /sys/kernel/oplus_display/backlight_smooth 0

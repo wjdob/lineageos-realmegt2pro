@@ -1,0 +1,13 @@
+--- a/extract-files.py
++++ b/extract-files.py
+@@ -49,6 +49,10 @@
+ }
+ 
+ blob_fixups: blob_fixups_user_type = {
++    'vendor/bin/hw/vendor.qti.media.c2audio@1.0-service': blob_fixup()
++        .binary_regex_replace(bytes.fromhex('00218052c5040094'), bytes.fromhex('00248052c5040094')),
++    'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
++        .binary_regex_replace(bytes.fromhex('00218052ff0b00f971030094'), bytes.fromhex('00248052ff0b00f971030094')),
+     'vendor/lib64/libface3d_dev.so': blob_fixup()
+         .binary_regex_replace(rb'libcamera2ndk_vendor\.so\x00', b'libcamera2ndk_realme.so\x00'),
+     'system_ext/bin/horae': blob_fixup()

@@ -1,0 +1,5 @@
+diff --git a/Android.bp b/Android.bp
+--- a/Android.bp
++++ b/Android.bp
+@@ -22551,0 +22552,1 @@
++                "libbase_shim",

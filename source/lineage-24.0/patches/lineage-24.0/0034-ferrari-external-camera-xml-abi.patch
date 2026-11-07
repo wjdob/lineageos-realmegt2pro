@@ -1,0 +1,12 @@
+--- a/extract-files.py
++++ b/extract-files.py
+@@ -82,6 +82,9 @@
+ 
+ 
+ blob_fixups: blob_fixups_user_type = {
++    # This external-camera caller reserves a776-byte legacy XMLDocument.
++    'vendor/lib64/camx.device@3.4-ext-impl.so': blob_fixup()
++        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+     'odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service': blob_fixup()
+         .add_needed('libbase_shim.so')
+         .clear_symbol_version('_ZN7android4base4TrimERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE')

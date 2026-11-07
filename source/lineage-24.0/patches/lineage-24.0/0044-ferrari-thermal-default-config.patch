@@ -1,0 +1,12 @@
+--- a/device.mk
++++ b/device.mk
+@@ -73,7 +73,8 @@
+     $(LOCAL_PATH)/init/init.ferrari.display.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ferrari.display.rc \
+     $(LOCAL_PATH)/init/init.ferrari.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ferrari.fingerprint.rc \
+     $(LOCAL_PATH)/init/init.ferrari.modules.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc \
+-    $(LOCAL_PATH)/init/init.ferrari.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh
++    $(LOCAL_PATH)/init/init.ferrari.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh \
++    $(LOCAL_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+ 
+ # Overlays
+ DEVICE_PACKAGE_OVERLAYS += \

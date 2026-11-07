@@ -1,0 +1,47 @@
+--- a/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapter.java
++++ b/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapter.java
+@@ -125,10 +125,13 @@
+     @Override
+     public void serviceDied(long cookie) {
+         Slog.d(TAG, "Fingerprint HAL died.");
+-        mSession = null;
+-        mDaemon = null;
+-        mCurrentUserId = UserHandle.USER_NULL;
+-        onBinderDied();
++        // Serialize daemon/session invalidation with scheduler work.
++        getHandler().post(() -> {
++            mSession = null;
++            mDaemon = null;
++            mCurrentUserId = UserHandle.USER_NULL;
++            super.onBinderDied();
++        });
+     }
+ 
+     @Override
+--- a/services/tests/servicestests/src/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapterTest.java
++++ b/services/tests/servicestests/src/com/android/server/biometrics/sensors/fingerprint/hidl/HidlToAidlSensorAdapterTest.java
+@@ -150,6 +150,24 @@
+     }
+ 
+     @Test
++    public void serviceDeathInvalidatesUserOnHandler() {
++        final var session = mHidlToAidlSensorAdapter.getLazySession().get();
++        assertThat(session.getUserId()).isEqualTo(USER_ID);
++
++        mHidlToAidlSensorAdapter.serviceDied(0);
++        assertThat(mHidlToAidlSensorAdapter.getSessionForUser(USER_ID))
++                .isSameInstanceAs(session);
++
++        mLooper.dispatchAll();
++        assertThat(mHidlToAidlSensorAdapter.getSessionForUser(USER_ID)).isNull();
++        assertThat(mHidlToAidlSensorAdapter.getScheduler().getCurrentClient()).isNull();
++
++        when(mFingerprintProvider.getTestHalEnabled()).thenReturn(true);
++        assertThat(mHidlToAidlSensorAdapter.getLazySession().get().getUserId())
++                .isEqualTo(android.os.UserHandle.USER_NULL);
++    }
++
++    @Test
+     public void lockoutTimedResetViaClient() {
+         setLockoutTimed();
+ 

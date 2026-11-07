@@ -1,0 +1,54 @@
+# Ferrari module startup for the retained 5.10 kernel.
+# Uses the stock Qualcomm/Oplus vendor_modprobe.sh and its blocklist handling.
+# Installed at init.qti.kernel.rc, which init.target.rc already imports.
+
+on early-init
+    start vendor.modprobe
+
+on init
+    wait_for_prop vendor.all.modules.ready 1
+
+service vendor.modprobe /vendor/bin/vendor_modprobe.sh
+    class main
+    user root
+    group root system
+    disabled
+    stdio_to_kmsg
+    seclabel u:r:vendor_modprobe:s0
+    oneshot
+
+# Preserve the Qualcomm early-boot subsystem starts used by accepted 23.2.
+# Loading their modules alone does not start the ADSP/CDSP or CVP firmware.
+on early-boot
+    exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/kernel/boot_adsp/boot 1
+    exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/kernel/boot_cdsp/boot 1
+    exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/devices/virtual/cvp/cvp/boot 1
+
+# Retain the accepted kernel/PASR/IRQ initialization and source tuning scripts.
+# Dump-mode and raw partition permission actions from the OEM template are not used.
+on property:sys.boot_completed=1
+    start kernel-boot
+    start kernel-post-boot
+
+on charger
+    start kernel-post-boot
+
+service kernel-boot /vendor/bin/sh /vendor/bin/init.qti.kernel.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+
+service kernel-post-boot /vendor/bin/sh /vendor/bin/init.kernel.post_boot.sh
+    class core
+    user root
+    group root system wakelock graphics
+    disabled
+    oneshot
+
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+    class core
+    user root
+    group root
+    disabled

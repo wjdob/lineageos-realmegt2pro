@@ -1,0 +1,339 @@
+--- a/Android.bp
++++ b/Android.bp
+@@ -2873,45 +2873,6 @@
+     soc_specific: true,
+ }
+ 
+-cc_prebuilt_library_shared {
+-    name: "libcamera2ndk_vendor",
+-    owner: "oneplus",
+-    strip: {
+-        none: true,
+-    },
+-    target: {
+-        android_arm64: {
+-            srcs: [
+-                "proprietary/vendor/lib64/libcamera2ndk_vendor.so",
+-            ],
+-            shared_libs: [
+-                "libfmq",
+-                "libhidlbase",
+-                "libhardware",
+-                "libnativewindow",
+-                "liblog",
+-                "libutils",
+-                "libstagefright_foundation-v33",
+-                "libcutils",
+-                "libcamera_metadata",
+-                "libmediandk",
+-                "android.frameworks.cameraservice.device@2.0",
+-                "android.frameworks.cameraservice.device@2.1",
+-                "android.frameworks.cameraservice.common@2.0",
+-                "android.frameworks.cameraservice.service@2.0",
+-                "android.frameworks.cameraservice.service@2.1",
+-                "android.frameworks.cameraservice.service@2.2",
+-                "libc++",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    prefer: true,
+-    soc_specific: true,
+-}
+ 
+ cc_prebuilt_library_shared {
+     name: "libcapiv2svacnnvendor",
+@@ -3332,35 +3293,6 @@
+     soc_specific: true,
+ }
+ 
+-cc_prebuilt_library_shared {
+-    name: "libcvp2_1",
+-    owner: "oneplus",
+-    strip: {
+-        none: true,
+-    },
+-    target: {
+-        android_arm64: {
+-            srcs: [
+-                "proprietary/vendor/lib64/libcvp2_1.so",
+-            ],
+-            shared_libs: [
+-                "liblog",
+-                "libbase",
+-                "libdmabufheap",
+-                "libutils",
+-                "libcv_common",
+-                "libvmmem",
+-                "libc++",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    prefer: true,
+-    soc_specific: true,
+-}
+ 
+ cc_prebuilt_library_shared {
+     name: "libcvpcpuRev_skel",
+@@ -4002,7 +3934,7 @@
+                 "libFace3D_hlos",
+                 "libFace3DTA",
+                 "libQ6MSFR_manager_stub",
+-                "libcamera2ndk_vendor",
++                "//vendor/realme/ferrari:libcamera2ndk_realme",
+                 "libmediandk",
+                 "libnativewindow",
+                 "libgui_vendor",
+@@ -19420,32 +19352,6 @@
+     device_specific: true,
+ }
+ 
+-cc_prebuilt_library_shared {
+-    name: "libziparchive_odm",
+-    owner: "oneplus",
+-    strip: {
+-        none: true,
+-    },
+-    target: {
+-        android_arm64: {
+-            srcs: [
+-                "proprietary/odm/lib64/libziparchive_odm.so",
+-            ],
+-            shared_libs: [
+-                "liblog",
+-                "libbase",
+-                "libz",
+-                "libc++",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    prefer: true,
+-    device_specific: true,
+-}
+ 
+ cc_prebuilt_library_shared {
+     name: "libwvdrmengine",
+@@ -20135,14 +20041,6 @@
+     device_specific: true,
+ }
+ 
+-prebuilt_etc_xml {
+-    name: "manifest_oplus_face.xml",
+-    owner: "oneplus",
+-    src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_face.xml",
+-    filename_from_src: true,
+-    sub_dir: "vintf/manifest",
+-    device_specific: true,
+-}
+ 
+ prebuilt_etc_xml {
+     name: "vendor.pixelworks.hardware.display.iris-service.xml",
+@@ -23013,54 +22911,6 @@
+     device_specific: true,
+ }
+ 
+-cc_prebuilt_binary {
+-    name: "vendor.oplus.hardware.biometrics.face@1.0-service",
+-    owner: "oneplus",
+-    target: {
+-        android_arm64: {
+-            srcs: [
+-                "proprietary/odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service",
+-            ],
+-            shared_libs: [
+-                "libbase_shim",
+-                "libbinder",
+-                "liblog",
+-                "libhidlbase",
+-                "libhidltransport",
+-                "libcutils",
+-                "libhardware",
+-                "libutils",
+-                "libbase",
+-                "libcamera2ndk_vendor",
+-                "libmediandk",
+-                "libnativewindow",
+-                "libui",
+-                "libbinder_ndk",
+-                "libdmabufheap",
+-                "android.hardware.biometrics.face-V1-ndk",
+-                "android.hardware.biometrics.common-V1-ndk",
+-                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
+-                "libosenseaidlhalclient",
+-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
+-                "libstfaceunlockocl",
+-                "libion",
+-                "libQSEEComAPI",
+-                "libolc_vnd",
+-                "libc++",
+-                "libc",
+-                "libm",
+-                "libdl",
+-            ],
+-        },
+-    },
+-    compile_multilib: "64",
+-    strip: {
+-        none: true,
+-    },
+-    prefer: true,
+-    relative_install_path: "hw",
+-    device_specific: true,
+-}
+ 
+ cc_prebuilt_binary {
+     name: "vendor.oplus.hardware.charger-V10-service",
+@@ -23281,8 +23131,3 @@
+     symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
+ }
+ 
+-cc_library_shared {
+-    name: "libstfaceunlockocl",
+-    compile_multilib: "64",
+-    device_specific: true,
+-}
+--- a/sm8450-common-vendor.mk
++++ b/sm8450-common-vendor.mk
+@@ -12,7 +12,6 @@
+     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/commcenterd.rc:$(TARGET_COPY_OUT_ODM)/etc/init/commcenterd.rc \
+     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/init.network.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.network.rc \
+     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/subsys_daemon.rc:$(TARGET_COPY_OUT_ODM)/etc/init/subsys_daemon.rc \
+-    vendor/oneplus/sm8450-common/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc \
+     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/vendor.oplus.hardware.charger-V10-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.charger-V10-service.rc \
+     vendor/oneplus/sm8450-common/proprietary/odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc \
+     vendor/oneplus/sm8450-common/proprietary/odm/etc/izat.conf:$(TARGET_COPY_OUT_ODM)/etc/izat.conf \
+@@ -24,7 +23,6 @@
+     vendor/oneplus/sm8450-common/proprietary/odm/firmware/tp/21631/FW_S3908_SAMSUNG_FAE.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/21631/FW_S3908_SAMSUNG_FAE.img \
+     vendor/oneplus/sm8450-common/proprietary/odm/firmware/tp/21631/LIMIT_S3908_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/21631/LIMIT_S3908_SAMSUNG.img \
+     vendor/oneplus/sm8450-common/proprietary/odm/firmware/tp/21631/LIMIT_S3908_SAMSUNG_AGING.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/21631/LIMIT_S3908_SAMSUNG_AGING.img \
+-    vendor/oneplus/sm8450-common/proprietary/odm/init.oplus.face.rc:$(TARGET_COPY_OUT_ODM)/init.oplus.face.rc \
+     vendor/oneplus/sm8450-common/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
+     vendor/oneplus/sm8450-common/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
+     vendor/oneplus/sm8450-common/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
+@@ -310,75 +308,10 @@
+     vendor/oneplus/sm8450-common/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+     vendor/oneplus/sm8450-common/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
+     vendor/oneplus/sm8450-common/proprietary/vendor/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/a730_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_sqe.fw \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/a730_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.b00 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/a730_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.b01 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/a730_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.b02 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/a730_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.elf \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/a730_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.mbn \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/a730_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.mdt \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b00 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b01 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b02 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b03 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b04 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b05 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b06 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b07 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b08 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b09 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b10 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b11 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b12 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b13 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b14 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b15 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b16 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b17 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b18 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b19 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.mbn \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass-lt-21.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.mdt \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b00 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b01 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b02 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b03 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b04 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b05 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b06 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b07 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b08 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b09 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b10 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b11 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b12 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b13 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b14 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b15 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b16 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b17 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b18 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b19 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mbn \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evass.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mdt \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b00 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b01 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b02 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b03 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b04 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b05 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b06 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b07 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.b08 \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/evautil64.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evautil64.mdt \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/firmware/gmu_gen70000.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gmu_gen70000.bin \
+     vendor/oneplus/sm8450-common/proprietary/vendor/firmware/vpu20_1v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.mbn \
+     vendor/oneplus/sm8450-common/proprietary/vendor/firmware/vpu20_1v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v_unsigned.mbn \
+     vendor/oneplus/sm8450-common/proprietary/vendor/firmware/vpu20_4v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.mbn \
+     vendor/oneplus/sm8450-common/proprietary/vendor/firmware/vpu20_4v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v_unsigned.mbn \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/gpu/kbc/sequence_manifest.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/sequence_manifest.bin \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
+-    vendor/oneplus/sm8450-common/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin
+ 
+ PRODUCT_PACKAGES += \
+     btaudio_offload_if \
+@@ -472,7 +405,6 @@
+     libbt-hidlclient \
+     libbtnv \
+     libcacertclient \
+-    libcamera2ndk_vendor \
+     libcapiv2svacnnvendor \
+     libcapiv2svarnnvendor \
+     libcapiv2uvvendor \
+@@ -487,7 +419,6 @@
+     libconfigdb \
+     libcpion \
+     libcv_common \
+-    libcvp2_1 \
+     libcvpcpuRev_skel \
+     libcwb_client_vendor \
+     libdataitems \
+@@ -1076,7 +1007,6 @@
+     libsubsys-service \
+     libsubsys-utils \
+     libvasapi \
+-    libziparchive_odm \
+     libwvdrmengine \
+     vendor.oplus.hardware.charger-V10-ndk_platform \
+     vendor.oplus.hardware.subsys-V5-ndk_platform \
+@@ -1137,7 +1067,6 @@
+     device_manifest_subsys.xml \
+     manifest_android.hardware.drm@1.4-service.widevine.xml \
+     manifest_oplus_charger_aidl.xml \
+-    manifest_oplus_face.xml \
+     vendor.pixelworks.hardware.display.iris-service.xml \
+     vendor.pixelworks.hardware.feature.irisfeature-service.xml \
+     adpl \
+@@ -1234,7 +1163,6 @@
+     android.hardware.drm@1.4-service.widevine \
+     gauged \
+     subsys_daemon \
+-    vendor.oplus.hardware.biometrics.face@1.0-service \
+     vendor.oplus.hardware.charger-V10-service \
+     vendor.pixelworks.hardware.display.iris-service \
+     vendor.pixelworks.hardware.feature.irisfeature-service \

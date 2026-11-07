@@ -1,0 +1,23 @@
+--- a/manifest.xml
++++ b/manifest.xml
+@@ -8,4 +8,9 @@
+             <instance>default</instance>
+         </interface>
+     </hal>
++    <hal format="hidl">
++        <name>android.hardware.secure_element</name>
++        <transport>hwbinder</transport>
++        <fqname>@1.2::ISecureElement/SIM1</fqname>
++    </hal>
+ </manifest>
+--- a/proprietary-files.txt
++++ b/proprietary-files.txt
+@@ -1392,3 +1392,8 @@
+ odm/etc/wifi/wifisar.cfg
+ odm/etc/wifi.cfg
+ odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
++
++# SIM secure element - matching .1410 / accepted23b provider
++odm/bin/hw/vendor.qti.secure_element@1.2-service
++odm/etc/init/vendor.qti.secure_element@1.2-service.rc
++odm/lib64/android.hardware.secure_element@1.0-impl.so

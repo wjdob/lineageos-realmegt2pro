@@ -1,0 +1,57 @@
+--- a/interfaces/Android.bp
++++ b/interfaces/Android.bp
+@@ -569,7 +569,7 @@
+ aidl_interface {
+     name: "vendor.oplus.hardware.sendextcamcmd",
+     system_ext_specific: true,
+-    odm_available: true,
++    odm_available: false,
+     local_include_dir: "aidl",
+     srcs: ["aidl/vendor/oplus/hardware/sendextcamcmd/*.aidl"],
+     stability: "vintf",
+@@ -833,6 +833,8 @@
+ 
+ cc_library_shared {
+     name: "vendor.oplus.hardware.cameraextension-V1-ndk_platform",
++    // Ferrari keeps the stock vendor/ODM interface libraries.
++    vendor_available: false,
+     defaults: ["vendor.oplus.hardware.ndk_platform_shim_defaults"],
+     whole_static_libs: ["vendor.oplus.hardware.cameraextension-V1-ndk"],
+ }
+@@ -851,6 +853,8 @@
+ 
+ cc_library_shared {
+     name: "vendor.oplus.hardware.olc2-V1-ndk_platform",
++    // Ferrari keeps the stock vendor/ODM interface libraries.
++    vendor_available: false,
+     defaults: ["vendor.oplus.hardware.ndk_platform_shim_defaults"],
+     whole_static_libs: ["vendor.oplus.hardware.olc2-V1-ndk"],
+ }
+@@ -875,12 +879,16 @@
+ 
+ cc_library_shared {
+     name: "vendor.oplus.hardware.radio-V2-ndk_platform",
++    // Ferrari keeps the stock vendor/ODM interface libraries.
++    vendor_available: false,
+     defaults: ["vendor.oplus.hardware.ndk_platform_shim_defaults"],
+     whole_static_libs: ["vendor.oplus.hardware.radio-V2-ndk"],
+ }
+ 
+ cc_library_shared {
+     name: "vendor.oplus.hardware.sendextcamcmd-V1-ndk_platform",
++    // Ferrari keeps the stock vendor/ODM interface libraries.
++    vendor_available: false,
+     defaults: ["vendor.oplus.hardware.ndk_platform_shim_defaults"],
+     whole_static_libs: ["vendor.oplus.hardware.sendextcamcmd-V1-ndk"],
+ }
+--- a/interfaces/oplus/hardware/cwb/1.0/Android.bp
++++ b/interfaces/oplus/hardware/cwb/1.0/Android.bp
+@@ -2,6 +2,8 @@
+ 
+ hidl_interface {
+     name: "vendor.oplus.hardware.cwb@1.0",
++    // Ferrari uses the stock CWB library; no selected source consumer needs this module.
++    enabled: false,
+     root: "vendor.oplus",
+     system_ext_specific: true,
+     srcs: [

@@ -1,0 +1,58 @@
+diff --git a/service/src/graph.c b/service/src/graph.c
+--- a/service/src/graph.c
++++ b/service/src/graph.c
+@@ -337,6 +337,31 @@
+     return soc_id;
+ }
+ 
++/* Full directory override for products with ODM calibration packaging. */
++#ifndef AGM_ACDB_PATH
++#define AGM_ACDB_PATH ""
++#endif
++
++static int select_acdb_path(char *destination, size_t capacity,
++                           const char *path_override, const char *card_extn,
++                           int soc_id)
++{
++    int length;
++
++    if (path_override[0] != '\0') {
++        length = snprintf(destination, capacity, "%s", path_override);
++    } else if (soc_id == ARRAX_SOC_ID) {
++        length = snprintf(destination, capacity, "%s%s%s", ACDB_PATH,
++                          card_extn, ARRAX_FILE_PATH_EXTN);
++    } else {
++        length = snprintf(destination, capacity, "%s%s", ACDB_PATH, card_extn);
++    }
++
++    if (length < 0)
++        return -EINVAL;
++    return (size_t)length >= capacity ? -ENAMETOOLONG : 0;
++}
++
+ int graph_init()
+ {
+     uint32_t ret = 0;
+@@ -354,16 +379,15 @@
+     acdb_files.num_files = 0;
+ 
+     snd_card_found = get_file_path_extn(file_path_extn);
+-    if (snd_card_found) {
+-        if (get_soc_id() == ARRAX_SOC_ID) {
+-            snprintf(acdb_path, ACDB_PATH_MAX_LENGTH, "%s%s%s", ACDB_PATH, file_path_extn, ARRAX_FILE_PATH_EXTN);
+-        } else {
+-            snprintf(acdb_path, ACDB_PATH_MAX_LENGTH, "%s%s", ACDB_PATH, file_path_extn);
+-        }
+-    } else {
++    if (!snd_card_found) {
+         ret = -ENOENT;
+         goto err;
+     }
++    ret = select_acdb_path(acdb_path, sizeof(acdb_path), AGM_ACDB_PATH,
++                           file_path_extn,
++                           AGM_ACDB_PATH[0] ? -1 : get_soc_id());
++    if (ret)
++        goto err;
+     AGM_LOGI("acdb file path: %s\n", acdb_path);
+ 
+     ret = get_acdb_files_from_directory(acdb_path, &acdb_files);

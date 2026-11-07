@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "source_files": [
+    {
+      "path": "device/realme/ferrari/device.mk",
+      "sha256": "f56a6f055685677a96a965570a69305fbd6057127ee43a6e7aff34487b5867e7"
+    },
+    {
+      "path": "device/realme/ferrari/configs/media/media_profiles_V1_0.xml",
+      "sha256": "56165bbacc2dce93461cd9d8c5dfb579c0af2698c0c460451936162c739a8d0f"
+    },
+    {
+      "path": "device/realme/ferrari/overlay/OPlusFrameworksResTarget/res/values-port-2412x1080/dimens.xml",
+      "sha256": "fe557401f0f1282300e55264a9f364e395addc8e5f21cedc75eb0dc823f12e92"
+    },
+    {
+      "path": "device/realme/ferrari/overlay/OPlusFrameworksResTarget/res/values-port-3216x1440/dimens.xml",
+      "sha256": "0413a4bafd4927f048d71eea05bfdec5f8af7e28e2200901862e7bed1738c3a1"
+    },
+    {
+      "path": "device/realme/ferrari/overlay/OPlusSystemUIResTarget/res/values-port-2412x1080/dimens.xml",
+      "sha256": "8120ddbae43fb39c6ac0c6a8f9bf826de8028eb198058d3cf47ab963e5e84edf"
+    },
+    {
+      "path": "device/realme/ferrari/overlay/OPlusSystemUIResTarget/res/values-port-3216x1440/dimens.xml",
+      "sha256": "8091b5192a07bf953f43c804facd0e5536ef2cb56a97ca06bd68953e6a67b3d1"
+    }
+  ],
+  "profile": {
+    "member": "VENDOR/etc/media_profiles_V1_0.xml",
+    "sha256": "56165bbacc2dce93461cd9d8c5dfb579c0af2698c0c460451936162c739a8d0f"
+  },
+  "overlays": [
+    {
+      "apk": "OPlusFrameworksResTarget.apk",
+      "dimensions": [
+        {
+          "name": "status_bar_height_portrait",
+          "configuration": "port-2412x1080",
+          "pixels": 114
+        },
+        {
+          "name": "status_bar_height_portrait",
+          "configuration": "port-3216x1440",
+          "pixels": 152
+        }
+      ]
+    },
+    {
+      "apk": "OPlusSystemUIResTarget.apk",
+      "dimensions": [
+        {
+          "name": "qs_header_row_min_height",
+          "configuration": "port-2412x1080",
+          "pixels": 125
+        },
+        {
+          "name": "status_bar_padding_top",
+          "configuration": "port-2412x1080",
+          "pixels": 11
+        },
+        {
+          "name": "qs_header_row_min_height",
+          "configuration": "port-3216x1440",
+          "pixels": 166
+        },
+        {
+          "name": "status_bar_padding_top",
+          "configuration": "port-3216x1440",
+          "pixels": 14
+        }
+      ]
+    }
+  ],
+  "limits": "Accepted23b physical-resolution geometry and camera profile declarations. These are not physical sensor limits or Android17 runtime acceptance."
+}

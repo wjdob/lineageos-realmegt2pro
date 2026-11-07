@@ -1,0 +1,9 @@
+--- a/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy
++++ b/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy
+@@ -35,3 +35,6 @@
+ getcwd: 1
+ getdents64: 1
+ setsockopt: 1
++# Permit debuggerd fallback to record the kernel release after a fault.
++# This preserves crash reporting; it does not repair a codec failure.
++uname: 1

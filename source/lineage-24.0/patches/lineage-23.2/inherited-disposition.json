@@ -1,0 +1,44 @@
+{
+  "status": "source review; real graph and package validation outstanding",
+  "candidate": "configs/lineage-23.2-candidate.json",
+  "patches": {
+    "0001": {
+      "decision": "split and reassess; never apply wholesale",
+      "sensor_removal": "Reject: selected Oplus fork supplies the intended service.",
+      "module_removals": "Reject provisionally: kernel pin contains S3910 and horae sources, Makefile targets and CONFIG_TOUCHPANEL_SYNAPTICS_TCM_S3910=m / CONFIG_HORAE_THERMAL_SHELL=m in oplus_GKI.config. Verify final merged config and output modules.",
+      "post_boot_scripts": "Draft 0005 retains source scripts and removes competing vendor package selections. Source commit 052246389da6cb4f2f4b8e5cb7c9dcba4689ccf8 explicitly removes Oplus memory tuning still present in vendor copies. Output ownership/runtime validation remains outstanding.",
+      "lineage_board_include": "Draft 0004 adds missing Lineage BoardConfig and common/qcom policy includes; sequential application with conflict removal passed. Graph and policy compilation remain outstanding.",
+      "wlan_namespaces": "New BoardConfigQcom.mk already adds both wlan namespaces once included; do not duplicate the old workaround blindly.",
+      "sepolicy": "Resolve selected common/qcom/Oplus policy includes against the new platform and compile policy. Historical success is not inherited."
+    },
+    "0003": {
+      "decision": "do not carry",
+      "reason": "Target old composer Android.bp entry is absent from selected maintainer vendor-common; no common-V2-ndk_platform occurrence found in its generated definitions."
+    },
+    "0005": {
+      "decision": "obsolete at selected module revision",
+      "reason": "New camera workqueue source lacks the redundant sched_param declaration."
+    },
+    "0006": {
+      "decision": "do not carry by default",
+      "reason": "Additional Afterlife/Evolution recovery certificates are not necessary to build this candidate. Define intentional OTA trust/signing policy separately; existing G4 evidence stays preserved."
+    },
+    "0007": {
+      "decision": "do not carry",
+      "reason": "Selected maintainer vendor-common definitions do not install manifest_performance_aidl.xml or the old proprietary performance service. Selected Oplus source service supplies its VINTF fragment. Final package VINTF still requires validation."
+    },
+    "0008": {
+      "decision": "not applicable to proposed source composer",
+      "reason": "Old proprietary composer target is absent; evaluate the source display fork and actual product selection."
+    },
+    "0009": {
+      "decision": "reject for this candidate",
+      "reason": "Restore the selected Oplus implementation and its dependencies; generic AOSP service substitution would preserve the reviewed functional deviation."
+    },
+    "0010": {
+      "decision": "rebased draft",
+      "replacement": "patches/lineage-23.2/0003-soong-host-memory-limit.patch",
+      "reason": "New Soong still creates a restricted builder environment; explicit host Go memory policy requires forwarding. Applied and hash-checked on a disposable exact preimage only."
+    }
+  }
+}

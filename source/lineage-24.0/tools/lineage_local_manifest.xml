@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Preserved pinned LineageOS 23.0 build baseline for the Realme GT 2 Pro,
+  codename ferrari (RMX3301). These project revisions reproduce the assessed
+  baseline; they are not a recommendation that this is the newest or preferred
+  installation target.
+
+  Independent review on 2026-10-24 found public 23.2 kernel/companion branches,
+  published ferrari 22.2/23.2 releases, and a new 24.0 Linux 6.6 port. Matching
+  branch names across projects are neither necessary nor sufficient for
+  compatibility. See docs/ROM_READINESS.md for source identities and limits.
+
+  G4 recovery embeds no kernel and G6 used the installed boot/vendor_boot
+  arrangement. Recovery boot success does not validate the ROM kernel or
+  remove firmware compatibility requirements. Original comments are preserved
+  in the migration snapshot and Git history.
+-->
+<manifest>
+  <!-- Device tree for realme GT 2 Pro -->
+  <project name="pjgowtham/android_device_realme_ferrari"
+           path="device/realme/ferrari"
+           remote="github"
+           revision="6a0477ddb2ef0e32fd340198e2b63e51a7a6eda8" />
+
+  <!-- Shared SM8450 platform tree, required by the device tree -->
+  <project name="pjgowtham/android_device_oneplus_sm8450-common"
+           path="device/oneplus/sm8450-common"
+           remote="github"
+           revision="4e7094610b59a4ebb878fe4dde8620ff62c2698f" />
+
+  <!-- Kernel and companions -->
+  <project name="pjgowtham/android_kernel_oneplus_sm8450"
+           path="kernel/oneplus/sm8450"
+           remote="github"
+           revision="21f6479a9c60817a2d51f409dc7cac49f72d4e4a" />
+
+  <project name="pjgowtham/android_kernel_oneplus_sm8450-devicetrees"
+           path="kernel/oneplus/sm8450-devicetrees"
+           remote="github"
+           revision="8eec758e35a644daf2cd3d46529a10f7ba675e2b" />
+
+  <project name="pjgowtham/android_kernel_oneplus_sm8450-modules"
+           path="kernel/oneplus/sm8450-modules"
+           remote="github"
+           revision="e9f592d5a1eefc15a2d7fac4aea5421e63e771a8" />
+
+  <!--
+    hardware/oplus. Not in the LineageOS 23.0 default manifest, but the sm8450-common
+    tree includes hardware/oplus/overlay/generic/generic.mk, so the build fails
+    without it. Found by validating with 'm nothing' rather than by a multi-hour
+    build reaching the same error.
+  -->
+  <project name="LineageOS/android_hardware_oplus"
+           path="hardware/oplus"
+           remote="github"
+           revision="894339c12aac99af312b43b6002963a36baff955" />
+
+  <!--
+    Proprietary blob repositories selected by the historical baseline. Their
+    branch availability does not establish that alternative compatible source
+    sets cannot be built. Any new source graph needs coherent extraction and
+    fixup provenance; do not silently reuse these blobs for a newer platform.
+  -->
+  <project name="Arman-ATI/proprietary_vendor_realme_ferrari"
+           path="vendor/realme/ferrari"
+           remote="github"
+           revision="e3fd7068d45837d72b59d4481199e5004257ed74" />
+
+  <project name="Arman-ATI/proprietary_vendor_oneplus_sm8450-common"
+           path="vendor/oneplus/sm8450-common"
+           remote="github"
+           revision="2e695fe2ad3d99fd6bfd386b1ab0764c7b115d2a" />
+</manifest>

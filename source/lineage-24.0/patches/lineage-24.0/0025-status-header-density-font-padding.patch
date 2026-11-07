@@ -1,0 +1,30 @@
+--- a/packages/SystemUI/res/layout/keyguard_status_bar.xml
++++ b/packages/SystemUI/res/layout/keyguard_status_bar.xml
+@@ -84,6 +84,7 @@
+         android:ellipsize="marquee"
+         android:textDirection="locale"
+         android:textAppearance="@style/TextAppearance.StatusBar.Default"
++        android:includeFontPadding="false"
+         android:textColor="?attr/wallpaperTextColorSecondary"
+         android:singleLine="true"
+         systemui:showMissingSim="true"
+--- a/packages/SystemUI/res/xml/qqs_header.xml
++++ b/packages/SystemUI/res/xml/qqs_header.xml
+@@ -20,6 +20,17 @@
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:id="@+id/qqs_header_constraint"
+ >
++
++    <!-- Reload the guideline with the row when density or resolution changes. -->
++    <Constraint
++        android:id="@id/qqs_header_bottom_guideline">
++        <Layout
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:orientation="horizontal"
++            app:layout_constraintGuide_begin="@dimen/large_screen_shade_header_min_height"
++        />
++    </Constraint>
+ 
+     <Constraint
+         android:id="@+id/clock">

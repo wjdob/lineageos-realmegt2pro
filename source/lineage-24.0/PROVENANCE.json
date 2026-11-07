@@ -1,0 +1,3111 @@
+{
+  "schema": 1,
+  "export_date": "2026-11-07",
+  "export_source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c",
+  "rom_source_commit": "cc7a266aab79592c9f2470a04f9bfc5f9557c385",
+  "camera_photos_source_commit": "7121ac8384917586f884055ddf3825983aef523e",
+  "clock_source_commit": "5a3951b6e1c9e909372e18ae46340997a6c7e3ae",
+  "scope": "Public source/configuration kit. Build recipe and manifest bind the ROM inputs; app configs bind their separate source payloads. Proprietary inputs and signing keys are excluded. Release metadata records subsequent device acceptance.",
+  "files": [
+    {
+      "path": "certs/rmx3301-releasekey.x509.pem",
+      "sha256": "56bb73dc5635505d44b52053e0f4ba82911fddb9ec9c9d3f9171800b9bcb855e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/agm-calibration-23.2.json",
+      "sha256": "e29707ad20bc594691ed7b3cd92e3a1ddb1c4323336919f71f1583c9f2466454",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/agm-calibration-24.0.json",
+      "sha256": "9c80826d65ef827417b8e551695a5edcb54f39edbecb9887bb9cc7caef9f7532",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/camera-recording-23.2.json",
+      "sha256": "26e6e091b241e34f516a66fe087b5b07d6908c367297d7b932f4bc2772253823",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/camera-vendor-filter-23.2.json",
+      "sha256": "1b08bbe0348595644ed728a745ce238d82cc1464192084cba55e774cc5d7fc10",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/camera-vendor-filter-24.0.json",
+      "sha256": "386e3c47f58adc3e626318caa379247e554db5f34126b5312589dbc43f574dd0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/codec-store-abi-24.0.json",
+      "sha256": "33b0d588bf0b7d1a1081d1533933d19e9b046cb650f1c8afa4d4d7eedc96782f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/common-runtime-24.0.json",
+      "sha256": "98ea5182b005d37601744dc4f4ea9a33158f06f229eb0476eb522395831362e6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/device-core-24.0.json",
+      "sha256": "783899bb51d56b4dd14838d04c177766743d292e9a1978f63642a54b40e162f0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/fingerprint-memory-23.2.json",
+      "sha256": "6e2c71ceffbb1218c240e653dac3bc3d1cf879b52fd406f1ac651b298928d720",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/health-current-23.2.json",
+      "sha256": "2ad9390a9648be3b2d001e359c733720336e6cf07bbee5489ef8503de56ad17c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/lineage-23.2-candidate.json",
+      "sha256": "2bd9151a991f5a9a041d77165b693d16169dc56352796ac233cb3da577b79773",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/lineage-24.0-candidate.json",
+      "sha256": "b1ce56bf9f9757f1c72a6033789092a2158e95dc2fb11edd3fe60527b9b01a66",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/lineage-24.0-vendor-inputs.json",
+      "sha256": "f762be5844f0cd03b220d122399bf09120aa0594833ad71e19cc5eee51e7cacc",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/lineage-24.0-vendor-output.json",
+      "sha256": "57e83ece9fc0b8c69935b6b187f4d1c9668086b1d723fc7c69ad9652525e0c5a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/local.example.json",
+      "sha256": "8756c021f2eeb87d94e030983721b3bd463f2aac5674f33e1f2c8077d67425f0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-23.2.json",
+      "sha256": "c8b90c450707cde2aab3c2adb29514456c0f353e193fdc87d226a9c9a12c5668",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-alpha1-24.0.json",
+      "sha256": "a843a7245a434b12e290925d5803d64b734aaaf9846d330f5306e7e91aed31ee",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera-consolidated-23.2.json",
+      "sha256": "1d6a7401722f278b70bf454f59f98d1c6d3116c05dba3a63886593fe761b290e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera11-23.2.json",
+      "sha256": "ea1ef478e33d1377a4e3f454b282d23f3d172ec17ed7172ed604d8144e6cc0c6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera11b-23.2.json",
+      "sha256": "d15992ca842abf04fb25a98ba00a8e48c769cebefc1a1ecc4ab7cbf5a1d11618",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera12-23.2.json",
+      "sha256": "6affc78c57c493a9acd248d8e1049f8ba2b02e6da1c865141a034dc1ac70d95b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera12b-23.2.json",
+      "sha256": "349ebbd2b253b20198283dd2c2a39dd45db1073e51e6ba86eaa7e0eb1c190169",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera12c-23.2.json",
+      "sha256": "2027fbc871d664e333421fb03a7f6e2bd923b16ffa3ddb2214f193fb31a4d8e7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera12d-23.2.json",
+      "sha256": "c32c5987e5bd3c7fe84ca2a75e73d6d498f1b6ec2bd3ebcc371959b7a0041a28",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera12e-23.2.json",
+      "sha256": "5a35eb1f3d4ec8bb291b14d0d4baa57f68351a8aabde9fd90005ab312a06f680",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera12f-23.2.json",
+      "sha256": "ba829d138cd5cf5f2921a2d44e4b8d63674828dd854d4c93d5389e62f4acc558",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera13-23.2.json",
+      "sha256": "02f31ec693df731c39ad3ebe08e156d7611d6d84774ff3528ccfd7c749ee23d7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera14-23.2.json",
+      "sha256": "91ab408cac8b281d21a79e01209fd0d8d2f5ad2262e86346f4d962c8bc961d4a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera15-23.2.json",
+      "sha256": "348f9509421e4c61507c2df7e6b4b697de719ed1f948063eed780ba12f0c7791",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera15-gallery14-23.2.json",
+      "sha256": "8f1e39cb62c3f2f9e44f51822a11cf7a1729b80ce3db6890d5ea0051035a4f56",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-camera15-gallery15-23.2.json",
+      "sha256": "87fbe2eb168e176fcc3d37bed028b99489adca774ce28cc509c713bf16f3af3c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha1-23.2.json",
+      "sha256": "ade0d195705f17b5c862f2557b33969b2e4bbada01d9fe85eec8a543a12560f2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha10-23.2.json",
+      "sha256": "2ca0f7c4be78823f0494d109b9192351940b41bb12f0a716d7852b3853c238ff",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha11-23.2.json",
+      "sha256": "5effa29b4eac37ceb1c476b654d545927458b0cc8dd0c0bb4a01d9e879707e81",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha12-23.2.json",
+      "sha256": "8666e0485fd27ed385602ac6eede231952deed2b145d0df6d1c209937166f38a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha13-23.2.json",
+      "sha256": "b844e7379c5822b097bc6de0299928247d1f9b7d546a17b51c25a2ad41bb0932",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha14-23.2.json",
+      "sha256": "9ed662a62f6c4ccd2d06e485a806071d700fb26ea7376aac7a372323f39f67b4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha15-23.2.json",
+      "sha256": "193285f31f9f1cd368ca8e3ed8d5172379d54de04511d8aca169ba6ce3557ad3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha2-23.2.json",
+      "sha256": "acd536103c51e04882028f8030f6ea0019eaf6f8e3abdb7567a53fff2ab25249",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha3-23.2.json",
+      "sha256": "685bba9417f30b63f8440964696ff9fff9ecad19ef8de2e8eec633ef808a42dc",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha4-23.2.json",
+      "sha256": "b8eb890e99f6818c9b01b7be562475526a118845510a950dffa151f9cb7cada2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha5-23.2.json",
+      "sha256": "b95532cc75e76cbea65222e02f3a3f843d37ce8de62f7dc12100e0c297dbd26d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha6-23.2.json",
+      "sha256": "6ae64383d30f5529ee5ae89894c6d6b851d381e03f08941fb5693c2001eb5043",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha7-23.2.json",
+      "sha256": "f9588db054e3ba69e5062c7f80b09413f96d35ab7d5a11b18661c7a057e4151d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha8-23.2.json",
+      "sha256": "4c9aa4de8eb24e484baae0859183f92f8ae0f4c9cb26bba311d536f40569d253",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-gallery-alpha9-23.2.json",
+      "sha256": "bc2957abae4af85a4a536f2e317730660c6c28170d40191ea7bb8273fadf374e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-addons-system-23.2.json",
+      "sha256": "f6be922b564a449064b1a76f09e1ff928a20f2dc37f1c4f312a0422b67e01756",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-bridge37-review.json",
+      "sha256": "d5c5fbb3dde6eee1364c43fb19fddb724da4089fc9cde4964583028044ea5f80",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-fileextender-23.2.json",
+      "sha256": "6b00c8dd75b492e31a78c7506713b05127bd239d6ceedaf516eee1a43f5aec96",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-filter-assets-23.2.json",
+      "sha256": "02de7735f5b98cca402041cd225375df291be4406d4fce5f0c52b7f2d2d1053c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-filter-capture-23.2.json",
+      "sha256": "b679b3bd1c93c495579064d1e93fdb3457a09307d4468246793e2cb2cbc353a5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-filter-sdk-23.2.json",
+      "sha256": "83ff0d6010f8adb056db93a3666708f03ffa596f086761f632e126c30717c8b3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-filters-23.2.json",
+      "sha256": "49018730e2e6c33ea12b155bf81cbe20fc27ed73778001b8224b6bd54f4f0fda",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-gallery-23.2.json",
+      "sha256": "0ac9ee38a0436a20aea4ff64c19e232d296d65b28a6d9e88dea86348cdf3e1f8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-gallery12-23.2.json",
+      "sha256": "5b5c71a6d3eaac181b799e20a536b147027d0f82921a5172e2fe56cdae01f4ee",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-gallery12e-23.2.json",
+      "sha256": "36876827fdf99807be27a2af7db91eb4bed2bc8c924a9f0daca9b26fad3620bc",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-gallery13-23.2.json",
+      "sha256": "8b287cb26e5a3ebcd4b88b46a936873a74cc9c9fefa621b766e815169c76f51d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-heif-23.2.json",
+      "sha256": "99c97c0f51e550c6dba87013b21d1ec63695a56d4782cff5093a39ba8a895402",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-heif-transport-23.2.json",
+      "sha256": "9e643b7abc21669cfc292743b279c389b128efc9ce6ab82f7c040a41633b3ebe",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-native37-review.json",
+      "sha256": "3a108b5bdf434262c5ec910e77fa3ba7b32bce69a5324b36f3bf43c8e630768a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-policy-23.2.json",
+      "sha256": "7b72221d2e0c46f387d0ac63b1c9b1dfbbf6a5ddf2e32582bc8358b9ad184e59",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-privileges-23.2.json",
+      "sha256": "65c642f4f5808c630419e9a42e0ffda6a619aad0c4fddf875f70ce3e966fb170",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-session-23.2.json",
+      "sha256": "1e4641c58d40c12a723df4614064a38c71e6edd3b9201805a5afdaa980ea7bac",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-system-upgrades-23.2.json",
+      "sha256": "0cb60a87c7211d5d611b98376e0cc76f2130bd271ef700e6aba77c42ef154e0c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-upgrades-23.2.json",
+      "sha256": "cafa319c0e4f24be3a71ffecc7a207502a46efec9967cf9a29c9764ef36998de",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera-window-23.2.json",
+      "sha256": "586e57057097f9a54ab46a80a06b00b2eb4a1ff20a5aa7fa29f2d8657ce8bdac",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera11-upgrades-23.2.json",
+      "sha256": "5cb72315b871e6280aa3a42bc3f0f22cb61d7f2cb3a40a7c328d7f0fe4472244",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera12-upgrades-23.2.json",
+      "sha256": "83d4e5d5bef45e8d002ade1d4f84dccca4fa4545eca022561c9493edf5e9e099",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera12d-upgrades-23.2.json",
+      "sha256": "a7b7c6e947fb4d3df287c6c2c89cb871bac07e4529083b165d4d8f8c220fe27d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera12e-upgrades-23.2.json",
+      "sha256": "1c972b46d0a3cf950399013ea049f381fad043beba24a545906eef09544cde6d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera12f-upgrades-23.2.json",
+      "sha256": "cdb8534b3fe06e23d585e1b25b97e2519472fc797b02490301fc0b4eaa7abc20",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera13-upgrades-23.2.json",
+      "sha256": "8e00c9d78b532931b0afa5a2defd4d78113e5404b9968fcd8cd5a6985e63e1b8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera14-upgrades-23.2.json",
+      "sha256": "78ccd7086176c576e6a87cad00fddc120a7a4296acc7fd39222bf41b030c6001",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-camera15-upgrades-23.2.json",
+      "sha256": "7f87e6deacb2273edf7b6454e5b72f8e51ed4b20708a97867254122d7e936531",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha10-upgrades-23.2.json",
+      "sha256": "d62afb97e1a3e3be0b406be8e26d5dc7811659fc63a26c0b5271792665d3dfa9",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha11-upgrades-23.2.json",
+      "sha256": "3a9d5e9cd8e4c4628a9e2d1d323c1a70fca50511578698266183ecf77db3f791",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha12-upgrades-23.2.json",
+      "sha256": "d2e3c45dbd9cdcda88f9f93ce759f2873d4f83fca04f444cb864bec77e709feb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha13-upgrades-23.2.json",
+      "sha256": "8457176591d645eb1821c906a81400fec9dea5ae7e303279c9a1ef3a9536b06c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha14-upgrades-23.2.json",
+      "sha256": "87818143f64104df26b908162f24c387893edf24ea5fe62d6c45d1f65fe964c9",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha15-upgrades-23.2.json",
+      "sha256": "5d08143d25e8fc832f7b05f50b0b5045c0234ac483a1f2d1fc28e8ea3ac3f951",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha2-upgrades-23.2.json",
+      "sha256": "1499b456acd157accc2b64a629d0a380334974a9f56b6c0c8d868c5554e95ea0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha3-upgrades-23.2.json",
+      "sha256": "6341ff42be5eadbfc9f502c05eca2e61fed1c3f975a27656f54a5a7e12bf90bf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha4-upgrades-23.2.json",
+      "sha256": "4db1473d285b27401c3b91d03c607913ee2cefa0d4890efca215daaef5d63bd7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha5-upgrades-23.2.json",
+      "sha256": "0734c7377494b53fcf16756909dac490df2a6d9310ebe54f767b58e96c59e587",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha6-upgrades-23.2.json",
+      "sha256": "9f12eed7b5d136016d86eddc4b3ddd5a5a93ca90f230492ac10777f5ab64e0f6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha7-upgrades-23.2.json",
+      "sha256": "b86130937f114af98872900b04724e43451a08e66c4141415d37091ce86dfd1f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha8-upgrades-23.2.json",
+      "sha256": "a38c7a7572bb6a4d33a23b1eb3216d1e96f091c15e8ab8feea337df6a0d6de0d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-alpha9-upgrades-23.2.json",
+      "sha256": "d33ba858c718f303b938243027b2ea07b6ddcd15e172ec27c4c57daabe7f4b60",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha1-24.0.json",
+      "sha256": "358d45230814fc38a2978a1253256eb7f0c0048f7e147f3dd1930e9d164b1a17",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha10-23.2.json",
+      "sha256": "79e8d1719e482a74c6e801c72a88b0318cb32217b7a86f1aed8ce15f16717161",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha11-23.2.json",
+      "sha256": "68ab7b76d3b231a4cd91efbddb847f9ae1194454c275182c91f3f82e6a43c1d3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha12-23.2.json",
+      "sha256": "59a6160436525cc543d930718516a2416961131211b902926ee04a07218bbacf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha14-23.2.json",
+      "sha256": "c6a8f24939888cbbb32ebe58ae4de371288712a360d60fa710e8df99605a9d48",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha15-23.2.json",
+      "sha256": "26a416e221b3b4fa9848ee43add33d2b3cf6f05fc30eebef794ac67c82e0c325",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha6-23.2.json",
+      "sha256": "47df8760e41f4d2cc13d6de6e1f58f86856b183abe6b40228e8458390ed5f27f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha7-23.2.json",
+      "sha256": "81c0287fe14bfb005b7de97e417a1f0f290404489d932bb0b5bcc49ca0868218",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha8-23.2.json",
+      "sha256": "690656e41927650c5b42ee53144a7d2ea4b16316e3c6d8946e6504131bf27b6c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-app-compat-alpha9-23.2.json",
+      "sha256": "f27d7f988b58415d2fb0cd75411494dd52cc43310f71a363f5b85c4d1f365fc0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-23.2.json",
+      "sha256": "7310c98a6e1620d41cf55f70ce80fe5783d7305f1ca79fcba88217bf70f2de1f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha1-24.0.json",
+      "sha256": "6f21e525a44abb1a8bdb8d26843833bd9fb21119d17aed162811891773e32465",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha10-23.2.json",
+      "sha256": "f00fb8f56f53a00b92cc292fd492caae45ba02179a1db4b1bd393f31b0831bfd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha11-23.2.json",
+      "sha256": "a7da5cbf978684deb77540219e2af1f75729371754c4702414dd8fa57d65a46a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha12-23.2.json",
+      "sha256": "a4d5fd31dfd0a43c34d4a5eebcc187301f385b36d94d78530d0a35141c5d8573",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha14-23.2.json",
+      "sha256": "b2faf6b91b065848da0be7959b0e0c855720d4fcd3c37d18ed420c0fca8839b4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha15-23.2.json",
+      "sha256": "8fb945c1f4c2a07d7cbecfb62a5a99a7284cc611f2d6cdb7cb81c88f80b76145",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha3-23.2.json",
+      "sha256": "d6c76cd44f8293dc906cb20b2dfa0b2cd17f66c820f94a7b53ec04c1422f5655",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha4-23.2.json",
+      "sha256": "1d9a969a5ce23f89ff27ebc518390189ad94856cd25bd1e5e4de760f013d365a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha5-23.2.json",
+      "sha256": "3ad717daf5ecd8aafd5c000c2c25a55b93431cba3978cf5dbd6507c52290a4d3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha6-23.2.json",
+      "sha256": "12e0a3fbb10fbd21e71222b6dd02237f98ca47f4dc252c66da851842813c07b7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha7-23.2.json",
+      "sha256": "f5ee839beb129fee164268bb6c17411d3679953723dc406d9f0f9f6fa08f3df4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha8-23.2.json",
+      "sha256": "caff6ef7a911f6c68b69acdfcc75330baaea3bab0d665840ff474b752efa8cf1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-gallery-runtime-alpha9-23.2.json",
+      "sha256": "8cdb4cd22b5d2d2955878a0c5656b0ba847553cacff406ec03bd6123b0c3a727",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-policy-native22-24.0.json",
+      "sha256": "95c17241450c44c37e98b5d9a0d5d7f476659fd21e47ee3a1206e1c9ed1df6f1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers-23.2.json",
+      "sha256": "0cab86a8a1da8e4916f0e290349a1d94c9f9ee6c2766134f2879e6952f7ac282",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers-alpha1-24.0.json",
+      "sha256": "f0555d01993036de73631512392770fa755e468a4bf54ef660e8aa81e77d25ba",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers12e-23.2.json",
+      "sha256": "d67fec5b31ed084d7f9a840c87c06a137e6dbce579b35e141b16a4bb53882ff4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers12f-23.2.json",
+      "sha256": "2ff8826b09287d0ff28607dfea0389e427a680814c8812124e6cf6ba10ad7329",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers13-23.2.json",
+      "sha256": "a94656d27ca62adfb4b692cb7756f6392aa209829984218674a5479e7846461e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers14-23.2.json",
+      "sha256": "abd920e6807042794a3c53e349cc391cb415d8a3fd0a90ffae161dd4a81e82fb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers15-23.2.json",
+      "sha256": "34a3ff888a9f95c92ee1db8631516e449496b9ff68bbfcf48d50f834f344ca01",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers16-23.2.json",
+      "sha256": "90674f8308ab060d14c375713032fc0759c3893023351a22c5dfd9f4eca42f50",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/oem-runtime-peers17-23.2.json",
+      "sha256": "63db97f143c47edd36952dc055bf9eafd7885e1eeb2e8f71da28ba090364e2db",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/optional-addons-23.2.json",
+      "sha256": "5ccde8775b699787a493d7c6eedc69fd7a5ca1758e224c27e3ae6f96125ea8b8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/package-requirements-23.2.json",
+      "sha256": "f0d476b2361189effb4b6ab508786f4c3f62aaeb027d0ea08d350f9d3742acff",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/package-requirements.json",
+      "sha256": "79176ff9e0d579b4d1de01596ad6ca5b5c1b55756b249802ead3072255f27d32",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/stock-clock-port.json",
+      "sha256": "6c01479c771f1ec5b8bf6075b92f258e7b1b0a1ab1ab04b366b65c63feadbbf5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/vendor-wfd-wiring-23.2.json",
+      "sha256": "4ce5fc4dcab7090f01a713485307a706fed8911e873539fa9b53ee7f893d0ea3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/vendor-xml-abi-23.2.json",
+      "sha256": "ea77f76fd9be6a3d2ff72c9025bac94b18def3658ec647be6694cffc96440614",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "configs/vendor-xml-abi-24.0.json",
+      "sha256": "4f2a9596cee2aeaeb5aab6f43b82e3b8146202baa2901461e08a6187d78c3a7d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "manifests/lineage-23.0-locked.xml",
+      "sha256": "fb605c65279f1e2e00abc1813893d9d24dddfbf64001eb869d11e1ef94a4a14d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "manifests/lineage-23.2-candidate.xml",
+      "sha256": "cd151cc92bb023019ab272ca6774bba0302903626e95729de346ec461c972cbd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "manifests/lineage-24.0-candidate.xml",
+      "sha256": "20c32bebf983a174d29166f6918d599097c0a5890d35adde2e85ecfbde7e851f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-23.2/camera/OplusCameraClientMetadata.h",
+      "sha256": "9006c7cdaeaea9f720ed0bc164f24ee8f32838cda399c2386e6e4307dd837dfd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-23.2/ferrari/framework/values-port-2412x1080/dimens.xml",
+      "sha256": "fe557401f0f1282300e55264a9f364e395addc8e5f21cedc75eb0dc823f12e92",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-23.2/ferrari/framework/values-port-3216x1440/dimens.xml",
+      "sha256": "0413a4bafd4927f048d71eea05bfdec5f8af7e28e2200901862e7bed1738c3a1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-23.2/ferrari/media/media_profiles_V1_0.xml",
+      "sha256": "56165bbacc2dce93461cd9d8c5dfb579c0af2698c0c460451936162c739a8d0f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-23.2/ferrari/systemui/values-port-2412x1080/dimens.xml",
+      "sha256": "8120ddbae43fb39c6ac0c6a8f9bf826de8028eb198058d3cf47ab963e5e84edf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-23.2/ferrari/systemui/values-port-3216x1440/dimens.xml",
+      "sha256": "8091b5192a07bf953f43c804facd0e5536ef2cb56a97ca06bd68953e6a67b3d1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-23.2/oplus/IOplusProtectConnection.aidl",
+      "sha256": "6802e0d52abbe78cd96319571046258d831fd623a7e85d07d016f844cfa5300c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/camera/OplusCameraClientMetadata.h",
+      "sha256": "9006c7cdaeaea9f720ed0bc164f24ee8f32838cda399c2386e6e4307dd837dfd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/framework/values-port-2412x1080/dimens.xml",
+      "sha256": "fe557401f0f1282300e55264a9f364e395addc8e5f21cedc75eb0dc823f12e92",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/framework/values-port-3216x1440/dimens.xml",
+      "sha256": "0413a4bafd4927f048d71eea05bfdec5f8af7e28e2200901862e7bed1738c3a1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/init/init.ferrari.display.rc",
+      "sha256": "3b6413c929b909eb9541942f5b6390695359de5704ab19549f8eb83836a070a3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/init/init.ferrari.fingerprint.rc",
+      "sha256": "197717af2a96755d40634d65e66b7b2be57fa2e21df65935572908b15754a823",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/init/init.ferrari.modules.rc",
+      "sha256": "7798b52f996f986ea87ab01306f5c8208f8031fd6edc13294ade29aa9199cede",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/init/init.ferrari.post_boot.sh",
+      "sha256": "f1565f3a115177d3c05b34907fd041722a6b1336142013d18482cd148f1021ee",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/media/media_profiles_V1_0.xml",
+      "sha256": "56165bbacc2dce93461cd9d8c5dfb579c0af2698c0c460451936162c739a8d0f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/systemui/values-port-2412x1080/dimens.xml",
+      "sha256": "8120ddbae43fb39c6ac0c6a8f9bf826de8028eb198058d3cf47ab963e5e84edf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/systemui/values-port-3216x1440/dimens.xml",
+      "sha256": "8091b5192a07bf953f43c804facd0e5536ef2cb56a97ca06bd68953e6a67b3d1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/ferrari/thermal/thermal-engine.conf",
+      "sha256": "c32b39af7a19759a7db7f8b2d92d069a0534848aa7a195ca2cec24aa6c317cb3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "overlays/lineage-24.0/oplus/IOplusProtectConnection.aidl",
+      "sha256": "6802e0d52abbe78cd96319571046258d831fd623a7e85d07d016f844cfa5300c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/0001-sm8450-common-build-fixes.patch",
+      "sha256": "fd07d9329d708c7962c7df14cbeca6bcd6580608fc097cfda9a59fc4b677acf2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/0003-sm8450-vendor-fix-common-v2-label.patch",
+      "sha256": "6cd8dde4ff397155674dd9153fe3769f14a6672534ae054db469189fce50923e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/0005-camera-kernel-drop-redundant-sched_param.patch",
+      "sha256": "e548c741f21d7148ee13e4e9028c35ec6faa590722e1587742f05b030ef490f9",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/0007-sm8450-vendor-drop-duplicate-performance-vintf.patch",
+      "sha256": "8860fa9c16681ef856e01870ea97780c18175ce4b5b5189fb1343ef41e488d2d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/0008-sm8450-vendor-composer-blob-repoint.py",
+      "sha256": "e50d90dda74f2004bd34090a69d1ba779e5bc9afa0ecc0ff4af1e48f9f1f9886",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/0009-sm8450-common-aosp-sensors-service.patch",
+      "sha256": "272be54cb0c687929c49b8baa5aec2e1034351cb3a94f39fd3393c5b672f6a7f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/0010-soong-forward-host-memory-limit.patch",
+      "sha256": "e0192e676d04acfc736257d03504bc7775eeeff6201c68d23db5e190f54cd94c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/README.md",
+      "sha256": "0d8bc5857ae8e053166a214806353be1f5a6b5d002906f0e30b8cf1d8ad36bc1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0001-remove-stale-vintf-conflict.patch",
+      "sha256": "70f1e31e05566491d18037cd465c3033bbedd220772b5b0ed504b1c49ff7c6ab",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0002-ferrari-runtime-panel-firmware.patch",
+      "sha256": "71d40d13f9be8d3466a6a066bd7c8bcc3571a2caefa9b52a1f394f96f8703b9d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0003-soong-host-memory-limit.patch",
+      "sha256": "fcbbb321dc602f9aab942f4d481999b70ce36b68fbcd3c97fb108630a018fe2f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0004-common-lineage-integration.patch",
+      "sha256": "50836f0629835d4bb9d5dbe4151211564b2925fe227838674a907a8bb415e684",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0005-vendor-use-source-post-boot-scripts.patch",
+      "sha256": "d100006a55fbb1850cb1618a2df19a81dd4cfad2a08dddc28069412455877bbd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0006-ferrari-graphics-common-v7.patch",
+      "sha256": "8f7decdf21ef67628e4cffd09be034a2c0a02e815d1899a3eb933611b8e2d8f0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0007-common-remove-stray-audio-path.patch",
+      "sha256": "651af90c603a910f5d1d97b8abde93c3c4b50eb6f87ed24d25826fc7fcbc5aa9",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0008-pixelworks-namespace-Android-bp.patch",
+      "sha256": "bce217bb8da61151238a75d4a11153d5ac3e84b37701fd21eb637c82e3061244",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0009-pixelworks-namespace-extract-files-py.patch",
+      "sha256": "5bd07f0dfbbf460e21e8fad59a6c73b514f91db14194ab1cae378165958a7abe",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0010-ferrari-camera-prebuilt-names-vendor.patch",
+      "sha256": "c0df9e4aef0863fff610dba1d629005a96e62110406e363c329205ac226fd76d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0011-ferrari-camera-prebuilt-names-device.patch",
+      "sha256": "6cda46a9419614bf906a4e3a82a1b7082852c38857e01f1beccb8fdc83567b85",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0012-common-interface-prebuilt-names-vendor.patch",
+      "sha256": "42a63f17a0eeda010ce2241fe56fb331a8d5d0fed2a3a79d75923860193e5ce2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0013-common-interface-prebuilt-names-device.patch",
+      "sha256": "d9d7730aa30beb7628c869de414edb32efbe500834e83da28196e00e9c2455f1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0014-common-type-vibrator-effect-flag.patch",
+      "sha256": "38bc19592171a94ca1fdc2f473c1b673f7e85f8e4deeececb7a8cef7e5063c60",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0015-remove-stale-post-boot-modules.patch",
+      "sha256": "425bd497ebf5f8dbd3ecf4f498d1d359b889e34124c6bb225bbc1872cb1b67e8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0016-oplus-retain-stock-interface-providers.patch",
+      "sha256": "40e11f3d0caf3230625aa46d858c6bce6a36e28167b40c918295b3513b44d579",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0017-common-audio-config-paths.patch",
+      "sha256": "5c81a10140edb5ce00763a3845af5ff249cfbe6b5efd90a620978d809fa0f894",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0018-common-horae-extract-fixup.patch",
+      "sha256": "858bfa6b231d6ef63fc203f8f412157a987677fed8cd166a5c093a7ae9a98804",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0019-common-horae-module-dependency.patch",
+      "sha256": "38ae93606c90f8ec0d17fe72c22203a4a7e8113fd8131b48e3a4ecc3cc17f53b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0020-common-wfd-input-shim-dependency.patch",
+      "sha256": "50b3442ddb0c9627daa9c7913fe92829dd8edfcf17b2ee8f452b160f2d4c8608",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0021-common-qguard-extractor-shim.patch",
+      "sha256": "cc8562447fa291742ba230bdfadba3302b3b1e2e94f2d5d2047ce25641e3c9e2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0022-common-qguard-module-shim.patch",
+      "sha256": "8ee152036c8ee8fc59621bd63484ad86056aca012713faeddaccc79d71c4a109",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0023-common-qccsyshal-protobuf-fixup.patch",
+      "sha256": "a82552941faa739a116473b018c8ce6bb5d82f5559d79fba364f5bb97798ee32",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0023-ferrari-external-firmware.patch",
+      "sha256": "7df9a30dabfed3d2662a64ea5066be32220e7e3bf5390bc9e092d9d97bf34894",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0024-common-qccsyshal-protobuf-module.patch",
+      "sha256": "e24c6f9931b600a736d05ee67aa8d3a5193648de8c5dbb68d3bdcfa3abe8fc95",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0025-common-export-pixelworks-namespace.patch",
+      "sha256": "fba083161d9c907667454f6d73cc701a1c639a583421b287531985c0229129f5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0026-common-tinyxml-v34-fixup.patch",
+      "sha256": "9630ade3c33b108ecc8a819141111ceab8053b5e8772bc606fbe70aca6eb6fe0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0027-common-tinyxml-v34-modules.patch",
+      "sha256": "30240ba2fa0286a7f0a6126e389382efd6d49e9d78cae3b5f35bcf7b16ac2d80",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0028-common-tinyxml-v34-provider.patch",
+      "sha256": "fd594232825ed6f101bd8092c7993d8792319bd3a60aa5844c998761887faec8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0029-ferrari-extensionlayer-ziparchive-module.patch",
+      "sha256": "ebd5324471887da107d9000751a6ce98aa20b000612711a070d7081bf79357e7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0030-sm8450-wfd-init-extraction.patch",
+      "sha256": "48fae1b922bc48f4694445e924b693e8c0c836673be412f5ca8c6d2e8694db9a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0031-sm8450-wfd-init-path.patch",
+      "sha256": "ace239885326dcf36d9a09046ef6e37abef11a6751b257dccf57670395a7b5af",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0032-agm-calibration-path-config.patch",
+      "sha256": "93ac8543a7ccc0abe358930cb572da02ffd9f50265b12c73342ceb079f6dc37e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0033-agm-calibration-path-selection.patch",
+      "sha256": "35a2b0cf92a528cec21071b685144238b0e1cdabcc09d02528e29a865afea6ea",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0034-ferrari-agm-odm-calibration.patch",
+      "sha256": "27b93c931f6c70ad1d0ae7ec1d11b95c9a309e299b8dec151922ada4311e5ff7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0035-ferrari-trusted-app-memory.patch",
+      "sha256": "1541c5ce4f76479064ee87bbd50fbc4bf42a865b592d9efc554999699d38c892",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0036-ferrari-report-missing-bootloader-state.patch",
+      "sha256": "095b02610831589ea8f87be923e876024e92001ccc58dcb7416973bf9f0cbd05",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0037-ferrari-health-current-units.patch",
+      "sha256": "816375725726dec9f4b6a42b6325048539b01f26e82323c431ed448e42714fde",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0090-ferrari-system-addon-space.patch",
+      "sha256": "08f90c2c807e2c82b4708c8f93df75eed724db09c9900b532f5f546aa6ea91b3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0091-oplus-camera-lifecycle-compat.patch",
+      "sha256": "2a8fbcdd6754f339d467a8435e6837d38acf74efdc93f281d09ac17836bbc9ba",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0092-oplus-verified-camera-client.patch",
+      "sha256": "9f3667e955d50518d4c1e0bcb9627678c3838ff34e7efe576725835f2b28cd64",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0093-ferrari-recording-profiles.patch",
+      "sha256": "9e25bbfbd6ea63e955eb4a2da65d857719fb2cf748592c360d8a2b538992bf56",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0094-nativewindow-p010-venus-planes.patch",
+      "sha256": "717c988f2188a3015da6ae38b3376171861d9857bf82c3bfa2829eff60260687",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0095-ferrari-vendor-filter-provider.patch",
+      "sha256": "6f0806fa534cce1533c3ad6545bc1ed3f663d1be792bc109069397612c50b2b7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0096-ferrari-extract-filter-provider.patch",
+      "sha256": "3a92663619c3dba7c0746516a37b81cc5789751f24e9328b80b8f4797437b538",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/0097-contacts-dismiss-keyboard-on-touch-down.patch",
+      "sha256": "ae1fe7da41e5dd5907ef84a30b07c414013082bae2087626393e1cfeb9ec1a64",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/graphics-fix-review.json",
+      "sha256": "6648b50609b5e05c808901ee9544e11b08cd426a26b4d4b67cd07bc92c4f2a42",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/host-memory-review.json",
+      "sha256": "d201daa850b9e406e4d168d120d44d0d72fab25fbbf1fd8254f4f46a81fb665e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/inherited-disposition.json",
+      "sha256": "74571918f6a20446d5253d7e5eae27061a3e4ab08be9b256eabaf6bef3ce87cc",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/integration-review.json",
+      "sha256": "5cc8250c1e250bf7d81ab70a327cb641f90cd3bee9bcbf054dbae5ba7e9be96d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-23.2/review.json",
+      "sha256": "013a407b68bef1419f3ae0dbfb328bbc72e48fefc7665922c0ca568dcab0c803",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0001-soong-host-memory-limit.patch",
+      "sha256": "fcbbb321dc602f9aab942f4d481999b70ce36b68fbcd3c97fb108630a018fe2f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0002-common-lineage-integration.patch",
+      "sha256": "50836f0629835d4bb9d5dbe4151211564b2925fe227838674a907a8bb415e684",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0003-ferrari-graphics-common-v7.patch",
+      "sha256": "8f7decdf21ef67628e4cffd09be034a2c0a02e815d1899a3eb933611b8e2d8f0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0004-ferrari-camera-prebuilt-names-vendor.patch",
+      "sha256": "c0df9e4aef0863fff610dba1d629005a96e62110406e363c329205ac226fd76d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0005-ferrari-external-firmware.patch",
+      "sha256": "7df9a30dabfed3d2662a64ea5066be32220e7e3bf5390bc9e092d9d97bf34894",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0006-common-tinyxml-v34-provider.patch",
+      "sha256": "0e1a11f33b968c37c86fa5c2eea3f1bb5ee703d2517af0a5a858c0786fe8752b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0007-ferrari-extensionlayer-ziparchive-module.patch",
+      "sha256": "ebd5324471887da107d9000751a6ce98aa20b000612711a070d7081bf79357e7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0008-agm-calibration-path-config.patch",
+      "sha256": "55247fe5d75e13f1ab473dda8ce7345736f560fa20fd8f35908a4ba3220af01c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0009-agm-calibration-path-selection.patch",
+      "sha256": "35a2b0cf92a528cec21071b685144238b0e1cdabcc09d02528e29a865afea6ea",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0010-ferrari-agm-odm-calibration.patch",
+      "sha256": "27b93c931f6c70ad1d0ae7ec1d11b95c9a309e299b8dec151922ada4311e5ff7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0011-ferrari-trusted-app-memory.patch",
+      "sha256": "1541c5ce4f76479064ee87bbd50fbc4bf42a865b592d9efc554999699d38c892",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0012-ferrari-report-missing-bootloader-state.patch",
+      "sha256": "095b02610831589ea8f87be923e876024e92001ccc58dcb7416973bf9f0cbd05",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0013-ferrari-health-current-units.patch",
+      "sha256": "201fb6a8df04fa6133334df13d80e78a7f72d544722d9b4945723bc764bfa213",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0014-ferrari-system-addon-space.patch",
+      "sha256": "08f90c2c807e2c82b4708c8f93df75eed724db09c9900b532f5f546aa6ea91b3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0015-contacts-dismiss-keyboard-on-touch-down.patch",
+      "sha256": "ae1fe7da41e5dd5907ef84a30b07c414013082bae2087626393e1cfeb9ec1a64",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0016-ferrari-vendor-ownership.patch",
+      "sha256": "3db0e388ece1e8abd5e1057bafa3b70518298048dc0a5b9ce5322b55f1b5a2d1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0017-ferrari-kernel66-optin.patch",
+      "sha256": "8136fe1da6ed473745c724d71b4d2619af8f49bd5b75e3d05e70497e3e9a3733",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0018-common-kernel66-source-layout.patch",
+      "sha256": "9b92d9231d95025769c028d96b1d4918265484fa90fdc78f8b67a081a67bef72",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0019-ferrari-runtime-init.patch",
+      "sha256": "c758712eba963b5b167133d10a94c812d4b946052f8302b26c7581156ed0f9f4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0020-hidl-fingerprint-handler.patch",
+      "sha256": "4f8892029e684cd393eb873119a8210c23022b5d3fd80f1772068f12716e8b1e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0021-ferrari-synx-dependencies.patch",
+      "sha256": "048f17aa5a2b6f11a975e104ae0d9b36c39817bab1a33592eb06fa646f107444",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0022-ferrari-camera-ndk-module-identity.patch",
+      "sha256": "46aad4c57f0d3bebf1fd5eebc38bc7a9ce32907b69086eb887548c0412d7116e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0023-common-ferrari-camera-ndk-provider.patch",
+      "sha256": "b273a594b087d9f9594d5f82e1ec60068a9f1b7ec5a2a7e019c538caf30b47a1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0024-common-extract-vendor-interface-scope.patch",
+      "sha256": "f063b238b5b4906c5c1c1c36961fb1eeb03c0d629956fa68062f8a86d6027387",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0025-status-header-density-font-padding.patch",
+      "sha256": "315a7687153eb4651e1c01db4ac9202459c51c7e1c0bc5fcf1b62d57adee92ca",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0026-c2audio-crash-report-uname.patch",
+      "sha256": "4fa5742dd740afbe5bb859f638e678111f9720d69ab82a56cafdc57a6e24089e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0027-ferrari-oem-camera-ndk-name.patch",
+      "sha256": "c0af4ad66e39379938092f0c172c4bf8549787c5cee2940cece64a3052321dee",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0028-common-pixelworks-make-export-scope.patch",
+      "sha256": "7d06db6acc11316bb0e8f9bb9a22df7483115f2c0110de45c1f658ba56e543d3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0029-ferrari-proven-kernel-toolchain.patch",
+      "sha256": "839af0ac79cefd80bd69c134791ef47bc951f6c1b12f350200210b9fde506f50",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0030-ferrari-hidl-audio-namespace.patch",
+      "sha256": "10c279a4de9f4200c8109de551e0be79c1da0ee91ee9b4cb922a876a11aea368",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0031-ferrari-oem-camera-ndk-linkage.patch",
+      "sha256": "96e8d8aac25a4f7ad75a01d3dc97ef3be60981122b0bcf02384066170fd8473a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0032-common-face-camera-ndk-linkage.patch",
+      "sha256": "bcd80a4b146ff2e1919b941528c324c4661fe23ae3e797e964f6fa28c4dc8635",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0033-common-codec2-allocation.patch",
+      "sha256": "341536a38898151f0b0f31bcc78bd04d6312043cbabc13ac6dddc8286a56b859",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0034-ferrari-external-camera-xml-abi.patch",
+      "sha256": "6e0517afc3299c6522f2eaa083f9fd8a85ffe3e6f555021364b2352f58e1a550",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0035-common-enable-masc-elf-check.patch",
+      "sha256": "6b2a5d5e89afaa7ace0147dcd47a5da187ef6f0588a820254b428b19fcb11b12",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0036-common-masc-standard-elf-validation.patch",
+      "sha256": "759c5790ce0d712df2ed8d76e37a1558e3f3b2206f0303a94052ccab9840a9f2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0037-ferrari-recording-profiles.patch",
+      "sha256": "9bf5ff14f9a268a638a383c279d800646388aa8dff1a97cd170fedcabf0453a9",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0038-ferrari-module-loader.patch",
+      "sha256": "cd9a73f4cf65e11b76466fcba7548e51df7eea4fefa34b03e9189e44ed35e867",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0039-common-early-hardware-rng.patch",
+      "sha256": "ea76e4908eb3179bbb2a222e1e64bb1330baba586195d07629a4a9c778a84d07",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0040-common-performance-runtime.patch",
+      "sha256": "ffb0826ff2957e3bbfbd3c85933a8562791ae6b5ea27ef9f69aecc6a5a16efec",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0041-common-performance-xml-extraction.patch",
+      "sha256": "d80790defd9d3f1e5e2b29e4c2d843f42efee5711b52e6921ee7f86ccc76e409",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0042-ferrari-postboot-dispatcher.patch",
+      "sha256": "96a73b21cc86fb7c429623aab7b2fb00e072642216e3908b2858bf09d68c8d23",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0043-qti-thermal-restart-target.patch",
+      "sha256": "ae5b699e6880493292984c56216cdc53739b8b05471c8d86e89bb8e648d5af75",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0044-ferrari-thermal-default-config.patch",
+      "sha256": "4528cdd96a989388d06473b89d77131d4a3653ea47c803d5c8c513dbbebb0103",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0045-oplus-camera-lifecycle-compat.patch",
+      "sha256": "2a8fbcdd6754f339d467a8435e6837d38acf74efdc93f281d09ac17836bbc9ba",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0046-oplus-verified-camera-client.patch",
+      "sha256": "9f3667e955d50518d4c1e0bcb9627678c3838ff34e7efe576725835f2b28cd64",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0047-nativewindow-p010-venus-planes.patch",
+      "sha256": "717c988f2188a3015da6ae38b3376171861d9857bf82c3bfa2829eff60260687",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0048-ferrari-optional-filter-extraction.patch",
+      "sha256": "0efec240cb9cdd6b8cacad52c5389e8e7804ceee8a1304f6deaa17d3fe56d3f7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0049-common-sm8450-taro-power-hints.patch",
+      "sha256": "5b7d87b1c77682092a067fb7c1e6a6fbde5fdd19774efbcb495ce5e991aa6dfa",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0050-ferrari-restore-sim-secure-element.patch",
+      "sha256": "943ab2473e23b12fd1e243898d39fd0cfe2f05c33797739dde3d6d39bc93793d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "patches/lineage-24.0/0051-ferrari-complete-secure-element-instances.patch",
+      "sha256": "170f873b1a03604fdacda952a3b308850b8dca3e4796de2979c627b670e962a7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "817cd2dda5c59d2f29a9e616f3b34857589b62024d63f21b7a02fa30092d089b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/addon_update_contract.py",
+      "sha256": "69b40c3aba846eac55efb67161ba176593df4d7f57c8dec2e9368c8720bf1e19",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/agent-launch.ps1",
+      "sha256": "768fbd9a56106ce6525882e5420234661cae6e885a156bb74901becd68f578c8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/agm_calibration.py",
+      "sha256": "16eeda301c584f5b3ae32570a303d03906f34c1a1c99dbcb27fdbb136716a97e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/app_dependency_audit.py",
+      "sha256": "f79c894138c77ca2a419ce30d7d3fc290839021b09d281026f067d8270bc25c3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/app_native_visibility.py",
+      "sha256": "f670bbc7fd62ca417f1f97ed3d423d6c2727f1d9e97e9dc7cb8ec93202448f52",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/arb_check.py",
+      "sha256": "9c1c010cb5ced3e74f34b97577f3576f00ab145dc16d362fef696c063c41f210",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/backup_catalog.py",
+      "sha256": "6620fa7d97c75a04fa929d57a5a869828e3be550f6b2ec7362bb0aea4ae5a53d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/backup_frp_pairing.ps1",
+      "sha256": "4c6df0ff1b4b77e52a42915137eb0d885d4431b3415bc2c5ede9477e172764d4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/backup_signing.ps1",
+      "sha256": "5ba8430aea49753b42f6513aadd650268db8150d678e06699d9439bd8ee4f4b2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/boot_control.py",
+      "sha256": "a5025048b281da89dc7b13ef66a1d801e2c59f544ed5cae87a7fd556e5dd4c90",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/bootimg/__init__.py",
+      "sha256": "5f02b2b7952ee1daa0b79fe78288e1397ea3de1d00c4fa087abff0b537418765",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/bootimg/bootimage.py",
+      "sha256": "34faef9998f92c8f5a1d00bcb38932f581feac5310b7a007cb429a7be47ddc29",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/bootimg/lz4.py",
+      "sha256": "acd44ec4c60066cc4a986371c1830fc8f45e0f919948c28b0a3b6c59074f69a3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/bootstrap_gallery_dex.py",
+      "sha256": "9382c9e84c69d930fa612769ae77d525cd503d01f9ab1f7674a14d1f8ca5066e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/apply_candidate_recipe.py",
+      "sha256": "fd5ecc5b50714b2f28064a23275114b26f02c8968fc205e8380901281ce64106",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/apply_recipe.py",
+      "sha256": "ccede1a112dcf5771a4909b8e40d958448acef4aa74db0b3b3c62c812ea1eca2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/assert_local_pins.py",
+      "sha256": "346012f7ce49e455174f05f9be7e68b0de517dff509281e5012ec8ae0dbc6c28",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/assert_lock.py",
+      "sha256": "bd720c810e60c285c9d033e79fb90fe615426750124593817b8db3be6dc8c435",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/build_candidate.sh",
+      "sha256": "49ed5951115920782e0a88552342bff1ffa60e7a93da33de1892916076047cdb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/build_candidate_24.0.sh",
+      "sha256": "0a51fd817b5b630ee72583fc42cb6ed0f7aeee25bd0bd0d6e28dcf47e735f79f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/build_target.sh",
+      "sha256": "f1b80ff8881d5a31e91f10b6b03daa179a28d0bdfe2344df34f607cf5329227f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/cache_inventory.py",
+      "sha256": "cb6d69e2c057336c953dd43e1d830998d91dd547fd42254f472707c08dc057c8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/check_candidate.py",
+      "sha256": "66fb77284f81ab123ed0a8c3bc97aaa548cf04fd9155eb256bc5acad96cebe06",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/common_runtime_24.py",
+      "sha256": "d946842e143734c2d4088a0c3d907e2c7def50172a7e90b353811a4bca75db2d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/init_boot_trace_24.py",
+      "sha256": "2b0b3ac8149f4825e5bc9a94fbbb7c3a6e13ba781d56dc9f7b0ebf78b6a80f6a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/init_cached_graph_24.py",
+      "sha256": "ae73b08623fcbf502053e9082b41b3dd08d57842c0452055cdf1eb5cf6976cb2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/init_diagnostic_cache_24.py",
+      "sha256": "4b94b7b229dc6c1370ad50187fb8f460e79fdbe73496f8010e4817cb6657392b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/isolated_job.py",
+      "sha256": "a7cab79cd9968c74fcdaeee171f3467b521a48713cb8de4be011121d3ba9c4ba",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/kernel_layout_24.py",
+      "sha256": "546f6a3845f2dfdb1bf20496f167fbe3c5c0526b35915eae3a1cdf280e68df5c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/manifest.py",
+      "sha256": "1bd83b7825aef6440d93cef920ed36c7296c67628cd11d0f86b5a21c21eaf0ad",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/materialize_lfs_24.py",
+      "sha256": "8e6bf6d98bbed185b165db2e9a693d87072cd12eb7357705c0994a9e42b7afd5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/mount_24.sh",
+      "sha256": "2ff3b6af7b4b29407ff7f7af76bd69eb2cada7ab20c5269abde66d4b1e5e61fa",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/observation_schedule_24.ps1",
+      "sha256": "9491a38b9e4b3d3af1ff224850dd4583ff1f711b577f2f6da57ad13d81dfaeb2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/observe_candidate.ps1",
+      "sha256": "b988abb3ef4295dd87bce7475533fc75f60f4670d89ce25fb6dee916ff33186c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/observe_candidate_24.ps1",
+      "sha256": "b1f69d41d9b78ed9bd7e5e5c494eb9da427bba20bdca5ef5eb0b793fc1d199b3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/observe_candidate_24.py",
+      "sha256": "614a52bd12b316766d93d48db7b522711dca3e9a3c363ec19ae33f314ca55b34",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/output_cache_24.py",
+      "sha256": "ee9f0a59a31fcbc60eed68b7fc6684ad74c02f30a1797ccfda91565e8d0e10f7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/preflight_24.py",
+      "sha256": "34e98482d3ab71a1929ec60d1c8300e118fd78c6866a1eff3944a66d73fdc6d7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/prepare_common_runtime_24.py",
+      "sha256": "f772c31c5b698ee63a907de9cc33abc90de644459a5367be809087d5bde5d998",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/prepare_job_24.sh",
+      "sha256": "7ef98d7c8da5722cdc487ba73361fd6f8a448d984db18a60d9503425a0c17d66",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/prepare_vendor_24.py",
+      "sha256": "4fcdf702fea99520891e661cafee53f22bea27c6215828a71b0adff808ea5281",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/recipe-23.2.json",
+      "sha256": "16512a69b771fbbe5e1b0f56325377d58b90c4bba451953ea8698cf4c0974f49",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/recipe-24.0.json",
+      "sha256": "0535a86ff7972007680b67d57d10a62d89309b0371a043c7313c193f2a576cea",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/recipe.json",
+      "sha256": "05e9a9ff3424963671e7166ba2d2467407f3e059bcbd3b2ba517587718c85bdd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/reconstruct_candidate.py",
+      "sha256": "b01fe6e363ea3f3ca7eceb4b47c467554cdc3c012a24375b098e21c8001c041e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/run_build.py",
+      "sha256": "7ff6967412e1b607fcd7f34e0bf8f1a64275693ac677a52e379d71395a7b4fd6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/run_candidate.py",
+      "sha256": "48f3eb71a97b7835450a2280419f062f8400f490062bf700f16aa944ddeb2ca7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/run_candidate_24.py",
+      "sha256": "fd9c40d7b81d30ee0be81052d4d33a5a98384180012be329e71b46a12776511b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/signing_keys.py",
+      "sha256": "fdb07fb23237706195eeec9cf8198d758d49fc5dc89ac2ef75cec549aa8c68af",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/start_candidate.ps1",
+      "sha256": "4e04285ab33f89f706949e08eb82a545467182385f276dc1640271d33eadb9e7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/start_candidate_24.ps1",
+      "sha256": "03c18b27099b80137f1e5adabc850fda1921f4331ae23262d4c5ab837f65eda2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/storage_24.py",
+      "sha256": "582fe3eed2be8cece7f3aea385fad4429ae4b52c0c9f1c446f9ab697129a0807",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/sync_24.sh",
+      "sha256": "718af38ae55fab40410a84a55b9de79d7712e137e4bc0f9dc2777d37bdd5fb30",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/vendor_input_24.py",
+      "sha256": "cb8ef29ec4b93da67c97f0a705d8186807384f782812d86859b56fa91c927235",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/vendor_ownership_24.py",
+      "sha256": "1dae252442fe9f7211b6c70009211085e8f6844b23af7fbe16be34eef85357d5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/verify_vendor_24.py",
+      "sha256": "5d7fec7004e9c921f24de926ad4aea79ea50a3fc6b2404e1b963cf2b10f2e6de",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build/workspace_revision_24.py",
+      "sha256": "fea1d7af79c6269f750323f1c5851f52b9f742ef7cc049906b4d7a737fd932b0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build_camera_bridge37.py",
+      "sha256": "d3d4043138d82ff2aed118e7a41de8b2f90f26a20f718cf5ede042e91f0fee5b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build_camera_native37.py",
+      "sha256": "1efc5d028e399f71ca1456d5a7b216a044370dc7d11d597f3bcf05435fc4201f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build_engineering_check.py",
+      "sha256": "63620e31f4c3175ed96675ad661235b155467c9dc6dc2fb250393989fbe81578",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build_identity.py",
+      "sha256": "2f61ed8418670aea9c78aa3f2681cdbcd5b849e3564ae0db95e5b05768e6cc66",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/build_recovery_mapper.py",
+      "sha256": "caec02a0dbea4de6495f2ad92404cc05ed7196a5d36037a2b5ded9247c0b3abf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/camera_profiles.py",
+      "sha256": "2b46448c9b5d8892187f0ddff3cb6708e20b884f1a3a9009e5e22b122fece004",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/camera_vendor_filter.py",
+      "sha256": "0986fa7be632b0ac9dc9c1387ffd6d4929f0517a1d1970373c35fa808369e38c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/candidate_sensors.py",
+      "sha256": "407c1bee3ab23d181924376545304a10cfb3fed7b7243adf64c443f69c89130e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/capture-partition.ps1",
+      "sha256": "248f45a6fd8eb2ddf2a384fba75399b3e557251ac993419fe4d673acae4fb1c6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/codec_store_abi_24.py",
+      "sha256": "ee464c205ed06035c09cdd95ea342cfc0a3aa8e5fce9d6c87f6da242250631e6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/EarlyBootTrace.cpp",
+      "sha256": "eb766029589d6693b2a8fe77d58fcec3d8d257152efc8a674c6360d5cc7c8f6c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageAudioPlaybackProbe.java",
+      "sha256": "8abb3fb8bb2d065ebc486f301468891f64eb2fb54739dbb6adc7dcc4c5b46ba0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageBatteryProbe.java",
+      "sha256": "a8675129666e47cfcca22792d97bd5fdd827d3b8405856d1a23a3ddf140068ba",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageCamcorderProfileProbe.java",
+      "sha256": "696b4b17cd907664ca563939f1e2bc74c64b80e607f9070b5b8f4f1d9cb19a04",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageCameraFrameProbe.java",
+      "sha256": "1c7700139023929d90634455716db220c5f918792358d9b5aa5f88cdb0b2d7b4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageCameraInventory.java",
+      "sha256": "bf079b5f205549c32df7c2b74cde9ee06f0ee9d22f34b7b53bb6b3fbf21013df",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageCameraRecordingCapabilities.java",
+      "sha256": "60bb0e6e8c8a6cbc6ea71ee44d0a79b120275450d23b80749cc632cc8030a9be",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageCodecProbe.java",
+      "sha256": "f1e6007d712956d52db01f806cf1d2c806318633bd7bae89d79d2e538dae4b51",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageCredentialState.java",
+      "sha256": "b2fab83c462b55aa85acde82ac50604b320344f2a3b632056288fe5886851f79",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageGnssProbe.java",
+      "sha256": "8c0567545e6f7d247af7495e5a3bc0be57d66408b7e9f8165b540778045f56a3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageHealthCurrentProbe.cpp",
+      "sha256": "7fb516f99ed5bd7a337dffc02a6601e3822ceefe6041c48adb8df82df31ab30b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageInitRamBindProbe.cpp",
+      "sha256": "75516de4240272900c9c3b40daee0de83f9d957a26219327ecb2e71b07b5c8da",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageMicrophoneProbe.java",
+      "sha256": "e120175df96d329d4ed26c6cf5d0fa352745265616296c6a0d03d5850432acb3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageNetworkProbe.java",
+      "sha256": "4ab2bce49edab5de8fafdf05a09c4891b211913e44ad7b0fbfaf2aa1ec8688b7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageNvbkReadonlySyncProbe.cpp",
+      "sha256": "d6a08971aedf033a9efa898b2a2e280b94b32915ad6aa42eb0c4f99069ff3642",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineagePowerProfileProbe.java",
+      "sha256": "098fb446e2c4be24066e58be19279ca39710074753812c36c2bfd04f11778f7c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageSensorProbe.java",
+      "sha256": "3f2cbdf46cce62ea38bfc98cb6db2b0aaf17408c5d020067d51087ddd69e4789",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/LineageSystemGnssLauncher.java",
+      "sha256": "722b9830ddc136f0eb42a9bd3dac756756718bb644eb743d4d2cc6c50ad99ff3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/backup_oem_os.ps1",
+      "sha256": "39f4671186f541fd5d89e204c09d061f8dcb865440b8498e92328ef39cced6a7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/backup_upgrade_state.py",
+      "sha256": "79be099db2f2cd8eca1a780b182c798a6b4cdab8e99ffc99d0838067cce34ef6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/capture_boot_logs.py",
+      "sha256": "87a1aa70a3b0b64e8669b146ed03ae6452dcf5bc523dc6779a3069cd2cc26dfc",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/capture_oem_app_logs.py",
+      "sha256": "eb264a615935958f28336f8d7d270cf1e11a34ab01ecd45205d2ed2a47e63845",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/capture_ui_state.py",
+      "sha256": "b239ace42ec02427fb5f1c3982f0e769733d65ee1fa0dfbae6c42ba8106c8001",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/prepare_upgrade_restore.py",
+      "sha256": "589d156fbcad0b9afbc866cfd05d22451ceebbae62da34cfbdf8b54f5b0c7cb0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/recovery_control.c",
+      "sha256": "04af837ebeb1b449978ecd323d0c97cb8fdfa7ee5f13125cad0016f75e581440",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device/verify_upgrade_boot_stack.py",
+      "sha256": "f214eab26f164d14f992a41f0330c56488278e01eea244b52193a17ceae373ec",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device_core_24.py",
+      "sha256": "7ceb0b15cee81044b78b2eeb28f214d257e4d7b5c9a0590cbc4c3453546de1c1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/device_responsibilities24.py",
+      "sha256": "bfe37559883d0803f174c112df0e5f4d3e3b4ea972b4176ffcf706523e24b3a7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/display_resources.py",
+      "sha256": "160cd409a0f6a7aa4cbae465c73441750bc37a8e482cff69766920f03ef57d03",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/elf_symbols.py",
+      "sha256": "d895bf88a31dd309faaa9c76f07b47ea1f199b6be26d1c85aa47ee133ba76fc0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/engineering_recovery.py",
+      "sha256": "c2aed3614d1bd68ef048084265e0e2e1e00a0270c191505c4abcb3c0be5e650b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/fetch_file.py",
+      "sha256": "05c8a77a397762164dd443acdf9de0cdd67dee4edb0070c00360e323b85a3bc6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/fetch_payload.py",
+      "sha256": "963f51885360663584490a92b8fcb15365ebac78bc5c731e2b4fcae07b996622",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/fingerprint_bootstate.py",
+      "sha256": "eb330e49c74c22faf57d7eb5761051d31cd48b73a7d58fc8c76581db747a4f36",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/fingerprint_memory.py",
+      "sha256": "01147ea42704ffa4d895df9648aab93e0454336a8f1523984a394e270fd1eb7b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/firmware_policy.py",
+      "sha256": "1be4fe5a5f9a3e63aba1a182fd6fa9e6e9491268673cb6574f3f06dac64e3e43",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/health_current.py",
+      "sha256": "be959dcc920379f6d39f658683a47333567ea9832da16bd1bcd65108ba3b38a5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/install_guard.py",
+      "sha256": "f62e8854312b59da287d33bca13aef63e003ee17e81bcec8fde61d56caace880",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/inventory-artifacts.ps1",
+      "sha256": "b5bfc1c1501977887e89ca9170e290464bd75867e753dcc5f757053d499919ef",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/kernel_modules.py",
+      "sha256": "f8f1e5ca698edd0476854422222125e14c02c291ba07a340d56740b4a8f544da",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/lineage_local_manifest.xml",
+      "sha256": "b3d4a5b72ba483bfe7cc00ec054f43862a2e37ddd138a5004c8a212c8b56cbf7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/observe_runtime.py",
+      "sha256": "23c496c935b9af33b048c9711d929b6c460e72c700dc9b802b14a7587606857a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_addons.py",
+      "sha256": "d83f1d80a9cd6d82020befc54d36b9a55ccf35e0adc5d7046beb9839d01c07f8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_addons/map_logical.cpp",
+      "sha256": "ae1998e78e990c162b7fedb70949f169395e7813f2e38da4ec430e4435abcbc2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_addons/retention-v3.sh",
+      "sha256": "e796f4a01aec78eb6fe4fd3d5ddaf72148d4c08f552c8b0aa0e472e294a3c813",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_addons/update-binary.sh",
+      "sha256": "36b39339a663fc09ed7e48410c4204455ffdc71d0d10fe34b8d67feebb0099cf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_base_comparison.py",
+      "sha256": "89b27ed6220190ba0475535f259436603313896bb49b1005faf5561ecb0137f2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat.py",
+      "sha256": "824639894bca1ea87f30838c1c28822fa1cac9cb0066ce0433c4186fefc60577",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/camera-policy.cil",
+      "sha256": "9b1be865b858ebe608e54c9452d4d50ac0724cc37129447cc728bc995d43d256",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/com/oplus/ocs/camera/metadata/parameter/CaptureRequestBuilderProxy.java",
+      "sha256": "f083e79891592d6964dea5a095663198822dd970122bbf52210aaeb5701d2e74",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/compile_stubs/android/app/OplusActivityTaskManager.java",
+      "sha256": "1a09fa322e1dece18b67cade4b337a891e8d8f4161ad7c0f54bedb62b6825206",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/compile_stubs/com/oplus/ocs/camera/metadata/parameter/ICaptureRequestBuilderInternal.java",
+      "sha256": "ce5474a4336c4e2609dcee0942a5adfa85be4a3a86b3451fb62dc32a63ce4623",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/compile_stubs/ek/v0$a.java",
+      "sha256": "b379246425abf5ea84e9d40418f8443adf99162e72d7e0724d43ebf9dd6fe7c7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/compile_stubs/ek/v0$b.java",
+      "sha256": "479e600331e92accbaf6f70f66cdec73c88081e1c48a4c63cd85ece290c869f8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/compile_stubs/ek/v0$c.java",
+      "sha256": "19aafe600cad7eab252e97bb594ec6b39b003d16d3f80e50371f0637c3f21eb6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/compile_stubs/og/d.java",
+      "sha256": "5c8d16a39de3e72d2686fa2b62bd54e33aa283d53d0fc663002b774f4c80260a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/ek/v0.java",
+      "sha256": "71a483069532af414107909b4f2f89ebca8c944e3ee6015685060721cc0fe0ee",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/f6/q0.java",
+      "sha256": "d0b4f50f703ce7ff2423405cdc0a628274e5a4cd667cb5181f0a330d13419bbb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/gallery13/realme/camera/compat/CaptureThumbnail.java",
+      "sha256": "4d87d90a9d7ca6252e9c7fe69f83a20ed7b480f652af2da54d918f861165eb01",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/gallery13/realme/camera/compat/GalleryShortcut.java",
+      "sha256": "09943f7ccd3e927acddfe4188cad59960de9d639d83534a022988b1fe3e82238",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/native/CameraPlatformAbiProbe.cpp",
+      "sha256": "ee4a7fa5e53eb5893c9c514751a1b03f2df0e06272584fc821271ff769499c94",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/native/HeifWinBufferBridge.cpp",
+      "sha256": "e41db96ba1bf54b778fb663d2f461d69d9ea8761b611a0cc0035746118f2263c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/native/NativeWinBufferExchange37.cpp",
+      "sha256": "c7a3eef75db61bc678b677ab0a76ecd8265a78d81f78a1e31b45d8755640ac49",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/realme/camera/compat/CaptureThumbnail.java",
+      "sha256": "e1220ba8ed3ed360d98d93a645bd6823609ba167a5c3a6755e61292649fadda2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/realme/camera/compat/GalleryShortcut.java",
+      "sha256": "6e9ec618ace7cff871e888ac4f1caabf7d014092fab9428692a816b9e9d2b5c1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_compat/realme/camera/compat/SessionCaller.java",
+      "sha256": "6a5a32f730b84f03a5c071e3ab3b900e64f557a2335f9ac298936f975f712b09",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_fileextender.py",
+      "sha256": "daf37028db3feb8ec2abc56f8193963dad939c6a5ce1dc3f02a981aaedea4c85",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_filter_assets.py",
+      "sha256": "edbd66e876a4426ed5e6c4e52e8d33bc92508981fd1a1e1fa830967482ad135f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_filter_capture.py",
+      "sha256": "2ff7ffe7c3d7320f04be5a88a225c0dad48e0da6081c4fc897a3db0914c8bd27",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_filter_sdk.py",
+      "sha256": "6fa1cd2d466e6bd3bb7b455c30122834e0a9247cad5f42f24328ef56136ec636",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_filters.py",
+      "sha256": "7e345982d59f6a42f54c97f53b511c2c89d6dbf58baab161fcb6cc9b5a6d1467",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_gallery.py",
+      "sha256": "7900cb749bff350bf98631f6a8e67c7e9d212d42c471a1f9953646ed0937c097",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_heif.py",
+      "sha256": "754c71d388d57788c19a416464dd32fd059c8896b16d0383084ab471989642d6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_heif_transport.py",
+      "sha256": "c6cb98276ac88e9e1a4075f0655cd9460331dded053e9b9e9e932b41db5a19a1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_session.py",
+      "sha256": "b22ee0df7f5d758c704497adfd37ef999385383993872a367b2e777465aa67c7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_camera_window.py",
+      "sha256": "80be233d10f1697c57d3e8d6bb414c6e7ebb8ef95d7627ff32579bb7ec638d36",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/AlarmMedia.java",
+      "sha256": "3821be9e4396152bbb8ab931ba271f5cd54069c12aded0073c40c3124e2d8e05",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/ClockDexCompat.java",
+      "sha256": "4713c090d7cb98d09e98fb2dd2574159c6f27fbe4a36b3bbca9e05c6212985c3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/ClockInsetPolicy.java",
+      "sha256": "9714de3309f9df991b8c02a12c8b4ec2cbefa4d49f4d58f6ef2a4dc8fc1a4128",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/ClockInsets.java",
+      "sha256": "a9325261f3c7b610286ef2d4caf5bf5bf25cfe377326412a9c70fad035aac9d3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/FeatureConfig.java",
+      "sha256": "7e736ba7374ef8f510e4b15dcc6728d29951521e8e7228d07971b59fa243ce0d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/OemBuild.java",
+      "sha256": "c77cabe63a139c53e247bf7e99f3c6c7472e4c98b729bd4de13229785b7e4e54",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/OemNotifications.java",
+      "sha256": "39768dcea9672d92687d2397cae985e5069d7cfd651d010394e0c26f44d86762",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_clock_compat/OptionalKeyguard.java",
+      "sha256": "9ad643bdd8ba4123732b6368ea125fca775996cfdf0683303211449af66cb0c4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_coinstall.py",
+      "sha256": "a1825f4a2453fdc4425b4846cc38f2c8cbce514c0ff36ed640afa2adb96d1137",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_app.py",
+      "sha256": "0b9494c539d052e261470c3b6aaee369118c6306785ad894f2d286604a67311e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_chooser.py",
+      "sha256": "a6a578da095157688dbf618a0261aeef36a6544509b1731e26f7c3959469e50b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/AppDexInventory.java",
+      "sha256": "ea2a441476f158cb88b1e8f5140d379cba7460ed7f60bccfa7dd65ffa48efb79",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/DoodleTheme.java",
+      "sha256": "d49e440db856351be986cf598534bd51f89e4963547f404694175a5308b8c10d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/GalleryDexMediaAssembly.java",
+      "sha256": "835db95a78f77f8847f5d5637a30030e621d36d2ac8bd2e47cd376c5c8cb8c31",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/GalleryDexMerge.java",
+      "sha256": "0af4e1c05259b4d0120bfe63cb940d756170086feefdb5f5b6649e3971ea6b42",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/GalleryDexRelocate.java",
+      "sha256": "000ebecc5d56b9d29ed87a0cfd3fd90dd7d0a420de166c2488f9c330925a713f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/GalleryDexSemanticCheck.java",
+      "sha256": "cea77b2a44b3a90282f5f310c6a9c5b3622d3c90381f908d23754d05cf979ee0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/MediaConsentFlow.java",
+      "sha256": "97f1d103a983e97014d451ac24cbb36ed8e69c3c7df18a7062ba847f6214db28",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/MediaSaveScope.java",
+      "sha256": "cf45845e41fdb0feea50bc484811211d0ae871c064244ea75bd2a21054c48101",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/MediaWriteConsent.java",
+      "sha256": "8080926821fdb8311763fefd309995c80ab6258ed03aab25b621fc9cb17f4169",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/ModelRequestCompat.java",
+      "sha256": "1ee187b7009a68ab5252698a403f6c0e69d6c5b13d0d57c40828f2bed5a56c6c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/MoveConsentState.java",
+      "sha256": "3303b239b9a467fa3b2cea3c1ad13a1ebf2b83ea000d106c3db5c601cc2c6304",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/MoveMediaItem.java",
+      "sha256": "5d2d93e687ab4308d085c880725308bf27c169f44b4bc21b9c5e5183b9c5848e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/MoveWriteConsent.java",
+      "sha256": "74bd90ae9683e825f9bbb061bf3815db5f0e987cdc3f3c7b2bf94f1845d780bc",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/OptionalOemHaptics.java",
+      "sha256": "d8ebdd8eb20fcb6185f21b8df86872a7364eb033e5856b944abefcee33c3830c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/OptionalOemPerformance.java",
+      "sha256": "99057413bfacde25b87e2a9125abd74475d71104a7fb19782108068e5c3282f7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/RemoverNativeCompat.java",
+      "sha256": "caaf02aa61559f79562d3670d3316b6e815dee27a91fd59c8e3c11195ed21898",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/ReplaceMediaItem.java",
+      "sha256": "5b755fe2bb0ed86b6d72a04753be7e4cfbc0b7aab18868614e638d0da880afb4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/ReplaceOriginalAccess.java",
+      "sha256": "525f12de0748b29b8fa47b6e621a51024d5d6d5e1a8868d4967902a4b8852a54",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/ResolverFallback.java",
+      "sha256": "acd863bc5ff3465da382ecc9f832b9611e33280076b027ad6f2e06286ea67b81",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/ReviewActivity.java",
+      "sha256": "aed9af78862733629a39d8725f95ebd4ee1467ef228b2443bd5869dc9fbcef76",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/ReviewRequest.java",
+      "sha256": "223773d68efd9b8766a05df0c540ea10b3df32c6b32f18060730f9a2311a6019",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/SingleShareMime.java",
+      "sha256": "79984aaca0802b7d09d6356dcb468f454593f3671748f600a07b579bebcfc972",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/SingleShareMimePolicy.java",
+      "sha256": "3c1ddc850d1687cee2bd8261fab873c7062aa7fc1b132e18689b4500e72b84ab",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/com/oplus/aiunit/vision/ft.java",
+      "sha256": "46ea40500b9ef8be6a9ab0c88a8430b502a6fd6589d14d6672338a5f82efc59f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_compat/gallery-policy.cil",
+      "sha256": "8e2ddcfb510d6adbec2cbcbb0c6c469bf4249ecf6c71c8704c5d3b5e1e6e92f0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_dex.py",
+      "sha256": "529fd7519dd8a0cdee0f3fad37d5b44d81b17e46a35493155befe6cef8e4a888",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_engine.py",
+      "sha256": "ed3be4bf77d8b2432fda697037a1d38473610fe15cc34d8526cc795dd25339ac",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_followup.py",
+      "sha256": "785269389c6602114633df34a607d754bd81801862c8a973601bcbb76a21fcb1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_icons.py",
+      "sha256": "943abf7a4c5fff646706a2242c070be8e9c7501225f86b298841d5f45b45be7d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_manifest.py",
+      "sha256": "8f64ac7fb745ba96cc168ae0bf4f7c25fa6ce39cafdec54f6d5aa482a98c5b26",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_media.py",
+      "sha256": "a4b3e81ff8e20e168237a0224ac1e80452105aa531c8c39fcec7628551e08415",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_move.py",
+      "sha256": "ee23f92d94b7b3cca7fe9cab169ef86adb2ca9e22c493e257f4864e3a4c35b98",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_paint.py",
+      "sha256": "9c9c778415fb7afcccdc3bf4c8b24e2d413c2460091b95bbf66112fa0765fd7b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_remover.py",
+      "sha256": "6179dcca1f9db18d214bc83e08a63cff04dbf9f71f707c702b5cdee7e5566c0e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_gallery_share.py",
+      "sha256": "64086707df019c2df03130b753944137c8d12e311dd452d9462f6dba4553e701",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_native.py",
+      "sha256": "de5299de76079bde0470023c34963cd5f1b6abec477e00234b667e28a541d315",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_ota_compat.py",
+      "sha256": "b8d94e0d70761a7d5915b3ca4ec2f0019dd8e4899e26f9eb9c50bee6f9437142",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_platform.py",
+      "sha256": "87a7daeea048d5ed3a2112b94ec088c2f8011e9db68417b1475881755225e345",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_policy.py",
+      "sha256": "600d944bc1fe0e164866fffc51c98d0b8a1e656c2e98e8329a7beb7b19eb1948",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_policy37.py",
+      "sha256": "29a39449297fa0bc18118ed56097fb375329d7e821ad4c61f13695169caabb2f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_policy_context.py",
+      "sha256": "b5dadf9b92d809710b35a399253dfd5ee5d3b40d815481633e86176269e17401",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_retention.py",
+      "sha256": "d6648a5c4fc758e87605f278929ea673644a780d6a71c4c9836ea517b0c418ae",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_runtime_policy.py",
+      "sha256": "1809fa17091282d2b781c98a497c26c64cf72c790e90fb1792e178cbf65a24a0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/oem_sdk.py",
+      "sha256": "b45cb36921007f756c49e0fdb6693f69945709952a1718b62e8f0e8a887acaf7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/ota_preflight.py",
+      "sha256": "8c0f6a5d779f7ae3c02ad6ae8ff6293759163ca95a7ec9da2976e395db856ac6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/package_coverage.py",
+      "sha256": "f4f85f9480fe497dd49027405287c0e6a2ef8a8024d5b56856a2cb8e996264d8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/payload_image_binding.py",
+      "sha256": "100ea1face3c2fa9d21ca6e90b6ecc164abaf90d713d15da86feae224760f055",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/payload_range.py",
+      "sha256": "df5f83a57c77b3571a5772eec1912c5b323b8c95b0bff771464a6cd48598aeb7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/port_stock_clock.py",
+      "sha256": "cb39bda6fbfd179dc54a0cb9eae6aa0a38b611c38c2dd1a2b59405ae18291b60",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/prepare_oem37_sources.py",
+      "sha256": "7c4f76e34d32a780074c36234ca1810b79ea47b3c9ac297b73ac03855b2da6ac",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/prepare_stock_clock.py",
+      "sha256": "aa6ea1da3de19eb591148b1004903f38f8cb9b914dab50f67efc67f48a261da0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/realme_ota_client.py",
+      "sha256": "ed258b14fd9ec20a32e8468d3c708d6f11ef6285b77938613607aebe17f9a078",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/recovery_assess.py",
+      "sha256": "1b8e2cd82af5ce217c57829f68dccd5a3531df8bc96ee22cd99e76a2a2e11cc0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/recovery_session.py",
+      "sha256": "30249e967750bee9715b0a7642f2312c07e16f5f6306cba23aa99ac253afa094",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/recovery_trust.py",
+      "sha256": "ca2133f1a6d0fb4cc4070f8f7eb15ca3ce94ad3fbe08b6318976d3ad3ff0a6be",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/review/avb_vbmeta_info.py",
+      "sha256": "b48fe765be2b56cb8831057b3755956a6c64f5dbc826c6ea355b70e17b7ed376",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/review/persist_compare.py",
+      "sha256": "0ffaf6ee1d3f05459287ea53a00395e3a8af578d1d6ecfa3d9abdff1d1b2ddcd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/review/super_slot_overlap.py",
+      "sha256": "08d6d5340f93fa90c8bab8d8422e9d9041681a953fd523a0282e64cde1c0fe58",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/rmx3301_device.py",
+      "sha256": "855c8da3bb3f57429cd8861c6264fea0cde4adbb794dd740544824af21eeea36",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/rmx3301_offline.py",
+      "sha256": "68c8a415a0dfe3b6922d8ef2ffa5a707b74bbfe8716b2ea90ffa5ff13c689231",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/slot_extent_overlap.py",
+      "sha256": "26188a3177491b71c0bbe67eaae0c88ec749820d2466ea57fc717670be5c9b86",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/sparse_hash.py",
+      "sha256": "6d995496d09f1d93fede4d34379e368158ef4f11da6557d0912aa170798b4ede",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/standard_boot24.py",
+      "sha256": "e320ef666f2b31f84f9432687bf2e9aa41b85d9ab19f2d14414b1d807cd4cbc6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/stream_capture.py",
+      "sha256": "72fdd94712a0401192d0cac5c93117da1c023de55914e0f03c20b72f38433eb5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/java/SingleShareMimePolicyTest.java",
+      "sha256": "37ae2d435eac18c8cc2f04c0d6db9d25bbfb5c009f7b2a29637f6053aa6aadc8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/run_oem_ram_tests.py",
+      "sha256": "d1cbbdb1261f09034522882a74a6c1808a28a27d28d9a9960f7a422d868c6f55",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_addon_update_contract.py",
+      "sha256": "cd1f0f4268e2cf2168fa3abdcc9459b9243fb9d32e2e002ca377bf4c8d75e443",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_agm_calibration.py",
+      "sha256": "21182eec0523d3359c3215930fd6f7f8cf488d6e551f9a0c6b34118d8d35c07a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_app_dependency_audit.py",
+      "sha256": "399592ae0217ee12924f515c7a9062193f67cb6313b3ce0e85b48d5f80239f88",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_app_native_visibility.py",
+      "sha256": "ffe4570ba648d45aca1c07bcbcbe4bb04082bd4be8f1c6f595e614da8542679a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_arb_advisory.py",
+      "sha256": "68b4e6afc42a2b11427e5cd92dbfc220592b0acc99ff24729c1ab0718ec81948",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_audit_attributes.py",
+      "sha256": "111013f88e3fd5945715a7350ee01c03f5cac049d10f6c1c52e3d4e2b71f51fd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_backup_catalog.py",
+      "sha256": "9c055c75474bd21cccb066366ef6cfab7da7c378100d920a84dd2601b6132c03",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_backup_oem_os.py",
+      "sha256": "3654c830db470d8987bd6061d15eff96c1a53cf41389b4f7c7590338d64fa663",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_backup_upgrade_state.py",
+      "sha256": "5af5d39074523aa6f57f15b8e09bee0cc2252cef61524baf20b05cd8ef7b3cf9",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_boot_control.py",
+      "sha256": "86c64d5a5a15a0791d5ce2d249a681bc67acbd6ff341e0f00ecfdccba7278ca7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_boot_startup_package_24.py",
+      "sha256": "0b1129928d00e6aba92f72f6ac4907039638cd736349695da93409d3641f6054",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_bootimg.py",
+      "sha256": "9920db9a1c2536ec12360edbf818b28519111d38da61c36dd0e24fdd12f9cabc",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_build_cache.py",
+      "sha256": "71ceecabfbfa85e20dac41f1a7625546efa374b2c5d3f0094018b2949df6bf08",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_build_identity.py",
+      "sha256": "0b62b606cd45a85d2e9b957587f2d8973dd05d17fcefa1263b46a4f646af0654",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_build_runner.py",
+      "sha256": "4aae8b002894d918696e54acd13e19a4f86801d5e935b02418e9ec91f3086158",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_cache_inventory.py",
+      "sha256": "a5a0920d17fb246d76d68ca7a3e1faa2ba4952a785775e3a239885f299d843cf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_camera_bridge37.py",
+      "sha256": "bfdc9e6f6d234bef864b9d50b3b1f487d50bfda7d80827c46d53f5f287f03797",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_camera_client_metadata.py",
+      "sha256": "c6e52147c5639455bea6e86e787c144224c9bef0ff2be15a759c0e12e0e0ec51",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_camera_native37.py",
+      "sha256": "617209baa8ea1682690f32be786f8734c071e471fe02eb34136adb83cc0b2995",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_camera_profiles.py",
+      "sha256": "9692f68c5ea705192acedd3145e63bfef03ffd4812f0d9d58c01637e54a8db23",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_camera_vendor_filter.py",
+      "sha256": "7687ef90b6d12e728fa46e802b936556d59aa355a7f193b03ddb7d9bdbf89069",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_candidate_artifacts_24.py",
+      "sha256": "595e9b8891ceb4ce2ff3996b61f44bb29bfcf574f2e77187af4330b86cb2babb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_candidate_checkout.py",
+      "sha256": "148c9c5166f61ee794bd58e371a90267d8c8c8978b43c3b8c1811e5f5b83fc1b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_candidate_sensors.py",
+      "sha256": "619d0be2279ee8c733957879133073a82018f11682b660c388d18a15714f9d40",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_capture_oem_app_logs.py",
+      "sha256": "19d09310cf25ab7a3e3ffcce2ed0bc0792e8254bfcf4529829fd3808d5d40611",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_codec_store_abi_24.py",
+      "sha256": "17067cad74b6fe2ae395c7dad20181a6155c616855e76d38e21d01c3233e5a57",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_common_runtime_24.py",
+      "sha256": "48ce9074cc682f2018ecfc69397423588593d6001d75ec06600b2158ec6d1ceb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_device.py",
+      "sha256": "bb343ef0d120dd4976b729d52753529620b9b9d6b552ab49a09735a42209af1b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_device_core_24.py",
+      "sha256": "3169215d981fd2c57a22aafafc0e2f0d6a6ef6eaff5f1c3b2a361a03ea845ec3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_device_responsibilities24.py",
+      "sha256": "3fc1225b55a9ba5d0ae95caf849e190a9dc2c8d1785a111b2a4e5274aa6ee50f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_display_resources.py",
+      "sha256": "9c94811e2f9d6088cf447cae36f225c87b4279562b01d8af9154a30c82951c1f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_elf_symbols.py",
+      "sha256": "3e0c378fccf445b36916529a3732e2d69d6b8f69f2a45b798eaa1b8d911e91c3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_engineering_check.py",
+      "sha256": "c567974f8b51855932f2409642e28f0baab3eebe3a8163219325d1ddd8d6fedd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_engineering_recovery.py",
+      "sha256": "082d289b696b5dd6a79d452bcd181b9e035c18710a108f495ffeaa85d1492baa",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_fingerprint_bootstate.py",
+      "sha256": "6a91b0432201d05f8488cb81e8b2d071021e0e7c770f99bfb6b6b1f07a8491cf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_fingerprint_memory.py",
+      "sha256": "174edef40f597d12bd5a75e0d711b7859d97422680e3330f720782fa7bae3a8d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_firmware_policy.py",
+      "sha256": "77072dad144281227a3c1c523d3b34a4e5b388a61e754f0a4bfbe7e49a0a6b3e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_health_current.py",
+      "sha256": "9281f048091a00481839ddff41c7d06528766f7b897693f916c2ffd11e589cb8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_init_boot_trace_24.py",
+      "sha256": "2858a9bf330a0c5c5b9c0f238f72b8cb212f907af7f41932fb03e74b172903b2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_init_cached_graph_24.py",
+      "sha256": "d9cdfc630eb0a67b23d273757a14dffff86eec3bb4e7f47acf9f10f072c1d621",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_init_diagnostic_cache_24.py",
+      "sha256": "3273a74ca9a8c727cee5661b5d591af19615dd0500e1ff9aa9dee90eea81fabf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_init_stage2_trace_24.py",
+      "sha256": "5ce633f794367b93d9eae82cef3fc790843b46faf146e605fb438b22781ecb9f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_init_trace_mount_lifetime_24.py",
+      "sha256": "fe2a0065e72f39b4a14abb190c80395af23a664bed7ecedbbfc39f0cf6b543c0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_install_guard.py",
+      "sha256": "a0e9b1227219e1561330fc27641f054438682a3c440af099f766dc77815f51dd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_kernel_layout_24.py",
+      "sha256": "a44a151bfd165ae3660e4a5a72b2a4a6008e82cbbe83d9f6d0d5017bdeb78e22",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_kernel_modules.py",
+      "sha256": "6838068a09c959c8c7330d46e9e3cacf1c10236bc31c1a79c9d656f0a438d29e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_driver_paths.py",
+      "sha256": "fa06ff361a42e8e8371b6af97255be5492a57e9d2146966fd08ace7118257046",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_ownership.py",
+      "sha256": "53e634bace7b7db20751e67828154650f18a4939485d0dec6e15c1148089a882",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_preflight.py",
+      "sha256": "c79f947c1834cfed598b29112bef877a68e3f5bdff10087afc7262a7dab4080c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_recipe.py",
+      "sha256": "c659ea2a8ac255e5b6473a5dce63e8db69458287929db997d4488c77f1a86c0c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_storage.py",
+      "sha256": "73facdc29f0dde1a36b5cb46a586afc738df911a4848ce717305ee1a3787b1ce",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_vendor.py",
+      "sha256": "01975ce174c96c3f290175ffce8bcda3ef9bf8fc93014667351a45f9ca51ff39",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_vendor_package.py",
+      "sha256": "11076857506914a29cbb6604215d26d5cf259103aa707cc1de8fb52226ae8ec3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_lineage_24_workspace.py",
+      "sha256": "c22c44d5ea1a97257d4aabc93101fc3b02e9eda1d8c14f395186bd36ebe70bd0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_manifest.py",
+      "sha256": "b3d69d7c3ee0e2b5b1e3819ddc275d2a0a9c099a756785fa1f227e5ebc2c9ba5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_observation_schedule_24.ps1",
+      "sha256": "e2cbe653126a74115e46f7fe7365be6c708d18d397d4db323189e583ace0920b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_observe_candidate.py",
+      "sha256": "dd1c868357285575a5f411e3eca8ef9709714dc433399fae7e466a9a0781176b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_observe_runtime.py",
+      "sha256": "503863690f67679790a4d2cc9d8b2197a50035b62e57fdfd290339d012e33626",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_addon_durability.py",
+      "sha256": "cd9812fe1ce652a3c20e04a47a95efd883d8b06f00ecce99ffc482f05c39f8fb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_addons.py",
+      "sha256": "3f56f53c74171e46e21856f5e9a8995a7fe861414c3bb34c0b78fcf7d3f7d749",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_base_comparison.py",
+      "sha256": "77a85eff120babc65ddb46025c6106b078cc6f0a6154a1777e29fb84bca8616b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_camera_fileextender.py",
+      "sha256": "db1529324edd600627f040394a59501fde37745630ee7620df366fb2b0d74d67",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_camera_filter_capture.py",
+      "sha256": "479d4d86bcdd715f1488421378600fc51dc49aab26fbc03f71f57b42a7f35eee",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_camera_filter_sdk.py",
+      "sha256": "1c9675fabe99d872c8d34a23cdbb3005c0aa565b265a107e59df9889e395ed25",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_camera_gallery.py",
+      "sha256": "f0d0915b4a43135da8d953275fb45ed91c9aa9619e9c1768cd78f32d88c98f42",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_camera_gallery13.py",
+      "sha256": "8b54ab7dfcfc36cac927b428384c3807a5a738431bd0499fa4b497cc363d08e8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_camera_session.py",
+      "sha256": "6cdb971f2e7e840f5ea1897921d2218d64d9174472cd080a7d946a64ee871e46",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_camera_window.py",
+      "sha256": "48ef2bd4003a6d364002443803bbce058434fcf19c6be632bc47af33727fbea6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_clock.py",
+      "sha256": "51199edc3c0af32c107d99a83aedb89fd0ac181bd34aece3ae2886fd9ee45729",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_coinstall.py",
+      "sha256": "b65d5853a8b830c7386a52bef3fd6d97e5923fc589512fc20fd421fbfbca8624",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_coinstall_transactions.py",
+      "sha256": "3a0a0ed7345d192fb48c43d534805154c3b152348a6d0e65d73792808c8d0fab",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_filter_assets.py",
+      "sha256": "5168658e96caf65d459a56c40a132b57665897befead08612405cb84a3fdcb31",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_app.py",
+      "sha256": "781b727baddcef98c2766c823bfeca01cdda54745767ae03ac8b5ad6008a6456",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_app_transition.py",
+      "sha256": "716438c10523f1e3c01e1cffef651960e2302b4c76e3297dddae35226f8a8263",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_chooser.py",
+      "sha256": "3120aafcf089e955d2ec5576e61e374fa706c5d09e9e62406dbd354f11a9a707",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_dex.py",
+      "sha256": "36acdcac5cc092009b521684394bf5cc36ed8e9de296be79b09842bee92d7fb1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_engine.py",
+      "sha256": "c5cc91a6de514b72cc51a326291af201512888ae0e6cd564bb5ef194974146e3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_followup.py",
+      "sha256": "9ec100bbee40eef4e795f3c61435a506627ef45071314cda1c404cf3b0d6832f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_icons.py",
+      "sha256": "376ee8f16ac7c5a324c15ea984086dcba5427fd5f79ea513b305ff8134025cda",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_manifest.py",
+      "sha256": "619bb1087cc3cb512e1f92c8ef78961e3355d9cd5e0846f1962d57ba9e235dcb",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_media.py",
+      "sha256": "bd25eb7c8d4708fc930f1bb54dedfe17ba5a3b660c3a8e40848620421b8d6142",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_move.py",
+      "sha256": "2257f94675c2953b8cc0df32634e54233bb806045389269d9ea94d456cb301ee",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_paint.py",
+      "sha256": "79f207cabb98f9e02a271e5a45d304560af879c4d05bd3077bfd4d45f5b0dfe5",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_remover.py",
+      "sha256": "c42a7736bffd18173a05ee94032dcda1f0a7033136d14b13d4630a5b4421c09f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_runtime.py",
+      "sha256": "37b66ad43d3210eef986173a5ab2e44193d2e7e5bc4222cc92a59ed5990cd9fd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_gallery_share.py",
+      "sha256": "2fe92968e88339bc79c25e9e26760e3a7eb60abfb0638593df33fd4e30aa5401",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_genesis37.py",
+      "sha256": "eb6ff399369361b1e82700b40a0deac01bd319d550482b5195610ddce20e3f5f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_heif_transport.py",
+      "sha256": "fca217ecc2d4262ef6a599773636fc02806445c30130e4e6f0ff92370b75cfe4",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_installer_platform.py",
+      "sha256": "6ae7a98ac6e5051c03e2d8e8b91aa7235b732652fec74b01274253dd130578cf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_ota_compat.py",
+      "sha256": "7f586685da4568bbae243ff07c24cb227af4dc2627bfe31ba89f4f3fff578da3",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_ota_platform37.py",
+      "sha256": "3a2c93c2f65bad8900a1d87710e9cfebf8b5c2b0985a0f1085f9ccbe1a929fc2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_platform.py",
+      "sha256": "a6c4eeaafd6dc17f44afdad1cfbde9e35ee504e82de869e240d8111012a5ac61",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_policy.py",
+      "sha256": "47808e500cdf3b07d5b32833fee03bf494d28302c85f15c79f2e824555ce9adf",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_policy37.py",
+      "sha256": "889de2ab26f2b39ce277d56c7fc90f396f9ad4856269484c07591013c34e178e",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_privileged_camera.py",
+      "sha256": "23f40504ff82697cc845cf63a1963a28bb03e1030e9c5d4368a598deac6ad85b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_recovery_mapper.py",
+      "sha256": "4f6ab09e83b36d7c013aff198943310760d1d05208141b5180e92f6542f80196",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_retention.py",
+      "sha256": "8bec4a8677a880dfac67246e632de44218bc85b88beeb9e54d35f0c90b6c61f2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_retention37.py",
+      "sha256": "3dcd5bd499d0598c2262126b2ba99815fa463f964a4628d54c7d9d3b465652ce",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_retention_integration.py",
+      "sha256": "49e396977df2be32e6df0db8ca30e4e89909c916a8532aab9f3c1af79429d206",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_runtime_policy.py",
+      "sha256": "12324e593ccc8d4b2298e188725830e108d804b1be664ef597624e71495d5843",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_shared_policy_transactions.py",
+      "sha256": "8b1e3399ebd67c12c40826a566051553493ac12a682bcbe5e16f102111269f89",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_sources37.py",
+      "sha256": "a2ce50c08bb29fa73b6b75257e1ff0596ba79cf731d9404326b9f0624a9deac8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_system_placement.py",
+      "sha256": "ca206d4d8270ded9c9ba121da5517a50e576614986efca05161fcac3ec4a89b9",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_upgrade.py",
+      "sha256": "a6a43efc411c5271ab5e2aeded73e556fc718fe59003a9cc6941e258a2ddc3e0",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_vendor_cohort37.py",
+      "sha256": "f97fb36b6883ee0b8a13dca25e9468b58b8badf0fc5682715716ce2944de1ec1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_oem_vendor_filter_binding.py",
+      "sha256": "d75af8c2b48bbe219565e2e2c899e2b5d52ed14a72f772563e9abb85bff1605a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_ota_preflight.py",
+      "sha256": "2385604df80cc953ff290801cc18f577bac47baacddaaf5615dacadf6a5d77f2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_output_cache_24.py",
+      "sha256": "5721e0957823a25c9cc94813d3bb06411e07600334b8b2d1d522e0650078bd68",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_package_coverage.py",
+      "sha256": "7a0785270bfd6be093d39a210a1d9d42e5f69eb2e29ea38827c881c25c3671b7",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_payload_image_binding.py",
+      "sha256": "a6e8f0e552fc3d557d2980561d6fc91f4b924d00dfaa28bae780a4d97dc6b00a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_payload_range.py",
+      "sha256": "4f4e3387865dfd4445f41840f2d74e9c0b070517a82fe5489940739374106b75",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_prepare_stock_clock.py",
+      "sha256": "45a9377d78de74472055f3849f063d3a17e5467995d9854fc1222ca1caebfe25",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_prepare_upgrade_restore.py",
+      "sha256": "51105f1b3cb531acbfc722aecf687c880acc5ebcba80542977a1f990955f1911",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_recovery_control_native.py",
+      "sha256": "c1b2b23c3e8c56222169857966da930f6e9f9d03cf7079d13282ca766ddd1032",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_recovery_session.py",
+      "sha256": "976fa72da705b2a514fac24e4f58714e4c4cb3aa692a839460bc1da14e2353b8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_recovery_trust.py",
+      "sha256": "ab1cbc3e482e8051e4f554958b25bec23014749d53878ef0125e4b23b746984f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_sensor_error_guard_24.py",
+      "sha256": "b7fc16088967dd08e76dcbbb03ac8667d63594649a7d55b3df3dbeb1ff6ac11f",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_signing_identity.py",
+      "sha256": "d1c3e9f9941006a087023cfd764f50ec9db3318869aa309d602aee4732783da1",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_slot_extent_overlap.py",
+      "sha256": "55b501615122ee60ec799cdb7bf8e513df4051a5c38ce65fd14f978c96bbc390",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_sparse_hash.py",
+      "sha256": "ab818f881657699d2a18903c9cf441d885fced7ac8fcbdfc2258b3ce5719e746",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_standard_boot24.py",
+      "sha256": "b6be416ca320a566513dda6018c4133d0141eca9ed9bd5cee17f35105206981b",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_stream_capture.py",
+      "sha256": "4201373af984d1a350c945cca9c5a1e025e2cee4b5e775b9717277bf595899c2",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_thermal_startup_24.py",
+      "sha256": "d15dc3ad7b4d1b6f15aca60ca35fa7bab6352292146a7761b058ae9b7ac1568d",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_vendor_cache_freshness24.py",
+      "sha256": "f532a2f1d9584b4dd57d99a1b18ae9b6182e67320cf06ab517c75ca0940e4e86",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_vendor_extraction_cohort24.py",
+      "sha256": "79b0cfce9ded8c999caad0fa728f7d5190d037136e262f1dcb16c2af6b456d72",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_vendor_fixup_binding.py",
+      "sha256": "e0742e281d3e81a0ab1ed5e891300a05726224d06d598ddfbadb3a31eacd2839",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_vendor_source_case24.py",
+      "sha256": "a39bb5d9a0c2e69658a2d0f5359b8f6b7969b72b1f80c7500ed22ed8a8b77f6a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_vendor_wfd_wiring.py",
+      "sha256": "ed10481277ba3c559b4fae17f51a9b2fb5bc954c3a2268774fb7b2e5761eb478",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_vendor_xml_abi.py",
+      "sha256": "5f047ebb6a49a70d595d8b3d39a44e5e89241fd17cf4a7a1e2c219b9305dfba8",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/tests/test_verify_upgrade_boot_stack.py",
+      "sha256": "91e404f3e628ff0bbacbd69898e50770066363a885b55be21217d542bf9ec95c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/validate-workspace.ps1",
+      "sha256": "c2f720be02ca8c81a29af295a08b3f6204d24ed8af2b99bc27a8d6afe6b71b8a",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/vendor_fixup_binding.py",
+      "sha256": "a4d6e07f0813bd18b41ad53c6bde63170e16eecf295869987ad9280a441da53c",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/vendor_wfd_wiring.py",
+      "sha256": "be19b428498fe1e66b4e99533b2ed9de26ee3321bc6e11fdbe84a0bb9cf362d6",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/vendor_xml_abi.py",
+      "sha256": "d29bb5e56bf7aec0121f5bb8c2ffdbe795f4f98010b3df7b4396fbf05b122eab",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/verify_restore_kit.py",
+      "sha256": "9c178b5281525dc1592d0575ea49e7d542be0db1b81b2ffa6159e4f880f7f731",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/verify_signapk_ota.py",
+      "sha256": "a816e37edfaa433c6356a2b92235d7b26a8d6dee218c5778f999ff5f69f578bd",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    },
+    {
+      "path": "tools/ziprange.py",
+      "sha256": "899e0af1b0a40401ee0d3e2be04ee2f0ca64bc2c015f4515759dbc98decaa918",
+      "source_commit": "69bf1cc09e299b1c21558c86aaeb629156d5849c"
+    }
+  ]
+}
