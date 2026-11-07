@@ -1,6 +1,6 @@
 # LineageOS for Realme GT2 Pro
 
-Unofficial **LineageOS 23.2 / Android 16** for **RMX3301**.
+Unofficial **LineageOS 23.2 / Android 16** for **Realme GT2 Pro (ferrari)**.
 Realme Camera and Photos/editor are optional packages. Google apps are installed
 separately with MindTheGapps.
 
@@ -14,10 +14,14 @@ separately with MindTheGapps.
 | ROM | LineageOS 23.2, Android 16, API 36 |
 | Kernel | Linux 5.10.246 |
 | Android / vendor security patch | 2026-10-01 / 2025-05-01 |
-| Development phone | RMX3301, project 21631, TW `RMX3301_15.0.0.1410(EX01)` |
+| Development handset | RMX3300, Chinese-market model |
+| Firmware baseline | RMX3301, project 21631, TW `RMX3301_15.0.0.1410(EX01)` |
 
-Development and testing use the TW .1410 phone. Other RMX3301 regions with
-compatible Android 15 firmware may work and need further testing. RMX3300 is untested.
+The development handset is an RMX3300 originally sold in China and later flashed
+with RMX3301 TW firmware. The test results include this converted RMX3300.
+RMX3301 names in properties, downloads and installer checks identify the firmware
+target. Compatibility checks concern installed firmware and partition layout;
+other firmware configurations still need qualification.
 
 ## Tested features
 

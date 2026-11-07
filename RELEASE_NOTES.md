@@ -3,11 +3,15 @@
 LineageOS 23.2 / Android 16 for RMX3301. Camera and Photos are separate
 downloads. Package-23b replaces the older Android 16 release, 20a.
 
+The development handset is an RMX3300 Chinese-market model converted to RMX3301
+TW .1410 firmware. These test results cover that converted phone. RMX3301 in the
+release names describes the firmware target.
+
 ## Lens update, 7 November
 
 Camera beta16 and Photos alpha16 prefer the current Google Lens link, with a
 legacy fallback. Camera and Photos keep their APKs, signing identities and settings.
-The shared library, its receipt and each app’s OTA hook are updated together.
+The shared library, its receipt and each appâ€™s OTA hook are updated together.
 Google remains optional. The Camera installer updates a recognized existing Photos
 bundle automatically; Camera-only users keep Photos absent.
 
