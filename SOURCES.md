@@ -1,21 +1,45 @@
-# Sources
+# Sources and credits
 
-[Source repositories and pinned build manifests](SOURCE_LAYOUT.md) describe the component layout.
-The original release source kit below remains the frozen reference.
+## Source repositories
 
-Package-23b uses the pinned [manifest](source/manifests/lineage-23.2-candidate.xml), [recipe](source/tools/build/recipe-23.2.json) and published patches. Its engineering source checkpoint is `6dbf8f1e4c7ffb3b60acfdb218008242d9bce458`. The public source kit has its own history; [provenance](source/PROVENANCE.json) binds exported files to that snapshot.
+| Repository | Contents |
+| --- | --- |
+| [Realme GT2 Pro device tree](https://github.com/wjdob/android_device_realme_ferrari/tree/lineage-23.2) | Device configuration, overlays and extraction scripts |
+| [SM8450 common](https://github.com/wjdob/android_device_oneplus_sm8450-common/tree/lineage-23.2) | Shared platform configuration and extraction support |
+| [Build manifests](https://github.com/wjdob/lineageos-realmegt2pro-manifests/tree/lineage-23.2) | Pinned source versions, remaining patches and build preparation |
+| [Optional Realme apps](https://github.com/wjdob/realmegt2pro-oem-apps/tree/lineage-23.2) | Camera, Photos/editor and Clock compatibility tools |
+
+Use matching version branches. For Package-23b, the source tag is **`source-package23b-20261107`**:
+
+| Repository | Commit |
+| --- | --- |
+| [android_device_realme_ferrari](https://github.com/wjdob/android_device_realme_ferrari/tree/source-package23b-20261107) | `c3a5d7fab59f3303606e10c77730d95439c836eb` |
+| [android_device_oneplus_sm8450-common](https://github.com/wjdob/android_device_oneplus_sm8450-common/tree/source-package23b-20261107) | `b7e92722c113ebcc8fafbc6bfef0286a4ede3c17` |
+| [lineageos-realmegt2pro-manifests](https://github.com/wjdob/lineageos-realmegt2pro-manifests/tree/source-package23b-20261107) | `1fe2bb35f020aabb51ad83473ec929494c20c4e4` |
+| [realmegt2pro-oem-apps](https://github.com/wjdob/realmegt2pro-oem-apps/tree/source-package23b-20261107) | `bd7cbf928b3d3493edd941c22f9ff300c8c26163` |
+
+Build prerequisites and source commands are in the manifest repository's README.
+Rebuilding requires matching stock files and your own signing keys. A complete
+rebuild using the new component manifests has not yet been tested.
+
+The original [release source kit](source/README.md)
+contains the original manifests, patches and file hashes. The source-tag versions
+remain available for inspecting the release.
 
 ## Kernel
 
-Linux **5.10.246-gki-g914935583f0c** comes from pjgowtham's SM8450 work:
+Package-23b uses **Linux 5.10.246-gki-g914935583f0c**, based on pjgowtham's SM8450 work.
 
-| Tree | Exact revision |
+| Tree | Revision |
 | --- | --- |
 | [Kernel](https://github.com/pjgowtham/android_kernel_oneplus_sm8450/tree/914935583f0ce199114a4a1f31178ab25a3a052d) | `914935583f0ce199114a4a1f31178ab25a3a052d` |
 | [Device trees](https://github.com/pjgowtham/android_kernel_oneplus_sm8450-devicetrees/tree/d8f3eb3fe8f98facd9669aa97d1247f6580e1e58) | `d8f3eb3fe8f98facd9669aa97d1247f6580e1e58` |
 | [Modules](https://github.com/pjgowtham/android_kernel_oneplus_sm8450-modules/tree/ca1104519fcb7e769129e75458a9da4833bcc751) | `ca1104519fcb7e769129e75458a9da4833bcc751` |
 
-Download [kernel-source-RMX3301-package23b.tar.gz](https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/kernel-source-RMX3301-package23b.tar.gz). It contains all three source trees, upstream licenses, the applied ferrari trusted-app memory overlay and the built `release/kernel_configs.txt` / `kernel_version.txt`. The kernel and module trees have no local modifications; the device-tree change is patch 0035 in the recipe. Kernel pins/configuration match 20a.
+Download the [complete kernel source archive](https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/kernel-source-RMX3301-package23b.tar.gz).
+It includes all three trees, license texts, the applied trusted-app memory change,
+and the build configuration in `release/kernel_configs.txt` and `kernel_version.txt`.
+The kernel and module trees are unchanged upstream sources. The device-tree patch restores the stock trusted-app memory reservation.
 
 To inspect kernel history:
 
@@ -26,10 +50,18 @@ git checkout --detach 914935583f0ce199114a4a1f31178ab25a3a052d
 git show --stat HEAD
 ```
 
-Use the manifest's pinned build tools/Clang and device kernel configuration when reproducing it.
+## Credits and licensing
 
-## ROM and app ports
+This port builds on **pjgowtham's** device, SM8450 common, Oplus and kernel work,
+with **LineageOS, AOSP, Qualcomm/Oplus** and other upstream contributors.
 
-`source/` contains the release's patches, templates, contracts and compatibility tools for Camera15/Gallery15. Proprietary APKs, libraries and models are separate inputs with expected hashes in the configs. Extract them from your own matching stock set; rebuilding signed packages also requires Android build dependencies and your signing identity.
+[Changes and credits](CHANGES.md) identifies upstream fixes and project additions.
 
-Upstream licenses remain in place. The kernel archive includes GPL-2.0 license texts. OEM apps/libraries retain their owners' rights and notices. [Changes and credits](CHANGES.md) separates foundations from local additions.
+Original licenses and copyright notices remain in place. OEM apps, libraries,
+models and assets retain their owners' rights. Extract proprietary inputs from
+your own matching firmware. Signing keys are supplied separately.
+
+## Contributions
+
+Report phone problems through this repository's [issue forms](https://github.com/wjdob/lineageos-realmegt2pro/issues/new/choose).
+Submit code changes to the relevant source repository and include the LineageOS version.
