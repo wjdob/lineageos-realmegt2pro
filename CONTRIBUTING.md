@@ -11,3 +11,5 @@
 Use ROM for recovery, hardware or optional Google integration. Mark boot/setup
 failures or possible data loss in the impact field. Feature requests should explain
 the use case and desired result. Update an existing report when new evidence appears.
+
+For code changes, use the relevant [source repository](SOURCE_LAYOUT.md). User bug reports stay here.
