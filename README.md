@@ -1,5 +1,9 @@
 # LineageOS for Realme GT2 Pro
 
+Android 17 is available separately: [Native25 beta and optional Camera, Photos and Clock](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-24.0-rmx3301-native25-20261107).
+[Android 17 source and guide](https://github.com/wjdob/lineageos-realmegt2pro/tree/lineage-24.0).
+This branch retains the Android 16 Package-23b release and its matching instructions.
+
 An unofficial **LineageOS 23.2 / Android 16** port for **RMX3301**, with separate Realme Camera and Photos/editor packages. The project aims for a dependable daily-use system close to upstream LineageOS. This release is **beta**.
 
 **Current release:** [Package-23b, Camera15 and Gallery15](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-23.2-rmx3301-23b-20261103).

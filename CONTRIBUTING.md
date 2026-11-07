@@ -1,10 +1,13 @@
 # Report an issue
 
-1. Search existing issues and read the release's known limits.
-2. Choose the **ROM**, **Camera** or **Gallery** form. It adds `bug`, `needs-triage` and the component label. Use ROM for recovery, hardware and optional Google integration.
-3. Use a short title describing the symptom. Report one problem per issue.
-4. Give the ROM/bundle versions, model/stock firmware, selected add-ons and any root/system modifications.
-5. List numbered reproduction steps, expected behavior, actual behavior and frequency. Say whether it worked in an earlier release and whether a restart changes it.
-6. Attach a short redacted log or screenshot when useful. Keep account details, IMEIs, credentials, partition backups and private media out of public reports.
+1. Search existing reports and the release limits.
+2. Pick ROM, Camera, Photos or Clock. The form adds the component and triage labels.
+3. Add `[24.0]` or `[23.2]` to a short symptom title, and select the version in the form.
+   Maintainers add the matching version label. Report one problem per issue.
+4. Give the OTA/app versions, model, stock firmware/region, selected add-ons and root/system changes.
+5. Number the reproduction steps. Include expected/actual behavior, frequency and any earlier working version.
+6. Attach short redacted logs/screenshots if useful. Exclude accounts, IMEIs, credentials, partition backups and private media.
 
-For a feature request, explain the use case and desired result. Existing reports can be updated with new evidence. Maintainers assign priority after reproduction; the impact field helps identify boot failures and data-loss risk. Back up data before attempting a workaround.
+Use ROM for recovery, hardware or optional Google integration. Mark boot/setup
+failures or possible data loss in the impact field. Feature requests should explain
+the use case and desired result. Update an existing report when new evidence appears.
