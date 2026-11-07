@@ -61,3 +61,5 @@ Use your own matching stock set and [return notes](INSTALL.md#returning-to-stock
 A wipe may be needed. Preserve calibration, EFS, FRP and unlock state. Current
 Native25-to-stock restoration is untested; historical .1410 returns are separate
 evidence. The Android 16 release and its source remain available on `lineage-23.2`.
+
+[Source repositories and contribution paths](SOURCE_LAYOUT.md).

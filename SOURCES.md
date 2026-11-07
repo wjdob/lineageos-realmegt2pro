@@ -1,5 +1,8 @@
 # Sources
 
+[Source repositories and pinned build manifests](SOURCE_LAYOUT.md) describe the component layout.
+The original release source kit below remains the frozen reference.
+
 Native25 uses the [pinned manifest](source/lineage-24.0/manifests/lineage-24.0-candidate.xml)
 and [recipe](source/lineage-24.0/tools/build/recipe-24.0.json). The frozen ROM build
 checkpoint is `cc7a266aab79592c9f2470a04f9bfc5f9557c385`. API37 Camera/Photos inputs
