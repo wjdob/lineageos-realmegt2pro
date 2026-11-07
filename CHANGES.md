@@ -1,20 +1,21 @@
 # Changes and credits
 
-LineageOS/AOSP Android 17 and pjgowtham's ferrari/SM8450/Oplus/kernel work form the
-foundation. Original authors retain credit. Exact pins and patches are in [Sources](SOURCES.md).
+LineageOS/AOSP and pjgowtham's Realme GT2 Pro, SM8450, Oplus and kernel work provide
+the foundation. Original authors retain credit. [Sources](SOURCES.md) lists exact versions.
 
-| Area | Foundation | Project changes |
+| Area | Upstream work | Project changes |
 | --- | --- | --- |
-| Device/kernel | [pjgowtham's ferrari](https://github.com/pjgowtham/android_device_realme_ferrari), [SM8450 common](https://github.com/pjgowtham/android_device_oneplus_sm8450-common), Oplus hardware and kernel trees | .1410 cohort integration, trusted-app memory overlay, restored module/subsystem startup and complete SIM1/SIM2/eSE1 declarations |
-| AOD sensors | [pjgowtham e7432ff](https://github.com/pjgowtham/android_device_oneplus_sm8450-common/commit/e7432ffb3533aa41bd46ab5c6e97f361c49d0f9e) request-mode correction | Separate sensor error-event parser guard and live rapid-wake validation |
-| Core hardware | Lineage/Qualcomm/Oplus HALs and drivers | Fingerprint lifecycle/recovery work, Codec2 provider ABI integration, health current reporting, audio calibration and HIDL compatibility |
-| Display | OEM panel and Lineage SystemUI | Direct backlight updates and resolution-aware cutout/header alignment |
-| Camera | OEM Camera/APS/HEIF, AOSP camera/native-window | Scoped lifecycle/caller metadata, public-buffer/API37 compatibility, P010 and filter/LUT provider integration |
-| Photos/editor | OEM app, editor and algorithms | Receiver/editor/Markup/Remover compatibility, media access/consent, sharing and latest-item viewer integration |
-| Clock | OEM Clock15.10.13 | App-local OEM API fallbacks, Android alarm-sound fallback, optional window integration and navigation-inset spacing |
-| Updates | Lineage addon.d/backuptool and Android update_engine | Selected-app ownership/retention checks and failure propagation; the next API37 app-retaining OTA still needs live validation |
-| GNSS research | [Rapper_skull's L5 module](https://github.com/rapperskull/realme_gps_l5_enabler) and libnvbk | Earlier23.2 guarded migration research; Native25 contains no GNSS-NV migration writer |
+| Device and kernel | [pjgowtham's device tree](https://github.com/pjgowtham/android_device_realme_ferrari), [SM8450 common](https://github.com/pjgowtham/android_device_oneplus_sm8450-common), Oplus and kernel sources | .1410 firmware integration, trusted-app memory, module/subsystem startup and SIM1/SIM2/eSE1 declarations |
+| Fingerprint | OEM HAL/trusted apps and Lineage HIDL-to-AIDL support | Trusted-app memory and boot-state fixes, cleanup after service failure and OEM provider restart handling |
+| Media and audio | Qualcomm Codec2 and Oplus audio components | Codec2 allocation/ABI fixes, crash-report syscall handling and device audio-calibration paths |
+| Battery | Qualcomm health HAL and Oplus dual-cell gauge | Corrected current units and sign in getters and callbacks |
+| Display | OEM panel, Lineage SystemUI and Contacts | Smooth backlight updates, resolution-aware status-bar alignment and Contacts scrolling fixes |
+| Sensors | [pjgowtham e7432ff](https://github.com/pjgowtham/android_device_oneplus_sm8450-common/commit/e7432ffb3533aa41bd46ab5c6e97f361c49d0f9e) changes the AOD sensor request mode | Additional handling for sensor error events, tested during rapid screen-off/wake |
+| Camera | OEM Camera/APS/HEIF and AOSP camera/native-window code | Camera lifecycle and vendor-interface compatibility, recording profiles, HEIF/P010 and filter support |
+| Photos/editor | OEM Photos, editor and native algorithms | Android compatibility for editing, Markup and Remover; media permissions, album moves, sharing and latest-photo viewing |
+| Clock | OEM Clock 15.10.13 | Android API fallbacks, alarm handling and navigation-bar spacing |
+| Updates | Lineage addon.d/backuptool and Android update_engine | Optional-app retention, shared-file ownership checks and error handling |
+| GNSS | [Rapper_skull L5 module](https://github.com/rapperskull/realme_gps_l5_enabler) and [libnvbk](https://github.com/rapperskull/libnvbk) | Earlier Android 16 migration work; Native25 includes no GNSS NV writer |
 
-Public common-vendor inputs also use [Arman-ATI's work](https://github.com/Arman-ATI/proprietary_vendor_oneplus_sm8450-common).
-Camera keeps its OEM APK signature. Patched Photos and Clock use separate project
-app identities. Google packages come from MindTheGapps. These additions remain optional.
+Camera retains its OEM APK signature. Patched Photos and Clock use separate project app keys.
+Google apps come from MindTheGapps. These apps remain optional.

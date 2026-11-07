@@ -1,65 +1,59 @@
 # LineageOS for Realme GT2 Pro
 
-An unofficial **LineageOS 24.0 / Android 17** port for **RMX3301**, with optional
-Realme Camera, Photos/editor and Clock apps. The base stays close to LineageOS.
-Google and the stock-app ports are separate choices. **Native25 is a beta prerelease.**
+Unofficial **LineageOS 24.0 / Android 17** for **RMX3301**.
+Realme Camera and Photos/editor are optional packages. Google apps are installed
+separately with MindTheGapps. Realme Clock is available as an optional APK.
 
-| Download | Use |
+**Current Android 17 beta:** [Native25](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-24.0-rmx3301-native25-20261107).
+[Android 16 downloads and guide](https://github.com/wjdob/lineageos-realmegt2pro/tree/lineage-23.2).
+
+## Device and firmware
+
+| Item | Version |
 | --- | --- |
-| [Android 17 Native25](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-24.0-rmx3301-native25-20261107) | Current Android 17 beta, with the tested optional app packages |
-| [Android 16 Package-23b](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-23.2-rmx3301-23b-20261103) | Retained Android 16 release; use its own guide and bundles |
-
-## Baseline and results
-
-| Item | Native25 |
-| --- | --- |
-| System | LineageOS 24.0, Android 17, API 37, cp2a |
+| ROM | LineageOS 24.0, Android 17, API 37 |
 | Kernel | Linux 5.10.246 |
 | Android / vendor security patch | 2026-10-01 / 2025-05-01 |
-| Primary development phone | RMX3301, project 21631, TW `RMX3301_15.0.0.1410(EX01)` |
+| Development phone | RMX3301, project 21631, TW `RMX3301_15.0.0.1410(EX01)` |
 
-Other compatible RMX3301 regions/Android 15 firmware may work; wider testing is
-needed. RMX3300 is unverified. The release contains a full OTA and standard recovery.
+Development and testing use the TW .1410 phone. Other RMX3301 regions with
+compatible Android 15 firmware may work and need further testing. RMX3300 is untested.
 
-Two standard boots and combined testing passed: retained apps/media and Google
-sign-in, PIN/fingerprint, calls/data, Wi-Fi/hotspot, Bluetooth, ordinary GPS,
-video/audio, High/Max alignment, dimming and wake. Camera photos/video, HEIC/10-bit,
-filters, Portrait and flash work. Photos viewing/editing, Markup, Remover, media
-moves and sharing work. Clock alarms, timer, stopwatch, World Clock and its bottom
-labels passed the recorded checks.
+## Tested features
 
-NFC, measured outdoor L5 and the next OTA's API37 app retention remain untested.
-Read [release limits](RELEASE_NOTES.md) before installing.
+- Calls, mobile data, Wi-Fi, hotspot, Bluetooth audio, PIN and fingerprint unlock.
+- Video playback, High/Max display resolution, status-bar alignment and smooth dimming.
+- Realme Camera photos and video, sound, flash, Portrait, filters, HEIC/10-bit and latest-photo viewing.
+- Realme Photos viewing, editing, Markup, Remover, Replace original, album moves and sharing.
+- Optional Google sign-in, Play Store downloads and app updates.
+- Realme Clock alarms, full-screen alarm controls, timer, stopwatch and World Clock.
+
+This is a beta tested on one development phone. Read the
+[known issues and test limits](RELEASE_NOTES.md) before installing.
 
 ## Quick start
 
-1. Read [Install](INSTALL.md), including verified backups, FRP and the first-install wipe.
-2. Download Native25 and its matching recovery-support ZIP. Verify `SHA256SUMS`.
-3. With the bootloader already unlocked, flash the support images for the current
-   slot, enter recovery, format data once and sideload the full ROM.
+1. Read [Install](INSTALL.md). Back up your data and core partitions, and check FRP/account access.
+2. Download the ROM and matching recovery-support ZIP from [Native25](https://github.com/wjdob/lineageos-realmegt2pro/releases/tag/lineage-24.0-rmx3301-native25-20261107). Verify `SHA256SUMS`.
+3. With the bootloader unlocked, flash the matching support images, enter recovery, format data and sideload the ROM.
 4. If wanted, install Android 17 ARM64 MindTheGapps before the first Android boot.
-5. After setup and completed OTA merge, optionally sideload the API37 Camera and
-   Photos installers. Clock installs as an ordinary APK.
+5. Finish setup and wait for the background update merge to complete. Then install any optional Camera/Photos packages. Clock installs as a normal APK.
 
-**Keep the bootloader unlocked. Relocking custom or mismatched images can brick the phone.**
+**The first installation erases internal storage. Keep the bootloader unlocked;
+relocking custom or mismatched images can brick the phone.**
 
-## Sources, credits and reports
+## Sources and support
 
-[pjgowtham](https://github.com/pjgowtham)'s device, common platform, Oplus and kernel
-work provides the foundation, with LineageOS/AOSP and upstream contributors.
-[Changes and credits](CHANGES.md) separates upstream fixes from project additions.
-[Sources](SOURCES.md) gives exact revisions, patches and full kernel source/configuration.
+[Sources and credits](SOURCES.md) lists the device repositories, exact release
+versions, kernel source and build instructions. This port builds on
+[pjgowtham](https://github.com/pjgowtham)'s work and LineageOS/AOSP.
+[Changes](CHANGES.md) identifies upstream contributions and project fixes.
 
-Use the [issue forms](https://github.com/wjdob/lineageos-realmegt2pro/issues/new/choose).
-Include `[24.0]` or `[23.2]` in the title, choose a component and provide versions,
-numbered reproduction steps, expected/actual behavior and frequency. Keep personal
-information out of logs. [Reporting tips](CONTRIBUTING.md) are brief.
+Use the [issue forms](https://github.com/wjdob/lineageos-realmegt2pro/issues/new/choose) to report a problem.
+Include the ROM/app versions and steps to reproduce it. See [reporting tips](CONTRIBUTING.md).
 
 ## Returning to stock
 
-Use your own matching stock set and [return notes](INSTALL.md#returning-to-stock).
-A wipe may be needed. Preserve calibration, EFS, FRP and unlock state. Current
-Native25-to-stock restoration is untested; historical .1410 returns are separate
-evidence. The Android 16 release and its source remain available on `lineage-23.2`.
-
-[Source repositories and contribution paths](SOURCE_LAYOUT.md).
+Use matching stock firmware or your own verified stock backup. A data wipe may
+be needed. Keep the bootloader unlocked and preserve calibration, EFS and FRP.
+See [return instructions and limits](INSTALL.md#returning-to-stock).
