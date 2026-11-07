@@ -1,5 +1,8 @@
 # Sources
 
+[Source repositories and pinned build manifests](SOURCE_LAYOUT.md) describe the component layout.
+The original release source kit below remains the frozen reference.
+
 Package-23b uses the pinned [manifest](source/manifests/lineage-23.2-candidate.xml), [recipe](source/tools/build/recipe-23.2.json) and published patches. Its engineering source checkpoint is `6dbf8f1e4c7ffb3b60acfdb218008242d9bce458`. The public source kit has its own history; [provenance](source/PROVENANCE.json) binds exported files to that snapshot.
 
 ## Kernel
