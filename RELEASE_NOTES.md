@@ -3,6 +3,19 @@
 LineageOS 23.2 / Android 16 for RMX3301. Camera and Photos are separate
 downloads. Package-23b replaces the older Android 16 release, 20a.
 
+## Lens update, 7 November
+
+Camera beta16 and Photos alpha16 prefer the current Google Lens link, with a
+legacy fallback. Camera and Photos keep their APKs, signing identities and settings.
+The shared library, its receipt and each app’s OTA hook are updated together.
+Google remains optional. The Camera installer updates a recognized existing Photos
+bundle automatically; Camera-only users keep Photos absent.
+
+Host tests, reproducible SDK compilation and package signature checks pass. New
+package installation, the Camera button and later OTA retention need live testing.
+The corrected Lens link itself worked on the Android17 development phone.
+The feature checks below cover the previous app packages.
+
 ## Tested features
 
 The tested update from Package-22 to Package-23b preserved existing apps and media,

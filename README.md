@@ -31,6 +31,9 @@ compatible Android 15 firmware may work and need further testing. RMX3300 is unt
 This is a beta tested on one development phone. Read the
 [known issues and test limits](RELEASE_NOTES.md) before installing.
 
+The optional Camera/Photos Lens revision is available in the current release.
+See [release notes](RELEASE_NOTES.md) for its test status and update instructions.
+
 ## Quick start
 
 1. Read [Install](INSTALL.md). Back up your data and core partitions, and check FRP/account access.

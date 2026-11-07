@@ -15,8 +15,8 @@
   "platform_security_patch": "2026-10-01",
   "vendor_security_patch": "2025-05-01",
   "tested_stock": "TW RMX3301_15.0.0.1410(EX01)",
-  "camera": "15",
-  "gallery": "15",
+  "camera": "beta16",
+  "gallery": "alpha16",
   "rom_source_commit": "6dbf8f1e4c7ffb3b60acfdb218008242d9bce458",
   "source_manifest_sha256": "cd151cc92bb023019ab272ca6774bba0302903626e95729de346ec461c972cbd",
   "recipe_sha256": "030ad752dfbfd67bed4744bddd3921cb8e70884b67a7dc15f64a93d582baed45",
@@ -81,42 +81,48 @@
       "type": "camera",
       "bytes": 186197963,
       "sha256": "a88fe35f2fb2431c41885bde941363bbd52e7ea3e7025f505fe5e2e5825949df",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-install.zip"
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-install.zip",
+      "status": "previous-app-version; retain matching remover for existing installations"
     },
     {
       "name": "realme-camera-23.2-beta15-remove.zip",
       "type": "camera",
       "bytes": 113990,
       "sha256": "9a4eff5a5b8f120bd448bd79712ca723a9a9eddc1dd3434465a0d3c63fcda511",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-remove.zip"
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-remove.zip",
+      "status": "previous-app-version; retain matching remover for existing installations"
     },
     {
       "name": "realme-camera-23.2-beta15-check.zip",
       "type": "camera",
       "bytes": 130836,
       "sha256": "f80009968b697b0614b0c3ab938cb68ce343778f51d8b739742f14b4e1bd0fe6",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-check.zip"
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-check.zip",
+      "status": "previous-app-version; retain matching remover for existing installations"
     },
     {
       "name": "realme-photos-23.2-alpha15-install.zip",
       "type": "gallery",
       "bytes": 222751747,
       "sha256": "1283780af6fd5d183a861a6ef5846094da60793e8a8bc7ce65b7c73aa9427a9b",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-install.zip"
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-install.zip",
+      "status": "previous-app-version; retain matching remover for existing installations"
     },
     {
       "name": "realme-photos-23.2-alpha15-remove.zip",
       "type": "gallery",
       "bytes": 75375,
       "sha256": "71c501fcd561c24e103eecb3e33b0851e39fc69308cd6a18c8ca7c5e6bd0abd8",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-remove.zip"
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-remove.zip",
+      "status": "previous-app-version; retain matching remover for existing installations"
     },
     {
       "name": "realme-photos-23.2-alpha15-check.zip",
       "type": "gallery",
       "bytes": 110008,
       "sha256": "c356eaf992c2dbb80e36889ee3a1477db22a06a2678c4b86cdf5601da8f5f9fd",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-check.zip"
+      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-check.zip",
+      "status": "previous-app-version; retain matching remover for existing installations"
     },
     {
       "name": "recovery-support-RMX3301-package23b.zip",
@@ -138,6 +144,72 @@
       "bytes": 254390054,
       "sha256": "5cd5a2d59367729a5c1c9dad99a8615df96551659f8938ee9ee2926d25aae41e",
       "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/kernel-source-RMX3301-package23b.tar.gz"
+    },
+    {
+      "name": "realme-camera-23.2-beta16-check.zip",
+      "bytes": 76297,
+      "sha256": "1603dc8fa2b028be3fcf653a69d86e35139597fb199b4d54dd27fb11bd8326db",
+      "type": "camera"
+    },
+    {
+      "name": "realme-camera-23.2-beta16-remove.zip",
+      "bytes": 67787,
+      "sha256": "dc08e386a8e180e11ba210717dbb214b16cb9e2ca9bea70acda40d7c19c12a25",
+      "type": "camera"
+    },
+    {
+      "name": "realme-camera-23.2-beta16-install.zip",
+      "bytes": 632029972,
+      "sha256": "e0f0533276e5f048c32bdcc65dafa966b7b5cb19a981243d4d93db3597c2efb7",
+      "type": "camera"
+    },
+    {
+      "name": "realme-photos-23.2-alpha16-check.zip",
+      "bytes": 75925,
+      "sha256": "0c236efe33180a30bb6e33272d282c4c903709a50eb9186d7b10c910406c536e",
+      "type": "gallery"
+    },
+    {
+      "name": "realme-photos-23.2-alpha16-remove.zip",
+      "bytes": 67153,
+      "sha256": "88b9309719d679407cf52f68061881cf0c1ca09fa9c55623cde3a4c47b1e8310",
+      "type": "gallery"
+    },
+    {
+      "name": "realme-photos-23.2-alpha16-install.zip",
+      "bytes": 222718235,
+      "sha256": "35236e76860b47dd741090a4ed2bd0010c36eed73ae5cb7749082d4f0d32eb5a",
+      "type": "gallery"
     }
-  ]
+  ],
+  "photos": "alpha16",
+  "optional_app_update": {
+    "date": "2026-11-07",
+    "change": "Camera Lens link and coordinated Camera/Photos shared SDK revision",
+    "source_repository": "https://github.com/wjdob/realmegt2pro-oem-apps",
+    "source_commit": "71c055dc4aa5fea454b7fbd7aacedfdc65ab78e9",
+    "source_tag": "camera-lens16-api36-20261107",
+    "config": "configs/oem-addons-lens16-23.2.json",
+    "sdk_sha256": "e88849bfcab32d3f6605a57e6558493520e45c3008914a088747cd1983f6e451",
+    "changed_payload_files_per_app": [
+      "shared SDK JAR",
+      "SDK receipt hash",
+      "addon.d retention hook"
+    ],
+    "preserved": "Camera/Photos APKs, signers, native libraries, permissions and policy are byte-identical to the previous packages.",
+    "installer": "One Camera sideload updates an exactly recognized existing Photos installation. Photos remains absent on Camera-only installations. Unknown files refuse. Separate child transactions are not atomic across power loss.",
+    "validation": {
+      "host_tests_run": 302,
+      "host_tests_skipped": 17,
+      "new_java_protocol_tests_ran": true,
+      "sdk_reproducible": true,
+      "unchanged_dex_members": 6,
+      "signatures_and_paired_manifests_verified": true,
+      "new_package_installation": "pending live test",
+      "camera_lens_button": "pending live test",
+      "future_ota_retention": "pending live test",
+      "modern_google_lens_uri": "live verified on API37 before this package update"
+    },
+    "earlier_uat": "Recorded Camera/Photos feature results apply to the previous released app packages."
+  }
 }
