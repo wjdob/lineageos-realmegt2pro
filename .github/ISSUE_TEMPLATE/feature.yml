@@ -3,6 +3,16 @@ description: Suggest a device fix or optional improvement
 title: "[Request] "
 labels: [enhancement, needs-triage]
 body:
+  - type: dropdown
+    id: lineage_version
+    attributes:
+      label: LineageOS version
+      options:
+        - "24.0 / Android17"
+        - "23.2 / Android16"
+        - "Other (give the exact version below)"
+    validations:
+      required: true
   - type: textarea
     id: usecase
     attributes:

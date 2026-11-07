@@ -6,11 +6,21 @@ body:
   - type: markdown
     attributes:
       value: Search existing issues first. Report one problem and remove private information from attachments.
+  - type: dropdown
+    id: lineage_version
+    attributes:
+      label: LineageOS version
+      options:
+        - "24.0 / Android17"
+        - "23.2 / Android16"
+        - "Other (give the exact version below)"
+    validations:
+      required: true
   - type: input
     id: versions
     attributes:
       label: ROM and bundle versions
-      placeholder: Package-23b, Camera15, Gallery15
+      placeholder: Native25, Camera alpha1 API37, Photos alpha1 API37, Clock alpha5
     validations:
       required: true
   - type: textarea
