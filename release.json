@@ -148,32 +148,38 @@
     {
       "name": "realme-camera-23.2-beta16-check.zip",
       "bytes": 76297,
-      "sha256": "1603dc8fa2b028be3fcf653a69d86e35139597fb199b4d54dd27fb11bd8326db"
+      "sha256": "1603dc8fa2b028be3fcf653a69d86e35139597fb199b4d54dd27fb11bd8326db",
+      "type": "camera"
     },
     {
       "name": "realme-camera-23.2-beta16-remove.zip",
       "bytes": 67787,
-      "sha256": "dc08e386a8e180e11ba210717dbb214b16cb9e2ca9bea70acda40d7c19c12a25"
+      "sha256": "dc08e386a8e180e11ba210717dbb214b16cb9e2ca9bea70acda40d7c19c12a25",
+      "type": "camera"
     },
     {
       "name": "realme-camera-23.2-beta16-install.zip",
       "bytes": 632029972,
-      "sha256": "e0f0533276e5f048c32bdcc65dafa966b7b5cb19a981243d4d93db3597c2efb7"
+      "sha256": "e0f0533276e5f048c32bdcc65dafa966b7b5cb19a981243d4d93db3597c2efb7",
+      "type": "camera"
     },
     {
       "name": "realme-photos-23.2-alpha16-check.zip",
       "bytes": 75925,
-      "sha256": "0c236efe33180a30bb6e33272d282c4c903709a50eb9186d7b10c910406c536e"
+      "sha256": "0c236efe33180a30bb6e33272d282c4c903709a50eb9186d7b10c910406c536e",
+      "type": "gallery"
     },
     {
       "name": "realme-photos-23.2-alpha16-remove.zip",
       "bytes": 67153,
-      "sha256": "88b9309719d679407cf52f68061881cf0c1ca09fa9c55623cde3a4c47b1e8310"
+      "sha256": "88b9309719d679407cf52f68061881cf0c1ca09fa9c55623cde3a4c47b1e8310",
+      "type": "gallery"
     },
     {
       "name": "realme-photos-23.2-alpha16-install.zip",
       "bytes": 222718235,
-      "sha256": "35236e76860b47dd741090a4ed2bd0010c36eed73ae5cb7749082d4f0d32eb5a"
+      "sha256": "35236e76860b47dd741090a4ed2bd0010c36eed73ae5cb7749082d4f0d32eb5a",
+      "type": "gallery"
     }
   ],
   "photos": "alpha16",
