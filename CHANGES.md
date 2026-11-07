@@ -19,3 +19,7 @@ the foundation. Original authors retain credit. [Sources](SOURCES.md) lists exac
 
 Camera retains its OEM APK signature. Patched Photos and Clock use separate project app keys.
 Google apps come from MindTheGapps. These apps remain optional.
+
+The Lens package revision adds the current Google Lens route with an older-route
+fallback and coordinates Camera/Photos shared-library updates. This project change
+keeps the OEM APKs and existing app signatures.

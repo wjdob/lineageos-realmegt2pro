@@ -3,6 +3,19 @@
 LineageOS 24.0 / Android 17 for RMX3301. Camera and Photos are separate
 downloads. Clock alpha5 is also available as a normal APK.
 
+## Lens update, 7 November
+
+Camera alpha2-api37 and Photos alpha2-api37 prefer the current Google Lens link, with a
+legacy fallback. Camera and Photos keep their APKs, signing identities and settings.
+The shared library, its receipt and each app’s OTA hook are updated together.
+Google remains optional. The Camera installer updates a recognized existing Photos
+bundle automatically; Camera-only users keep Photos absent.
+
+Host tests, reproducible SDK compilation and package signature checks pass. New
+package installation, the Camera button and later OTA retention need live testing.
+The corrected Lens link itself worked on the Android17 development phone.
+The feature checks below cover the previous app packages.
+
 ## Tested features
 
 Photos and videos, existing apps, PIN/fingerprint and Google sign-in were preserved
@@ -29,7 +42,7 @@ listed below worked after the update.
 
 ## GNSS
 
-Native25 includes no GNSS NV migration writer. Outdoor dual-band reception needs further testing on this release.
+Native25 preserves existing GNSS NV configuration. It does not enable L5 on an unpatched phone. The development phone was already corrected before its Android17 upgrade. A [separate recovery package](https://github.com/wjdob/lineageos-realmegt2pro/issues/17) is planned; its changed-target and rollback paths need validation. Outdoor dual-band reception needs further testing on this release.
 
 ## Security
 

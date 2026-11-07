@@ -65,3 +65,10 @@ your own matching firmware. Signing keys are supplied separately.
 
 Report phone problems through this repository's [issue forms](https://github.com/wjdob/lineageos-realmegt2pro/issues/new/choose).
 Submit code changes to the relevant source repository and include the LineageOS version.
+
+## Lens package source
+
+The Lens app-package revision uses [this source commit](https://github.com/wjdob/realmegt2pro-oem-apps/tree/eab3eebc6b4eba86764a114ed6c51ecd0d7bea8e)
+and tag `camera-lens16-api37-20261107`.
+Its recipe is `configs/oem-addons-lens16-24.0.json` in that repository.
+The ROM and kernel source versions above still describe the shipped OTA.
