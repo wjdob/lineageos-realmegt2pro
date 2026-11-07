@@ -211,5 +211,15 @@
       "modern_google_lens_uri": "live verified on API37 before this package update"
     },
     "earlier_uat": "Recorded Camera/Photos feature results apply to the previous released app packages."
+  },
+  "development_device": {
+    "original_model": "RMX3300",
+    "original_market": "China",
+    "reported_firmware_model": "RMX3301",
+    "stock_firmware_baseline": "RMX3301_15.0.0.1410(EX01)",
+    "stock_firmware_region": "TW",
+    "project": "21631",
+    "history": "Chinese-market handset later converted to RMX3301 firmware",
+    "history_source": "Owner confirmation, 2026-11-07"
   }
 }
