@@ -45,3 +45,5 @@ Report problems through the [ROM, Camera or Gallery issue form](https://github.c
 ## Returning to stock
 
 Use your own verified stock OS set and [return notes](INSTALL.md#returning-to-stock). A wipe may be required. Preserve calibration, EFS, FRP and unlock state. Historical .1410 stock returns passed on the development phone; a full return from 23b remains untested. [20a is retained as a superseded release](releases/20a.md).
+
+[Source repositories and contribution paths](SOURCE_LAYOUT.md).
