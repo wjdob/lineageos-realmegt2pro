@@ -1,7 +1,12 @@
-# Source kit
+# Android 16 release source
 
-The manifest, recipe, patches and templates describe Package-23b. Compatibility sources/configs describe Camera15/Gallery15. PROVENANCE.json records the original snapshot and file hashes. Historical status strings in frozen source contracts describe their build-time state; current acceptance is in the release notes.
+This directory contains the original Package-23b manifests, patches and templates,
+plus Camera15/Gallery15 compatibility tools. `PROVENANCE.json` records their versions
+and hashes. [Sources and credits](../SOURCES.md) links the maintained repositories
+and complete kernel source.
 
-Proprietary inputs and private keys are supplied separately. The recipe's omitted `.local/build-inputs/ferrari-filter/libmsnativefilter.so` comes from matching stock firmware and is checked against the recorded hash.
-
-See [Sources](../SOURCES.md) for kernel/toolchain pins and attribution, and [Install](../INSTALL.md) for installation. Rebuilding requires the Android checkout, proprietary inputs and host configuration.
+Rebuilding needs the Android checkout, matching stock files, build tools and your
+own signing keys. The filter library at `.local/build-inputs/ferrari-filter/libmsnativefilter.so`
+is supplied from matching stock firmware and checked against the recipe's hash.
+Build-time status text in the original configurations is historical;
+[release notes](../RELEASE_NOTES.md) describe the published release's test results.

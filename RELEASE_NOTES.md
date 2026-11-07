@@ -1,31 +1,43 @@
 # Package-23b beta
 
-**Package-23b + optional Camera15 + optional Gallery15**, release date 2026-11-03. This full OTA includes the earlier battery, calibration, display, GNSS and camera-platform fixes.
+LineageOS 23.2 / Android 16 for RMX3301. Camera and Photos are separate
+downloads. Package-23b replaces the older Android 16 release, 20a.
 
-## Changes since 20a
+## Tested features
 
-- Match both Qualcomm Codec2 launchers to the provider's 288-byte allocation ABI; retain the narrow audio crash-report syscall fix.
-- Restore fingerprint framework state after HAL death and restart its OEM companion through a device-specific init dependency.
-- Reload the notification-header guideline correctly when switching resolution and align lock-screen carrier font padding.
-- Gallery15 supplies Share labels and image-specific MIME handling, including privacy/format conversion.
+The tested update from Package-22 to Package-23b preserved existing apps and media,
+encrypted data, PIN/fingerprint, Google sign-in and the Camera/Photos settings checked
+during testing.
 
-## Tested
+- Calls/mobile data, Wi-Fi/hotspot, Bluetooth audio and ordinary video playback.
+- PIN/fingerprint unlock, Play Store installs/updates and screen-off notifications.
+- High/Max display alignment, dimming, wake, touch and adaptive brightness.
+- Camera photos/video with sound, HEIC with 10-bit OFF/ON, filters, Portrait, flash and latest-media viewing.
+- Photos JPEG/HEIC/video, Markup, Remover, Undo, Save copy, Replace original, album moves, Share and wallpaper selection.
 
-The development phone completed a same-key, no-wipe 22/A to 23b/B update using the standard shipped boot. Recovery/firmware checks, encrypted data, PIN/fingerprint, Google session/app installation, video/audio, Camera JPEG/HEIC10-bit OFF/ON/video/thumbnail, Photos Markup/Remover and High/Max alignment passed. All 38 captured app preferences were retained. Captured codec startup/crash checks and dimming-interruption checks passed.
+## Known issues and untested cases
 
-Idle fingerprint-service recovery passed in 6.3 seconds. During active recovery, the original empty-queue test timed out while cleanup waited behind fresh authentication. Cleanup then completed and PIN/fingerprint worked without repair. A brief reconnect retry burst remains tracked.
+- Private-photo locking is unavailable because the OEM privacy service is missing.
+
+- NFC, navigation accuracy, every camera mode and full battery/power behavior need further testing.
+- The direct 20a-to-23b update has not been tested separately.
+- A brief fingerprint retry burst can occur while recovering from a fingerprint service failure. Unlocking recovered in testing.
+- Separate base-only, Google-only, Camera-only and Photos-only update combinations need live testing.
+- The bundled older Digital Wellbeing app needs more startup testing. The Play-updated version works.
+- Remover downloads models from OEM servers. VPN or DNS filtering can block `fourier-videoclip-sg.allawnos.com` or `videoclipfsg.coloros.com`.
 
 ## GNSS
 
-Earlier 20a/B outdoor testing received fresh fixes and GPS L5/Galileo E5a signals. The packaged migration's already-enabled path now runs successfully through normal OTA updates, preserving both NV images. A changed-target write, inverse return and live refusal/failure paths still need validation. The installer can refuse other layouts. Preserve your own NV backups and report an error before changing firmware.
+Earlier outdoor testing on 20a received GPS L5 and Galileo E5a signals. Package-23b preserves already-enabled NV images during normal updates. Its first-time NV change, reverse change and refusal/failure handling still need live testing. Other partition layouts may be refused. Keep your own NV backups.
 
-## Remaining limits
+## Security
 
-- A brief HIDL user-start retry burst during deliberate fingerprint HAL recovery; enrollment hints need broader observation.
-- Gallery private-photo locking requires its missing OEM privacy backend.
-- Independent plain/Google-only/Camera-only/Gallery-only update profiles need live coverage. Their package prerequisites pass offline checks.
-- The older bundled Wellbeing version's direct-boot behavior remains separate from the working Play-updated app.
-- NFC tags, every camera mode, navigation accuracy and full power behavior need broader testing.
-- Remover downloads models from OEM services; filtering can block `fourier-videoclip-sg.allawnos.com` or `videoclipfsg.coloros.com`.
+Public downloads use the standard boot and recovery images. The custom auto-ADB
+engineering recovery is excluded. The ROM is a **userdebug beta**.
 
-Magisk and KernelSU remain user-managed, with separate compatibility work required. See [open issues](https://github.com/wjdob/lineageos-realmegt2pro/issues) before reporting a problem.
+Keep the bootloader unlocked.
+
+Android security patch: **2026-10-01**. Vendor security patch: **2025-05-01**.
+Play Integrity, banking-app compatibility and DRM support have not been certified.
+
+See [open issues](https://github.com/wjdob/lineageos-realmegt2pro/issues) for current reports and workarounds.

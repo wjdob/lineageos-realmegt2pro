@@ -1,17 +1,21 @@
 # Changes and credits
 
-LineageOS/AOSP Android 16 and pjgowtham's Realme GT2 Pro platform work form the baseline. Original authors retain credit for their drivers, framework, apps and algorithms. [Sources](SOURCES.md) records exact pins and local patches.
+LineageOS/AOSP and pjgowtham's Realme GT2 Pro, SM8450, Oplus and kernel work provide
+the foundation. Original authors retain credit. [Sources](SOURCES.md) lists exact versions.
 
-| Area | Foundation | Project additions |
+| Area | Upstream work | Project changes |
 | --- | --- | --- |
-| Device/kernel/Oplus | [pjgowtham's ferrari tree](https://github.com/pjgowtham/android_device_realme_ferrari), [SM8450 common](https://github.com/pjgowtham/android_device_oneplus_sm8450-common), [Oplus hardware](https://github.com/pjgowtham/android_hardware_oplus) and kernel trees | Pinned integration, .1410 extraction/fixups, TinyXML/ZIP/WFD bindings and audio-calibration paths |
-| Fingerprint | OEM HAL/trusted apps and upstream HIDL-to-AIDL lifecycle | Trusted-app memory/calibration fixes, queued death cleanup, cached-user reset and Ferrari companion restart |
-| Codec2 | Qualcomm provider and launchers | Corrected both allocations to the measured 288-byte provider ABI and the audio crash-report syscall rule |
-| Battery | Qualcomm health HAL and Oplus dual-cell gauge | Consistent measured current units/polarity in direct getters and callbacks |
-| Display/Contacts | Oplus panel modes, Lineage SystemUI and Contacts | Direct backlight updates, cutout/font alignment, QQS guideline reload and scrolling fix |
-| Camera | OEM APS/HEIF providers and AOSP camera/native-window | Scoped lifecycle/vendor compatibility, recording profiles, P010 handling, filter provider and app-local dependencies |
-| Optional Photos | OEM Photos/editor and native libraries | Android 16 editor/Markup/Remover compatibility, media access, thumbnail/viewer handoff and Share labels/MIME |
-| Updates | Lineage addon.d/backuptool and Android update_engine | Selected-app retention/ownership checks and restore-failure propagation |
-| GNSS | [Rapper_skull L5 module](https://github.com/rapperskull/realme_gps_l5_enabler) and [libnvbk](https://github.com/rapperskull/libnvbk) | Whole-container preservation, exact-layout validation and guarded inactive-slot migration |
+| Device and kernel | [pjgowtham's device tree](https://github.com/pjgowtham/android_device_realme_ferrari), [SM8450 common](https://github.com/pjgowtham/android_device_oneplus_sm8450-common), Oplus and kernel sources | .1410 firmware integration, trusted-app memory, module/subsystem startup and device-specific extraction fixes |
+| Fingerprint | OEM HAL/trusted apps and Lineage HIDL-to-AIDL support | Trusted-app memory and boot-state fixes, cleanup after service failure and OEM provider restart handling |
+| Media and audio | Qualcomm Codec2 and Oplus audio components | Codec2 allocation/ABI fixes, crash-report syscall handling and device audio-calibration paths |
+| Battery | Qualcomm health HAL and Oplus dual-cell gauge | Corrected current units and sign in getters and callbacks |
+| Display | OEM panel, Lineage SystemUI and Contacts | Smooth backlight updates, resolution-aware status-bar alignment and Contacts scrolling fixes |
 
-Camera keeps its OEM APK signature. Patched Photos uses a dedicated project app key. Google apps use the separate MindTheGapps project. The base system keeps Google/OEM app selection optional.
+| Camera | OEM Camera/APS/HEIF and AOSP camera/native-window code | Camera lifecycle and vendor-interface compatibility, recording profiles, HEIF/P010 and filter support |
+| Photos/editor | OEM Photos, editor and native algorithms | Android compatibility for editing, Markup and Remover; media permissions, album moves, sharing and latest-photo viewing |
+
+| Updates | Lineage addon.d/backuptool and Android update_engine | Optional-app retention, shared-file ownership checks and error handling |
+| GNSS | [Rapper_skull L5 module](https://github.com/rapperskull/realme_gps_l5_enabler) and [libnvbk](https://github.com/rapperskull/libnvbk) | Preserve the full NV container, verify its layout and apply the guarded inactive-slot change |
+
+Camera retains its OEM APK signature. Patched Photos uses a dedicated project app key.
+Google apps come from MindTheGapps. These apps remain optional.
