@@ -1,0 +1,20 @@
+diff --git a/qcom/opensource/camera-kernel/drivers/cam_req_mgr/cam_req_mgr_workq.c b/qcom/opensource/camera-kernel/drivers/cam_req_mgr/cam_req_mgr_workq.c
+index be7c3ba456..152f9c78a1 100644
+--- a/qcom/opensource/camera-kernel/drivers/cam_req_mgr/cam_req_mgr_workq.c
++++ b/qcom/opensource/camera-kernel/drivers/cam_req_mgr/cam_req_mgr_workq.c
+@@ -9,10 +9,11 @@
+ #include "cam_common_util.h"
+ #include <linux/sched/types.h>
+ 
+-struct sched_param {
+-	int sched_priority;
+-};
+-
++/* struct sched_param is already defined by include/linux/sched.h, which this
++ * file pulls in via the include of linux/sched/types.h above. The definition
++ * that used to sit here was byte-identical to the kernel one, so removing it
++ * changes nothing except avoiding a redefinition error against newer kernel
++ * headers. */
+ #define WORKQ_ACQUIRE_LOCK(workq, flags) {\
+ 	if ((workq)->in_irq) \
+ 		spin_lock_irqsave(&(workq)->lock_bh, (flags)); \

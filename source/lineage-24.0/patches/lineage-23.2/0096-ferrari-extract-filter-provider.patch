@@ -1,0 +1,10 @@
+--- a/proprietary-files.txt
++++ b/proprietary-files.txt
+@@ -833,6 +833,7 @@
+ odm/lib64/lib2DSlender.so
+ odm/lib64/lib3d_photo.so
+ odm/lib64/libAlgoInterface.so
++odm/lib64/libmsnativefilter.so
+ odm/lib64/libAlgoProcess.so
+ odm/lib64/libAncFilter.so
+ odm/lib64/libAncHumBokeh.so

@@ -1,0 +1,11 @@
+--- a/src/com/android/contacts/list/ContactEntryListFragment.java
++++ b/src/com/android/contacts/list/ContactEntryListFragment.java
+@@ -904,7 +904,7 @@
+      */
+     @Override
+     public boolean onTouch(View view, MotionEvent event) {
+-        if (view == mListView) {
++        if (view == mListView && event.getActionMasked() == MotionEvent.ACTION_DOWN) {
+             hideSoftKeyboard();
+         }
+         return false;

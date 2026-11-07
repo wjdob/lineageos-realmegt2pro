@@ -1,0 +1,12 @@
+diff --git a/oplus/ferrari-21631-waipio-overlay.dts b/oplus/ferrari-21631-waipio-overlay.dts
+--- a/oplus/ferrari-21631-waipio-overlay.dts
++++ b/oplus/ferrari-21631-waipio-overlay.dts
+@@ -56,3 +56,8 @@
+ };
+ //#endif
+ 
++/* Match RMX3301 stock: Goodix G7 must load alongside the other trusted apps. */
++&qseecom_ta_mem {
++    size = <0x0 0x02000000>;
++};
++

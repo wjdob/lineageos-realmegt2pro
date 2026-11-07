@@ -1,0 +1,125 @@
+diff --git a/BoardConfigCommon.mk b/BoardConfigCommon.mk
+index 22a3390..df306f2 100644
+--- a/BoardConfigCommon.mk
++++ b/BoardConfigCommon.mk
+@@ -214,3 +214,45 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
+ 
+ # Include the proprietary files BoardConfig.
+ include vendor/oneplus/sm8450-common/BoardConfigVendor.mk
++
++# Added 2026-10-11 for the realmeGT2Pro recovery build.
++# The LineageOS sepolicy configuration is not included by this device tree.
++#
++#   common/sepolicy.mk adds device/lineage/sepolicy/common/{public,private,dynamic,vendor}
++#     to the sepolicy search path. Without it, attributes declared there, such as
++#     hal_lineage_livedisplay_server, are undeclared and checkpolicy fails with
++#     'attribute hal_lineage_livedisplay_server is not declared'.
++#
++#   qcom/sepolicy.mk adds the qcom policy dirs and sets BOARD_SEPOLICY_M4DEFS mappings
++#     that rename generic sysfs types to their vendor_ prefixed forms. Without it,
++#     sysfs_battery_supply and sysfs_usb_supply are unresolved even though the trees
++#     define the vendor_ prefixed types.
++#
++# These come first because they are plain variable appends.
++include device/lineage/sepolicy/common/sepolicy.mk
++include device/lineage/sepolicy/qcom/sepolicy.mk
++
++
++# Added 2026-10-09 for the realmeGT2Pro recovery build.
++# hardware/qcom-caf/wlan/Android.bp declares an empty soong_namespace, so the module
++# libwifi-hal-qcom is unreachable by bare name unless its namespace is listed. The
++# device sets BOARD_WLAN_DEVICE := qcwcn, which makes
++# frameworks/opt/net/wifi/libwifi_hal/Android.bp reference it by bare name.
++PRODUCT_SOONG_NAMESPACES += \
++    hardware/qcom-caf/wlan \
++    hardware/qcom-caf/wlan/qcwcn
++
++
++# Added 2026-10-09 for the realmeGT2Pro recovery build.
++# vendor/lineage/config/BoardConfigLineage.mk is the only file that includes
++# BoardConfigKernel.mk and BoardConfigSoong.mk. Without it the LineageOS Soong
++# variables are never exported and the lineage_generator modules fail with
++# 'cmd: unknown variable $(KERNEL_BUILD_OUT_PREFIX)'.
++#
++# THIS MUST BE THE LAST LINE OF THIS FILE. BoardConfigLineage.mk includes
++# hardware/qcom-caf/common/BoardConfigQcom.mk, but only when
++# BOARD_USES_QCOM_HARDWARE is already true. That flag is set mid-file. Make
++# evaluates sequentially, so placing this include earlier silently skips
++# BoardConfigQcom.mk and none of the Qualcomm CAF soong namespaces are added,
++# producing about 27 unreachable modules.
++include vendor/lineage/config/BoardConfigLineage.mk
+diff --git a/common.mk b/common.mk
+index 88ab11a..c440b3e 100644
+--- a/common.mk
++++ b/common.mk
+@@ -170,8 +170,6 @@ PRODUCT_PACKAGES += \
+     fstab.qcom \
+     fstab.qcom.vendor_ramdisk \
+     init.class_main.sh \
+-    init.kernel.post_boot-cape.sh \
+-    init.kernel.post_boot-taro.sh \
+     init.oplus.hw.rc \
+     init.oplus.hw.rc.recovery \
+     init.oplus.rc \
+@@ -247,7 +245,6 @@ PRODUCT_PACKAGES += \
+ 
+ # Sensors
+ PRODUCT_PACKAGES += \
+-    android.hardware.sensors-service.oplus-multihal \
+     sensors.dynamic_sensor_hal \
+     sensors.oplus
+ 
+diff --git a/init/Android.bp b/init/Android.bp
+index 958a4d7..92192ff 100644
+--- a/init/Android.bp
++++ b/init/Android.bp
+@@ -79,17 +79,7 @@ sh_binary {
+     vendor: true,
+ }
+ 
+-sh_binary {
+-    name: "init.kernel.post_boot-cape.sh",
+-    src: "init.kernel.post_boot-cape.sh",
+-    vendor: true,
+-}
+ 
+-sh_binary {
+-    name: "init.kernel.post_boot-taro.sh",
+-    src: "init.kernel.post_boot-taro.sh",
+-    vendor: true,
+-}
+ sh_binary {
+     name: "init.qcom.sh",
+     src: "init.qcom.sh",
+diff --git a/modules.load b/modules.load
+index b6c10aa..4a306de 100644
+--- a/modules.load
++++ b/modules.load
+@@ -140,7 +140,6 @@ oplus_bsp_tp_custom.ko
+ oplus_bsp_tp_comon.ko
+ oplus_bsp_tp_notify.ko
+ oplus_bsp_tp_tcm_oncell.ko
+-oplus_bsp_tp_tcm_S3910.ko
+ oplus_bsp_tp_syna_comnon.ko
+ pm8941-pwrkey.ko
+ qcom-hv-haptics.ko
+@@ -157,7 +156,6 @@ oplus_chg.ko
+ oplus_chg_v2.ko
+ oplus_chg_symbol.ko
+ qcom-spmi-temp-alarm.ko
+-horae_shell_temp.ko
+ qti-adc-tm.ko
+ qti_qmi_sensor_v2.ko
+ qti_qmi_cdev.ko
+diff --git a/modules.load.recovery b/modules.load.recovery
+index f2ccda0..ef2632a 100644
+--- a/modules.load.recovery
++++ b/modules.load.recovery
+@@ -246,7 +246,6 @@ oplus_bsp_tp_custom.ko
+ oplus_bsp_tp_comon.ko
+ oplus_bsp_tp_notify.ko
+ oplus_bsp_tp_tcm_oncell.ko
+-oplus_bsp_tp_tcm_S3910.ko
+ oplus_bsp_tp_syna_comnon.ko
+ pm8941-pwrkey.ko
+ qcom-hv-haptics.ko

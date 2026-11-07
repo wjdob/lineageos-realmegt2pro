@@ -1,0 +1,20 @@
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -3,6 +3,9 @@
+ #
+ # SPDX-License-Identifier: Apache-2.0
+ #
++
++# Ferrari uses the pinned WAIPIO kernel 6.6 bring-up.
++TARGET_USES_KERNEL_6_6 := true
+ 
+ # Include the common OEM chipset BoardConfig.
+ include device/oneplus/sm8450-common/BoardConfigCommon.mk
+@@ -10,6 +13,7 @@
+ DEVICE_PATH := device/realme/ferrari
+ 
+ # DTB / DTBO
++TARGET_MERGE_DTBS_WILDCARD := waipio*
+ TARGET_MERGE_DTBOS_WILDCARD := ferrari-21631-waipio-overlay
+ 
+ # Biometrics (Face)

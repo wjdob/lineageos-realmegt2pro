@@ -1,0 +1,847 @@
+{
+  "schema": 2,
+  "status": "Next bundled candidate preserves Package18 vendor-filter and prior core fixes, and incorporates owner-accepted Contacts touch-down-only keyboard dismissal. Current signed18 OTA remains unchanged; the same-signer Contacts UI update is deployed separately in this maintenance session. OEM apps remain optional.",
+  "manifest": "manifests/lineage-23.2-candidate.xml",
+  "manifest_sha256": "cd151cc92bb023019ab272ca6774bba0302903626e95729de346ec461c972cbd",
+  "files": [
+    {
+      "path": "device/oneplus/sm8450-common/BoardConfigCommon.mk",
+      "project": "device/oneplus/sm8450-common",
+      "relative": "BoardConfigCommon.mk",
+      "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
+      "base_sha256": "89f7fba4adb764c40cff3b8fab63a47698a942c8a141f6e565387b1cdea7721a",
+      "canonical_sha256": "69571851f8b24874caf2066738208f988344d3820d855b8d4d6a3354bc859fb9"
+    },
+    {
+      "path": "device/realme/ferrari/proprietary-files.txt",
+      "project": "device/realme/ferrari",
+      "relative": "proprietary-files.txt",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "base_sha256": "8277e09f04b0f9b560150f8853692099b8b677f33c2dfeb1d19ecc83bf56cf54",
+      "canonical_sha256": "b3805743a79eacb7c4e545455038bd905d39f65766c35f59579502fce2872204",
+      "previous_sha256": [
+        "5b2327f3b045d1fbdc5cab24bd04cab1dca4310961dce9639b9f5c08315bd5f5"
+      ]
+    },
+    {
+      "path": "build/soong/ui/build/soong.go",
+      "project": "build/soong",
+      "relative": "ui/build/soong.go",
+      "revision": "9aa045a2aef10b8089e32e847fed26d9aa3d61be",
+      "base_sha256": "4a195bcd352e6e529a83479420cf27c1a030a31286d855e22d641487f3f4f5f6",
+      "canonical_sha256": "f74b7424ee647fe78098a6ba815e345e2f25398b6319f33201a0248fb8bd018d"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/sm8450-common-vendor.mk",
+      "project": "vendor/oneplus/sm8450-common",
+      "relative": "sm8450-common-vendor.mk",
+      "revision": "15ddc806fa2816908b0d61e9ff9c161e6ef1eba5",
+      "base_sha256": "41d705874584835992cf819f455bc8ae4d9b6b669ae8e33bb2c4f64ac9e8eb42",
+      "canonical_sha256": "6c29076d5fb0b5c845166ef9acfee86cbca8f278780b5e79f860889237f60640"
+    },
+    {
+      "path": "vendor/realme/ferrari/Android.bp",
+      "project": "vendor/realme/ferrari",
+      "relative": "Android.bp",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "base_sha256": "c0876db748e3367d17b7bcb28dbb8bb3e62b6d8352bffc0fb8466062af771c16",
+      "canonical_sha256": "963abf8081dac5d1c7241c1c5ac265f8cd027cd9e02340b6b6ce7cb40a619e73",
+      "previous_sha256": [
+        "26f9552f8fea26ec595829ac8c2206d50fdc12e84df240de0bb03fee0ea1f713",
+        "5119faca84d8dca83730b75f86a86d639c8c4887f9c27894a819fd9e15a2a8ac"
+      ]
+    },
+    {
+      "path": "vendor/realme/ferrari/proprietary/odm/lib64/libAlgoProcess.so",
+      "project": "vendor/realme/ferrari",
+      "relative": "proprietary/odm/lib64/libAlgoProcess.so",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "base_sha256": "9127d2e8ba4ffb842e10f1b01df9df4c01f5c152e9ccc299c7ca8761b585b6b2",
+      "canonical_sha256": "726183ac2d9073ca66497cfae074e421887d81298c0fb01532b7201d01647d30"
+    },
+    {
+      "path": "device/oneplus/sm8450-common/common.mk",
+      "project": "device/oneplus/sm8450-common",
+      "relative": "common.mk",
+      "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
+      "base_sha256": "83c656d8d7276982641abfbd6621fa73cd3a50e3e9cb83f6fccbc7b533fbbd5f",
+      "canonical_sha256": "3e86349278f315d5e0c561de9b129259e125a83ac681b70793996d7f751ec22a",
+      "previous_sha256": [
+        "29cc2a09da706d6d11c7c537df70ee3e836236e5fbb4d567b5656f0362ddf7cb",
+        "91639d5b523601fc65266126dc299cc39505426e48d731f2fbafcaf46a95448f"
+      ]
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/Android.bp",
+      "project": "vendor/oneplus/sm8450-common",
+      "relative": "Android.bp",
+      "revision": "15ddc806fa2816908b0d61e9ff9c161e6ef1eba5",
+      "base_sha256": "1085be49700a1be7962122b2a03f059e875d60c0ab5db3e5ff9fa25281dbbf40",
+      "canonical_sha256": "ee6ff67d1423657da2623e2cc217be274c0a7a5ef8de232ea23e79fac6ec6005",
+      "previous_sha256": [
+        "66a8dd03fb0ddf62119432f3e1406b02441992d7081cdf0b99bb93e74509919d",
+        "aaaff76bafac5699bc0293fad03b1fe817ff6bf481c417d2e5ce7b948e59dde7",
+        "8747bce3f07925b294ba20aea8937299bd7c4cdc5f4db1e8dec50d322572c12e",
+        "094221723fbc9f35f084d448bf27eca1a57ede38588dec0302aca85af625e36d",
+        "e4fd250aae5b7b44ea04df1793bce25590eb39507508690b3aa771d645f4d309"
+      ]
+    },
+    {
+      "path": "device/oneplus/sm8450-common/extract-files.py",
+      "project": "device/oneplus/sm8450-common",
+      "relative": "extract-files.py",
+      "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
+      "base_sha256": "9b978c38f98505dc8f36e942c64652d54e54ded73e57e2e2cfd945fe8887a890",
+      "canonical_sha256": "22bd0eacee4c0025cf968a4d602eda881af14348aca0f7e6489aa7ebe482b545",
+      "previous_sha256": [
+        "3045390a898ffb0bbf07cebf0dd9f9cf7e04ff57c4ac7b2582ac6266f62dc1a9",
+        "00a0cbef7eb41baab3e0a1c9c929180f0f50c043e7bd01d353edf9bec5703dac",
+        "01dc534960a7188b09f08e10e7a4807de616cd7d22691c0f565ed1bbad868ffa",
+        "44fa01f13c6d1f16bd6160c5862c562889cbac355e1f776f25759c44049e6565",
+        "cf345f947f751ff99da32bac12c24fffd68e00df5160d2cb4e8a6655be0f460b"
+      ]
+    },
+    {
+      "path": "vendor/realme/ferrari/ferrari-vendor.mk",
+      "project": "vendor/realme/ferrari",
+      "relative": "ferrari-vendor.mk",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "base_sha256": "249c52df7132e8b1077997a8ac679cea12476bd90b9b66e6a071ce831c25f849",
+      "canonical_sha256": "75bf90ecdd707dbe02ccafe2a7806801151d262fc97e35cf9cfffdbd59264ca3",
+      "previous_sha256": [
+        "dc2d2e662f64db9c103d48bc54d7618e3bbbcea6dd1d0d7c14466bf93f4a4d4b"
+      ]
+    },
+    {
+      "path": "device/realme/ferrari/extract-files.py",
+      "project": "device/realme/ferrari",
+      "relative": "extract-files.py",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "base_sha256": "d62b8a1a5c63c9a6de435d7eb8fabdad6a319a93e49707f8ec31923ee22b048e",
+      "canonical_sha256": "85c1ef894d00bd379889f7494e5ab9dc8e955161ea7298fcc0fd7902b3136587"
+    },
+    {
+      "path": "device/oneplus/sm8450-common/proprietary-files.txt",
+      "project": "device/oneplus/sm8450-common",
+      "relative": "proprietary-files.txt",
+      "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
+      "base_sha256": "9667763dc0e3b4ee997a91da3b487d1446d430a6c4acc23ae969a9fe4700b43c",
+      "canonical_sha256": "82a4144b643a1e775802dc747d9fe527376d74b283481ed62cb7fef500f81456"
+    },
+    {
+      "path": "hardware/oplus/interfaces/Android.bp",
+      "project": "hardware/oplus",
+      "relative": "interfaces/Android.bp",
+      "revision": "9ed73330d06ad8ef3aa4595f6ee49837928dfda6",
+      "base_sha256": "e1b27a28cc33e8c009b81b500fe4b74df102138e917366615eb5bd30f9fc4c93",
+      "canonical_sha256": "de8163a3bc10b5af846fdd96b17d224762c10407594447c0bd76a5090f6cbbb4"
+    },
+    {
+      "path": "hardware/oplus/interfaces/oplus/hardware/cwb/1.0/Android.bp",
+      "project": "hardware/oplus",
+      "relative": "interfaces/oplus/hardware/cwb/1.0/Android.bp",
+      "revision": "9ed73330d06ad8ef3aa4595f6ee49837928dfda6",
+      "base_sha256": "476f67343e1e91f69244e3c1f5397b29897c6a7ece7052b4150e633c7bf44b69",
+      "canonical_sha256": "4f61bc591b9c95b1f145be14e6b59b1fd9b92223e636c6a46baa3d16ad2f92c9"
+    },
+    {
+      "path": "vendor/realme/ferrari/Android.mk",
+      "project": "vendor/realme/ferrari",
+      "relative": "Android.mk",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "base_sha256": "52d38ad4018a45dc61fe9432052057a75d287a728a4d5b207abe23eab3dcc07c",
+      "canonical_sha256": "1dee31235a6c9d01d297aba11a57b326d6538fb7e855544fd991eff429b9ddff"
+    },
+    {
+      "path": "vendor/realme/ferrari/BoardConfigVendor.mk",
+      "project": "vendor/realme/ferrari",
+      "relative": "BoardConfigVendor.mk",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "base_sha256": "02f841c74ca80c1f039b0e3a39c5ef81578d46448cdf32a5bb371002520ea9a6",
+      "canonical_sha256": "1dee31235a6c9d01d297aba11a57b326d6538fb7e855544fd991eff429b9ddff"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/system_ext/etc/init/wfdservice.rc",
+      "project": "vendor/oneplus/sm8450-common",
+      "relative": "proprietary/system_ext/etc/init/wfdservice.rc",
+      "revision": "15ddc806fa2816908b0d61e9ff9c161e6ef1eba5",
+      "base_sha256": "cfd2a1aaf71fbe26d00faa0943827e14adaa197d860d498e8d40285de5a05fe1",
+      "canonical_sha256": "cf1019ae924cb3fef81bdc76888cc55b72307143e8fd7d377a7dc519c8d03081",
+      "previous_sha256": [
+        "cfd2a1aaf71fbe26d00faa0943827e14adaa197d860d498e8d40285de5a05fe1"
+      ]
+    },
+    {
+      "path": "hardware/qcom-caf/sm8450/audio/agm/service/Android.bp",
+      "project": "hardware/qcom-caf/sm8450/audio/agm",
+      "relative": "service/Android.bp",
+      "revision": "35c3491ff5566de4f60a64ad47e74fb39cd192e0",
+      "base_sha256": "adc91dad97b22e58cc369ec9898fd43fbafe19b848fb502818e81d971f80904b",
+      "canonical_sha256": "5db1be75e23261752df2cc809ab1a10f37af02e36099fcd6c29600f95d77b11e",
+      "previous_sha256": [
+        "adc91dad97b22e58cc369ec9898fd43fbafe19b848fb502818e81d971f80904b"
+      ]
+    },
+    {
+      "path": "hardware/qcom-caf/sm8450/audio/agm/service/src/graph.c",
+      "project": "hardware/qcom-caf/sm8450/audio/agm",
+      "relative": "service/src/graph.c",
+      "revision": "35c3491ff5566de4f60a64ad47e74fb39cd192e0",
+      "base_sha256": "a706f02776e59b55e0ba2e40e07f09261e1ba1a8611d6d4112e847f568f08309",
+      "canonical_sha256": "309109754ff3e349ef43ecb6625e640045b0e07fad31d400b508e76fe4449169",
+      "previous_sha256": [
+        "a706f02776e59b55e0ba2e40e07f09261e1ba1a8611d6d4112e847f568f08309"
+      ]
+    },
+    {
+      "path": "device/realme/ferrari/device.mk",
+      "project": "device/realme/ferrari",
+      "relative": "device.mk",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "base_sha256": "5cd814c0a0ed0cd0c5dd47c5791e2cd8448e210cbd3121c81ef795f8028a4213",
+      "canonical_sha256": "a5533183e286f599aa3e366831ff8d23b3f6fb2a3daaf473d2f2d4172dc20f08",
+      "previous_sha256": [
+        "5cd814c0a0ed0cd0c5dd47c5791e2cd8448e210cbd3121c81ef795f8028a4213",
+        "2f35e439742ec4228f0fe5c228caa3719707c2a14ac8267929e8f03017d38c94"
+      ]
+    },
+    {
+      "path": "kernel/oneplus/sm8450-devicetrees/oplus/ferrari-21631-waipio-overlay.dts",
+      "project": "kernel/oneplus/sm8450-devicetrees",
+      "relative": "oplus/ferrari-21631-waipio-overlay.dts",
+      "revision": "d8f3eb3fe8f98facd9669aa97d1247f6580e1e58",
+      "base_sha256": "317937abdabeffa0f7e5e0b420fbac0b291b2c70e259882e6efe745aad29f720",
+      "canonical_sha256": "df85fd6c6e46e55853d69382382f1dc4e9b55e4fa3f590f1d704a896f49bd942"
+    },
+    {
+      "path": "device/oneplus/sm8450-common/init/init_oplus.cpp",
+      "project": "device/oneplus/sm8450-common",
+      "relative": "init/init_oplus.cpp",
+      "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
+      "base_sha256": "33fc338b3759ab1a7932f130504a55b6cd28674366e2719764d48a2f91b466fa",
+      "canonical_sha256": "d6dfd47874a1e1cfb3791016d4cd0587b43f031dd576e1f59dcc2fae01f1b373",
+      "previous_sha256": [
+        "33fc338b3759ab1a7932f130504a55b6cd28674366e2719764d48a2f91b466fa"
+      ]
+    },
+    {
+      "path": "vendor/qcom/opensource/healthd-ext/aidl/main.cpp",
+      "project": "vendor/qcom/opensource/healthd-ext",
+      "relative": "aidl/main.cpp",
+      "revision": "bc2932b076745271d6e5445f40b12662b812b85e",
+      "base_sha256": "6d2cc06d6f74ff45ea824a319ea87b3c8ed1c833489ae74c9006c9dc0d53c62d",
+      "canonical_sha256": "93797b260c4c15a0d21c4d51f9fe5f517c9171133c5d48b9adea90970e894c13"
+    },
+    {
+      "path": "device/realme/ferrari/BoardConfig.mk",
+      "project": "device/realme/ferrari",
+      "relative": "BoardConfig.mk",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "base_sha256": "12152eb17e52f5e2a0e8ac60f7924e855e4f729f8aa189d2fa5cd321b3c53988",
+      "canonical_sha256": "b84aa78c1a4873de86783adac2c666be872431efca697fe7ed2b88bfc2335b72"
+    },
+    {
+      "path": "hardware/oplus/oplus-fwk/src/android/app/OplusWhiteListManager.java",
+      "project": "hardware/oplus",
+      "relative": "oplus-fwk/src/android/app/OplusWhiteListManager.java",
+      "revision": "9ed73330d06ad8ef3aa4595f6ee49837928dfda6",
+      "base_sha256": "d61cff866e09a6ec104ccc76a0c0ce421ddb7325314ab55fb81b4d3c85a157ff",
+      "canonical_sha256": "c143ce0869d8f628db3b3389e52247f828b27372e83f51741a30153b713f5a92"
+    },
+    {
+      "path": "hardware/oplus/oplus-fwk/src/android/os/OplusSystemProperties.java",
+      "project": "hardware/oplus",
+      "relative": "oplus-fwk/src/android/os/OplusSystemProperties.java",
+      "revision": "9ed73330d06ad8ef3aa4595f6ee49837928dfda6",
+      "base_sha256": "dd7dd0b6f80b945fbe53e799327194a3d81b0b0e164df0e5e1a771729fa86135",
+      "canonical_sha256": "e03994ee02d607c8dab695675244454fa233232630647e8e9f00f71f9937b56a"
+    },
+    {
+      "path": "hardware/oplus/oplus-fwk/src/com/oplus/wrapper/os/SystemProperties.java",
+      "project": "hardware/oplus",
+      "relative": "oplus-fwk/src/com/oplus/wrapper/os/SystemProperties.java",
+      "revision": "9ed73330d06ad8ef3aa4595f6ee49837928dfda6",
+      "base_sha256": "871cfc6845859863d4631531c5f518aa6117a8d5191592b06e29a949a73ac20f",
+      "canonical_sha256": "7c6978b92c58188f1970e8506e8c47995665f1204c428d406fc4ec7b44d9e85a"
+    },
+    {
+      "path": "frameworks/av/services/camera/libcameraservice/common/CameraDeviceBase.h",
+      "project": "frameworks/av",
+      "relative": "services/camera/libcameraservice/common/CameraDeviceBase.h",
+      "revision": "b6b36c1fdb3c6ffced822a054fbf035b544f0de2",
+      "base_sha256": "817127ba5db4881ca6502376e7e3fe83ca0be25517a344959a5006ed1b45f8b6",
+      "canonical_sha256": "5aa8485131781fcc56c8a6f7b8bf8d7f22155f4a03a4d66c9f8c14e8ced14206"
+    },
+    {
+      "path": "frameworks/av/services/camera/libcameraservice/common/Camera2ClientBase.cpp",
+      "project": "frameworks/av",
+      "relative": "services/camera/libcameraservice/common/Camera2ClientBase.cpp",
+      "revision": "b6b36c1fdb3c6ffced822a054fbf035b544f0de2",
+      "base_sha256": "278dee1cdf00cbf551178326ef436b0ad0e326437dfa0127a0e2d3547158060a",
+      "canonical_sha256": "be3fc43dfa154d577380545bd9daffd5e5b6d82ec29b6acbd1d58b22ffc813f1"
+    },
+    {
+      "path": "frameworks/av/services/camera/libcameraservice/device3/Camera3Device.cpp",
+      "project": "frameworks/av",
+      "relative": "services/camera/libcameraservice/device3/Camera3Device.cpp",
+      "revision": "b6b36c1fdb3c6ffced822a054fbf035b544f0de2",
+      "base_sha256": "eea20f540e0bf3058017a0b5fc500ae11eacf3f3542e919d4c7048c441cb21e2",
+      "canonical_sha256": "8dd9350063a1555afdbbbd4514084f13111911db241cf06b73b9f8227de38f99"
+    },
+    {
+      "path": "frameworks/native/libs/nativewindow/AHardwareBuffer.cpp",
+      "project": "frameworks/native",
+      "relative": "libs/nativewindow/AHardwareBuffer.cpp",
+      "revision": "9568531f9be7ae65f260699811f32ec4e461de6e",
+      "base_sha256": "db9d3ec931c217082f802fffaa4a3e1449771bb475b0b57631f33f73b0c2297f",
+      "canonical_sha256": "369278e5c04647317b95877cb7955b59514c7dc8626d62ff82404e08561d9442"
+    },
+    {
+      "path": "vendor/realme/ferrari/proprietary/odm/lib64/libAlgoInterface.so",
+      "project": "vendor/realme/ferrari",
+      "relative": "proprietary/odm/lib64/libAlgoInterface.so",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "base_sha256": "92ffe181ca6658bdc893527ab8098630009ea45c8147cac60a16dfbd0d7a7937",
+      "canonical_sha256": "96d9b0e608958221fec259d0a1959073efc7a7b7fd185de1eda64bc0f20c8d47",
+      "previous_sha256": [
+        "359f28812fa2b3d0c93f7d4de6c696913259eb6b379aa12bd29a5da24437f017"
+      ]
+    },
+    {
+      "path": "packages/apps/Contacts/src/com/android/contacts/list/ContactEntryListFragment.java",
+      "project": "packages/apps/Contacts",
+      "relative": "src/com/android/contacts/list/ContactEntryListFragment.java",
+      "revision": "02bbe49b4ed8e8094d9573ff52747ff8050d9813",
+      "base_sha256": "b30e2bb55dbe456b73a6714b9b1caeeb7e6d39c6951179b684d66d970cbeed0b",
+      "canonical_sha256": "16ecd9a57b559b37dad479bda3201cf64c9c9fe00f0664ccfb6bd17178b3e87c"
+    }
+  ],
+  "actions": [
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0001-remove-stale-vintf-conflict.patch",
+      "sha256": "70f1e31e05566491d18037cd465c3033bbedd220772b5b0ed504b1c49ff7c6ab"
+    },
+    {
+      "type": "patch",
+      "project": "device/realme/ferrari",
+      "file": "patches/lineage-23.2/0002-ferrari-runtime-panel-firmware.patch",
+      "sha256": "71d40d13f9be8d3466a6a066bd7c8bcc3571a2caefa9b52a1f394f96f8703b9d"
+    },
+    {
+      "type": "patch",
+      "project": "build/soong",
+      "file": "patches/lineage-23.2/0003-soong-host-memory-limit.patch",
+      "sha256": "fcbbb321dc602f9aab942f4d481999b70ce36b68fbcd3c97fb108630a018fe2f"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0004-common-lineage-integration.patch",
+      "sha256": "50836f0629835d4bb9d5dbe4151211564b2925fe227838674a907a8bb415e684"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0005-vendor-use-source-post-boot-scripts.patch",
+      "sha256": "d100006a55fbb1850cb1618a2df19a81dd4cfad2a08dddc28069412455877bbd"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/realme/ferrari",
+      "file": "patches/lineage-23.2/0006-ferrari-graphics-common-v7.patch",
+      "sha256": "8f7decdf21ef67628e4cffd09be034a2c0a02e815d1899a3eb933611b8e2d8f0"
+    },
+    {
+      "type": "replace_bytes",
+      "path": "vendor/realme/ferrari/proprietary/odm/lib64/libAlgoProcess.so",
+      "old_hex": "616e64726f69642e68617264776172652e67726170686963732e636f6d6d6f6e2d56362d6e646b2e736f00",
+      "new_hex": "616e64726f69642e68617264776172652e67726170686963732e636f6d6d6f6e2d56372d6e646b2e736f00",
+      "expected_count": 1
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0007-common-remove-stray-audio-path.patch",
+      "sha256": "651af90c603a910f5d1d97b8abde93c3c4b50eb6f87ed24d25826fc7fcbc5aa9"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0008-pixelworks-namespace-Android-bp.patch",
+      "sha256": "bce217bb8da61151238a75d4a11153d5ac3e84b37701fd21eb637c82e3061244"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0009-pixelworks-namespace-extract-files-py.patch",
+      "sha256": "5bd07f0dfbbf460e21e8fad59a6c73b514f91db14194ab1cae378165958a7abe"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/realme/ferrari",
+      "file": "patches/lineage-23.2/0010-ferrari-camera-prebuilt-names-vendor.patch",
+      "sha256": "c0df9e4aef0863fff610dba1d629005a96e62110406e363c329205ac226fd76d"
+    },
+    {
+      "type": "patch",
+      "project": "device/realme/ferrari",
+      "file": "patches/lineage-23.2/0011-ferrari-camera-prebuilt-names-device.patch",
+      "sha256": "6cda46a9419614bf906a4e3a82a1b7082852c38857e01f1beccb8fdc83567b85"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0012-common-interface-prebuilt-names-vendor.patch",
+      "sha256": "42a63f17a0eeda010ce2241fe56fb331a8d5d0fed2a3a79d75923860193e5ce2"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0013-common-interface-prebuilt-names-device.patch",
+      "sha256": "d9d7730aa30beb7628c869de414edb32efbe500834e83da28196e00e9c2455f1"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0014-common-type-vibrator-effect-flag.patch",
+      "sha256": "38bc19592171a94ca1fdc2f473c1b673f7e85f8e4deeececb7a8cef7e5063c60"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0015-remove-stale-post-boot-modules.patch",
+      "sha256": "425bd497ebf5f8dbd3ecf4f498d1d359b889e34124c6bb225bbc1872cb1b67e8"
+    },
+    {
+      "type": "patch",
+      "project": "hardware/oplus",
+      "file": "patches/lineage-23.2/0016-oplus-retain-stock-interface-providers.patch",
+      "sha256": "40e11f3d0caf3230625aa46d858c6bce6a36e28167b40c918295b3513b44d579"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0017-common-audio-config-paths.patch",
+      "sha256": "5c81a10140edb5ce00763a3845af5ff249cfbe6b5efd90a620978d809fa0f894"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0018-common-horae-extract-fixup.patch",
+      "sha256": "858bfa6b231d6ef63fc203f8f412157a987677fed8cd166a5c093a7ae9a98804"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0019-common-horae-module-dependency.patch",
+      "sha256": "38ae93606c90f8ec0d17fe72c22203a4a7e8113fd8131b48e3a4ecc3cc17f53b"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0020-common-wfd-input-shim-dependency.patch",
+      "sha256": "50b3442ddb0c9627daa9c7913fe92829dd8edfcf17b2ee8f452b160f2d4c8608"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0021-common-qguard-extractor-shim.patch",
+      "sha256": "cc8562447fa291742ba230bdfadba3302b3b1e2e94f2d5d2047ce25641e3c9e2"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0022-common-qguard-module-shim.patch",
+      "sha256": "8ee152036c8ee8fc59621bd63484ad86056aca012713faeddaccc79d71c4a109"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0023-common-qccsyshal-protobuf-fixup.patch",
+      "sha256": "a82552941faa739a116473b018c8ce6bb5d82f5559d79fba364f5bb97798ee32"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0024-common-qccsyshal-protobuf-module.patch",
+      "sha256": "e24c6f9931b600a736d05ee67aa8d3a5193648de8c5dbb68d3bdcfa3abe8fc95"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/realme/ferrari",
+      "file": "patches/lineage-23.2/0023-ferrari-external-firmware.patch",
+      "sha256": "7df9a30dabfed3d2662a64ea5066be32220e7e3bf5390bc9e092d9d97bf34894"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0025-common-export-pixelworks-namespace.patch",
+      "sha256": "fba083161d9c907667454f6d73cc701a1c639a583421b287531985c0229129f5"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0026-common-tinyxml-v34-fixup.patch",
+      "sha256": "9630ade3c33b108ecc8a819141111ceab8053b5e8772bc606fbe70aca6eb6fe0"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0027-common-tinyxml-v34-modules.patch",
+      "sha256": "30240ba2fa0286a7f0a6126e389382efd6d49e9d78cae3b5f35bcf7b16ac2d80"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0028-common-tinyxml-v34-provider.patch",
+      "sha256": "fd594232825ed6f101bd8092c7993d8792319bd3a60aa5844c998761887faec8"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/realme/ferrari",
+      "file": "patches/lineage-23.2/0029-ferrari-extensionlayer-ziparchive-module.patch",
+      "sha256": "ebd5324471887da107d9000751a6ce98aa20b000612711a070d7081bf79357e7"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0030-sm8450-wfd-init-extraction.patch",
+      "sha256": "48fae1b922bc48f4694445e924b693e8c0c836673be412f5ca8c6d2e8694db9a"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0031-sm8450-wfd-init-path.patch",
+      "sha256": "ace239885326dcf36d9a09046ef6e37abef11a6751b257dccf57670395a7b5af"
+    },
+    {
+      "type": "patch",
+      "project": "hardware/qcom-caf/sm8450/audio/agm",
+      "file": "patches/lineage-23.2/0032-agm-calibration-path-config.patch",
+      "sha256": "93ac8543a7ccc0abe358930cb572da02ffd9f50265b12c73342ceb079f6dc37e"
+    },
+    {
+      "type": "patch",
+      "project": "hardware/qcom-caf/sm8450/audio/agm",
+      "file": "patches/lineage-23.2/0033-agm-calibration-path-selection.patch",
+      "sha256": "35a2b0cf92a528cec21071b685144238b0e1cdabcc09d02528e29a865afea6ea"
+    },
+    {
+      "type": "patch",
+      "project": "device/realme/ferrari",
+      "file": "patches/lineage-23.2/0034-ferrari-agm-odm-calibration.patch",
+      "sha256": "27b93c931f6c70ad1d0ae7ec1d11b95c9a309e299b8dec151922ada4311e5ff7"
+    },
+    {
+      "type": "patch",
+      "project": "kernel/oneplus/sm8450-devicetrees",
+      "file": "patches/lineage-23.2/0035-ferrari-trusted-app-memory.patch",
+      "sha256": "1541c5ce4f76479064ee87bbd50fbc4bf42a865b592d9efc554999699d38c892"
+    },
+    {
+      "type": "patch",
+      "project": "device/oneplus/sm8450-common",
+      "file": "patches/lineage-23.2/0036-ferrari-report-missing-bootloader-state.patch",
+      "sha256": "095b02610831589ea8f87be923e876024e92001ccc58dcb7416973bf9f0cbd05"
+    },
+    {
+      "type": "patch",
+      "project": "vendor/qcom/opensource/healthd-ext",
+      "file": "patches/lineage-23.2/0037-ferrari-health-current-units.patch",
+      "sha256": "816375725726dec9f4b6a42b6325048539b01f26e82323c431ed448e42714fde"
+    },
+    {
+      "type": "patch",
+      "project": "device/realme/ferrari",
+      "file": "patches/lineage-23.2/0090-ferrari-system-addon-space.patch",
+      "sha256": "08f90c2c807e2c82b4708c8f93df75eed724db09c9900b532f5f546aa6ea91b3"
+    },
+    {
+      "type": "patch",
+      "project": "hardware/oplus",
+      "file": "patches/lineage-23.2/0091-oplus-camera-lifecycle-compat.patch",
+      "sha256": "2a8fbcdd6754f339d467a8435e6837d38acf74efdc93f281d09ac17836bbc9ba"
+    },
+    {
+      "type": "patch",
+      "project": "frameworks/av",
+      "file": "patches/lineage-23.2/0092-oplus-verified-camera-client.patch",
+      "sha256": "9f3667e955d50518d4c1e0bcb9627678c3838ff34e7efe576725835f2b28cd64"
+    },
+    {
+      "type": "patch",
+      "project": "device/realme/ferrari",
+      "file": "patches/lineage-23.2/0093-ferrari-recording-profiles.patch",
+      "sha256": "9e25bbfbd6ea63e955eb4a2da65d857719fb2cf748592c360d8a2b538992bf56"
+    },
+    {
+      "type": "patch",
+      "project": "frameworks/native",
+      "file": "patches/lineage-23.2/0094-nativewindow-p010-venus-planes.patch",
+      "sha256": "717c988f2188a3015da6ae38b3376171861d9857bf82c3bfa2829eff60260687"
+    },
+    {
+      "type": "replace_bytes",
+      "path": "vendor/realme/ferrari/proprietary/odm/lib64/libAlgoInterface.so",
+      "old_hex": "2f6f646d2f6574632f63616d6572612f6d65697368655f6c75742f00",
+      "new_hex": "2f73797374656d2f6574632f7265616c6d652d6c75742f0000000000",
+      "expected_count": 1
+    },
+    {
+      "type": "patch",
+      "project": "vendor/realme/ferrari",
+      "file": "patches/lineage-23.2/0095-ferrari-vendor-filter-provider.patch",
+      "sha256": "6f0806fa534cce1533c3ad6545bc1ed3f663d1be792bc109069397612c50b2b7"
+    },
+    {
+      "type": "patch",
+      "project": "device/realme/ferrari",
+      "file": "patches/lineage-23.2/0096-ferrari-extract-filter-provider.patch",
+      "sha256": "3a92663619c3dba7c0746516a37b81cc5789751f24e9328b80b8f4797437b538"
+    },
+    {
+      "type": "patch",
+      "project": "packages/apps/Contacts",
+      "file": "patches/lineage-23.2/0097-contacts-dismiss-keyboard-on-touch-down.patch",
+      "sha256": "ae1fe7da41e5dd5907ef84a30b07c414013082bae2087626393e1cfeb9ec1a64"
+    }
+  ],
+  "binary_fixups": [
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/system_ext/bin/horae",
+      "source_sha256": "9d11432a6373144b70723a90836fe5bfae24229ee1299612c0fb1f3e87b4577b",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libprotobuf-cpp-lite.so",
+      "new_needed": "libprotobuf-cpp-lite-21.7.so",
+      "result_sha256": "681400fc97df93bdeb75c916b8f0beadc2a3478f437e7a38079ea3447d556dfd"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/system_ext/lib64/libwfdnative.so",
+      "source_sha256": "04f171a96320e723f866e5a20b8ef0dbb721d90f32ee5f5216d9b0e7434a8696",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "operation": "add_needed",
+      "new_needed": "libinput_shim.so",
+      "result_sha256": "d2703c07f809df201ed0c674422e21f481715d22d2b383170fc1d35edc7509fb"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/qguard",
+      "source_sha256": "0a355600bf3cb99eba26a6f87558e86d55ed82012e592ba683e68d284090b785",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "operation": "add_needed",
+      "new_needed": "libbase_shim.so",
+      "result_sha256": "d80e405d92fb998b91dc20bc627f02b4fdd7a59d7b1c3c9cbb3e5b9b80bae3de"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so",
+      "source_sha256": "99e3fe60a0cfde1fa469f5c3824f4eb744c3c1d5a88d7994ce14fea5052016f6",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libprotobuf-cpp-full.so",
+      "new_needed": "libprotobuf-cpp-full-21.7.so",
+      "result_sha256": "1672b16f2a92bb01995cacfc62c3ee938645f6c4c6e4adcadf0c5c4cac8769fa"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libapengine.so",
+      "source_sha256": "90a1f45024ae8d66b41adc7f6454474f0fa79885173c381c1bc716531ecb2e23",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "14c227e1371e80b91458ab22055c05a4c674404ac52c77bc1c44cc9011122d2e"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libdpps.so",
+      "source_sha256": "c56036c37d8517b242f4dea2a9a4c6ae99ba9449d9c93f7375e66ea9fcce5c51",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "6b80061eab50ffd3473082d97efc4ed5b403189aa292ad24924b699f9c3573e3"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/liblearningmodule.so",
+      "source_sha256": "f7a3c19192f300cf34995f6b582e0757eedc9d28e884d75b066b84c34400e6c5",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "c506a620e8752565db29d977916479949fb911e37cfa743c005e424710aaebea"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libpowercallback.so",
+      "source_sha256": "d0da46e7d864bc8cea798d8f301f5b8473e24884090d7233569dd8b3aaecb8e0",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "1ce8026da47bb97aee444c7e814eca4f5f74bbffcfb26a6ae648c33a5f510f2d"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libpowercore.so",
+      "source_sha256": "e62004040fdb190249e964ff7c7f9dfaa5bc31131a183d9e90fd6c6be33b3fad",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "0a63e1669f78c86ffcce4b055757d274b0c058c70363f7ca9fc99a8990862e29"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libpsmoptfeature.so",
+      "source_sha256": "cd788bfa90b571adc6cb08fecc76d35ac25c8d558e8223e033c2b959b62615cf",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "4204c7459ccf1f2ebd30d51593db7cd8baf71988b8bb4d704d8b017542d89c32"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libsnapdragoncolor-manager.so",
+      "source_sha256": "633f397cc6250ccb9563045dc5ffcd58d1438327b2f1d8658b6f11969d896d77",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "47cac1ce0718c1d3193f8bd11a4be8571bec22ce94c737690b40e53ef7a88afd"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libstandbyfeature.so",
+      "source_sha256": "7ebaed79b774d990bf59969decb88d08784936f256d06da16dc442585661a3c8",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "2951bf49050734f7eb30313ab9860e67c265615aae2456cd2c64138b216c1bac"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libvendorscenariopoweroptfeature.so",
+      "source_sha256": "72e7d76e3119a59dc4f8bcc00af1512c34c68e524c7c4b5a31688874ec6d586e",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "3a8a3bfef4bef6a5b3ddd7b0747f2792fa076d8ac81955968d3d4ca7134efcc8"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/lib64/libvideooptfeature.so",
+      "source_sha256": "8e06db6db40ae90b2f0ca775dcf53c3e70e080f209dd6c027afe32063a454210",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "e8db72d18f6145a3e44d6db3db7c1329dc56dca5348e8525af39bcdfaf15def4"
+    },
+    {
+      "path": "vendor/oneplus/sm8450-common/proprietary/vendor/bin/poweropt-service",
+      "source_sha256": "4dcf45389f07a56f577d96a23e3b6681d717ea8cc9e49ab7c04e64defdf7896c",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libtinyxml2.so",
+      "new_needed": "libtinyxml2-v34.so",
+      "result_sha256": "fa389826a9ea2ea986fb62cc82975d8548e82eb69a99b20f3a1fe380c3238588"
+    },
+    {
+      "path": "vendor/realme/ferrari/proprietary/odm/lib64/libextensionlayer.so",
+      "source_sha256": "7db704d903c3caec64bf973c54c4135bc264ca0606f15eecf457fbba8f16441c",
+      "tool": "prebuilts/extract-tools/linux-x86/bin/patchelf-0_18",
+      "tool_sha256": "b699cb82300dfd08ea6c895d8829b46bea970cfa737fa34188d8256ca89404e5",
+      "old_needed": "libziparchive.so",
+      "new_needed": "libziparchive_odm.so",
+      "result_sha256": "cbb5b0ded5ddea0c7e4e9c8753998ef0a608fec3138040f1eb12df6e342abeb8"
+    }
+  ],
+  "limits": [
+    "Does not validate unmodified project files or actual checkout revisions.",
+    "Does not establish complete vendor fixup coverage or runtime compatibility.",
+    "Existing apply_recipe.py is the 23.0 runner and does not consume this schema."
+  ],
+  "firmware_policy": {
+    "mode": "external",
+    "contract": "Retain compatible RMX3301 Android 15 stock firmware; .1410 is the first test reference, not a TW-only requirement.",
+    "os_partitions": [
+      "boot",
+      "dtbo",
+      "odm",
+      "product",
+      "recovery",
+      "system",
+      "system_ext",
+      "vbmeta",
+      "vbmeta_system",
+      "vbmeta_vendor",
+      "vendor",
+      "vendor_boot",
+      "vendor_dlkm"
+    ]
+  },
+  "new_files": [
+    {
+      "path": "device/realme/ferrari/overlay/OPlusFrameworksResTarget/res/values-port-2412x1080/dimens.xml",
+      "project": "device/realme/ferrari",
+      "relative": "overlay/OPlusFrameworksResTarget/res/values-port-2412x1080/dimens.xml",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "source": "overlays/lineage-23.2/ferrari/framework/values-port-2412x1080/dimens.xml",
+      "canonical_sha256": "fe557401f0f1282300e55264a9f364e395addc8e5f21cedc75eb0dc823f12e92"
+    },
+    {
+      "path": "device/realme/ferrari/overlay/OPlusFrameworksResTarget/res/values-port-3216x1440/dimens.xml",
+      "project": "device/realme/ferrari",
+      "relative": "overlay/OPlusFrameworksResTarget/res/values-port-3216x1440/dimens.xml",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "source": "overlays/lineage-23.2/ferrari/framework/values-port-3216x1440/dimens.xml",
+      "canonical_sha256": "0413a4bafd4927f048d71eea05bfdec5f8af7e28e2200901862e7bed1738c3a1"
+    },
+    {
+      "path": "device/realme/ferrari/overlay/OPlusSystemUIResTarget/res/values-port-2412x1080/dimens.xml",
+      "project": "device/realme/ferrari",
+      "relative": "overlay/OPlusSystemUIResTarget/res/values-port-2412x1080/dimens.xml",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "source": "overlays/lineage-23.2/ferrari/systemui/values-port-2412x1080/dimens.xml",
+      "canonical_sha256": "8120ddbae43fb39c6ac0c6a8f9bf826de8028eb198058d3cf47ab963e5e84edf"
+    },
+    {
+      "path": "device/realme/ferrari/overlay/OPlusSystemUIResTarget/res/values-port-3216x1440/dimens.xml",
+      "project": "device/realme/ferrari",
+      "relative": "overlay/OPlusSystemUIResTarget/res/values-port-3216x1440/dimens.xml",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "source": "overlays/lineage-23.2/ferrari/systemui/values-port-3216x1440/dimens.xml",
+      "canonical_sha256": "8091b5192a07bf953f43c804facd0e5536ef2cb56a97ca06bd68953e6a67b3d1"
+    },
+    {
+      "path": "hardware/oplus/oplus-fwk/src/com/oplus/app/IOplusProtectConnection.aidl",
+      "project": "hardware/oplus",
+      "relative": "oplus-fwk/src/com/oplus/app/IOplusProtectConnection.aidl",
+      "revision": "9ed73330d06ad8ef3aa4595f6ee49837928dfda6",
+      "source": "overlays/lineage-23.2/oplus/IOplusProtectConnection.aidl",
+      "canonical_sha256": "6802e0d52abbe78cd96319571046258d831fd623a7e85d07d016f844cfa5300c"
+    },
+    {
+      "path": "frameworks/av/services/camera/libcameraservice/device3/OplusCameraClientMetadata.h",
+      "project": "frameworks/av",
+      "relative": "services/camera/libcameraservice/device3/OplusCameraClientMetadata.h",
+      "revision": "b6b36c1fdb3c6ffced822a054fbf035b544f0de2",
+      "source": "overlays/lineage-23.2/camera/OplusCameraClientMetadata.h",
+      "canonical_sha256": "9006c7cdaeaea9f720ed0bc164f24ee8f32838cda399c2386e6e4307dd837dfd"
+    },
+    {
+      "path": "device/realme/ferrari/configs/media/media_profiles_V1_0.xml",
+      "project": "device/realme/ferrari",
+      "relative": "configs/media/media_profiles_V1_0.xml",
+      "revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+      "source": "overlays/lineage-23.2/ferrari/media/media_profiles_V1_0.xml",
+      "canonical_sha256": "56165bbacc2dce93461cd9d8c5dfb579c0af2698c0c460451936162c739a8d0f"
+    },
+    {
+      "path": "vendor/realme/ferrari/proprietary/odm/lib64/libmsnativefilter.so",
+      "project": "vendor/realme/ferrari",
+      "relative": "proprietary/odm/lib64/libmsnativefilter.so",
+      "revision": "b87a690f74d08d83a73ed66affe493a2e665588d",
+      "source": ".local/build-inputs/ferrari-filter/libmsnativefilter.so",
+      "canonical_sha256": "6309ed48a3aac2a7a94408d0e81b891e445c70bf995d60a5eed57a14ebf15a56"
+    }
+  ]
+}

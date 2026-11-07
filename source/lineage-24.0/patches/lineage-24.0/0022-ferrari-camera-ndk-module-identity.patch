@@ -1,0 +1,20 @@
+--- a/extract-files.py
++++ b/extract-files.py
+@@ -31,6 +31,17 @@
+     'vendor/qcom/opensource/commonsys-intf/display',
+     'vendor/qcom/opensource/commonsys/display',
+ ]
++
++
++def lib_fixup_camera_vendor(lib: str, partition: str, *args, **kwargs):
++    # Keep the OEM ABI separate from AOSP's source module with the same name.
++    return f'{lib}_ferrari' if partition == 'vendor' else None
++
++
++lib_fixups = {
++    **lib_fixups,
++    'libcamera2ndk_vendor': lib_fixup_camera_vendor,
++}
+ 
+ 
+ def blob_fixup_nop_call(

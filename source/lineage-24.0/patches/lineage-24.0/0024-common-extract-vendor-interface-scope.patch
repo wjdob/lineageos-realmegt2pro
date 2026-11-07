@@ -1,0 +1,10 @@
+--- a/extract-files.py
++++ b/extract-files.py
+@@ -20,7 +20,6 @@
+ namespace_imports = [
+     'device/oneplus/sm8450-common',
+     'hardware/oplus',
+-    'hardware/pixelworks/interfaces',
+     'hardware/qcom-caf/sm8450',
+     'hardware/qcom-caf/wlan',
+     'vendor/qcom/opensource/commonsys-intf/display',

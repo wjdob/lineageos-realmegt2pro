@@ -1,143 +1,277 @@
 {
   "schema": 1,
-  "tag": "lineage-23.2-rmx3301-23b-20261103",
-  "channel": "beta",
-  "release_date": "2026-11-03",
-  "device": "RMX3301",
+  "tag": "lineage-24.0-rmx3301-native25-20261107",
+  "release_date": "2026-11-07",
+  "channel": "beta-prerelease",
+  "rom": "Native25",
+  "lineageos": "24.0",
+  "android": "17",
+  "api": 37,
+  "target_release": "cp2a",
+  "model": "RMX3301",
   "project": "21631",
-  "rom": "Package-23b",
-  "lineageos": "23.2",
-  "android": "16",
-  "api": 36,
-  "target_release": "bp4a",
+  "tested_stock": "TW RMX3301_15.0.0.1410(EX01)",
   "kernel": "5.10.246-gki-g914935583f0c",
+  "kernel_projects": [
+    {
+      "path": "kernel/configs",
+      "revision": "200b3987b78fc25015bf826b281f0c3851daf146",
+      "repository": "https://github.com/LineageOS/android_kernel_configs"
+    },
+    {
+      "path": "kernel/oneplus/sm8450",
+      "revision": "914935583f0ce199114a4a1f31178ab25a3a052d",
+      "repository": "https://github.com/pjgowtham/android_kernel_oneplus_sm8450"
+    },
+    {
+      "path": "kernel/oneplus/sm8450-devicetrees",
+      "revision": "d8f3eb3fe8f98facd9669aa97d1247f6580e1e58",
+      "repository": "https://github.com/pjgowtham/android_kernel_oneplus_sm8450-devicetrees"
+    },
+    {
+      "path": "kernel/oneplus/sm8450-modules",
+      "revision": "ca1104519fcb7e769129e75458a9da4833bcc751",
+      "repository": "https://github.com/pjgowtham/android_kernel_oneplus_sm8450-modules"
+    },
+    {
+      "path": "kernel/prebuilts/6.1/arm64",
+      "revision": "bfb3baed33d4497416d6f77fc015d71f726b838d",
+      "repository": "https://github.com/kernel/prebuilts/6.1/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/6.1/x86_64",
+      "revision": "f1a9310e363d905f5587fa58925a1059af58cc01",
+      "repository": "https://github.com/kernel/prebuilts/6.1/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/6.12/arm64",
+      "revision": "318576752b27af3d328e6deb5e6aa29b08f762c9",
+      "repository": "https://github.com/kernel/prebuilts/6.12/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/6.12/x86_64",
+      "revision": "cb8e8ee3babf4a27b742f59dcb92f59cf186299c",
+      "repository": "https://github.com/kernel/prebuilts/6.12/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/6.18/arm64",
+      "revision": "6b2d4fe8c0c7ffe9e72f64dbc9811d6a8d4d2907",
+      "repository": "https://github.com/kernel/prebuilts/6.18/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/6.18/x86_64",
+      "revision": "23cf6401297ea7e14f6b2365067f585f9143e51f",
+      "repository": "https://github.com/kernel/prebuilts/6.18/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/6.6/arm64",
+      "revision": "350899556b7cae26d5981c7055759428aef7598d",
+      "repository": "https://github.com/kernel/prebuilts/6.6/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/6.6/x86_64",
+      "revision": "b87e9b115da5dd1ed94b423657279c766057d5b3",
+      "repository": "https://github.com/kernel/prebuilts/6.6/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/trusty/6.12/arm64",
+      "revision": "36b655a113a38fe26146dac298262ea28878f9a2",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/trusty/6.12/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/trusty/6.6/arm64",
+      "revision": "3f7053bdf0a7147e001e69a1d61d9ce679404289",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/trusty/6.6/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.1/arm64",
+      "revision": "5c2c81e8c957851c06c5e8696105c796d885bed0",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.1/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.1/x86-64",
+      "revision": "c0d95b0f0520cdb63653802d6a4cfd51717c09d7",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.1/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.12/arm64",
+      "revision": "e6673fcbd05e63e6fcc2c2d2cf33246108b73b0c",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.12/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.12/x86-64",
+      "revision": "4463c45163d93baf9479744641a03961f58c1467",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.12/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.18/arm64",
+      "revision": "659b5e0fdcbb92fe1dd4a930fc861e744bd3f157",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.18/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.18/x86-64",
+      "revision": "8dcdc633a80d0a37f549fdf8fd1c48f2317f76fa",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.18/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.6/arm64",
+      "revision": "3aa5ec86b45a7eda3c85cd7e97ef2845d1b95b7f",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.6/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/6.6/x86-64",
+      "revision": "bd4fabf3d97e12cedebb1beafddc5116e3da5fde",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/6.6/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/mainline/arm64",
+      "revision": "c1b6f17450d64bb1c368b48aae97055563e5043e",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/mainline/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/common-modules/virtual-device/mainline/x86-64",
+      "revision": "8686f19c255c36095c0dcf087901a5a8f7a00750",
+      "repository": "https://github.com/kernel/prebuilts/common-modules/virtual-device/mainline/x86-64"
+    },
+    {
+      "path": "kernel/prebuilts/mainline/arm64",
+      "revision": "49cdfc22db6be7a55ae951e522d5ecadf6293a90",
+      "repository": "https://github.com/kernel/prebuilts/mainline/arm64"
+    },
+    {
+      "path": "kernel/prebuilts/mainline/x86_64",
+      "revision": "51a4241eb8c63ce034bfcd798d8dff8eaa8325d0",
+      "repository": "https://github.com/kernel/prebuilts/mainline/x86-64"
+    },
+    {
+      "path": "kernel/tests",
+      "revision": "bbc501af326dc8351cd6a6fa9efadcbce649d46f",
+      "repository": "https://github.com/kernel/tests"
+    }
+  ],
   "kernel_config_sha256": "e72ce945996b9ca426974f11bde2fa4ca13477b659ad4649f4640ec629a5e2dc",
+  "kernel_source_reuse": "Kernel, modules, device-tree pins, local DTS patch and actual kernel config match the corresponding-source archive used by Package-23b. Archive content is reused unchanged.",
   "platform_security_patch": "2026-10-01",
   "vendor_security_patch": "2025-05-01",
-  "tested_stock": "TW RMX3301_15.0.0.1410(EX01)",
-  "camera": "15",
-  "gallery": "15",
-  "rom_source_commit": "6dbf8f1e4c7ffb3b60acfdb218008242d9bce458",
-  "source_manifest_sha256": "cd151cc92bb023019ab272ca6774bba0302903626e95729de346ec461c972cbd",
-  "recipe_sha256": "030ad752dfbfd67bed4744bddd3921cb8e70884b67a7dc15f64a93d582baed45",
-  "rom_incremental": "RMX3301.1793741073.e07edcf28438",
-  "os_payload_partitions": [
-    "boot",
-    "dtbo",
-    "odm",
-    "product",
-    "recovery",
-    "system",
-    "system_ext",
-    "vbmeta",
-    "vbmeta_system",
-    "vbmeta_vendor",
-    "vendor",
-    "vendor_boot",
-    "vendor_dlkm"
-  ],
-  "additional_install_effects": "Guarded inactive-slot GNSS NV migration; live already-enabled OTA path validated, changed-target/inverse/refusal paths remain open.",
+  "build_incremental": "RMX3301.1793995398.8d8201ec7e27",
+  "rom_source_commit": "cc7a266aab79592c9f2470a04f9bfc5f9557c385",
+  "camera_photos_source_commit": "7121ac8384917586f884055ddf3825983aef523e",
+  "clock_source_commit": "5a3951b6e1c9e909372e18ae46340997a6c7e3ae",
+  "source_manifest_sha256": "20c32bebf983a174d29166f6918d599097c0a5890d35adde2e85ecfbde7e851f",
+  "recipe_sha256": "0535a86ff7972007680b67d57d10a62d89309b0371a043c7313c193f2a576cea",
   "support_images": {
     "boot.img": {
       "bytes": 201326592,
-      "sha256": "0f0c22de0a28df95adf0b1ee1c77a9e321054dad27bc41afa1d40df185da151d"
+      "sha256": "229d67ceb2395c819a5bbd87d4468ac2ffc4b5327b7e97b9e77d39de0e9fe853"
     },
     "dtbo.img": {
       "bytes": 25165824,
-      "sha256": "e399a38756bcad5a1dcfbf5e553b15283cce2f08ea12600d9ceb0a2e0b2d5a36"
-    },
-    "vendor_boot.img": {
-      "bytes": 201326592,
-      "sha256": "4627f96ee8a09ae74cbc1fabe25d45a7628f9f092f73957cf59183f1c32794f5"
+      "sha256": "bbe6c62ef8a429db7b151d681d8b20cd1980ccf8efde920c4a6e334f14b7fc84"
     },
     "recovery.img": {
       "bytes": 104857600,
-      "sha256": "06ad5a26583feafb1e56886f724a39d7fc4b2db781ec588f20b209492f73f9ad"
+      "sha256": "13408b609ad380d7a5b9f07798e97e762df1362a71bbd538d9ee97a00f07b08d"
+    },
+    "vendor_boot.img": {
+      "bytes": 201326592,
+      "sha256": "950e2952a647e72d4f543aab8e03d5fed4517177a1c8b5e929782aeb6b0b3bbe"
     },
     "vbmeta.img": {
       "bytes": 12288,
-      "sha256": "2cee1998bb42cd0302cb5ff489758634b4466d8eeb76076e275c0653ae14d3de"
+      "sha256": "59cfb55a8de3ca1eb1537ce5304cee20f9a4cb2b9307df6bc24aed25b03b8548"
     },
     "vbmeta_system.img": {
       "bytes": 4096,
-      "sha256": "44d72da24cca433a3bff678afd1bb8679e838aaa10e28fb561d056c930cbc14c"
+      "sha256": "e8032f21b0ca0217674170a812454c1cc06074392f526db19c728b74d821a756"
     },
     "vbmeta_vendor.img": {
       "bytes": 4096,
-      "sha256": "1b2dade3d575d84f1cace5c63987f9b6157eca94c524dd94c9ed76378b3b16a9"
+      "sha256": "913563ec19722287a0cca340423f50546ff918be490ac91c3bd2df958a2e9bfe"
     }
   },
-  "validation": "Standard shipped boot, same-key22-to23b combined-profile OTA and scoped owner UAT. Remaining fingerprint retry burst and other limits are documented in RELEASE_NOTES.md.",
+  "tested": {
+    "standard_boot": true,
+    "repeat_boot": true,
+    "retained_data_pin_fingerprint_google": true,
+    "camera_photos_basic_uat": true,
+    "clock_api37_basic_uat": true,
+    "calls_data_wifi_hotspot_bluetooth": true,
+    "ordinary_gps_owner_report": true,
+    "high_max_display_alignment_and_wake": true
+  },
+  "untested": [
+    "NFC/card transactions",
+    "Measured outdoor L5 in this session",
+    "Independent six-refresh-mode sweep",
+    "Next API37 Camera/Photos-retaining OTA and independent base/single-app profiles",
+    "Clean first installation on a fresh phone",
+    "Generic direct 23b-to-Native25 major upgrade",
+    "Clock API36 runtime, Doze, reboot/timezone and powered-off alarms"
+  ],
+  "security_notes": [
+    "Bootloader must remain unlocked.",
+    "Global SELinux is Enforcing; nine inherited permissive vendor domains remain.",
+    "Build is userdebug. Operator-keyed engineering recovery is excluded."
+  ],
+  "installation_effects": "13 OS payload partitions; no bootloader/radio firmware or GNSS-NV migration writer in this OTA.",
+  "camera": "24.0 alpha1 API37",
+  "photos": "24.0 alpha1 API37",
+  "clock": "15.10.13 alpha5, ordinary APK, tested on API37 only",
   "assets": [
     {
-      "name": "lineage-23.2-RMX3301-package23b.zip",
-      "type": "rom",
-      "bytes": 2121988635,
-      "sha256": "5e8284a023c81f5ce2bb14b2a2dd3bd2404cb32bd6cfc94e6155d54de631311f",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/lineage-23.2-RMX3301-package23b.zip"
+      "name": "lineage-24.0-RMX3301-native25.zip",
+      "bytes": 2139950813,
+      "sha256": "2d5ef6ad00a3b98ad6a94ab571a2f2a1a5a0e347a6c7e552074e860869edf750"
     },
     {
-      "name": "realme-camera-23.2-beta15-install.zip",
-      "type": "camera",
-      "bytes": 186197963,
-      "sha256": "a88fe35f2fb2431c41885bde941363bbd52e7ea3e7025f505fe5e2e5825949df",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-install.zip"
-    },
-    {
-      "name": "realme-camera-23.2-beta15-remove.zip",
-      "type": "camera",
-      "bytes": 113990,
-      "sha256": "9a4eff5a5b8f120bd448bd79712ca723a9a9eddc1dd3434465a0d3c63fcda511",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-remove.zip"
-    },
-    {
-      "name": "realme-camera-23.2-beta15-check.zip",
-      "type": "camera",
-      "bytes": 130836,
-      "sha256": "f80009968b697b0614b0c3ab938cb68ce343778f51d8b739742f14b4e1bd0fe6",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-camera-23.2-beta15-check.zip"
-    },
-    {
-      "name": "realme-photos-23.2-alpha15-install.zip",
-      "type": "gallery",
-      "bytes": 222751747,
-      "sha256": "1283780af6fd5d183a861a6ef5846094da60793e8a8bc7ce65b7c73aa9427a9b",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-install.zip"
-    },
-    {
-      "name": "realme-photos-23.2-alpha15-remove.zip",
-      "type": "gallery",
-      "bytes": 75375,
-      "sha256": "71c501fcd561c24e103eecb3e33b0851e39fc69308cd6a18c8ca7c5e6bd0abd8",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-remove.zip"
-    },
-    {
-      "name": "realme-photos-23.2-alpha15-check.zip",
-      "type": "gallery",
-      "bytes": 110008,
-      "sha256": "c356eaf992c2dbb80e36889ee3a1477db22a06a2678c4b86cdf5601da8f5f9fd",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/realme-photos-23.2-alpha15-check.zip"
-    },
-    {
-      "name": "recovery-support-RMX3301-package23b.zip",
-      "type": "recovery-support",
-      "bytes": 56874176,
-      "sha256": "0612534fe37c86e5207341c0d8585aab904c3774bbe49343b0956883e5cda0af",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/recovery-support-RMX3301-package23b.zip"
-    },
-    {
-      "name": "recovery-RMX3301-package23b.img",
-      "type": "recovery",
+      "name": "recovery-RMX3301-native25.img",
       "bytes": 104857600,
-      "sha256": "06ad5a26583feafb1e56886f724a39d7fc4b2db781ec588f20b209492f73f9ad",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/recovery-RMX3301-package23b.img"
+      "sha256": "13408b609ad380d7a5b9f07798e97e762df1362a71bbd538d9ee97a00f07b08d"
     },
     {
-      "name": "kernel-source-RMX3301-package23b.tar.gz",
-      "type": "kernel-source",
+      "name": "recovery-support-RMX3301-native25.zip",
+      "bytes": 52923933,
+      "sha256": "b4d4c1f0a1667f1733c4eaaef8bf5aef8d22bffd0e0cf76446e8957caaa6570a"
+    },
+    {
+      "name": "kernel-source-RMX3301-native25.tar.gz",
       "bytes": 254390054,
-      "sha256": "5cd5a2d59367729a5c1c9dad99a8615df96551659f8938ee9ee2926d25aae41e",
-      "url": "https://github.com/wjdob/lineageos-realmegt2pro/releases/download/lineage-23.2-rmx3301-23b-20261103/kernel-source-RMX3301-package23b.tar.gz"
+      "sha256": "5cd5a2d59367729a5c1c9dad99a8615df96551659f8938ee9ee2926d25aae41e"
+    },
+    {
+      "name": "realme-camera-24.0-alpha1-api37-install.zip",
+      "bytes": 186137548,
+      "sha256": "22345159216a8d8be1fa60e5b49ce56b29128ffa6be99c232048c9b25296395b"
+    },
+    {
+      "name": "realme-camera-24.0-alpha1-api37-check.zip",
+      "bytes": 69084,
+      "sha256": "fbf3413d2e2abb65593b1008de4c7ab433dfe24ddb68d30adc1a32fad15ae6e8"
+    },
+    {
+      "name": "realme-camera-24.0-alpha1-api37-remove.zip",
+      "bytes": 69085,
+      "sha256": "20d4f575a937c054f5764de0b616b10db812d2878d98465fbc8ddb908342c0a2"
+    },
+    {
+      "name": "realme-photos-24.0-alpha1-api37-install.zip",
+      "bytes": 222712035,
+      "sha256": "574026bc8d94654568e9b717b368275c65c2352536660ec8d43e33c75044243d"
+    },
+    {
+      "name": "realme-photos-24.0-alpha1-api37-check.zip",
+      "bytes": 68280,
+      "sha256": "29dd55b9fc5f5f784031c0c69105db4b176bfd1b7cd36a9c4f8e7164bbdaf202"
+    },
+    {
+      "name": "realme-photos-24.0-alpha1-api37-remove.zip",
+      "bytes": 68281,
+      "sha256": "209fae55e07700105ff68b2e1eb78478db80b56839d3188b4ff8c40300dc900d"
+    },
+    {
+      "name": "realme-clock-15.10.13-alpha5-api36-api37.apk",
+      "bytes": 39532854,
+      "sha256": "fa19ca7fdbdcbe665610a00901a147e7b8c758ac1fdd33cbec43f4090e82dfec"
     }
   ]
 }

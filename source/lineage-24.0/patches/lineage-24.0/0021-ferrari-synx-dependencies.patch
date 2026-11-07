@@ -1,0 +1,11 @@
+--- a/proprietary-files.txt
++++ b/proprietary-files.txt
+@@ -100,6 +100,8 @@
+ vendor/lib64/libcvp2_1.so
+ vendor/lib64/libeva.so:vendor/lib64/libeva_waipio.so;FIX_SONAME
+ vendor/lib64/libsnsapi.so:vendor/lib64/libsnsapi_waipio.so;FIX_SONAME
++vendor/lib64/libos.so
++vendor/lib64/libthreadutils.so
+ vendor/lib64/libsynx.so:vendor/lib64/libsynx_waipio.so;FIX_SONAME
+ 
+ # Camera

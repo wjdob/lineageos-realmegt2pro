@@ -1,0 +1,11 @@
+--- a/sm8450-common-vendor.mk
++++ b/sm8450-common-vendor.mk
+@@ -1215,8 +1215,6 @@
+     vendor.qti.media.c2audio@1.0-service \
+     ims_rtp_daemon \
+     imsdaemon \
+-    init.kernel.post_boot-cape \
+-    init.kernel.post_boot-taro \
+     init.kernel.post_boot \
+     init.qcom.sensors \
+     init.qti.kernel \

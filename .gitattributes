@@ -1,3 +1,8 @@
 * text=auto eol=lf
 source/** -text
 source/patches/** -whitespace
+source/lineage-24.0/patches/** -whitespace
+source/lineage-24.0/** whitespace=cr-at-eol
+source/lineage-24.0/patches/** -whitespace
+source/lineage-24.0/manifests/lineage-23.0-locked.xml -whitespace
+source/lineage-24.0/overlays/lineage-24.0/ferrari/init/init.ferrari.post_boot.sh whitespace=cr-at-eol,-blank-at-eof

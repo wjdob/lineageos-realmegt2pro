@@ -1,0 +1,18 @@
+From: Realme GT2 Pro development
+Subject: [PATCH] sm8450-common: select the existing AOSP AIDL multihal service
+
+Apply after 0001 for ROM candidates. The pinned tree provides the generic
+service, its init rc and AIDL-v3 VINTF fragment. The configured dynamic/QTI/Oplus
+sub-HALs expose the multihal interfaces consumed by its HalProxy adapter.
+This closes a source-selection omission; runtime sensor behavior remains untested.
+
+--- a/common.mk
++++ b/common.mk
+@@ -245,6 +245,7 @@
+ 
+ # Sensors
+ PRODUCT_PACKAGES += \
++    android.hardware.sensors-service.multihal \
+     sensors.dynamic_sensor_hal \
+     sensors.oplus
+ 

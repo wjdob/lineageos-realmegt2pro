@@ -1,0 +1,9 @@
+{
+  "sourceCheckout": "C:/Users/OWNER/realmegt2Pro/realmeGT2Pro",
+  "artifactRoot": "C:/Users/OWNER/realmeGT2Pro-dev",
+  "restoreKit": "C:/Users/OWNER/realmeGT2Pro-dev/restore-kit",
+  "wslDistribution": "realme-build",
+  "wslBuildRoot": "/build/lineage",
+  "wslDisk": "C:/Users/OWNER/wsl/realme-build-distro/ext4.vhdx",
+  "note": "Location registry only. Existing analysis tools do not automatically consume this file."
+}

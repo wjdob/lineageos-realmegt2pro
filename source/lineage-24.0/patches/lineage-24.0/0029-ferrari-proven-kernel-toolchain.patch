@@ -1,0 +1,14 @@
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -3,6 +3,11 @@
+ #
+ # SPDX-License-Identifier: Apache-2.0
+ #
++
++# Retain the accepted RMX3301 kernel/toolchain cohort for first Android17 testing.
++TARGET_KERNEL_VERSION := 5.10
++TARGET_KERNEL_CLANG_VERSION := r563880c
++TARGET_MERGE_DTBS_WILDCARD := waipio*
+ 
+ # Include the common OEM chipset BoardConfig.
+ include device/oneplus/sm8450-common/BoardConfigCommon.mk

@@ -1,0 +1,12 @@
+diff --git a/Android.bp b/Android.bp
+--- a/Android.bp
++++ b/Android.bp
+@@ -11823,7 +11823,7 @@
+                 "libchilog",
+                 "libbinder",
+                 "libqdMetaData",
+-                "libziparchive",
++                "libziparchive_odm",
+                 "libbase",
+                 "libz",
+                 "vendor.qti.hardware.vpp@1.1",

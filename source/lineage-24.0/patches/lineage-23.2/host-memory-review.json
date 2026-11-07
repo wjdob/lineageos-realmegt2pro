@@ -1,0 +1,9 @@
+{
+  "project": "build/soong",
+  "revision": "9aa045a2aef10b8089e32e847fed26d9aa3d61be",
+  "patch": "patches\\lineage-23.2\\0003-soong-host-memory-limit.patch",
+  "sha256": "fcbbb321dc602f9aab942f4d481999b70ce36b68fbcd3c97fb108630a018fe2f",
+  "preimage_sha256": "4a195bcd352e6e529a83479420cf27c1a030a31286d855e22d641487f3f4f5f6",
+  "postimage_sha256": "f74b7424ee647fe78098a6ba815e345e2f25398b6319f33201a0248fb8bd018d",
+  "validation": "Applied to disposable exact preimage and output hash verified; no real Soong graph run. Numeric memory policy is inherited from the tested 23.0 change; new platform runtime still untested."
+}

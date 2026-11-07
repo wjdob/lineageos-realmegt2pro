@@ -1,0 +1,11 @@
+--- a/Android.bp
++++ b/Android.bp
+@@ -3934,7 +3934,7 @@
+                 "libFace3D_hlos",
+                 "libFace3DTA",
+                 "libQ6MSFR_manager_stub",
+-                "//vendor/realme/ferrari:libcamera2ndk_vendor",
++                "//vendor/realme/ferrari:libcamera2ndk_vendor_ferrari",
+                 "libmediandk",
+                 "libnativewindow",
+                 "libgui_vendor",

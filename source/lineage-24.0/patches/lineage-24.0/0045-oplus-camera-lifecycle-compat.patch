@@ -1,0 +1,56 @@
+--- a/oplus-fwk/src/android/app/OplusWhiteListManager.java
++++ b/oplus-fwk/src/android/app/OplusWhiteListManager.java
+@@ -1,6 +1,9 @@
+ package android.app;
+ 
+ import android.content.Context;
++import android.util.Log;
++
++import com.oplus.app.IOplusProtectConnection;
+ 
+ import java.util.ArrayList;
+ 
+@@ -14,5 +17,17 @@
+ 
+     public void addStageProtectInfo(String pkg, long timeout) {}
+ 
++    /**
++     * Compatibility with the newer optional ColorOS self-protection hint.
++     * Lineage has no ColorOS freezer exemption service. As with the legacy
++     * overload, no exemption is granted; Android foreground-service rules apply.
++     * Never report a successful protection callback for an unavailable service.
++     */
++    public void addStageProtectInfo(String pkg, String reason, long timeout,
++            IOplusProtectConnection connection) {
++        Log.w("OplusWhiteListManager", "ColorOS stage protection unavailable; "
++                + "Android service lifecycle applies");
++    }
++
+     public void removeStageProtectInfo(String pkg) {}
+ }
+--- a/oplus-fwk/src/android/os/OplusSystemProperties.java
++++ b/oplus-fwk/src/android/os/OplusSystemProperties.java
+@@ -14,6 +14,10 @@
+         return SystemProperties.getInt(key, def);
+     }
+ 
++    public static long getLong(String key, long def) {
++        return SystemProperties.getLong(key, def);
++    }
++
+     public static boolean getBoolean(String key, boolean def) {
+         return SystemProperties.getBoolean(key, def);
+     }
+--- a/oplus-fwk/src/com/oplus/wrapper/os/SystemProperties.java
++++ b/oplus-fwk/src/com/oplus/wrapper/os/SystemProperties.java
+@@ -14,6 +14,10 @@
+         return android.os.SystemProperties.getInt(key, def);
+     }
+ 
++    public static long getLong(String key, long def) {
++        return android.os.SystemProperties.getLong(key, def);
++    }
++
+     public static boolean getBoolean(String key, boolean def) {
+         return android.os.SystemProperties.getBoolean(key, def);
+     }

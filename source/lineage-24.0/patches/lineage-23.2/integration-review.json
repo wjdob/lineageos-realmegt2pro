@@ -1,0 +1,27 @@
+{
+  "status": "draft",
+  "reason": "Restore Lineage integration; select maintainer source post-boot behavior from commit 052246389da6cb4f2f4b8e5cb7c9dcba4689ccf8. Preserve vendor dispatcher.",
+  "patches": [
+    {
+      "patch": "patches\\lineage-23.2\\0004-common-lineage-integration.patch",
+      "project": "device/oneplus/sm8450-common",
+      "revision": "8b8694732bf21cde0e1186cfe73da5f1526cdef3",
+      "file": "BoardConfigCommon.mk",
+      "preimage_sha256": "89f7fba4adb764c40cff3b8fab63a47698a942c8a141f6e565387b1cdea7721a",
+      "postimage_sha256": "b2df74e21be94f7d3fe02e0a9c13cea414832f8de9f25f10acde6393500f0b00",
+      "patch_sha256": "50836f0629835d4bb9d5dbe4151211564b2925fe227838674a907a8bb415e684",
+      "check": "Applied in disposable scratch; exact postimage verified. No build graph pass."
+    },
+    {
+      "patch": "patches\\lineage-23.2\\0005-vendor-use-source-post-boot-scripts.patch",
+      "project": "vendor/oneplus/sm8450-common",
+      "revision": "15ddc806fa2816908b0d61e9ff9c161e6ef1eba5",
+      "file": "sm8450-common-vendor.mk",
+      "preimage_sha256": "41d705874584835992cf819f455bc8ae4d9b6b669ae8e33bb2c4f64ac9e8eb42",
+      "postimage_sha256": "cf80c22b98afd15a8bb1319f50a103b5e26d34a99bb3e2ee442d1fad192c9c97",
+      "patch_sha256": "d100006a55fbb1850cb1618a2df19a81dd4cfad2a08dddc28069412455877bbd",
+      "check": "Applied in disposable scratch; exact postimage verified. No build graph pass."
+    }
+  ],
+  "ordering": "0001 and 0004 both modify BoardConfigCommon.mk; individual preimage hashes refer to upstream. Verify sequential combined application before build."
+}
