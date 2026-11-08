@@ -89,8 +89,8 @@ OTA merge, run `adb reboot recovery`. Leave system unmounted and choose
 **Apply update > Apply from ADB** for each selected package:
 
 ```sh
-adb sideload realme-camera-24.0-alpha2-api37-install.zip
-adb sideload realme-photos-24.0-alpha2-api37-install.zip
+adb sideload realme-camera-24.0-alpha6-api37-install.zip
+adb sideload realme-photos-24.0-alpha6-api37-install.zip
 ```
 
 Choose Apply from ADB again between packages. Choose **No** if asked to reboot
@@ -101,7 +101,7 @@ The matching `check.zip` checks compatibility and installed files. The matching
 `remove.zip` removes one bundle while preserving shared files needed by the other.
 Back up app settings and media before removal. Android 17 removal has not yet had a separate live test.
 
-### Updating the Lens fix
+### Updating Camera and Photos
 
 The new Camera install ZIP also updates an exactly recognized existing Photos
 installation to the matching shared library. It keeps Photos absent on Camera-only
@@ -113,9 +113,12 @@ Photos installation, keep recovery open, save its log and sideload the matching
 Photos install ZIP before rebooting. Each app operation has rollback, but a power
 loss can interrupt the sequence between apps. Keep your verified backup.
 
-The Lens revision passed host tests and signature checks. Its installation and
-Lens-button tests on the phone are pending. Earlier app packages remain available
-for their matching removers and return procedures.
+The paired alpha5-to-alpha6 upgrade passed recovery installation, independent
+readback, settings retention and Camera Lens tests on Native25. Install Google
+Lens separately to use its button. Photos can export a compatible JPEG copy of
+a 10-bit HEIC photo through Share → Privacy and compatibility. Keep originals.
+Other installation combinations and later OTA retention need separate live tests.
+Earlier packages remain available for their matching removers and return procedures.
 
 ## Optional Clock
 

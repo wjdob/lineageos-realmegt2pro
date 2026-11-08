@@ -155,7 +155,7 @@
   "vendor_security_patch": "2025-05-01",
   "build_incremental": "RMX3301.1793995398.8d8201ec7e27",
   "rom_source_commit": "cc7a266aab79592c9f2470a04f9bfc5f9557c385",
-  "camera_photos_source_commit": "7121ac8384917586f884055ddf3825983aef523e",
+  "camera_photos_source_commit": "1984488387ca8502a2b3a8fe5d7f7339717c0646",
   "clock_source_commit": "5a3951b6e1c9e909372e18ae46340997a6c7e3ae",
   "source_manifest_sha256": "20c32bebf983a174d29166f6918d599097c0a5890d35adde2e85ecfbde7e851f",
   "recipe_sha256": "0535a86ff7972007680b67d57d10a62d89309b0371a043c7313c193f2a576cea",
@@ -197,7 +197,9 @@
     "clock_api37_basic_uat": true,
     "calls_data_wifi_hotspot_bluetooth": true,
     "ordinary_gps_owner_report": true,
-    "high_max_display_alignment_and_wake": true
+    "high_max_display_alignment_and_wake": true,
+    "camera_lens_alpha6": true,
+    "camera_photos_paired_alpha6_upgrade_retained_settings": true
   },
   "untested": [
     "NFC/card transactions",
@@ -214,8 +216,8 @@
     "Build is userdebug. Operator-keyed engineering recovery is excluded."
   ],
   "installation_effects": "13 OS payload partitions; no bootloader/radio firmware or GNSS-NV migration writer in this OTA.",
-  "camera": "alpha2-api37",
-  "photos": "alpha2-api37",
+  "camera": "alpha6-api37",
+  "photos": "alpha6-api37",
   "clock": "15.10.13 alpha5, ordinary APK, tested on API37 only",
   "assets": [
     {
@@ -242,37 +244,37 @@
       "name": "realme-camera-24.0-alpha1-api37-install.zip",
       "bytes": 186137548,
       "sha256": "22345159216a8d8be1fa60e5b49ce56b29128ffa6be99c232048c9b25296395b",
-      "status": "previous-app-version; retain matching remover for existing installations"
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-camera-24.0-alpha1-api37-check.zip",
       "bytes": 69084,
       "sha256": "fbf3413d2e2abb65593b1008de4c7ab433dfe24ddb68d30adc1a32fad15ae6e8",
-      "status": "previous-app-version; retain matching remover for existing installations"
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-camera-24.0-alpha1-api37-remove.zip",
       "bytes": 69085,
       "sha256": "20d4f575a937c054f5764de0b616b10db812d2878d98465fbc8ddb908342c0a2",
-      "status": "previous-app-version; retain matching remover for existing installations"
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-photos-24.0-alpha1-api37-install.zip",
       "bytes": 222712035,
       "sha256": "574026bc8d94654568e9b717b368275c65c2352536660ec8d43e33c75044243d",
-      "status": "previous-app-version; retain matching remover for existing installations"
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-photos-24.0-alpha1-api37-check.zip",
       "bytes": 68280,
       "sha256": "29dd55b9fc5f5f784031c0c69105db4b176bfd1b7cd36a9c4f8e7164bbdaf202",
-      "status": "previous-app-version; retain matching remover for existing installations"
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-photos-24.0-alpha1-api37-remove.zip",
       "bytes": 68281,
       "sha256": "209fae55e07700105ff68b2e1eb78478db80b56839d3188b4ff8c40300dc900d",
-      "status": "previous-app-version; retain matching remover for existing installations"
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-clock-15.10.13-alpha5-api36-api37.apk",
@@ -282,62 +284,108 @@
     {
       "name": "realme-camera-24.0-alpha2-api37-check.zip",
       "bytes": 77629,
-      "sha256": "03ecb57c135b827727feb3cdeae93485b2d613615a74ea10a6bf6ef3d59a6762"
+      "sha256": "03ecb57c135b827727feb3cdeae93485b2d613615a74ea10a6bf6ef3d59a6762",
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-camera-24.0-alpha2-api37-remove.zip",
       "bytes": 69093,
-      "sha256": "0e92270de76d3b9fab3ded51be0b9ea970a5663d28131454b28069d100f1f6c9"
+      "sha256": "0e92270de76d3b9fab3ded51be0b9ea970a5663d28131454b28069d100f1f6c9",
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-camera-24.0-alpha2-api37-install.zip",
       "bytes": 631939657,
-      "sha256": "4201fd22fec661c7153ef6baf7b0f50199ae457bda05bc1ba489b1d2b79a43fa"
+      "sha256": "4201fd22fec661c7153ef6baf7b0f50199ae457bda05bc1ba489b1d2b79a43fa",
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-photos-24.0-alpha2-api37-check.zip",
       "bytes": 77096,
-      "sha256": "7f075b0b2f56350cc37392b9a7552a6f7353ee443c83bdabc2d5e2035ea27f8f"
+      "sha256": "7f075b0b2f56350cc37392b9a7552a6f7353ee443c83bdabc2d5e2035ea27f8f",
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-photos-24.0-alpha2-api37-remove.zip",
       "bytes": 68296,
-      "sha256": "81bedbdd5fc790d762ad751c97a4f409b6e0ebf17bed9144071cf2f2860ec018"
+      "sha256": "81bedbdd5fc790d762ad751c97a4f409b6e0ebf17bed9144071cf2f2860ec018",
+      "status": "superseded; retain matching removers for installed versions"
     },
     {
       "name": "realme-photos-24.0-alpha2-api37-install.zip",
       "bytes": 222721427,
-      "sha256": "491de0f95aef33f77cd40ef7877dbc21c21a8b1cbcf41cabb6bbbe4a43341126"
+      "sha256": "491de0f95aef33f77cd40ef7877dbc21c21a8b1cbcf41cabb6bbbe4a43341126",
+      "status": "superseded; retain matching removers for installed versions"
+    },
+    {
+      "name": "realme-camera-24.0-alpha6-api37-camera-only-install.zip",
+      "bytes": 186168843,
+      "sha256": "da94e4ba6b7e966b3ec7e29d8b83aa1f683fcdda69c67d0bf17b75f8935639c6"
+    },
+    {
+      "name": "realme-camera-24.0-alpha6-api37-check.zip",
+      "bytes": 94677,
+      "sha256": "895ba921167ab7100afdea6f6219be37d768540db96a6520b9dacad2f9a8f5c8"
+    },
+    {
+      "name": "realme-camera-24.0-alpha6-api37-install.zip",
+      "bytes": 1078021553,
+      "sha256": "eddd385ded09e98b585b8065f2462180326b21efb2aab8fe39c668b1bdf2260a"
+    },
+    {
+      "name": "realme-camera-24.0-alpha6-api37-remove.zip",
+      "bytes": 69394,
+      "sha256": "05551cf65bb4931a264d609e88628e4c0eced11946ee18a5d6920897e27141c4"
+    },
+    {
+      "name": "realme-photos-24.0-alpha6-api37-check.zip",
+      "bytes": 94735,
+      "sha256": "bae08ec146e38e30fefb3eddf80f5faa20821662a894b4af03e6cedbe166782a"
+    },
+    {
+      "name": "realme-photos-24.0-alpha6-api37-install.zip",
+      "bytes": 222842891,
+      "sha256": "4bef46e54ebca2156cd01c16a8feeb0a4aae0f2d4094ae35fcec7611447c48bf"
+    },
+    {
+      "name": "realme-photos-24.0-alpha6-api37-remove.zip",
+      "bytes": 68651,
+      "sha256": "1bd1f907b387c3e92557223084733ebefd824e2dfae775914604bec1e6d359c8"
     }
   ],
   "optional_app_update": {
-    "date": "2026-11-07",
-    "change": "Camera Lens link and coordinated Camera/Photos shared SDK revision",
+    "date": "2026-11-08",
+    "change": "Camera Lens public launcher, HEVC menu persistence and compatible 10-bit HEIC sharing",
     "source_repository": "https://github.com/wjdob/realmegt2pro-oem-apps",
-    "source_commit": "eab3eebc6b4eba86764a114ed6c51ecd0d7bea8e",
-    "source_tag": "camera-lens16-api37-20261107",
-    "config": "configs/oem-addons-lens16-24.0.json",
-    "sdk_sha256": "e88849bfcab32d3f6605a57e6558493520e45c3008914a088747cd1983f6e451",
-    "changed_payload_files_per_app": [
-      "shared SDK JAR",
-      "SDK receipt hash",
-      "addon.d retention hook"
-    ],
-    "preserved": "Camera/Photos APKs, signers, native libraries, permissions and policy are byte-identical to the previous packages.",
-    "installer": "One Camera sideload updates an exactly recognized existing Photos installation. Photos remains absent on Camera-only installations. Unknown files refuse. Separate child transactions are not atomic across power loss.",
+    "source_commit": "1984488387ca8502a2b3a8fe5d7f7339717c0646",
+    "source_tag": "camera-lens20-api37-20261108",
+    "config": "configs/oem-addons-lens20-24.0.json",
+    "sdk_sha256": "e5e24a1820457eb13ca94273bc537988ff5f94e4b27e901634297470c59596ce",
+    "camera_apk": "Original OEM APK and signature retained.",
+    "photos_apk": "Compatible HEIC export patch; existing dedicated signing key retained.",
+    "installer": "One Camera sideload updates a recognized existing Photos installation. Camera-only users keep Photos absent. Unknown or modified files refuse. Separate child transactions are not atomic across power loss.",
     "validation": {
-      "host_tests_run": 369,
+      "host_tests_run": 439,
       "host_tests_skipped": 17,
-      "new_java_protocol_tests_ran": true,
+      "executed_pass": 422,
       "sdk_reproducible": true,
       "unchanged_dex_members": 6,
-      "signatures_and_paired_manifests_verified": true,
-      "new_package_installation": "pending live test",
-      "camera_lens_button": "pending live test",
-      "future_ota_retention": "pending live test",
-      "modern_google_lens_uri": "live verified on API37 before this package update"
-    },
-    "earlier_uat": "Recorded Camera/Photos feature results apply to the previous released app packages."
+      "outer_signatures_verified": 7,
+      "child_manifests_verified": 16,
+      "paired_alpha5_to_alpha6_installation": "passed with status 0 and independent readback",
+      "readback_paths": 278,
+      "protected_references": 64,
+      "retained_preferences": 35,
+      "camera_lens_button": "passed twice, including mode change/return",
+      "brief_regression": "Capture, latest-photo viewing, Markup Save copy and HEVC switch persistence pass",
+      "format_uat": "HEVC 1080p/4K at 30/60 fps, AVC control, compatible single/multiple HEIC shares, colour/orientation and location removal passed in alpha3; paths retained in alpha6",
+      "untested": [
+        "API36 packages",
+        "Fresh and single-app installation profiles",
+        "Other predecessor upgrades on a live device",
+        "Removal and later Android17 OTA retention"
+      ]
+    }
   },
   "development_device": {
     "original_model": "RMX3300",

@@ -35,8 +35,9 @@ other firmware configurations still need qualification.
 This is a beta tested on one development phone. Read the
 [known issues and test limits](RELEASE_NOTES.md) before installing.
 
-The optional Camera/Photos Lens revision is available in the current release.
-See [release notes](RELEASE_NOTES.md) for its test status and update instructions.
+Camera/Photos **alpha6** adds a working Lens button, persistent HEVC recording
+settings and optional JPEG conversion for sharing 10-bit HEIC photos. Install
+Google Lens to use the Lens button. See [release notes](RELEASE_NOTES.md).
 
 ## Quick start
 
